@@ -1,0 +1,60 @@
+<%= javascript 'googleearth' %>
+
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>All Messages</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal"><%= link_to 'New message', new_message_path %></p>
+
+
+<% if @messages.empty? %>
+
+  <div class="general-form">
+    <p class="normal"> You have no messages associated with you or your groups.</p>
+  </div>
+
+<% else %>
+
+  <div id="ids-for-earth" data-ids="1"></div>
+
+  <div id="message-tabs">
+
+    <ul>
+      <li><a href="#message-tabs-1">Location</a></li>
+      <li><a href="#message-tabs-2">Details</a></li>
+    </ul>
+
+    <div id="message-tabs-1">
+
+      <div id="google_map_section-1" data-url="<%= messages_urls(@messages) %>" data-name="<%= messages_names(@messages) %>" data-lat="<%= messages_lats(@messages) %>" data-long="<%= messages_longs(@messages) %>">
+      </div>
+
+    </div>
+
+
+    <div id="message-tabs-2">
+
+      <div class="item-table">
+        <table>
+          <tr class="listing-header">
+            <td class="listing-i-fm">Message:</td>
+            <td>Location:</td>
+            <td><%= link_to "Group", sort_index_messages_path(:sort => "group_id"), :remote => true %></td>
+            <td><%= link_to "Posted by", sort_index_messages_path(:sort => "user_id"), :remote => true %></td>
+            <td><%= link_to "Posted at", sort_index_messages_path(:sort => "created_at"), :remote => true %></td>
+            <td class="listing-i-f">Actions</td>
+          </tr>
+          <%= render @messages %>
+
+        </table>
+      </div>
+    </div>
+
+  </div>
+<% end %>

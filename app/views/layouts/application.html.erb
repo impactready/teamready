@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Incivent | Visualised Operations
+    </title>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/include' %>
+  </head>
+
+  <body>
+
+    <section class="notifications">
+      <% flash.each do |key, value| %>
+        <div class="flash_<%= key %>"><strong><%= value %></strong></div>
+      <% end %>
+    </section>
+
+    <section class="header-wrapper">
+      <%= render 'layouts/header' %>
+    </section>
+    
+    <section class="container"> 
+      <div class="page">
+       <%= yield %>
+      </div>
+    </section>
+    
+    <section class="footer-wrapper">
+      <%= render 'layouts/footer_menu' %>
+      <%= debug(params) if Rails.env.development? %>
+    </section>
+
+  </body>
+</html>

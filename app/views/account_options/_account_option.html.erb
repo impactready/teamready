@@ -1,0 +1,11 @@
+<div class="listing">  
+  <div class="listing-item">
+    <div class="listing-i-fm"><%= account_option.name %></div>
+    <div class="listing-i-f"><%= account_option.cost %></div>
+    <div class="listing-i-f"><%= account_option.users %></div>
+    <div class="listing-i-f"><%= account_option.groups %></div>
+    <div class="listing-i-f"><%= link_to 'Edit', edit_account_option_path(account_option) %></div>
+    <div class="listing-i-f"><%= link_to 'Delete', account_option, :data => {:confirm => 'Are you sure?'}, :method => :delete %></div>
+    <br class="clear" />
+  </div>
+</div>

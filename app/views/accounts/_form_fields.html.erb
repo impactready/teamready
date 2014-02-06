@@ -1,0 +1,11 @@
+<%= semantic_form_for @account do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name %>
+    <%= f.input :account_option, :include_blank => false %>
+    <% if current_user && current_user.god_user %>
+        <%= f.input :active, :as => :select %>
+        <%= f.input :payment_active, :as => :select %>
+    <% end %>
+  <% end %>
+  <%= f.buttons%>
+<% end %>

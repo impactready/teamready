@@ -1,0 +1,16 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Message</h2>
+</div>
+
+<p class="normal">
+  <% if current_user.master_user? %>
+    <%= link_to "Edit this Message", edit_message_path(@message) %>  |
+    <%= link_to "Delete this Message", @message, :method => :delete, :data => {:confirm => "Are you sure?"}, :title => "Delete message" %>  |
+  <% end %>
+  <%= link_to 'Back to Messages', messages_path %>
+</p>
+
+<%= render 'messages/message_show_detail' %>

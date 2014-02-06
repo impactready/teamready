@@ -1,0 +1,66 @@
+<header>
+
+  <div class="above-header">
+    <div class="container">
+      <% if signed_in? %>
+        <div class="top-name">
+          Hello <strong><%= current_user.first_name %>!</strong>  
+        </div>
+      <% end %>
+      <nav class="top-menu">
+          <ul>
+              <% if signed_in? %>
+                  <li><%= link_to "Support", contact_path %></li>     
+                  <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+              <% else %>
+                  <li><%= link_to "Home", '/' %></li>
+                  <li><%= link_to "Pricing/Signup", pricing_path %></li>
+                  <li><%= link_to "About Us", about_path %></li>
+                  <li><%= link_to "Contact Us", contact_path %></li>
+                  <li><%= link_to "Sign in", signin_path %></li>
+              <% end %>
+          </ul>
+      </nav>
+      <br class="clear"/>
+    </div>
+  </div>
+
+  <div class="header-main">
+    <div class="container">
+      <div class="main-page-image">
+          <%= image_tag("HeaderLogo.png", :alt => "Incivent") %>
+      </div>
+    </div>
+  </div>
+  <% if signed_in? %>
+    <div class="header-info">
+      <div class="container">
+        <div class="main-page-user_info">       
+          Account: <strong><%= current_user.account.name %></strong>
+        </div>
+
+        <nav class="main-menu">
+            <ul>
+                <% if signed_in? %>
+                  <li><%= link_to "Dashboard", groups_path %></li>
+                  <li><%= link_to "Events", incivents_path %></li>
+                  <li><%= link_to "Tasks", tasks_path %></li>
+                  <li><%= link_to "Messages", messages_path %></li>
+                  <% if current_user.master_user? %>
+                    <li><%= link_to "User Admin", users_path %></li>
+                  <% else %>
+                    <li><%= link_to "Fellow Members", users_path %></li>
+                  <% end %>
+                  <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+                  <% if current_user.master_user? %>
+                    <li><%= link_to "Account Management", current_user.account %></li>
+                  <% end %>
+                <% end %>
+            </ul>
+        </nav>
+        <br class="clear"/>
+      </div>
+    </div>
+  <% end %>
+
+</header>

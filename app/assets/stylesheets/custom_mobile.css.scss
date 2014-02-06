@@ -1,0 +1,164 @@
+/* Error Showing */
+@import "errors";
+
+
+/* Layouts */
+
+div.spacer {
+  height: 15px;
+  beckground: none;
+}
+
+div.mobile-header-main {
+  background-color: #D1D1D1;
+  background-image: -moz-linear-gradient(
+    hsla(0,0%,100%,0),
+    hsla(0,0%,100%,.5) 20px
+  );
+  background-image: -webkit-gradient(
+    linear, 0 0, 0 20,
+    from(hsla(0,0%,100%,0)),
+    to(hsla(0,0%,100%,.5))
+  );
+  padding: 15px 5px 0 5px;
+  border-bottom: 1px solid #919191;
+  height: 45px;
+  img {
+    height: 30px;
+  }
+}
+
+div.mobile-heading-block {
+  font-family: 'AbeeZee', sans-serif;
+  color: #333;
+  padding: 10px 5px 2px 5px;
+  background-color: #8EE5EE;
+  height: 40px;
+  text-align: center;
+  border-top: 1px solid #EEE;
+  border-bottom: 1px solid #919191;
+}
+
+div.mobile-form {
+  background-color: #FFFFFD;
+  padding: 0 5px 0 5px;
+}
+
+div.mt-item {
+  border-bottom: 1px solid #eee;
+  -webkit-box-shadow: 0px 1px 2px hsla(0,0%,0%,.2);
+  box-shadow: 0px 1px 2px hsla(0,0%,0%,.2);
+  background-color: #FFFFFD;
+  div.mt-name {
+    font-size: 18px;
+    padding-top: 4px;
+    text-align: center;
+    min-height: 50px;
+    background-color: #E5E2FA;
+    background-image: -moz-linear-gradient(
+      hsla(0,0%,100%,0),
+      hsla(0,0%,100%,.5) 20px
+    );
+    background-image: -webkit-gradient(
+      linear, 0 0, 0 20,
+      from(hsla(0,0%,100%,0)),
+      to(hsla(0,0%,100%,.5))
+    );
+    border-top: 1px solid #999;
+  }
+  div.mt-name:even {
+    background-color: #F9F9FB;
+  }
+  div.mt-info {
+    border-top: 1px solid #DDD;
+    float: none;
+    display: none;
+  }
+
+  div.mt-buttons {
+    background-color: #fff;
+    padding: 8px 3px 6px 3px;
+    div[class^="mt-button"] {
+      color: #eee;
+      background-color: #2F4F4F;
+      margin-bottom: 3px;
+      padding-top: 15px;
+      height: 40px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background-image: -moz-linear-gradient(
+        hsla(0,0%,100%,.3),
+        hsla(0,0%,100%,0) 20px
+      );
+      background-image: -webkit-gradient(
+        linear, 0 0, 0 20,
+        from(hsla(0,0%,100%,.3)),
+        to(hsla(0,0%,100%,0))
+      );
+    }
+    div.mt-button-s {
+      background-color: #7AC5CD;
+      background-image: -moz-linear-gradient(
+          hsla(0,0%,100%,.7),
+          hsla(0,0%,100%,0) 20px
+      );
+      background-image: -webkit-gradient(
+          linear, 0 0, 0 20,
+          from(hsla(0,0%,100%,.7)),
+          to(hsla(0,0%,100%,0))
+      );
+      a {
+        text-decoration: none;
+      }
+
+    }
+  }
+}
+
+
+/* Form */
+form.formtastic input[type="submit"] {
+  width: 99%;
+}
+
+form.formtastic fieldset > ol > li.string input,
+form.formtastic fieldset > ol > li.file input,
+form.formtastic fieldset > ol > li.date input,
+form.formtastic fieldset > ol > li.password input,
+form.formtastic fieldset > ol > li.numeric input,
+form.formtastic fieldset > ol > li.email input,
+form.formtastic fieldset > ol > li.url input,
+form.formtastic fieldset > ol > li.phone input,
+form.formtastic fieldset > ol > li.search input,
+form.formtastic fieldset > ol > li.text textarea {
+  width: 99%;
+  float: none;
+}
+
+form.formtastic fieldset.buttons {
+  margin-left: 0;
+  padding: 0.5em 0;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+form.formtastic fieldset.buttons li {
+  float: none;
+  input {
+    height: 40px;
+  }
+
+}
+
+form.formtastic fieldset > ol > li {
+margin-bottom: 0.1em;
+}
+
+form.formtastic fieldset > ol > li > fieldset label {
+  float: none;
+}
+form.formtastic fieldset > ol > li label {
+  float: none;
+}
+

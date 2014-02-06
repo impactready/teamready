@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>
+      Incivent | The Dreaded 422
+    </title>
+    <%= csrf_meta_tag %>
+    <%= render 'layouts/include' %>
+  </head>
+
+  <body>
+
+    <section class="header-wrapper">
+      <%= render 'layouts/header' %>
+    </section>
+    
+    <section class="errors">
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>
+    </section>
+    
+    <section class="container"> 
+      <div class="page">
+        <h1>Oh dear... something went wrong!</h1>
+        <p>The change you wanted was rejected. Maybe you tried to change something you didn't have access to.</p>
+      </div>
+    </section>
+    
+    <section class="footer-wrapper">
+      <%= render 'layouts/footer_menu' %>
+      <%= debug(params) if Rails.env.development? %>
+    </section>
+
+  </body>
+</html>
+

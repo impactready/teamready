@@ -1,0 +1,28 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Messages</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<% if @launch_interests.count == 0 %>
+  <div class="general-form">
+    No messages are available yet.
+  </div>
+
+<% else %>
+
+  <div class="listing">
+    <div class="listing-header">
+      <div class="listing-i-fm">Email:</div>
+      <div class="listing-i-fxl">Message:</div>
+      <br class="clear"/>
+    </div>
+  </div>
+
+  <%= render @launch_interests %>
+
+<% end %>

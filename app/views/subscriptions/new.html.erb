@@ -1,0 +1,23 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Account Activation</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal">Please enter the activation code obtained from our implementation partner below. You can request an activtion code from Impactready <a href="http://www.impactready.org">here.</a></p>
+<div class="general-form">
+	<div class="subscribe-container">
+		 <%= semantic_form_for :activation, :url => activate_subscriptions_path, :method => 'post' do |f|%>
+        <%= f.inputs do %>
+          <%= f.input :code %>
+        <% end %>
+        <%= f.buttons do %>
+          <%= f.commit_button :label => "Submit" %>
+        <% end %>
+      <% end %>
+	</div>
+</div>

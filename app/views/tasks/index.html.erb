@@ -1,0 +1,62 @@
+<%= javascript 'googleearth' %>
+
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>All Tasks</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal"><%= link_to 'New Task', new_task_path %></p>
+
+
+<% if @tasks.empty? %>
+
+  <div class="general-form">
+    <p class="normal"> You have no tasks associated with you or your groups.</p>
+  </div>
+
+<% else %>
+
+  <div id="ids-for-earth" data-ids="1"></div>
+
+  <div id="task-tabs">
+
+    <ul>
+      <li><a href="#task-tabs-1">Location</a></li>
+      <li><a href="#task-tabs-2">Details</a></li>
+    </ul>
+
+    <div id="task-tabs-1">
+
+      <div id="google_map_section-1" data-url="<%= tasks_urls(@tasks) %>" data-name="<%= tasks_names(@tasks) %>" data-lat="<%= tasks_lats(@tasks) %>" data-long="<%= tasks_longs(@tasks) %>">
+      </div>
+
+    </div>
+
+
+    <div id="task-tabs-2" class="item-table">
+
+      <table>
+        <tr class="listing-header">
+          <td class="listing-i-fd">Description:</td>
+          <td class="listing-i-fb">Location:</td>
+          <td><%= link_to "Raised by", sort_index_tasks_path(:sort => "raised_user_id"), :remote => true %></td>
+          <td><%= link_to "Raised", sort_index_tasks_path(:sort => "created_at"), :remote => true %></td>
+          <td><%= link_to "Priority", sort_index_tasks_path(:sort => "priority_id"), :remote => true %></td>
+          <td><%= link_to "Status", sort_index_tasks_path(:sort => "status_id"), :remote => true %></td>
+          <td><%= link_to "Assigned to", sort_index_tasks_path(:sort => "user_id"), :remote => true %></td>
+          <td><%= link_to "Due Date", sort_index_tasks_path(:sort => "due_date"), :remote => true %></td>
+          <td class="listing-i-f">Image</td>
+        </tr>
+
+        <%= render @tasks %>
+      </table>
+
+    </div>
+
+  </div>
+<% end %>

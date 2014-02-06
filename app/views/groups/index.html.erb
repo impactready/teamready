@@ -1,0 +1,44 @@
+<%= javascript 'googleearth' %>
+
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+    <h2>All Groups</h2>
+</div>
+
+<div class="spacer">
+</div>
+<% if current_user.master_user? %>
+  <p class="normal"><%= link_to 'Create a New Group', new_group_path %></p>
+<% end %>
+
+<% if @groups.count == 0%>
+
+  <div class="general-form">
+    <% if current_user.master_user? %>
+      <p class="normal">You have not created any groups. Please use the link above to create your first group.</p>
+    <% else %>
+      <p class="normal">You have not been assigned to any groups. Please contact the Account Administrator.</p>
+    <% end %>
+  </div>
+
+<% else %>
+
+  <div id="ids-for-earth" data-ids="<%= @groups.map(&:id).join(", ") %>">
+  </div>
+
+  <div id="group-tabs">
+    <ul>
+      <% @groups.each do |group| %>
+        <li><a href="#group-tabs-<%= group.id %>"><%= group.name %></a></li>
+      <% end %>
+    </ul>
+
+    <% @groups.each do |group|%>
+        <%= render 'groups/group_show', :group => group %>
+    <% end %>
+
+  </div>
+
+<% end %>

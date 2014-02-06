@@ -1,0 +1,18 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Event</h2>
+</div>
+
+<p class="normal">
+  <% if current_user?(@incivent.user) || current_user.master_user? %>
+    <%= link_to "Edit this Event", edit_incivent_path(@incivent) %>  | 
+    <%= link_to "Delete this Event", @incivent, :method => :delete, :data => {:confirm => "Are you sure?"}, :title => "Delete #{@incivent.name}" %>  |  
+  <% end %>
+  <%= link_to 'Back to Events', incivents_path %>
+</p>
+
+<%= render 'incivents/incivent_show_detail' %>
+
+<p class="normal"><%= link_to 'Back to Events', incivents_path %></p>

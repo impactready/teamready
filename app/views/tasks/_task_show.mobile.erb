@@ -1,0 +1,20 @@
+<div class="mt-item" data-task-name="<%= task.id %>">
+  <div class="mt-name">
+    <%= task.description %>
+  </div>
+  <div class="mt-info">
+    <div class="mobile-form">
+      <%= semantic_form_for task do |f| %>
+        <%= f.inputs do %>
+          <%= f.input :complete, as: :hidden, value: true %>
+        <% end %>
+        <%= f.buttons do %>
+          <%= f.commit_button :label => "Complete this Task" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+

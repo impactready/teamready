@@ -1,0 +1,14 @@
+<%= semantic_form_for @message do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :description, :input_html => { :cols => 40, :rows => 5 } %>
+    <%= f.input :location, :hint => "You must enter either an address OR latitude and longitude as decimal degrees" %>
+    <%= f.input :group, :collection => current_user.groups, :member_label => :name, :include_blank => false %>
+    <%= f.input :latitude %>
+    <%= f.input :longitude %>
+    <%= f.input :archive, :label => "Archive this Message" %>
+    <%= f.input :user_id, :as => :hidden %>
+  <% end %>
+  <%= f.buttons do %>
+    <%= f.commit_button :label => "Submit" %>
+  <% end %>
+<% end %>

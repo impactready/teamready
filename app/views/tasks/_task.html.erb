@@ -1,0 +1,24 @@
+
+<tr class="listing-item">
+  <td class="listing-i-fd"><%= link_to task.description, task_path(task) %></td>
+  <td class="listing-i-fb"><%= task.location %></td>
+  <% if current_user?(user_locate_by_id(task.raised_user_id)) %>
+    <td>You</td>
+  <% else %>
+    <td><%= user_locate_by_id(task.raised_user_id).full_name %></td>
+  <% end %>
+  <td><%= time_ago_in_words(task.created_at) %> ago</td>
+   <td><%= task.priority.description %></td>
+  <td><%= task.status.description %></td>
+  <% if current_user?(task.user) %>
+    <td>You</td>
+  <% else %>
+    <td><%= task.user.full_name %></td>
+  <% end %>
+  <td><%= task.due_date %></td>
+  <% if task.task_image.url == '/task_images/original/missing.png' %>
+    <td><%= image_tag 'missingThumb.png' %></td>
+  <% else %>
+    <td><%= image_tag task.task_image.url(:thumb) %></td>
+  <% end %>
+</tr>

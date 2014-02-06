@@ -1,0 +1,20 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Reset Password - Step 1</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<div class="general-form">
+	<%= semantic_form_for(:p_reset, :url => password_resets_path) do |f|%>
+	  <%= f.inputs do %>
+	  	<%= f.input :email %>
+	  <% end %>
+	 	<%= f.buttons do %>
+      <%= f.commit_button :label => "Submit Email" %>
+    <% end %>
+	<% end %>
+</div>

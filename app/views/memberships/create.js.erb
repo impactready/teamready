@@ -1,0 +1,10 @@
+$('#group-admin').html(
+  '<table>' +
+    '<tr class="listing-header">' +
+      '<td class="listing-i-ff">Name:</td>' +
+      '<td class="listing-i-fl">Description:</td>' +
+      '<td>Membership Status:</td>' +
+    '</tr>' +
+    '<%= escape_javascript(render(@groups)) %>' +
+  '</table>'
+)

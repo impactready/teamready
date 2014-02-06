@@ -1,0 +1,32 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Account options</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<% if @account_options.count == 0 %>
+  <div class="general-form">
+    No account options are available yet.<%= link_to 'Create one now', new_account_option_path %>
+  </div>
+
+<% else %>
+  <p class='normal'><%= link_to 'New account option', new_account_option_path %></p>
+
+  <div class="listing">
+    <div class="listing-header">
+      <div class="listing-i-fm">Description:</div>
+      <div class="listing-i-f">Cost:</div>
+      <div class="listing-i-f">Users:</div>
+      <div class="listing-i-f">Groups:</div>
+      <br class="clear"/>
+    </div>
+  </div>
+
+  <%= render @account_options %>
+
+<% end %>
+

@@ -1,0 +1,49 @@
+<div class="index-wrapper">
+  <div class="index-listing">
+    <div class="item-table">
+      <table>
+        <tr class="listing-header">
+          <td class="listing-i-i">Characteristic</td>
+          <td>Value</td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Description:</td>
+          <td><%= @message.description %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Raised by:</td>
+          <% if current_user?(@message.user) %>
+            <td>You</td>
+          <% else %>
+            <td><%= @message.user.full_name %></td>
+          <% end %>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Raised:</td>
+          <td><%= time_ago_in_words(@message.created_at) %> ago</td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Location:</td>
+          <% if @message.location == "" %>
+            <td>Unnamed Coordinates</td>
+          <% else %>
+            <td><%= @message.location %></td>
+          <% end %>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Group:</td>
+          <td><%= @message.group.name %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Coordinates - Latitude:</td>
+          <td><%= @message.latitude %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Coordinates - Longitude:</td>
+          <td><%= @message.longitude %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>

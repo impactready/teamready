@@ -1,0 +1,87 @@
+/* -------------------------------------------------------------------------------------------------
+
+Load this stylesheet after formtastic.css in your layouts to override the CSS to suit your needs.
+This will allow you to update formtastic.css with new releases without clobbering your own changes.
+
+For example, to make the inline hint paragraphs a little darker in color than the standard #666:
+
+form.formtastic fieldset > ol > li p.inline-hints { color:#333; }
+
+HINT:
+The following style may be *conditionally* included for improved support on older versions of IE(<8)
+form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
+
+--------------------------------------------------------------------------------------------------*/
+
+
+form {
+  font-family: Helvetica, sans-serif;
+}
+
+form.formtastic input, form.formtastic textarea, form.formtastic select {
+  font: inherit;
+  padding: 2px;
+  border: 1px solid #BABABA;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+
+}
+
+form.formtastic fieldset > ol > li.text textarea {height: 100px; }
+
+form.formtastic input[type="submit"] {
+  background-color: #7AC5CD;
+  padding: 2px 7px 2px 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background-image: -moz-linear-gradient(
+      hsla(0,0%,100%,.7),
+      hsla(0,0%,100%,0) 20px
+  );
+  background-image: -webkit-gradient(
+      linear, 0 0, 0 20,
+      from(hsla(0,0%,100%,.7)),
+      to(hsla(0,0%,100%,0))
+  );
+  -webkit-box-shadow: 1px 1px 1px hsla(0,0%,0%,.3);
+  box-shadow: 1px 1px 1px hsla(0,0%,0%,.3);
+}
+
+form.formtastic fieldset.buttons { margin-left: 0; padding:0.5em 0; margin-top:-0.5em; margin-bottom:1em; }
+
+form.formtastic fieldset > ol > li p.inline-errors {
+  color:#cc0000;
+  margin:0.5em 460px 0 130px;
+  font-size: 0.8em;
+}
+
+form.formtastic fieldset > ol > li p.inline-hints {
+  color:#666;
+  margin:0.5em 460px 0 130px;
+  font-size: 0.8em;
+}
+
+form.formtastic fieldset > ol > li {
+  padding: 3px 2px 2px 2px;
+  margin-top: 0;
+}
+
+form.formtastic fieldset > ol > li.boolean label {
+    padding-left: 0px;
+}
+
+/*form.formtastic fieldset > ol > li.boolean label input {
+  margin:0 0.5em 0 0;
+}*/
+
+.listing-i-ff form.formtastic fieldset.buttons {
+  margin-left: 0px;
+  padding-top: 0px;
+}
+
+.item-table form.formtastic fieldset.buttons {
+    margin: 0px;
+    padding: 0px;
+}

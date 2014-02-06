@@ -1,0 +1,41 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Status Options</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal">
+  <%= link_to 'New status', new_status_path %>
+</p>
+
+<% if @statuses.count == 0 %>
+
+  <div class="general-form">
+    <p class="normal">You have not set up any statuses yet.</p>
+  </div>
+
+<% else %>
+
+  <div class="item-table">
+    <table>
+      <tr class="listing-header">
+        <td class="listing-i-fm">Description:</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <% @statuses.each do |status| %>
+        <tr class="listing-item">
+          <td class="listing-i-fm"><%= status.description %></td>
+          <td><%= link_to 'Edit', edit_priority_path(status) %></td>
+          <td><%= link_to 'Delete', status, :data => {:confirm => 'Are you sure?'}, :method => :delete %></td>
+        </tr>
+      <% end %>
+    </table>
+
+  </div>
+<% end %>
+

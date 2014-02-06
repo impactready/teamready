@@ -1,0 +1,74 @@
+/* Error and success messages */
+
+
+.flash_error, .flash_notice, .flash_success {
+    padding-top: 6px;
+    height: 28px;
+    background: #FFFFFF;
+    text-align: center;   
+}
+
+.flash_error {
+    color: #FF0000;
+    border: solid 2px #FF0000;
+}
+
+.flash_notice {
+    color: #20B2AA;
+    border: solid 2px #20B2AA;
+}
+
+.flash_success {
+    color: #008B00;
+    border: solid 2px #008B00;
+}
+
+#form-errors {
+    color:#8a1f11;
+}
+
+div#form-errors  h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.field_with_errors {
+    margin-top: 5px;
+    background-color: red;
+    border-radius: 10px;
+    display: table;
+}
+
+.field_with_errors label {
+    color: #fff;
+}
+
+#error_explanation {
+    width: 400px;
+    border: 2px solid red;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff;
+}
+
+#error_explanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px;
+}
+
+#error_explanation ul li {
+    font-size: 12px;
+    list-style: square;
+}

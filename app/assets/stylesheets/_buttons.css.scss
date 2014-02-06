@@ -1,0 +1,30 @@
+
+/* Buttons */
+
+input[type="submit"] {
+    background-color: #7AC5CD;
+    border: 1px solid #BABABA;
+    padding: 1px 4px 1px 4px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background-image: -moz-linear-gradient(
+        hsla(0,0%,100%,.7),
+        hsla(0,0%,100%,0) 20px
+    );
+    background-image: -webkit-gradient(
+        linear, 0 0, 0 20,
+        from(hsla(0,0%,100%,.7)),
+        to(hsla(0,0%,100%,0))
+    );
+}
+
+.subscribe-container {
+    padding-top: 10px;
+}
+.subscribe-form {
+    padding: 35px 30px 25px;
+    background: #eee;
+    border: 1px solid #ddd;
+
+}

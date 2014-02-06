@@ -1,0 +1,24 @@
+<% content_for :head do -%>
+  <%= stylesheet_link_tag 'static_pages.css' %>
+<% end %>
+
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Want to know more?</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<div class="general-form">
+	<% unless signed_in? %>
+	  <h3>Want to discuss our offering? Leave us a message and we will get in touch in 24 hours. Note: We personally suffer from spamming every day and we will not share your email adress with anyone. Ever.</h3>
+	<% else %>
+		<h3>For support, billing and general enquiries contact us using the form below.</h3>
+	<% end %>
+  <br/>
+  <%= render 'launch_interests/form_fields' %>
+  
+</div>

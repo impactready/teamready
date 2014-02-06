@@ -1,0 +1,65 @@
+<div class="index-wrapper">
+  <div class="index-listing">
+    <div class="item-table">
+      <table>
+        <tr class="listing-header">
+          <td class="listing-i-i">Characteristic</td>
+          <td>Value</td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Description:</td>
+          <td><%= @task.description %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Raised by:</td>
+          <% if current_user?(user_locate_by_id(@task.raised_user_id)) %>
+            <td>You</td>
+          <% else %>
+            <td><%= user_locate_by_id(@task.raised_user_id).full_name %></td>
+          <% end %>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Assigned to:</td>
+          <% if current_user?(@task.user) %>
+            <td>You</td>
+          <% else %>
+            <td><%= @task.user.full_name %></td>
+          <% end %>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Raised:</td>
+          <td><%= time_ago_in_words(@task.created_at) %> ago</td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Due:</td>
+          <td><%= @task.due_date %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Location:</td>
+          <% if @task.location == "" %>
+            <td>Unnamed Coordinates</td>
+          <% else %>
+            <td><%= @task.location %></td>
+          <% end %>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Group:</td>
+          <td><%= @task.group.name %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Coordinates - Latitude:</td>
+          <td><%= @task.latitude %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Coordinates - Longitude:</td>
+          <td><%= @task.longitude %></td>
+        </tr>
+        <tr class="listing-item">
+          <td class="listing-i-i">Complete:</td>
+          <td><%= @task.complete? ? 'Yes' : 'No' %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>

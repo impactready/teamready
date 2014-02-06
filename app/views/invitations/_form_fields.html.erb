@@ -1,0 +1,10 @@
+<%= semantic_form_for @invitation do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :recipient_email, :label => "Email address" %>
+    <%= f.input :account_id, :as => :hidden %>
+  <% end %>
+  <%= f.buttons do %>
+    <%= f.commit_button :label => "Submit" %>
+  <% end %>
+<% end %>
+  

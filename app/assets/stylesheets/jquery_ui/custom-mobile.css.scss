@@ -1,0 +1,24 @@
+@import "errors";
+
+div.mobile-header-main {
+    font-family: 'Arimo', sans-serif;
+    background-color: #D1D1D1;
+    background-image: -moz-linear-gradient(
+        hsla(0,0%,100%,0),
+        hsla(0,0%,100%,.4) 105px
+    );
+    background-image: -webkit-gradient(
+        linear, 0 0, 0 105,
+        from(hsla(0,0%,100%,0)),
+        to(hsla(0,0%,100%,.4))
+    );
+    padding: 0 5px 0 5px;
+    -webkit-border-radius: 0 2px;
+    border-radius: 0 2px;
+    border-top: 2px solid #ECF1EF;
+    border-bottom: 2px solid #919191;
+    height: 45px;
+    img {
+        height: 30px;
+    }
+}

@@ -1,0 +1,59 @@
+<div id="group-tabs-<%= group.id %>">
+  <div class="item-table">
+    <table>
+      <tr class="listing-header">
+        <td class="listing-i-f">Name:</td>
+        <td class="listing-i-fl">Description:</td>
+        <td>Number of Events</td>
+        <td>Number of Tasks</td>
+        <td>Number of Messages</td>
+        <td class="listing-i-f">Actions</td>
+      </tr>
+
+      <tr class="listing-item">
+        <td class="listing-i-f"><%= group.name %></td>
+        <td class="listing-i-fl"><%= group.description %></td>
+        <td><%= group.incivents.count %></td>
+        <td><%= group.tasks.count %></td>
+        <td><%= group.messages.count %></td>
+        <% if current_user.master_user? %>
+          <td class="listing-i-f"><%= link_to 'Edit', edit_group_path(group) %> |
+          <%= link_to 'Delete', group, :data => {:confirm => 'Are you sure?'}, :method => :delete %></td>
+        <% end %>
+      </tr>
+    </table>
+  </div>
+
+  <div class="spacer">
+  </div>
+
+  <div class="heading-block-in">
+    <h2>Group Dashboard: <%= group.name %></h2>
+  </div>
+
+  <% if group.incivents.count == 0 && group.tasks.count == 0 && group.messages.count == 0 %>
+    <div class="general-form">
+      <p class="normal">There are no incivents, tasks or messages in this group.</p>
+    </div>
+  <% else %>
+    <div id="google_map_section-<%= group.id %>" data-kml="<%= attachment_url(group.geo_info) %>" data-url="<%= group_feature_urls(group) %>" data-name="<%= group_feature_names(group) %>" data-lat="<%= group_lats(group) %>" data-long="<%= group_longs(group) %>">
+    </div>
+  <% end %>
+  <% unless group.updates.empty? %>
+
+    <div class="spacer">
+    </div>
+
+    <div class="heading-block-in">
+      <h2>Group Updates: <%= group.name %></h2>
+    </div>
+
+    <div class="spacer">
+    </div>
+
+    <div class="general-form-in">
+      <%= render group.updates %>
+    </div>
+  <% end %>
+
+</div>

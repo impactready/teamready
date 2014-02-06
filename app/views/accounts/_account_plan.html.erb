@@ -1,0 +1,5 @@
+<% if @account.account_option.cost == "0" %>
+  <p class="normal"><strong>Account Option: </strong><%= @account.account_option.name%> at <strong>$<%= @account.account_option.cost %></strong> per month.</p>
+<% else %>
+  <p class="normal"><strong>Account Option: </strong><%= @account.account_option.name%></p>
+<% end %>

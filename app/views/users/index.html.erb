@@ -1,0 +1,36 @@
+<div class="spacer">
+</div>
+<% if current_user.master_user? %>
+  <div class="heading-block">
+    <h2>All Users</h2>
+  </div>
+<% else %>
+  <div class="heading-block">
+    <h2>All Users in your Groups</h2>
+  </div>
+<% end %>
+<% if @users.count == 0%>
+
+  <% if current_user.master_user? %>
+    <p>You have not added any users to this account.</p>
+  <% else %>
+    <p>You have no fellow members. You need to be assigned to groups to see your fellow members.</p>
+  <% end %>
+
+<% else %>
+
+  <div class="spacer">
+  </div>
+
+  <div class="item-table">
+    <table>
+      <tr class="listing-header">
+        <td>Name:</td>
+        <td class="listing-i-fxl">Memberships:</td>
+        <td></td>
+      </tr>
+      <%= render @users %>
+    </table>
+  </div>
+
+<% end %>

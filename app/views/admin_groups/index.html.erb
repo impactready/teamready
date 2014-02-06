@@ -1,0 +1,23 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Membership Administration: <%= @user.first_name %> <%= @user.last_name %></h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal"><%= link_to 'Back to Users', users_path %></p>
+
+<div class="item-table">
+  <table>
+    <tr class="listing-header">
+      <td class="listing-i-ff">Name</td>
+      <td class="listing-i-fl">Description</td>
+      <td>Membership Status</td>
+      <td>Actions</td>
+    </tr>
+    <%= render @groups %>
+  </table>
+</div>

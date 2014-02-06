@@ -1,0 +1,16 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Task</h2>
+</div>
+
+<p class="normal">
+  <% if current_user.master_user? %>
+    <%= link_to "Edit this Task", edit_task_path(@task) %>  |
+    <%= link_to "Delete this Task", @task, :method => :delete, :data => {:confirm => "Are you sure?"}, :title => "Delete task" %>  |
+  <% end %>
+  <%= link_to 'Back to Tasks', tasks_path %>
+</p>
+
+<%= render 'tasks/task_show_detail' %>

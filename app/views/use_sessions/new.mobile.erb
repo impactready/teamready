@@ -1,0 +1,15 @@
+<div class="mobile-heading-block">
+    <h2>Sign In</h2>
+</div>
+<div class="mobile-form">
+  <%= semantic_form_for(:session, :url => use_sessions_path) do |f|%>
+    <%= f.inputs do%>
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.input :remember_me, :as => :boolean %>
+    <% end %>
+    <%= f.buttons do %>
+      <%= f.commit_button :label => "Sign in" %>
+    <% end %>
+  <% end %>
+</div>

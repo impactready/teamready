@@ -1,0 +1,43 @@
+<%= javascript 'mobile' %>
+
+<div class="mobile-heading-block">
+    <h2>All Tasks</h2>
+</div>
+<% if @tasks.count == 0 %>
+
+  <div class="mobile-form">
+    <p>You do not have any tasks assigned to you.</p>
+  </div>
+
+<% else %>
+
+  <div class="mobile-task-table">
+    <% @tasks.each do |task| %>
+        <% unless task.complete? %>
+          <%= render 'tasks/task_show', :task => task %>
+        <% end %>
+    <% end %>
+  </div>
+
+<% end %>
+
+<div class="spacer"></div>
+
+<div class="mobile-heading-block">
+    <h2>Report In</h2>
+</div>
+
+<div class="mt-item">
+  <div class="mt-buttons">
+    <div class="mt-button-i">New Event</div>
+    <div class="mt-button-t">New Task</div>
+    <div class="mt-button-m">New Message</div>
+  </div>
+</div>
+
+<div class="mt-item">
+  <div class="mt-buttons">
+    <div class="mt-button-s"><%= link_to "Sign out", signout_path, :method => :delete %></div>
+  </div>
+</div>
+

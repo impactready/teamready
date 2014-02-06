@@ -1,0 +1,69 @@
+<%= javascript 'googleearth' %>
+
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>All Events</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal"><%= link_to 'New Event', new_incivent_path %></p>
+
+
+<% if @incivents.empty? %>
+
+  <div class="general-form">
+    <p class="normal"> You have no events associated with you or your groups.</p>
+  </div>
+
+<% else %>
+
+  <div id="ids-for-earth" data-ids="1"></div>
+
+  <div id="incivent-tabs">
+
+    <ul>
+      <li><a href="#incivent-tabs-1">Location</a></li>
+      <li><a href="#incivent-tabs-2">Details</a></li>
+    </ul>
+
+    <div id="incivent-tabs-1">
+
+      <div id="google_map_section-1" data-url="<%= incivents_urls(@incivents) %>" data-name="<%= incivents_names(@incivents) %>" data-lat="<%= incivents_lats(@incivents) %>" data-long="<%= incivents_longs(@incivents) %>">
+      </div>
+
+    </div>
+
+    <div id="incivent-tabs-2">
+
+      <div class="general-form">
+        <%= render 'incivents/search_form' %>
+      </div>
+
+      <div class="item-table">
+
+        <table>
+          <tr class="listing-header">
+            <td class="listing-i-fm">Name:</td>
+            <td><%= link_to "Raised", sort_index_incivents_path(:sort => "created_at"), :remote => true %></td>
+            <td><%= link_to "Priority", sort_index_incivents_path(:sort => "priority_id"), :remote => true %></td>
+            <td><%= link_to "Status", sort_index_incivents_path(:sort => "status_id"), :remote => true %></td>
+            <td><%= link_to "Type", sort_index_incivents_path(:sort => "type_id"), :remote => true %></td>
+            <td>Location:</td>
+            <td><%= link_to "Group", sort_index_incivents_path(:sort => "group_id"), :remote => true %></td>
+            <td>Image</td>
+          </tr>
+
+          <%= render @incivents %>
+        </table>
+      </div>
+    </div>
+
+  </div>
+<% end %>
+
+
+

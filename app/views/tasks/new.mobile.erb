@@ -1,0 +1,26 @@
+<div class="mobile-heading-block">
+    <h2>New Task</h2>
+</div>
+<div class="mobile-form">
+  <%= semantic_form_for @task, :html => {:multipart => true} do |f| %>
+    <%= f.inputs do %>
+      <%= f.input :description, size: "12x12"  %>
+      <%= f.input :priority, :collection => @account.priorities, :member_label => :description, :include_blank => false %>
+      <%= f.input :status, :collection => @account.statuses, :member_label => :description, :include_blank => false %>
+      <%= f.input :location %>
+      <%= f.input :group, :collection => current_user.groups, :member_label => :name %>
+      <%= f.input :user, :collection=> @account.users, :member_label => :full_name, :include_blank => false %>
+      <%= f.input :latitude %>
+      <%= f.input :longitude %>
+      <li class="string input optional stringish">
+        <%= f.label :due_date, :class => " label" %>
+        <%= f.text_field :due_date, :type => "Date" %>
+      </li>
+      <%= f.input :task_image, :as => :file, :label => "Task Image" %>
+      <%= f.input :raised_user_id, :as => :hidden %>
+    <% end %>
+    <%= f.buttons do %>
+      <%= f.commit_button :label => "Submit" %>
+    <% end %>
+  <% end %>
+</div>

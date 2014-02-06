@@ -1,0 +1,72 @@
+/* Google Earth */
+
+div[id^="google_map_section"] {
+    height: 530px;
+    width: 930px;
+}
+
+.map-label {
+    font-size: 1.1em;
+    background-color:#ffffff;
+    opacity: .88;
+    filter: alpha(opacity=88);
+    width: 140px;
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    border:2px #404040 solid;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 2px 4px 4px hsla(0,0%,0%,.4);
+    box-shadow: 2px 4px 4px hsla(0,0%,0%,.4);
+}
+
+div[class^="label-"] {
+    color: #000000;
+    padding: 1px 0px;
+    text-align: center;
+    font-size: 13px;
+}
+
+div.label-message {
+    background-color: #00BFFF;
+}
+
+div.label-incivent {
+    background-color: #FF4500;
+
+}
+
+div.label-task {
+    background-color: #ffe956;
+}
+
+div.label-content {
+    padding: 1px 2px;
+    text-align: left;
+}
+
+div.label-footer {
+    padding: 1px 2px;
+    text-align: left;
+    background-color: #E5E5E5;
+    color: #424242;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+/* Photo */
+
+.photo {
+    margin: 0 0 0 2px;
+    padding: 3px 3px 10px 3px;
+    background-color:#ffffff;
+    -moz-box-shadow: 2px 2px 4px #aaa;
+    -webkit-box-shadow: 2px 2px 4px #aaa;
+    box-shadow: 2px 2px 4px #aaa;
+}
+
+.photo-main {
+}
+
+.photo-mosaic {
+    margin-left: 1px;
+}

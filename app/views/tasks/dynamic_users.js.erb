@@ -1,0 +1,4 @@
+$('#task_assigned_user_id').empty();
+<% for user in @users %>
+  $('#task_assigned_user_id').append("<option value=<%= escape_javascript(user.id.to_s) %>><%= escape_javascript(user.full_name) %></option>")
+<% end %>

@@ -1,0 +1,310 @@
+
+---
+account_options:
+  columns:
+  - id
+  - name
+  - cost
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Free
+    - 0
+    - '2012-06-26 12:38:52.052591'
+    - '2012-06-26 12:38:52.052591'
+  - - 2
+    - Basic
+    - 15
+    - '2012-06-26 12:38:52.087593'
+    - '2012-06-26 12:38:52.087593'
+  - - 3
+    - Full
+    - 30
+    - '2012-06-26 12:38:52.097594'
+    - '2012-06-26 12:38:52.097594'
+
+---
+accounts:
+  columns:
+  - id
+  - name
+  - created_at
+  - updated_at
+  - account_option_id
+  records: 
+  - - 1
+    - Package Deliveries Inc.
+    - '2012-06-26 12:38:52.138596'
+    - '2012-06-26 12:38:52.138596'
+    - 1
+
+---
+groups:
+  columns:
+  - id
+  - name
+  - description
+  - created_at
+  - updated_at
+  - creator_id
+  - account_id
+  - geo_info_file_name
+  - geo_info_content_type
+  - geo_info_file_size
+  - geo_info_updated_at
+  records: 
+  - - 1
+    - Delivery Trucks
+    - A group for all our delivery trucks.
+    - '2012-06-26 12:38:53.503674'
+    - '2012-06-26 12:38:53.503674'
+    - 1
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+
+---
+incivents:
+  columns:
+  - id
+  - name
+  - raised_user_id
+  - location
+  - created_at
+  - updated_at
+  - latitude
+  - longitude
+  - priority_id
+  - type_id
+  - description
+  - group_id
+  - status_id
+  - incivent_image_file_name
+  - incivent_image_content_type
+  - incivent_image_file_size
+  - incivent_image_updated_at
+  - archive
+  records: 
+  - - 1
+    - Tire Burst on my van!
+    - 1
+    - 174 Longmarket St, Cape Town 8000, South Africa
+    - '2012-06-26 12:38:56.391840'
+    - '2012-06-26 12:38:56.391840'
+    - -33.92063
+    - 18.41689
+    - 1
+    - 1
+    - I burst a tire and I will not be on time!
+    - 1
+    - 1
+    - !!null 
+    - !!null 
+    - !!null 
+    - !!null 
+    - false
+
+---
+memberships:
+  columns:
+  - id
+  - user_id
+  - group_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - 1
+    - 1
+    - '2012-06-26 12:38:53.534676'
+    - '2012-06-26 12:38:53.534676'
+  - - 2
+    - 2
+    - 1
+    - '2012-06-26 12:40:21.930732'
+    - '2012-06-26 12:40:21.930732'
+
+---
+messages:
+  columns:
+  - id
+  - user_id
+  - description
+  - group_id
+  - location
+  - latitude
+  - longitude
+  - created_at
+  - updated_at
+  - archive
+  records: 
+  - - 1
+    - 1
+    - Customer raved about us! I am on my way to the next delivery.
+    - 1
+    - 0C Strand St, Cape Town 8001, South Africa
+    - -33.9227
+    - 18.424228
+    - '2012-06-26 12:39:00.339065'
+    - '2012-06-26 12:39:00.339065'
+    - false
+
+---
+priorities:
+  columns:
+  - id
+  - description
+  - created_at
+  - updated_at
+  - account_id
+  records: 
+  - - 1
+    - High
+    - '2012-06-26 12:38:52.571621'
+    - '2012-06-26 12:38:52.571621'
+    - 1
+  - - 2
+    - Medium
+    - '2012-06-26 12:38:52.636625'
+    - '2012-06-26 12:38:52.636625'
+    - 1
+  - - 3
+    - Low
+    - '2012-06-26 12:38:52.653626'
+    - '2012-06-26 12:38:52.653626'
+    - 1
+
+---
+statuses:
+  columns:
+  - id
+  - description
+  - created_at
+  - updated_at
+  - account_id
+  records: 
+  - - 1
+    - Open
+    - '2012-06-26 12:38:52.731630'
+    - '2012-06-26 12:38:52.731630'
+    - 1
+  - - 2
+    - Under Investigation
+    - '2012-06-26 12:38:52.746631'
+    - '2012-06-26 12:38:52.746631'
+    - 1
+  - - 3
+    - Resolved
+    - '2012-06-26 12:38:52.759632'
+    - '2012-06-26 12:38:52.759632'
+    - 1
+  - - 4
+    - Closed
+    - '2012-06-26 12:38:52.774633'
+    - '2012-06-26 12:38:52.774633'
+    - 1
+
+---
+tasks:
+  columns:
+  - id
+  - description
+  - location
+  - group_id
+  - assigned_user_id
+  - priority_id
+  - status_id
+  - created_at
+  - updated_at
+  - raised_user_id
+  - due_date
+  - latitude
+  - longitude
+  - complete
+  records: 
+  - - 1
+    - Deliver 4 packages to SDS
+    - 0A Darling St, Cape Town 8000, South Africa
+    - 1
+    - 1
+    - 1
+    - 1
+    - '2012-06-26 12:38:58.924985'
+    - '2012-06-26 12:38:58.924985'
+    - 1
+    - '2012-06-15'
+    - -33.9252985
+    - 18.4242265
+    - false
+  - - 2
+    - Deliver new Steinway piano to international meistro
+    - 23 Lion St, Cape Town 8001, South Africa
+    - 1
+    - 2
+    - 1
+    - 1
+    - '2012-06-26 12:43:23.001089'
+    - '2012-06-26 12:43:23.001089'
+    - 1
+    - '2012-08-08'
+    - -33.92372
+    - 18.41255
+    - false
+
+---
+types:
+  columns:
+  - id
+  - description
+  - created_at
+  - updated_at
+  - account_id
+  records: 
+  - - 1
+    - Delivery delay
+    - '2012-06-26 12:38:52.853637'
+    - '2012-06-26 12:38:52.853637'
+    - 1
+  - - 2
+    - Stock spoilage
+    - '2012-06-26 12:38:52.864638'
+    - '2012-06-26 12:38:52.864638'
+    - 1
+
+---
+users:
+  columns:
+  - id
+  - first_name
+  - last_name
+  - email
+  - encrypted_password
+  - salt
+  - created_at
+  - updated_at
+  - master_user
+  - account_id
+  records: 
+  - - 1
+    - Test
+    - User1
+    - testuser1@example.com
+    - $2a$10$In7C.3ql5daWVR3d.6S28uQVVLmsUjdyLRRTDs5Asfei0QgQF1TlG
+    - $2a$10$In7C.3ql5daWVR3d.6S28u
+    - '2012-06-26 12:38:53.269661'
+    - '2012-06-26 12:38:53.269661'
+    - true
+    - 1
+  - - 2
+    - Test
+    - User2
+    - testuser2@example.com
+    - $2a$10$QaLWqH0sD2zKoiDYKTy9p.h/jtc4X60DZIVaU5M2jhTTVroe7ui3K
+    - $2a$10$QaLWqH0sD2zKoiDYKTy9p.
+    - '2012-06-26 12:38:53.445671'
+    - '2012-06-26 12:38:53.445671'
+    - false
+    - 1

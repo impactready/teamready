@@ -1,0 +1,90 @@
+/* various types of lists for incivents and associated details*/
+
+.item-table {
+    margin: 4px 0 4px 0;
+}
+
+.listing {
+    float: none;
+    border-radius: 4px;
+}
+
+.listing-header {
+    font-weight: bold;
+    background-color: #8EE5EE;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.listing-header td, .listing-item td {
+    min-height: 35px;
+}
+
+.listing-item {
+    background-color: #F9F9FB;
+}
+
+div[class^="listing-i-"] {
+    float: left;
+    padding: 2px 2px 2px 3px;
+    min-height: 50px;
+    font-size: 13px;
+}
+
+.listing-i-fs {
+    width: 60px;
+}
+
+.listing-i-f {
+    width: 90px;
+}
+
+.listing-i-fb {
+    width: 110px;
+}
+
+.listing-i-ff {
+    width: 130px;
+}
+
+.listing-i-fn {
+    width: 150px;
+}
+
+.listing-i-fd {
+    width: 190px;
+}
+
+.listing-i-fm {
+    width: 230px;
+}
+
+.listing-i-fl {
+    width: 380px;
+}
+
+.listing-i-fll {
+    width: 530px;
+}
+
+.listing-i-fxl {
+    width: 600px;
+}
+
+.listing-i-i {
+    width: 230px;
+}
+
+.listing-i-im {
+    width: 280px;
+}
+
+.listing-i-il {
+    width: 500px;
+}
+
+.listing-view-image {
+    color: #999;
+    font-weight: bold;
+}

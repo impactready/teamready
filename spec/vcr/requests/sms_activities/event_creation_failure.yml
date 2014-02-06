@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://client.connet-systems.com/submit/
+    body:
+      encoding: US-ASCII
+      string: username=worldwize&password=vae0aih5Bayerau&account=worldwize&da=%5BIncivent%5D+-+Number+not+recognized+for+submission.&ud&id=hdcaoyb9ck
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - '*/*'
+      user-agent:
+      - Ruby
+      host:
+      - client.connet-systems.com
+      content-type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Mon, 27 Jan 2014 09:15:07 GMT
+      server:
+      - Apache/2.2.17 (Ubuntu)
+      x-powered-by:
+      - PHP/5.3.5-1ubuntu7.11
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-type:
+      - text/plain
+      expires:
+      - Mon, 27 Jan 2014 11:15:07 GMT
+      transfer-encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        BatchIdentifier: worldwize_worldwize_20140127111508_1390814108.0213
+        Code: 811
+        Description: Missing User Data
+        Info: hdcaoyb9ck
+    http_version: '1.1'
+  recorded_at: Mon, 27 Jan 2014 09:15:08 GMT
+recorded_with: VCR 2.4.0

@@ -1,0 +1,24 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Sign in</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<div class="general-form">
+  <%= semantic_form_for(:session, :url => use_sessions_path) do |f|%>
+    <%= f.inputs do%>
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.input :remember_me, :as => :boolean %>
+    <% end %>
+    <%= f.buttons do %>
+      <%= f.commit_button :label => "Sign in" %>
+    <% end %>
+  <% end %>
+</div>
+
+<p class="normal"><strong><%= link_to "Forgot your Username/Password", new_password_reset_path %></strong></p>

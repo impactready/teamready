@@ -1,0 +1,26 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <% if @new_account == true %>
+    <h2>Registration: Step 1</h2>
+  <% else %>
+    <h2>Invite a User to your Account</h2>
+  <% end %>
+</div>
+
+<div class="spacer">
+</div>
+
+<div class="general-form">
+  <% if @new_account == true %>
+    <p>Enter your email address:<p>
+  <% else %>
+    <p>Enter the recipient's email address:</p>
+  <% end %>
+  <%= render 'invitations/form_fields' %>
+</div>
+
+<% if @new_account == false %>
+  <%= link_to 'Back', account_path(current_user.account) %>
+<% end %>

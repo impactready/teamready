@@ -1,0 +1,13 @@
+<%= semantic_form_for @launch_interest do |f| %>
+  <%= f.inputs do %>
+  	<% if signed_in? %>
+  		<%= f.input :email_address, :value => current_user.email, :as => :hidden %>
+  	<% else %>
+    	<%= f.input :email_address, :label => "Contact Email" %>
+    <% end %>
+    <%= f.input :message, :label => "Message" %>
+  <% end %>
+  <%= f.buttons do %>
+    <%= f.commit_button :label => "Submit" %>
+  <% end %>
+<% end %>

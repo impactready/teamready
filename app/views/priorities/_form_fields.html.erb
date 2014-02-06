@@ -1,0 +1,9 @@
+<%= semantic_form_for(@priority) do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :description %>
+    <%= f.input :account_id, :as => :hidden %>
+  <% end%>
+  <%= f.buttons do %>
+    <%= f.commit_button :label => "Submit" %>
+  <% end %>
+<% end %>

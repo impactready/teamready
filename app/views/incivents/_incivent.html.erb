@@ -1,0 +1,18 @@
+<tr class="listing-item">
+  <td class="listing-i-fm"><%= link_to incivent.name, incivent_path(incivent) %></td>
+  <td><%= time_ago_in_words(incivent.created_at) %> ago</td>
+  <td><%= incivent.priority.description %></td>
+  <td><%= incivent.status.description %></td>
+  <td><%= incivent.type.description %></td>
+  <% if incivent.location == "" %>
+    <td>Unnamed Coordinates</td>
+  <% else %>
+    <td><%= incivent.location %></td>
+  <% end %>
+  <td><%= incivent.group.name %></td>
+  <% if incivent.incivent_image.url == '/incivent_images/original/missing.png' %>
+    <td><%= image_tag 'missingThumb.png' %></td>
+  <% else %>
+    <td><%= image_tag incivent.incivent_image.url(:thumb) %></td>
+  <% end %>
+</tr>

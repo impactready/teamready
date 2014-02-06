@@ -1,0 +1,80 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Analytics</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<div class="item-table">
+  <table>
+      <tr class="listing-item">
+        <td class="listing-i-fl"><strong>Number of users:</strong></td>
+        <td><%= @account.users.count %></td>
+      </tr>
+      <tr class="listing-item">
+        <td class="listing-i-fl"><strong>Number of groups:</strong></td>
+        <td><%= @account.groups.count %></td>
+      </tr>
+  </table>
+</div>
+
+<div class="spacer">
+</div>
+
+<div class="item-table">
+  <table>
+    <tr class="listing-header">
+      <td class="listing-i-fl"><strong>Group Name</strong></td>
+      <td><strong>Number of Incivents</strong></td>
+      <td><strong>Number of Tasks</strong></td>
+      <td><strong>Number of Messages</strong></td>
+    </tr>
+    <% @account.groups.each do |group| %>
+      <tr class="listing-item">
+        <td class="listing-i-fl"><%= group.name %>:</td>
+        <td><%= group.incivents.count %></td>
+        <td><%= group.tasks.count %></td>
+        <td><%= group.messages.count %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+
+
+
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Account Administration</h2>
+</div>
+
+<div>
+  <div class="admin-column">
+
+    <%= render 'accounts/account_plan' %>
+    <p class="normal"><%= link_to "Edit your Account", edit_account_path(@account) %></p>
+    <p class="normal"><%= link_to "Close your Account", @account, :method => :delete, :data => {:confirm => "You sure you want to remove your profile?"} %></p>
+  </div>
+
+  <div class="admin-column">
+    <p class="normal"><strong>Incivent Classification</strong></p>
+    <p class="normal"><%= link_to "Manage Priority Options", priorities_path %></p>
+    <p class="normal"><%= link_to "Manage Types", types_path %></p>
+    <p class="normal"><%= link_to "Manage Statuses", statuses_path %></p>
+  </div>
+
+  <div class="admin-column">
+    <p class="normal"><strong>Additional Users</strong></p>
+    <p class="normal"><%= link_to "Invite a user to this account", new_invitation_path %></p>
+  </div>
+  <br class="clear"/>
+
+</div>
+
+<div class="spacer">
+</div>
