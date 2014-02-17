@@ -99,7 +99,6 @@ GEM
       activesupport (>= 2.3.2)
       cocaine (>= 0.0.2)
       mime-types
-    paypal-recurring (1.1.0)
     pg (0.13.1)
     pg (0.13.1-x86-mingw32)
     polyglot (0.3.3)
@@ -205,7 +204,6 @@ DEPENDENCIES
   geocoder (= 1.1.4)
   jquery-rails
   paperclip (= 2.6.0)
-  paypal-recurring
   pg
   rails (= 3.2.16)
   rspec-rails (= 2.13.0)
