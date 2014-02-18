@@ -79681,3 +79681,1338 @@ Served asset /icons/Sms.png - 200 OK (1ms)
 
 Started GET "/assets/icons/BasicPhone.png" for 127.0.0.1 at 2014-02-17 23:38:42 +0200
 Served asset /icons/BasicPhone.png - 200 OK (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-18 20:16:51 +0200
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/frontpage (86.8ms)
+Compiled custom.css  (159ms)  (pid 68287)
+Compiled application.css  (3ms)  (pid 68287)
+Compiled jquery.js  (4ms)  (pid 68287)
+Compiled jquery_ujs.js  (32ms)  (pid 68287)
+Compiled application.js  (152ms)  (pid 68287)
+Compiled application-ie.css  (3ms)  (pid 68287)
+  Rendered layouts/_include.html.erb (608.3ms)
+  Rendered layouts/_header.html.erb (33.0ms)
+  Rendered layouts/_footer_menu.html.erb (1.1ms)
+Completed 200 OK in 862.2ms (Views: 861.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /formtastic.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /custom.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /static_pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:16:52 +0200
+Served asset /jquery-ui.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (50ms)
+
+
+Started GET "/assets/FrontPage.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /FrontPage.png - 304 Not Modified (20ms)
+
+
+Started GET "/assets/icons/Person.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/Person.png - 304 Not Modified (40ms)
+
+
+Started GET "/assets/icons/Gear.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/Gear.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/icons/List.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/List.png - 304 Not Modified (34ms)
+
+
+Started GET "/assets/icons/Globe.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/Globe.png - 304 Not Modified (16ms)
+
+
+Started GET "/assets/icons/Marker.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/Marker.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/icons/Email.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/Email.png - 304 Not Modified (11ms)
+
+
+Started GET "/assets/icons/MobilePhone.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/MobilePhone.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/icons/Camera.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/Camera.png - 304 Not Modified (12ms)
+
+
+Started GET "/assets/icons/Sms.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/Sms.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/icons/BasicPhone.png" for 127.0.0.1 at 2014-02-18 20:16:53 +0200
+Served asset /icons/BasicPhone.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:16:57 +0200
+Served asset /GreyBackground.png - 304 Not Modified (13ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Processing by UseSessionsController#new as HTML
+  Rendered use_sessions/new.html.erb within layouts/application (306.9ms)
+  Rendered layouts/_include.html.erb (10.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer_menu.html.erb (0.4ms)
+Completed 200 OK in 365.8ms (Views: 365.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:17:26 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started POST "/use_sessions" for 127.0.0.1 at 2014-02-18 20:17:38 +0200
+Processing by UseSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdXzfbiHP2sUupXro0qA6zgPaotNerUj5WE87JGzopw=", "session"=>{"email"=>"raoul@world-wize.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'raoul@world-wize.com' LIMIT 1[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 292.1ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-02-18 20:17:38 +0200
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccountOption Load (0.1ms)[0m  SELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1
+  [1m[36mGroup Load (0.1ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."account_id" = 1 ORDER BY groups.created_at DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."group_id" = 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "updates" WHERE "updates"."group_id" = 1[0m
+  Rendered groups/_group_show.html.erb (184.0ms)
+  Rendered groups/index.html.erb within layouts/application (244.3ms)
+  Rendered layouts/_include.html.erb (6.1ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 403.1ms (Views: 278.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /googleearth.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:17:39 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-02-18 20:18:38 +0200
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccountOption Load (0.2ms)[0m  SELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."account_id" = 1 ORDER BY groups.created_at DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."group_id" = 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "updates" WHERE "updates"."group_id" = 1[0m
+  Rendered groups/_group_show.html.erb (10.7ms)
+  Rendered groups/index.html.erb within layouts/application (13.6ms)
+Compiled custom.css  (71ms)  (pid 68287)
+Compiled application.css  (3ms)  (pid 68287)
+Compiled application-ie.css  (3ms)  (pid 68287)
+  Rendered layouts/_include.html.erb (147.2ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 173.9ms (Views: 166.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /custom.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:18:39 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-02-18 20:20:30 +0200
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1
+  [1m[36mAccount Load (0.2ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccountOption Load (0.1ms)[0m  SELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."account_id" = 1 ORDER BY groups.created_at DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."group_id" = 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "updates" WHERE "updates"."group_id" = 1[0m
+  Rendered groups/_group_show.html.erb (12.6ms)
+  Rendered groups/index.html.erb within layouts/application (14.3ms)
+Compiled custom.css  (71ms)  (pid 68287)
+Compiled application.css  (3ms)  (pid 68287)
+Compiled application-ie.css  (3ms)  (pid 68287)
+  Rendered layouts/_include.html.erb (155.1ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 183.2ms (Views: 175.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /custom.css - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:20:31 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:20:32 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccountOption Load (0.2ms)[0m  SELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."account_id" = 1 ORDER BY groups.created_at DESC[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mMessage Load (0.1ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."group_id" = 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "updates" WHERE "updates"."group_id" = 1[0m
+  Rendered groups/_group_show.html.erb (10.5ms)
+  Rendered groups/index.html.erb within layouts/application (12.7ms)
+Compiled custom.css  (94ms)  (pid 68287)
+Compiled application.css  (3ms)  (pid 68287)
+Compiled application-ie.css  (2ms)  (pid 68287)
+  Rendered layouts/_include.html.erb (132.2ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 156.1ms (Views: 149.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /custom.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:21:05 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:21:06 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/incivents" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Processing by InciventsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccountOption Load (0.2ms)[0m  SELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1
+  [1m[36m (14.8ms)[0m  [1mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "incivents" WHERE "incivents"."archive" = 'f' AND (group_id IN (1) OR raised_user_id = 2)
+  Rendered incivents/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_include.html.erb (7.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer_menu.html.erb (0.4ms)
+Completed 200 OK in 133.4ms (Views: 29.5ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:21:15 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.1ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.1ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.1ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  Rendered tasks/_task.html.erb (84.8ms)
+  Rendered tasks/index.html.erb within layouts/application (102.0ms)
+  Rendered layouts/_include.html.erb (6.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 125.4ms (Views: 119.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/missingThumb.png" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /missingThumb.png - 200 OK (14ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:21:18 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/tasks/sort_index?sort=raised_user_id" for 127.0.0.1 at 2014-02-18 20:21:33 +0200
+Processing by TasksController#sort_index as HTML
+  Parameters: {"sort"=>"raised_user_id"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.1ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC
+Completed 406 Not Acceptable in 5.8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.1ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.1ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.1ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  Rendered tasks/_task.html.erb (6.8ms)
+  Rendered tasks/index.html.erb within layouts/application (13.7ms)
+Compiled custom.css  (107ms)  (pid 68287)
+Compiled application.css  (3ms)  (pid 68287)
+Compiled application-ie.css  (3ms)  (pid 68287)
+  Rendered layouts/_include.html.erb (187.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 212.4ms (Views: 206.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /custom.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/missingThumb.png" for 127.0.0.1 at 2014-02-18 20:23:00 +0200
+Served asset /missingThumb.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:23:02 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.2ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.1ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.1ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.1ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  Rendered tasks/_task.html.erb (6.6ms)
+  Rendered tasks/index.html.erb within layouts/application (11.6ms)
+Compiled custom.css  (55ms)  (pid 68287)
+Compiled application.css  (2ms)  (pid 68287)
+Compiled application-ie.css  (3ms)  (pid 68287)
+  Rendered layouts/_include.html.erb (133.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 156.5ms (Views: 150.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /custom.css - 200 OK (44ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/missingThumb.png" for 127.0.0.1 at 2014-02-18 20:23:19 +0200
+Served asset /missingThumb.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:23:20 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Processing by TasksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.2ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.1ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))[0m
+  [1m[35mTask Load (0.1ms)[0m  SELECT "tasks".* FROM "tasks" WHERE "tasks"."archive" = 'f' AND (group_id IN (1))
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.2ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 1 LIMIT 1[0m
+  [1m[35mStatus Load (0.2ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPriority Load (0.2ms)[0m  [1mSELECT "priorities".* FROM "priorities" WHERE "priorities"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "statuses".* FROM "statuses" WHERE "statuses"."id" = 1 LIMIT 1
+  Rendered tasks/_task.html.erb (9.3ms)
+  Rendered tasks/index.html.erb within layouts/application (15.2ms)
+Compiled custom.css  (51ms)  (pid 68287)
+Compiled application.css  (3ms)  (pid 68287)
+Compiled application-ie.css  (3ms)  (pid 68287)
+  Rendered layouts/_include.html.erb (165.6ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 192.7ms (Views: 186.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /custom.css - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/missingThumb.png" for 127.0.0.1 at 2014-02-18 20:23:49 +0200
+Served asset /missingThumb.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:23:51 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-02-18 20:23:58 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.1ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."account_id" = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 1 ORDER BY groups.created_at DESC[0m
+  [1m[35mGroup Load (0.1ms)[0m  SELECT name FROM "groups" WHERE "groups"."id" IN (1) ORDER BY groups.created_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT name FROM "groups" WHERE "groups"."id" IN (1) ORDER BY groups.created_at DESC
+  Rendered users/_user.html.erb (5.3ms)
+  Rendered users/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_include.html.erb (5.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 44.7ms (Views: 38.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:23:59 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (39.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.1ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."account_id" = 1 AND "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/_form_fields.html.erb (42.2ms)
+  Rendered users/edit.html.erb within layouts/application (43.7ms)
+  Rendered layouts/_include.html.erb (5.8ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 167.4ms (Views: 124.1ms | ActiveRecord: 39.4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:24:01 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/accounts/1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+  [1m[35mAccount Load (0.1ms)[0m  SELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1
+  [1m[36mAccountOption Load (0.1ms)[0m  [1mSELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" WHERE "users"."account_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "groups" WHERE "groups"."account_id" = 1[0m
+  [1m[35mGroup Load (0.1ms)[0m  SELECT "groups".* FROM "groups" WHERE "groups"."account_id" = 1 ORDER BY groups.created_at DESC
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1[0m
+  Rendered accounts/_account_plan.html.erb (0.9ms)
+  Rendered accounts/show.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_include.html.erb (7.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer_menu.html.erb (0.3ms)
+Completed 200 OK in 53.1ms (Views: 48.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:24:03 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2014-02-18 20:24:08 +0200
+Processing by MessagesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1
+  [1m[36mAccount Load (0.1ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccountOption Load (0.1ms)[0m  SELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT "groups".id FROM "groups" INNER JOIN "memberships" ON "groups"."id" = "memberships"."group_id" WHERE "memberships"."user_id" = 2 ORDER BY groups.created_at DESC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."archive" = 'f' AND (group_id IN (1))
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."archive" = 'f' AND (group_id IN (1)) ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mGroup Load (0.2ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."id" = 1 ORDER BY groups.created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered messages/_message.html.erb (5.3ms)
+  Rendered messages/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_include.html.erb (10.6ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer_menu.html.erb (0.2ms)
+Completed 200 OK in 122.6ms (Views: 75.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /googleearth.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
+Served asset /GreyBackground.png - 304 Not Modified (0ms)

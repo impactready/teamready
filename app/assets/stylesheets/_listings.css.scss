@@ -11,10 +11,14 @@
 
 .listing-header {
     font-weight: bold;
-    background-color: #8EE5EE;
+    color: #eee;
+    background-color: #416AA5;
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
+    a {
+        color: #eee;
+    }
 }
 
 .listing-header td, .listing-item td {
