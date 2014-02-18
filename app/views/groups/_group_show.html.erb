@@ -33,7 +33,7 @@
 
   <% if group.incivents.count == 0 && group.tasks.count == 0 && group.messages.count == 0 %>
     <div class="general-form">
-      <p class="normal">There are no incivents, tasks or messages in this group.</p>
+      <p class="normal">There are no events, tasks or messages in this group.</p>
     </div>
   <% else %>
     <div id="google_map_section-<%= group.id %>" data-kml="<%= attachment_url(group.geo_info) %>" data-url="<%= group_feature_urls(group) %>" data-name="<%= group_feature_names(group) %>" data-lat="<%= group_lats(group) %>" data-long="<%= group_longs(group) %>">

@@ -4,18 +4,17 @@
     <div class="container">
       <% if signed_in? %>
         <div class="top-name">
-          Hello <strong><%= current_user.first_name %>!</strong>  
+          Hello <strong><%= current_user.first_name %>!</strong>
         </div>
       <% end %>
       <nav class="top-menu">
           <ul>
               <% if signed_in? %>
-                  <li><%= link_to "Support", contact_path %></li>     
+                  <li><%= link_to "Support", contact_path %></li>
                   <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
               <% else %>
                   <li><%= link_to "Home", '/' %></li>
                   <li><%= link_to "Pricing/Signup", pricing_path %></li>
-                  <li><%= link_to "About Us", about_path %></li>
                   <li><%= link_to "Contact Us", contact_path %></li>
                   <li><%= link_to "Sign in", signin_path %></li>
               <% end %>
@@ -35,7 +34,7 @@
   <% if signed_in? %>
     <div class="header-info">
       <div class="container">
-        <div class="main-page-user_info">       
+        <div class="main-page-user_info">
           Account: <strong><%= current_user.account.name %></strong>
         </div>
 

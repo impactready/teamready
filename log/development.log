@@ -81016,3 +81016,311 @@ Served asset /HeaderLogo.png - 304 Not Modified (0ms)
 
 Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 20:24:09 +0200
 Served asset /GreyBackground.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-18 22:26:17 +0200
+Processing by StaticPagesController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1[0m
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 140.8ms (ActiveRecord: 21.9ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2014-02-18 22:26:17 +0200
+Processing by GroupsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."auth_token" = 'X5JPN1t9gGhu202s5hiUSg' LIMIT 1
+  [1m[36mAccount Load (0.3ms)[0m  [1mSELECT "accounts".* FROM "accounts" WHERE "accounts"."id" = 1 LIMIT 1[0m
+  [1m[35mAccountOption Load (0.3ms)[0m  SELECT "account_options".* FROM "account_options" WHERE "account_options"."id" = 1 LIMIT 1
+  [1m[36mGroup Load (0.4ms)[0m  [1mSELECT "groups".* FROM "groups" WHERE "groups"."account_id" = 1 ORDER BY groups.created_at DESC[0m
+Compiled googleearth.js  (0ms)  (pid 68485)
+  [1m[35m (21.0ms)[0m  SELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "incivents" WHERE "incivents"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "tasks" WHERE "tasks"."group_id" = 1
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."group_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "messages" WHERE "messages"."group_id" = 1
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT "messages".* FROM "messages" WHERE "messages"."group_id" = 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (14.1ms)[0m  [1mSELECT COUNT(*) FROM "updates" WHERE "updates"."group_id" = 1[0m
+  Rendered groups/_group_show.html.erb (449.6ms)
+  Rendered groups/index.html.erb within layouts/application (484.3ms)
+Compiled blueprint/screen.css  (0ms)  (pid 68485)
+Compiled jquery_ui/custom-mobile.css  (86ms)  (pid 68485)
+Compiled jquery_ui/jquery-ui-raoul.css  (15ms)  (pid 68485)
+Compiled formtastic.css  (0ms)  (pid 68485)
+Compiled formtastic_changes.css  (0ms)  (pid 68485)
+Compiled custom.css  (205ms)  (pid 68485)
+Compiled application.css  (368ms)  (pid 68485)
+Compiled jquery-ui.js  (43ms)  (pid 68485)
+Compiled tabs_datepicker.js  (0ms)  (pid 68485)
+Compiled markerwithlabel.js  (1ms)  (pid 68485)
+Compiled application.js  (193ms)  (pid 68485)
+Compiled blueprint/ie.css  (1ms)  (pid 68485)
+Compiled application-ie.css  (13ms)  (pid 68485)
+  Rendered layouts/_include.html.erb (694.6ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer_menu.html.erb (1.2ms)
+Completed 200 OK in 1361.9ms (Views: 1207.9ms | ActiveRecord: 40.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /formtastic.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /application.css - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:19 +0200
+Served asset /jquery-ui.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:19 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:19 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:19 +0200
+Served asset /application.js - 304 Not Modified (51ms)
+
+
+Started GET "/assets/googleearth.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:19 +0200
+Served asset /googleearth.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 22:26:19 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (32ms)
+
+
+Started GET "/assets/GreyBackground.png" for 127.0.0.1 at 2014-02-18 22:26:19 +0200
+Served asset /GreyBackground.png - 304 Not Modified (61ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2014-02-18 22:26:36 +0200
+Processing by UseSessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jdXzfbiHP2sUupXro0qA6zgPaotNerUj5WE87JGzopw="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 0.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-02-18 22:26:36 +0200
+Processing by StaticPagesController#home as HTML
+Compiled static_pages.css  (26ms)  (pid 68485)
+  Rendered static_pages/home.html.erb within layouts/frontpage (35.3ms)
+  Rendered layouts/_include.html.erb (5.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer_menu.html.erb (0.3ms)
+Completed 200 OK in 51.5ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /static_pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/FrontPage.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /FrontPage.png - 304 Not Modified (40ms)
+
+
+Started GET "/assets/icons/Person.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/Person.png - 304 Not Modified (43ms)
+
+
+Started GET "/assets/icons/Gear.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/Gear.png - 304 Not Modified (13ms)
+
+
+Started GET "/assets/icons/List.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/List.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/icons/Globe.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/Globe.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/icons/Marker.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/Marker.png - 304 Not Modified (4ms)
+
+
+Started GET "/assets/icons/Email.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/Email.png - 304 Not Modified (6ms)
+
+
+Started GET "/assets/icons/MobilePhone.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/MobilePhone.png - 304 Not Modified (8ms)
+
+
+Started GET "/assets/icons/Camera.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/Camera.png - 304 Not Modified (5ms)
+
+
+Started GET "/assets/icons/Sms.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/Sms.png - 304 Not Modified (19ms)
+
+
+Started GET "/assets/icons/BasicPhone.png" for 127.0.0.1 at 2014-02-18 22:26:37 +0200
+Served asset /icons/BasicPhone.png - 304 Not Modified (18ms)
+
+
+Started GET "/pricing" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Processing by StaticPagesController#pricing_signup as HTML
+  Rendered static_pages/pricing_signup.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_include.html.erb (6.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer_menu.html.erb (0.4ms)
+Completed 200 OK in 63.6ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/custom-mobile.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /jquery_ui/custom-mobile.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ui/jquery-ui-raoul.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /jquery_ui/jquery-ui-raoul.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /formtastic.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formtastic_changes.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /formtastic_changes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /static_pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery-ui.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /jquery-ui.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tabs_datepicker.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /tabs_datepicker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/markerwithlabel.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /markerwithlabel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/HeaderLogo.png" for 127.0.0.1 at 2014-02-18 22:26:49 +0200
+Served asset /HeaderLogo.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ButtonNorm.png" for 127.0.0.1 at 2014-02-18 22:26:50 +0200
+Served asset /ButtonNorm.png - 200 OK (29ms)
