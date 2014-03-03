@@ -1,7 +1,7 @@
 desc "These tasks are called by the Heroku scheduler add-on"
 
 task :remind_intervention_due_date => :environment do
-    Intervention.check_deadlines
+    Task.check_deadlines
 end
 
 # task :check_acc_still_pay => :environment do
