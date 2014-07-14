@@ -6,7 +6,7 @@
     <div class="mobile-form">
       <%= semantic_form_for task do |f| %>
         <%= f.inputs do %>
-          <%= f.input :complete, as: :hidden, value: true %>
+          <%= f.input :complete, as: :hidden, input_html: { value: true} %>
         <% end %>
         <%= f.actions do %>
           <%= f.action :submit, as: :button, label: 'Submit' %>
