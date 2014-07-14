@@ -5,15 +5,15 @@ class Incivent < ActiveRecord::Base
   belongs_to :type
   belongs_to :status
   belongs_to :group
-  
+
   has_attached_file :incivent_image, {:styles => { :medium => "390x390#", :thumb => "90x90#" }}.merge(ADD_PP_OPTIONS)
-  
+
   attr_accessible :name, :location, :description, :longitude, :latitude, :priority_id, :type_id, :status_id, :incivent_image, :group_id, :archive
   attr_protected :raised_user_id
-  
-  geocoded_by :location 
-  reverse_geocoded_by :latitude, :longitude, :address => :location 
-  
+
+  geocoded_by :location
+  reverse_geocoded_by :latitude, :longitude, :address => :location
+
   validates :name, :presence => true , :length => { :maximum => 80 }
   validates :raised_user_id, :presence => true, :numericality =>  { :only_integer => true }
   validates :priority_id, :presence => true
@@ -29,11 +29,11 @@ class Incivent < ActiveRecord::Base
   before_validation :geocode, :if => :has_location, :unless => :has_coordinates
 
   before_save :cleanup
-  
-  scope :default_order, order('created_at DESC')
-  
-  scope :unarchived, where(:archive => false)
-  scope :archived, where(:archive => true)
+
+  scope :default_order, -> { order('created_at DESC') }
+
+  scope :unarchived, -> { where(:archive => false) }
+  scope :archived, -> { where(:archive => true) }
 
   # Called to limit incivents shown according to a search field
   def self.search(user, search)
@@ -56,7 +56,7 @@ class Incivent < ActiveRecord::Base
   end
 
   private
-  
+
   def cleanup
     self.name = self.name.chomp
     self.location = self.location.chomp
@@ -70,5 +70,5 @@ class Incivent < ActiveRecord::Base
   def has_location
     self.location
   end
-  
+
 end

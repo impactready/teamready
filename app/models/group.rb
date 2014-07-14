@@ -17,7 +17,7 @@ class Group < ActiveRecord::Base
 
   validates :name, :presence => true
 
-  default_scope :order => 'groups.created_at DESC'
+  default_scope { order(created_at: :desc) }
 
   def updates_add_create(group_name, type, title)
     updates.create!(detail: "New #{type} called '#{title}' created in group '#{group_name}'.")

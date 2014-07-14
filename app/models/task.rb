@@ -18,16 +18,16 @@ class Task < ActiveRecord::Base
   validates :longitude, :numericality => { :greater_than_or_equal_to => -180, :less_than_or_equal_to => 180 }
   validates :latitude, :numericality => { :greater_than_or_equal_to => -90, :less_than_or_equal_to => 90 }
 
-  scope :default_order, order('created_at DESC')
+  scope :default_order, -> { order('created_at DESC') }
 
   before_validation :reverse_geocode, :if => :has_coordinates
   before_validation :geocode, :if => :has_location, :unless => :has_coordinates
 
   before_save :cleanup
 
-  scope :in_progress, where(:complete => false)
-  scope :complete, where(:complete => true)
-  scope :unarchived, where(:archive => false)
+  scope :in_progress, -> { where(:complete => false) }
+  scope :complete, -> { where(:complete => true) }
+  scope :unarchived, -> { where(:archive => false) }
 
   def self.check_deadlines
     deadline_tasks = Task.where("due_date = ?", Date.today)

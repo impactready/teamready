@@ -1,5 +1,5 @@
 class MembershipsController < ApplicationController
-  
+
   before_filter :check_master_user
 
   def create
@@ -11,7 +11,7 @@ class MembershipsController < ApplicationController
       format.js
     end
   end
-  
+
   def destroy
     @membership = Membership.find(params[:id])
     @membership.destroy
@@ -26,7 +26,7 @@ class MembershipsController < ApplicationController
 
   def assign_group
     @account = current_user.account
-    @groups = @account.groups.all
+    @groups = @account.groups
     @user = User.find(params[:membership][:user_id])
   end
 

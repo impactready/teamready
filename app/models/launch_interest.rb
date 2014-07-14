@@ -7,7 +7,7 @@ class LaunchInterest < ActiveRecord::Base
   validates :email_address, :presence => true,
                   :format => { :with => email_regex }
 	validates :message, :presence => true
-  
-  default_scope :order => 'launch_interests.created_at DESC'
+
+  default_scope -> { order(created_at: :desc) }
 
 end

@@ -16,7 +16,7 @@ class SmsIo < ActiveRecord::Base
 	def self.save_inbound_details(user, account, model_att)
 	  group = account.groups.where("name LIKE ? OR description LIKE?", "#{model_att[1].chomp.titlecase}", "#{model_att[1].chomp.titlecase}").first
 		if model_att[0].titlecase.match("Ev")
-			user.incivents.create!( :group => group.nil? ? account.groups.find_or_create_by_name(:name => "SMS Inbound", :description => "SMS Inbound") : group,
+			user.incivents.create!( :group => group.nil? ? account.groups.where(:name => "SMS Inbound", :description => "SMS Inbound").first_or_create(:name => "SMS Inbound", :description => "SMS Inbound") : group,
 	                           :name => model_att[2].chomp,
 	                           :description => model_att[2].chomp,
 	                           :location => model_att[3].chomp,
@@ -24,8 +24,8 @@ class SmsIo < ActiveRecord::Base
 	                           :type_id => account.types.first.id,
 	                           :priority_id => account.priorities.first.id )
 	  else
-	    user.messages.create!( :group => group.nil? ? account.groups.find_or_create_by_name(:name => "SMS Inbound", :description => "SMS Inbound") : group,
-	                          :description => model_att[2].chomp, 
+	    user.messages.create!( :group => group.nil? ? account.groups.where(:name => "SMS Inbound", :description => "SMS Inbound").first_or_create(:name => "SMS Inbound", :description => "SMS Inbound") : group,
+	                          :description => model_att[2].chomp,
 	                          :location => model_att[3].chomp )
 		end
 	end
