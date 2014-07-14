@@ -29,38 +29,35 @@ Incivent_App::Application.routes.draw do
     collection do
       get 'sort_index'
       get 'dynamic_users'
-      get 'bulk_new'
-      post 'bulk_create'
     end
   end
 
-  resources :users, :only => [:new, :edit, :index, :create, :update, :destroy] do
-    resources :admin_groups, :only => :index
+  resources :users, only: [:new, :edit, :index, :create, :update, :destroy] do
+    resources :admin_groups, only: :index
     # /users/:user_id/admin_groups/
   end
 
-  resources :use_sessions, :only => [:new, :create, :destroy]
-  resources :groups, :only => [:new, :edit, :index, :create, :update, :destroy]
-  resources :memberships, :only => [:create, :destroy]
+  resources :use_sessions, only: [:new, :create, :destroy]
+  resources :groups, only: [:new, :edit, :index, :create, :update, :destroy]
+  resources :memberships, only: [:create, :destroy]
 
   resources :accounts
-  resources :account_options, :only => [:index, :new, :edit, :create, :update, :destroy]
-  resources :invitations, :only => [:new, :create]
-  resources :launch_interests, :only => [:index, :create, :destroy]
+  resources :account_options, only: [:index, :new, :edit, :create, :update, :destroy]
+  resources :invitations, only: [:new, :create]
+  resources :launch_interests, only: [:index, :create, :destroy]
 
-  match '/sms_ios/receive', :to => 'sms_ios#receive', :defaults =>  {:format  => :json}
-  match '/register', :to => 'accounts#new'
-  match '/signup/:invitation_token', :to => 'users#new'
-  match '/signup', :to => 'users#new'
-  match '/signin', :to => 'use_sessions#new'
-  match '/signout', :to => 'use_sessions#destroy'
-  match '/privacy', :to => 'static_pages#privacy'
-  match '/terms', :to => 'static_pages#service_terms'
-  match '/pricing', :to => 'static_pages#pricing_signup'
-  match '/about', :to => 'static_pages#about'
-  match '/contact', :to => 'static_pages#contact'
+  get '/sms_ios/receive', :to => 'sms_ios#receive', :defaults =>  {:format  => :json}
+  get '/register', :to => 'accounts#new'
+  get '/signup/:invitation_token', :to => 'users#new'
+  get '/signup', :to => 'users#new'
+  get '/signin', :to => 'use_sessions#new'
+  delete '/signout', :to => 'use_sessions#destroy'
+  get '/privacy', :to => 'static_pages#privacy'
+  get '/terms', :to => 'static_pages#service_terms'
+  get '/pricing', :to => 'static_pages#pricing_signup'
+  get '/contact', :to => 'static_pages#contact'
 
-  root :to => 'static_pages#home'
+  root to: 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

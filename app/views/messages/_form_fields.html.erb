@@ -8,7 +8,7 @@
     <%= f.input :archive, :label => "Archive this Message" %>
     <%= f.input :user_id, :as => :hidden %>
   <% end %>
-  <%= f.buttons do %>
-    <%= f.commit_button :label => "Submit" %>
+  <%= f.actions do %>
+    <%= f.action :submit, as: :button, label: 'Submit' %>
   <% end %>
 <% end %>

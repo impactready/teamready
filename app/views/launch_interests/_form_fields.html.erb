@@ -7,7 +7,7 @@
     <% end %>
     <%= f.input :message, :label => "Message" %>
   <% end %>
-  <%= f.buttons do %>
-    <%= f.commit_button :label => "Submit" %>
+  <%= f.actions do %>
+    <%= f.action :submit, as: :button, label: 'Submit' %>
   <% end %>
 <% end %>

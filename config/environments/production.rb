@@ -26,6 +26,9 @@ Incivent_App::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.eager_load = true
+  config.assets.js_compressor = :uglifier
+
   ### Mail now sent from Heroku -- SendGrid
 
   #config.action_mailer.delivery_method = :smtp

@@ -19,8 +19,8 @@
       <%= f.input :task_image, :as => :file, :label => "Task Image" %>
       <%= f.input :raised_user_id, :as => :hidden %>
     <% end %>
-    <%= f.buttons do %>
-      <%= f.commit_button :label => "Submit" %>
+    <%= f.actions do %>
+      <%= f.action :submit, as: :button, label: 'Submit' %>
     <% end %>
   <% end %>
 </div>

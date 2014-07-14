@@ -3,7 +3,7 @@ class TypesController < ApplicationController
   before_filter :check_master_user
 
   def index
-    @types = current_user.account.types.all
+    @types = current_user.account.types
   end
 
   def new
@@ -25,7 +25,7 @@ class TypesController < ApplicationController
     else
       flash[:error] = "Type could not be created."
       render 'new'
-    end 
+    end
   end
 
   def update
@@ -45,11 +45,11 @@ class TypesController < ApplicationController
     type.destroy
     redirect_to types_path
   end
-  
+
   private
-  
+
   def check_master_user
     deny_access_master_user unless current_user.master_user?
   end
-  
+
 end

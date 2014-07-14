@@ -3,8 +3,7 @@
     <%= f.input :recipient_email, :label => "Email address" %>
     <%= f.input :account_id, :as => :hidden %>
   <% end %>
-  <%= f.buttons do %>
-    <%= f.commit_button :label => "Submit" %>
+  <%= f.actions do %>
+    <%= f.action :submit, as: :button, label: 'Submit' %>
   <% end %>
 <% end %>
-  

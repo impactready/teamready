@@ -1,10 +1,10 @@
 require 'vcr'
 
 VCR.configure do |c|
-  #the directory where your cassettes will be saved
-  c.cassette_library_dir = 'spec/vcr'
-  # your HTTP request service. You can also use fakeweb, webmock, and more
-  c.hook_into :fakeweb
+  c.default_cassette_options = { record: :once, erb: true, re_record_interval: 20.days }
 
+  # not important for this example, but must be set to something
+  c.hook_into :webmock
+  c.cassette_library_dir = 'spec/vcr'
   c.ignore_localhost = true
 end

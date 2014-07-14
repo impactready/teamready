@@ -1,6 +1,10 @@
 
 FactoryGirl.define do
 
+  sequence :email do |n|
+    "person#{n}@example.com"
+  end
+
   factory :account_option do
     name "Test"
     cost 0
@@ -31,12 +35,12 @@ FactoryGirl.define do
 
   factory :user do
     first_name "Test"
-    sequence(:last_name) {|n| "User#{n}" }
+    last_name "User"
     phone "27834455556"
     password "mememe"
     password_confirmation "mememe"
     account
-    sequence(:email) {|n| "person#{n}@example.com" }
+    email { generate(:email) }
   end
 
   factory :group do

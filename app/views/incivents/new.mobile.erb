@@ -15,8 +15,8 @@
       <%= f.input :longitude %>
       <%= f.input :incivent_image, :as => :file, :label => "Event Image"%>
     <% end %>
-    <%= f.buttons do %>
-      <%= f.commit_button :label => "Submit" %>
+    <%= f.actions do %>
+      <%= f.action :submit, as: :button, label: 'Submit' %>
     <% end %>
   <% end %>
 </div>

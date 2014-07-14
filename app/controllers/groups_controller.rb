@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
   def index
     if current_user.master_user?
-      @groups = current_user.account.groups.all
+      @groups = current_user.account.groups
     else
       @groups = current_user.groups
     end

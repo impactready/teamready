@@ -5,8 +5,8 @@
     <%= f.inputs do%>
       <%= f.input :user_id, :as => :hidden %>
       <% end %>
-      <%= f.buttons do %>
-        <%= f.commit_button :label => "Unassign" %>
+      <%= f.actions do %>
+        <%= f.action :submit, as: :button, label: 'Unassign' %>
       <% end %>
     <% end %>
   </td>
@@ -18,8 +18,8 @@
         <%= f.input :user_id, :as => :hidden %>
         <%= f.input :group_id, :as => :hidden %>
       <% end %>
-      <%= f.buttons do %>
-        <%= f.commit_button :label => "Assign" %>
+      <%= f.actions do %>
+        <%= f.action :submit, as: :button, label: 'Assign' %>
       <% end %>
     <% end %>
   </td>

@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-  
+
   skip_before_filter :check_access, :check_account_active, :check_payer, :only => [:new, :create]
 
   def index
     if current_user.master_user?
-      @users = current_user.account.users.all
+      @users = current_user.account.users
     else
       @users = current_user.relevant_members
     end
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if signed_in?
       flash[:error] = "You are already an existing user."
       redirect_to root_path
-    else  
+    else
       @user = User.new
       if params[:invitation_token]
         @invitation = Invitation.find_by_token(params[:invitation_token])
@@ -54,8 +54,8 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-  
- 
+
+
   def update
     @account = current_user.account
     @user = @account.users.find(params[:id])
@@ -78,7 +78,7 @@ class UsersController < ApplicationController
         user.destroy
         flash[:success] = "User removed."
       end
-    else 
+    else
       flash[:error] = "Only a master user can destroy users."
     end
     redirect_to users_path

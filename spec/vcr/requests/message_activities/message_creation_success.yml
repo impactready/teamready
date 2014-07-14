@@ -2,42 +2,42 @@
 http_interactions:
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?address=20+Corlett+Drive%2C+Johannesburg&language=en&sensor=false
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=20%20Corlett%20Drive,%20Johannesburg&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
     headers:
-      accept-encoding:
+      Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
+      Accept:
       - '*/*'
-      user-agent:
+      User-Agent:
       - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      content-type:
+      Content-Type:
       - application/json; charset=UTF-8
-      date:
-      - Mon, 27 Jan 2014 09:14:59 GMT
-      expires:
-      - Tue, 28 Jan 2014 09:14:59 GMT
-      cache-control:
+      Date:
+      - Mon, 14 Jul 2014 17:48:38 GMT
+      Expires:
+      - Tue, 15 Jul 2014 17:48:38 GMT
+      Cache-Control:
       - public, max-age=86400
-      access-control-allow-origin:
+      Access-Control-Allow-Origin:
       - '*'
-      server:
+      Server:
       - mafe
-      x-xss-protection:
+      X-Xss-Protection:
       - 1; mode=block
-      x-frame-options:
+      X-Frame-Options:
       - SAMEORIGIN
-      alternate-protocol:
+      Alternate-Protocol:
       - 80:quic
-      connection:
-      - close
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: UTF-8
       string: |
@@ -58,7 +58,7 @@ http_interactions:
                     {
                        "long_name" : "Bramley",
                        "short_name" : "Bramley",
-                       "types" : [ "sublocality", "political" ]
+                       "types" : [ "sublocality_level_1", "sublocality", "political" ]
                     },
                     {
                        "long_name" : "Johannesburg",
@@ -114,6 +114,6 @@ http_interactions:
            ],
            "status" : "OK"
         }
-    http_version: '1.1'
-  recorded_at: Mon, 27 Jan 2014 09:15:00 GMT
-recorded_with: VCR 2.4.0
+    http_version: 
+  recorded_at: Mon, 14 Jul 2014 17:48:38 GMT
+recorded_with: VCR 2.9.2

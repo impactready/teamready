@@ -14,8 +14,8 @@
 	    <%= f.input :password %>
 	    <%= f.input :password_confirmation %>
 	  <% end %>
-	  <%= f.buttons do %>
-        <%= f.commit_button :label => "Update Password" %>
+    <%= f.actions do %>
+      <%= f.action :submit, as: :button, label: 'Update Password' %>
     <% end %>
   <% end %>
 </div>

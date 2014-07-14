@@ -2,8 +2,8 @@ class StatusesController < ApplicationController
 
   before_filter :check_master_user
 
-  def index 
-    @statuses = current_user.account.statuses.all
+  def index
+    @statuses = current_user.account.statuses
   end
 
   def new
@@ -25,7 +25,7 @@ class StatusesController < ApplicationController
     else
       flash[:error] = "Status could not be created"
       render 'new'
-    end  
+    end
   end
 
   def update
@@ -47,7 +47,7 @@ class StatusesController < ApplicationController
   end
 
   private
-  
+
   def check_master_user
     deny_access_master_user unless current_user.master_user?
   end

@@ -8,8 +8,8 @@
       <%= f.input :password %>
       <%= f.input :remember_me, :as => :boolean %>
     <% end %>
-    <%= f.buttons do %>
-      <%= f.commit_button :label => "Sign in" %>
+    <%= f.actions do %>
+      <%= f.action :submit, as: :button, label: 'Sign in' %>
     <% end %>
   <% end %>
 </div>
