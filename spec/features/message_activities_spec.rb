@@ -3,10 +3,11 @@ require 'vcr'
 
 describe 'Message Activities' do
 	before(:each) do
+		FactoryGirl.create(:account_option)
 		@user = FactoryGirl.create(:user, :master_user => true)
-		@account = @user.account
-		@group = FactoryGirl.create(:group, :account => @account)
-		FactoryGirl.create(:membership, :user => @user, :group => @group)
+    @account = FactoryGirl.create(:account)
+		@group = FactoryGirl.create(:group)
+		FactoryGirl.create(:membership)
 		visit signin_path
 		fill_in 'Email', :with => @user.email
 		fill_in 'Password', :with => "mememe"
@@ -28,12 +29,12 @@ describe 'Message Activities' do
 
 	describe 'Message new page' do
 	  it 'should show a new page for a message' do
-	    visit new_incivent_path
+	    visit new_message_path
 	    page.should have_selector('.heading-block', :text => 'New Message')
 	  end
 
 	  it 'should show a mobile view for a new page for a message' do
-	    visit new_incivent_path(:mobile => true)
+	    visit new_message_path(:mobile => true)
 	    page.should have_selector('.mobile-heading-block', :text => 'New Message')
 	  end
 	end
@@ -46,7 +47,7 @@ describe 'Message Activities' do
 					  visit new_message_path
 					  click_button 'Submit'
 					  page.should have_selector('div.flash_error')
-					  page.should have_content('Add a Message')
+					  page.should have_content('New Message')
 					end
 				end.should_not change(Message, :count)
 			end

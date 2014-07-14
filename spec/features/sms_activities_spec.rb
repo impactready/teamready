@@ -3,16 +3,17 @@ require 'spec_helper'
 describe "SMS Activities" do
 
   before(:each) do
+    FactoryGirl.create(:account_option)
     @user = FactoryGirl.create(:user)
-    @account = @user.account
-    @priority = FactoryGirl.create(:priority, :account => @account)
-    @status = FactoryGirl.create(:status, :account => @account)
-    @type = FactoryGirl.create(:type, :account => @account)
-    @group = FactoryGirl.create(:group, :account => @account)
-    FactoryGirl.create(:membership, :user => @user, :group => @group)
+    @account = FactoryGirl.create(:account)
+    @priority = FactoryGirl.create(:priority)
+    @status = FactoryGirl.create(:status)
+    @type = FactoryGirl.create(:type)
+    @group = FactoryGirl.create(:group)
+    FactoryGirl.create(:membership)
   end
 
-  describe "Inbound SMS Logging" do
+  describe "Inbound SMS Logging", type: :request do
     describe "Event/Message failure" do
       it "should not save an event/message with no details" do
         VCR.use_cassette 'requests/sms_activities/event_creation_failure' do

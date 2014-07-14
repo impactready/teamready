@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe "User Activities" do
+  before(:each) do
+    FactoryGirl.create(:account_option)
+    FactoryGirl.create(:account)
+
+  end
 
   describe "Sign in/out" do
     describe 'show' do
@@ -55,7 +60,7 @@ describe "User Activities" do
         click_button 'Sign in'
         page.should have_selector('.mt-button-s', :text => 'Sign out')
         click_link 'Sign out'
-        page.should have_selector('div.mobile-heading-block', :text => 'Sign in')
+        page.should have_selector('div.mobile-heading-block', :text => 'Sign In')
       end
     end
   end

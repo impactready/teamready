@@ -3,11 +3,12 @@ require 'spec_helper'
 describe "Group Activities" do
 
   before(:each) do
+    FactoryGirl.create(:account_option)
     @user = FactoryGirl.create(:user, :master_user => true)
-    @account = @user.account
-    @priority = FactoryGirl.create(:priority, :account => @account)
-    @status = FactoryGirl.create(:status, :account => @account)
-    @type = FactoryGirl.create(:type, :account => @account)
+    @account = FactoryGirl.create(:account)
+    @priority = FactoryGirl.create(:priority)
+    @status = FactoryGirl.create(:status)
+    @type = FactoryGirl.create(:type)
     visit signin_path
     fill_in 'Email', :with => @user.email
     fill_in 'Password', :with => "mememe"
@@ -24,7 +25,7 @@ describe "Group Activities" do
       group = FactoryGirl.create(:group, :account => @account)
       visit groups_path
       page.should have_selector('a', :text => group.name)
-      page.should have_content('There are no incivents, tasks or messages in this group.')
+      page.should have_content('There are no events, tasks or messages in this group.')
     end
 
     it 'should show a map if an event/task/message has been created' do

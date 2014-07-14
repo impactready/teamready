@@ -1,11 +1,12 @@
 require 'spec_helper'
 
 describe 'Account Activities' do
-	before(:each) do
-		FactoryGirl.create(:account_option)
-	end
+  before(:each) do
+    FactoryGirl.create(:account_option)
+  end
 
 	describe 'Account Creation' do
+
 		it 'should not create an account without a name' do
 			visit new_account_path
 			fill_in 'Name', with: 'Package Deliveries Inc.'
@@ -27,11 +28,11 @@ describe 'Account Activities' do
   	it 'should list all accounts' do
   		account = FactoryGirl.create(:account)
   		user = FactoryGirl.create(:user, :master_user => true, :god_user => true)
-  		priority = FactoryGirl.create(:priority, :account => account)
-  		status = FactoryGirl.create(:status, :account => account)
-  		type = FactoryGirl.create(:type, :account => account)
-  		group = FactoryGirl.create(:group, :account => account)
-  	  FactoryGirl.create(:membership, :user => user, :group => group)
+  		priority = FactoryGirl.create(:priority)
+  		status = FactoryGirl.create(:status)
+  		type = FactoryGirl.create(:type)
+  		group = FactoryGirl.create(:group)
+  	  FactoryGirl.create(:membership)
   	  visit signin_path
   	  fill_in 'Email', :with => user.email
   	  fill_in 'Password', :with => "mememe"
@@ -45,9 +46,9 @@ describe 'Account Activities' do
   describe 'Account Editing' do
     before(:each) do
       @account = FactoryGirl.create(:account)
-      priority = FactoryGirl.create(:priority, :account => @account)
-      status = FactoryGirl.create(:status, :account => @account)
-      type = FactoryGirl.create(:type, :account => @account)
+      priority = FactoryGirl.create(:priority)
+      status = FactoryGirl.create(:status)
+      type = FactoryGirl.create(:type)
     end
 
     it 'should allow editing for god users' do
@@ -66,9 +67,9 @@ describe 'Account Activities' do
     end
 
     it 'should redirect to subscriptions if the account type is changed' do
-      FactoryGirl.create(:account_option, :name => 'Pro', :cost => 40)
+      FactoryGirl.create(:account_option, name: "Pro", cost: 40, id: 2)
       user = FactoryGirl.create(:user, :master_user => true)
-      group = FactoryGirl.create(:group, :account => @account)
+      group = FactoryGirl.create(:group)
       FactoryGirl.create(:membership, :user => user, :group => group)
       visit signin_path
       fill_in 'Email', :with => user.email
@@ -76,6 +77,7 @@ describe 'Account Activities' do
       click_button 'Sign in'
 
       visit account_path(@account)
+
       click_link 'Edit your Account'
       select 'Pro', :from => 'Account option'
       click_button 'Update Account'

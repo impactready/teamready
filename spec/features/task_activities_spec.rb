@@ -4,12 +4,13 @@ require 'vcr'
 describe "Task Activities" do
 
   before(:each) do
+    FactoryGirl.create(:account_option)
     @user = FactoryGirl.create(:user, :master_user => true)
-    @account = @user.account
-    @priority = FactoryGirl.create(:priority, :account => @account)
-    @status = FactoryGirl.create(:status, :account => @account)
-    @group = FactoryGirl.create(:group, :account => @account)
-    FactoryGirl.create(:membership, :user => @user, :group => @group)
+    @account = FactoryGirl.create(:account)
+    @priority = FactoryGirl.create(:priority)
+    @status = FactoryGirl.create(:status)
+    @group = FactoryGirl.create(:group)
+    FactoryGirl.create(:membership)
     visit signin_path
     fill_in 'Email', :with => @user.email
     fill_in 'Password', :with => "mememe"
@@ -63,7 +64,7 @@ describe "Task Activities" do
             visit new_task_path
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_content('Add a Task')
+            page.should have_content('New Task')
           end
         end.should_not change(Task, :count)
       end

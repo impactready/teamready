@@ -4,8 +4,8 @@ describe 'Subscription Activities' do
 
   before(:each) do
     account_option = FactoryGirl.create(:account_option, cost: 40)
-    account = FactoryGirl.create(:account, account_option: account_option)
-    @user = FactoryGirl.create(:user, master_user: true, account: account)
+    account = FactoryGirl.create(:account)
+    @user = FactoryGirl.create(:user, master_user: true)
     visit signin_path
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: 'mememe'

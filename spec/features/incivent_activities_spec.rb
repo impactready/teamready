@@ -4,13 +4,14 @@ require 'vcr'
 describe "Incivent Activities" do
 
   before(:each) do
+    FactoryGirl.create(:account_option)
     @user = FactoryGirl.create(:user, :master_user => true)
-    @account = @user.account
-    @priority = FactoryGirl.create(:priority, :account => @account)
-    @status = FactoryGirl.create(:status, :account => @account)
-    @type = FactoryGirl.create(:type, :account => @account)
-    @group = FactoryGirl.create(:group, :account => @account)
-    FactoryGirl.create(:membership, :user => @user, :group => @group)
+    @account = FactoryGirl.create(:account)
+    @priority = FactoryGirl.create(:priority)
+    @status = FactoryGirl.create(:status)
+    @type = FactoryGirl.create(:type)
+    @group = FactoryGirl.create(:group)
+    FactoryGirl.create(:membership)
     visit signin_path
     fill_in 'Email', :with => @user.email
     fill_in 'Password', :with => "mememe"
@@ -49,7 +50,7 @@ describe "Incivent Activities" do
             visit new_incivent_path
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_text('Create a new Event')
+            page.should have_text('New Event')
           end
         end.should_not change(Incivent, :count)
       end

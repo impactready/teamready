@@ -3,12 +3,13 @@ require 'spec_helper'
 describe "Membership Activities" do
 
   before(:each) do
+    FactoryGirl.create(:account_option)
     @user = FactoryGirl.create(:user, :master_user => true)
-    @account = @user.account
-    @priority = FactoryGirl.create(:priority, :account => @account)
-    @status = FactoryGirl.create(:status, :account => @account)
-    @type = FactoryGirl.create(:type, :account => @account)
-    @group = FactoryGirl.create(:group, :account => @account)
+    @account = FactoryGirl.create(:account)
+    @priority = FactoryGirl.create(:priority)
+    @status = FactoryGirl.create(:status)
+    @type = FactoryGirl.create(:type)
+    @group = FactoryGirl.create(:group)
     visit signin_path
     fill_in 'Email', :with => @user.email
     fill_in 'Password', :with => "mememe"

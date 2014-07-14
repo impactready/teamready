@@ -3,8 +3,9 @@ require 'spec_helper'
 describe 'SignUp Activities' do
 
   before(:each) do
+    FactoryGirl.create(:account_option)
     @account = FactoryGirl.create(:account)
-    @invitation = FactoryGirl.create(:invitation, :account_id => @account.id)
+    @invitation = FactoryGirl.create(:invitation)
     @url = signup_url + '/' + @invitation.token
   end
 
@@ -24,9 +25,12 @@ describe 'SignUp Activities' do
           fill_in 'First name', :with => ''
           fill_in 'Last name', :with => ''
           fill_in 'Phone', :with => ''
-          fill_in 'Password', :with => 'mememe'
-          fill_in 'Password confirmation', :with => 'mememe'
-
+          within '#user_password_input' do
+            fill_in 'Password', :with => 'mememe'
+          end
+          within '#user_password_confirmation_input' do
+            fill_in 'Password confirmation', :with => 'mememe'
+          end
           click_button 'Submit'
           page.should have_selector("li.error")
       end
@@ -38,9 +42,12 @@ describe 'SignUp Activities' do
           fill_in 'First name', :with => 'Test'
           fill_in 'Last name', :with => 'User'
           fill_in 'Phone', :with => ''
-          fill_in 'Password', :with => ''
-          fill_in 'Password confirmation', :with => ''
-
+          within '#user_password_input' do
+            fill_in 'Password', :with => ''
+          end
+          within '#user_password_confirmation_input' do
+            fill_in 'Password confirmation', :with => ''
+          end
           click_button 'Submit'
           page.should have_selector("li.error")
       end
@@ -52,8 +59,12 @@ describe 'SignUp Activities' do
           fill_in 'First name', :with => 'Test'
           fill_in 'Last name', :with => 'User'
           fill_in 'Phone', :with => ''
-          fill_in 'Password', :with => 'mememe'
-          fill_in 'Password confirmation', :with => 'mememe'
+          within '#user_password_input' do
+            fill_in 'Password', :with => 'mememe'
+          end
+          within '#user_password_confirmation_input' do
+            fill_in 'Password confirmation', :with => 'mememe'
+          end
           click_button 'Submit'
           page.should have_content('All Groups')
       end

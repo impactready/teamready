@@ -3,8 +3,9 @@ require 'spec_helper'
 describe "Status Activities" do
 
   before(:each) do
+    FactoryGirl.create(:account_option)
     @user = FactoryGirl.create(:user, :master_user => true)
-    @account = @user.account
+    @account = FactoryGirl.create(:account)
     visit signin_path
     fill_in 'Email', :with => @user.email
     fill_in 'Password', :with => "mememe"
