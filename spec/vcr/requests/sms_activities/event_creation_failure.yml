@@ -5,7 +5,7 @@ http_interactions:
     uri: http://client.connet-systems.com/submit/
     body:
       encoding: US-ASCII
-      string: username=worldwize&password=vae0aih5Bayerau&account=worldwize&da=%5BIncivent%5D+-+Number+not+recognized+for+submission.&ud&id=vkhizk86v
+      string: username=worldwize&password=vae0aih5Bayerau&account=worldwize&da=%5BIncivent%5D+-+Number+not+recognized+for+submission.&ud&id=uil7d617vt
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -23,7 +23,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Jul 2014 18:39:54 GMT
+      - Thu, 05 Mar 2015 12:54:26 GMT
       Server:
       - Apache/2.2.17 (Ubuntu)
       X-Powered-By:
@@ -37,10 +37,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: |
-        BatchIdentifier: worldwize_worldwize_20140714203954_1405363194.4496
+        BatchIdentifier: worldwize_worldwize_20150305145426_1425560066.5549
         Code: 811
         Description: Missing User Data
-        Info: vkhizk86v
+        Info: uil7d617vt
     http_version: 
-  recorded_at: Mon, 14 Jul 2014 18:39:54 GMT
+  recorded_at: Thu, 05 Mar 2015 12:54:26 GMT
 recorded_with: VCR 2.9.2

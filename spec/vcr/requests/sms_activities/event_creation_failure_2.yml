@@ -5,7 +5,7 @@ http_interactions:
     uri: http://client.connet-systems.com/submit/
     body:
       encoding: US-ASCII
-      string: username=worldwize&password=vae0aih5Bayerau&account=worldwize&da=%5BIncivent%5D+-+Number+not+recognized+for+submission.&ud&id=9n32my28pi
+      string: username=worldwize&password=vae0aih5Bayerau&account=worldwize&da=%5BIncivent%5D+-+Number+not+recognized+for+submission.&ud&id=h2aolp0hoh
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -23,24 +23,24 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Jul 2014 18:39:54 GMT
+      - Thu, 05 Mar 2015 12:54:26 GMT
       Server:
       - Apache/2.2.17 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.5-1ubuntu7.11
       Vary:
       - Accept-Encoding
-      Content-Length:
-      - '131'
+      Transfer-Encoding:
+      - chunked
       Content-Type:
       - text/plain
     body:
       encoding: UTF-8
       string: |
-        BatchIdentifier: worldwize_worldwize_20140714203955_1405363195.0488
+        BatchIdentifier: worldwize_worldwize_20150305145426_1425560066.8047
         Code: 811
         Description: Missing User Data
-        Info: 9n32my28pi
+        Info: h2aolp0hoh
     http_version: 
-  recorded_at: Mon, 14 Jul 2014 18:39:55 GMT
+  recorded_at: Thu, 05 Mar 2015 12:54:26 GMT
 recorded_with: VCR 2.9.2

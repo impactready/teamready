@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 14 Jul 2014 18:39:59 GMT
+      - Thu, 05 Mar 2015 12:54:28 GMT
       Expires:
-      - Tue, 15 Jul 2014 18:39:59 GMT
+      - Fri, 06 Mar 2015 12:54:28 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -35,7 +35,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Alternate-Protocol:
-      - 80:quic
+      - 80:quic,p=0.08
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
@@ -73,11 +77,6 @@ http_interactions:
                     {
                        "long_name" : "Cape Town",
                        "short_name" : "Cape Town",
-                       "types" : [ "administrative_area_level_3", "political" ]
-                    },
-                    {
-                       "long_name" : "Cape Town",
-                       "short_name" : "Cape Town",
                        "types" : [ "administrative_area_level_2", "political" ]
                     },
                     {
@@ -96,7 +95,7 @@ http_interactions:
                        "types" : [ "postal_code" ]
                     }
                  ],
-                 "formatted_address" : "40 Kloof Street, Cape Town 8001, South Africa",
+                 "formatted_address" : "40 Kloof Street, Gardens, Cape Town, 8001, South Africa",
                  "geometry" : {
                     "location" : {
                        "lat" : -33.92875,
@@ -114,19 +113,20 @@ http_interactions:
                        }
                     }
                  },
+                 "place_id" : "ChIJRUKwxHFnzB0Rv3-DSIK12rg",
                  "types" : [ "street_address" ]
               }
            ],
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 14 Jul 2014 18:40:00 GMT
+  recorded_at: Thu, 05 Mar 2015 12:54:28 GMT
 - request:
     method: post
     uri: http://client.connet-systems.com/submit/
     body:
       encoding: US-ASCII
-      string: username=worldwize&password=vae0aih5Bayerau&account=worldwize&da=%5BIncivent%5D+-+Your+message%2Fevent+has+been+logged.&ud&id=gozgq4wv09
+      string: username=worldwize&password=vae0aih5Bayerau&account=worldwize&da=%5BIncivent%5D+-+Your+message%2Fevent+has+been+logged.&ud&id=991i3qymn7
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -144,24 +144,24 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 14 Jul 2014 18:40:00 GMT
+      - Thu, 05 Mar 2015 12:54:28 GMT
       Server:
       - Apache/2.2.17 (Ubuntu)
       X-Powered-By:
       - PHP/5.3.5-1ubuntu7.11
       Vary:
       - Accept-Encoding
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '132'
       Content-Type:
       - text/plain
     body:
       encoding: UTF-8
       string: |
-        BatchIdentifier: worldwize_worldwize_20140714204000_1405363200.3479
+        BatchIdentifier: worldwize_worldwize_20150305145428_1425560068.7799
         Code: 811
         Description: Missing User Data
-        Info: gozgq4wv09
+        Info: 991i3qymn7
     http_version: 
-  recorded_at: Mon, 14 Jul 2014 18:40:00 GMT
+  recorded_at: Thu, 05 Mar 2015 12:54:28 GMT
 recorded_with: VCR 2.9.2

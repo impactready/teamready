@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 14 Jul 2014 17:48:38 GMT
+      - Thu, 05 Mar 2015 12:54:19 GMT
       Expires:
-      - Tue, 15 Jul 2014 17:48:38 GMT
+      - Fri, 06 Mar 2015 12:54:19 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -35,7 +35,11 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Alternate-Protocol:
-      - 80:quic
+      - 80:quic,p=0.08
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Encoding
       Transfer-Encoding:
       - chunked
     body:
@@ -66,11 +70,6 @@ http_interactions:
                        "types" : [ "locality", "political" ]
                     },
                     {
-                       "long_name" : "Johannesburg",
-                       "short_name" : "Johannesburg",
-                       "types" : [ "administrative_area_level_3", "political" ]
-                    },
-                    {
                        "long_name" : "City of Johannesburg Metropolitan Municipality",
                        "short_name" : "City of Johannesburg Metropolitan Municipality",
                        "types" : [ "administrative_area_level_2", "political" ]
@@ -91,7 +90,7 @@ http_interactions:
                        "types" : [ "postal_code" ]
                     }
                  ],
-                 "formatted_address" : "20 Corlett Drive, Johannesburg 2018, South Africa",
+                 "formatted_address" : "20 Corlett Drive, Johannesburg, 2018, South Africa",
                  "geometry" : {
                     "location" : {
                        "lat" : -26.1249014,
@@ -109,11 +108,12 @@ http_interactions:
                        }
                     }
                  },
+                 "place_id" : "ChIJ8w1rWxUNlR4RKkv--7CNFgU",
                  "types" : [ "street_address" ]
               }
            ],
            "status" : "OK"
         }
     http_version: 
-  recorded_at: Mon, 14 Jul 2014 17:48:38 GMT
+  recorded_at: Thu, 05 Mar 2015 12:54:19 GMT
 recorded_with: VCR 2.9.2

@@ -1,7 +1,7 @@
 require 'vcr'
 
 VCR.configure do |c|
-  c.default_cassette_options = { record: :once, erb: true, re_record_interval: 20.days }
+  c.default_cassette_options = { record: :once, erb: true, re_record_interval: 1.year }
 
   # not important for this example, but must be set to something
   c.hook_into :webmock
