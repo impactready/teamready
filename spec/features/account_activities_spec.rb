@@ -7,7 +7,7 @@ describe 'Account Activities' do
 
 	describe 'Account Creation' do
 
-		it 'should not create an account without a name' do
+		it 'should create an account with a name' do
 			visit new_account_path
 			fill_in 'Name', with: 'Package Deliveries Inc.'
 			select 'Test', from: 'Account option'
@@ -22,6 +22,14 @@ describe 'Account Activities' do
 			click_button 'Create Account'
 			page.should have_content("can't be blank")
 		end
+
+    it 'should create and account and send details to an email address' do
+      true.should eq false
+    end
+
+    it 'should not allow an email if it already exits' do
+      true.should eq false
+    end
   end
 
   describe 'Account Listing' do

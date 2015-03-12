@@ -14,7 +14,7 @@ class InvitationsController < ApplicationController
     else
       # This is for completely new signups, i.e. not done by the admin user.
       if params[:account_id]
-        @account = Account.find(cookies[:account_id])
+        @account = Account.find(params[:account_id])
         if @account && @account.users.count == 0
           @new_account = true
           @invitation = Invitation.new(:account_id => @account.id)
@@ -38,7 +38,7 @@ class InvitationsController < ApplicationController
       else
         redirect_to root_path
       end
-      cookies.delete(:current_account_id)
+      # cookies.delete(:current_account_id)
     else
       render :action => 'new'
     end
