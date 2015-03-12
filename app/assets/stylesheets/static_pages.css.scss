@@ -111,15 +111,26 @@ h3.home-page-top {
 
 }
 
-.price-block a {
-  background: url(/assets/ButtonNorm.png) no-repeat;
-  width: 151px;
-  height: 51px;
-  position: absolute;
-  text-indent: -5000px;
-  left: 89px;
-  top: 195px;
+.price-block {
+  div.large_button_container {
+    margin-top: 10px;
+  }
+
+  a.large_button {
+    font-size: 2em;
+    color: #FFF;
+    background-color: #999;
+    padding: 5px 13px 7px 13px;
+    border-radius: 7px;
+  }
+
+  a.large_button:hover {
+    background-color: #1465A7;
+    text-decoration: none;
+  }
 }
+
+
 
 .price-block ul {
     padding: 0;
@@ -132,9 +143,6 @@ h3.home-page-top {
   font-style: italic;
 }
 
-.price-block a:hover {
-    background: url(/assets/ButtonHighlight.png) no-repeat;
-}
 
 .option-price {
   font-size: 1.7em;

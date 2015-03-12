@@ -48,9 +48,9 @@ class AccountsController < ApplicationController
     @account.toggle(:active)
     if @account.save
       AccountInterface.set_account_defaults(@account)
-      cookies[:current_account_id] = @account.id
+      # cookies[:current_account_id] = @account.id
       flash[:success] = "Your account has been created."
-      redirect_to new_invitation_path
+      redirect_to new_invitation_path(account_id: @account.id)
     else
       render 'new'
     end

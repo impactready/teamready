@@ -1,5 +1,7 @@
 class Invitation < ActiveRecord::Base
 
+	attr_accessible :recipient_email, :account_id
+
 	validate :recipient_is_not_registered
 	validates :recipient_email, :presence => true
 

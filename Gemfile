@@ -9,7 +9,7 @@ gem 'rails', '4.0.8'
 
 gem 'paperclip', '~> 3.5.4'
 gem 'aws-sdk'
-gem 'taps'
+gem 'pry'
 
 gem 'cocaine', '0.5.3'
 gem 'formtastic', '2.3.0.rc3'

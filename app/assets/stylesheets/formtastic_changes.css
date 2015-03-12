@@ -30,9 +30,9 @@ form.formtastic input, form.formtastic textarea, form.formtastic select {
 
 form.formtastic fieldset > ol > li.text textarea {height: 100px; }
 
-form.formtastic input[type="submit"] {
+form.formtastic input[type="submit"], form.formtastic button {
   background-color: #7AC5CD;
-  padding: 2px 7px 2px 7px;
+  padding: 3px 10px 4px 10px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -43,10 +43,9 @@ form.formtastic input[type="submit"] {
   background-image: -webkit-gradient(
       linear, 0 0, 0 20,
       from(hsla(0,0%,100%,.7)),
-      to(hsla(0,0%,100%,0))
+      to(hsla(0,0%,100%,.3))
   );
-  -webkit-box-shadow: 1px 1px 1px hsla(0,0%,0%,.3);
-  box-shadow: 1px 1px 1px hsla(0,0%,0%,.3);
+  border: 1px solid #BBB;
 }
 
 form.formtastic fieldset.buttons { margin-left: 0; padding:0.5em 0; margin-top:-0.5em; margin-bottom:1em; }
