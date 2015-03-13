@@ -6,7 +6,7 @@ body {
     margin: 0 0 0 0;
     padding: 0px;
     color: #030303;
-    background: #fff url(/assets/GreyBackground.png) repeat;
+    background-image: linear-gradient(180deg, #D7D7D7, #D7D7D7 150px, #fff 400px);
     font-size: 13px;
     line-height: 1.5;
 }
@@ -69,7 +69,7 @@ div.header-main {
 
 .heading-block, .heading-block-in {
    padding: 2px 5px 2px 5px;
-   background-color: #EEE0E5;
+   background-color: #F7F7F7;
    background-image: -moz-linear-gradient(
        hsla(0,0%,100%,0),
        hsla(0,0%,100%,.2) 50px

@@ -49,6 +49,10 @@ describe 'Account Activities' do
   	  visit accounts_path
   	  page.should have_content(account.name)
   	end
+
+    it 'should redirect to the new acccounts path for creating a new account' do
+      true.should eq false
+    end
   end
 
   describe 'Account Editing' do
