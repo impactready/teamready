@@ -8,5 +8,4 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require tabs_datepicker
-//= require markerwithlabel
 //= require_self

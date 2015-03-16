@@ -10,17 +10,28 @@ describe 'Static Page Activities' do
 	end
 
 	describe 'get the Pricing Page' do
-	  it "should show details from the home page" do
+	  it "should show details from the pricing page" do
 	    visit '/pricing'
-	    page.should have_content('Pricing')
+	    page.should have_content('Signup')
 	    page.should have_selector('div.pricing')
+	  end
+
+	  it "should show details from the pricing page and click through to the contact page" do
+	    visit '/pricing'
+	    page.should have_content('Signup')
+	    page.should have_selector('div.pricing')
+
+	    click_link 'New account'
+
+	    page.should have_content 'Contact us'
+	    page.should have_content 'Thank you for your interest in joining us.'
 	  end
 	end
 
 	describe 'get the Contact Page' do
 	  it "should show details from the home page" do
 	    visit '/contact'
-	    page.should have_content('Want to know more?')
+	    page.should have_content('Want to discuss our offering?')
 	  end
 	end
 

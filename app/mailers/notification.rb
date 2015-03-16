@@ -44,7 +44,7 @@ class Notification < ActionMailer::Base
     mail :to => user.email, :subject => "[ImpactReady] - Password Reset"
   end
 
-  def notify_contact(email, message)
+  def notify_contact(email, message, subject)
     @email = email
     @message = message
     mail :to => ["joseph@impactready.org", "raouldevilliers@gmail.com"], :subject => "Query from ImpactReady.com"

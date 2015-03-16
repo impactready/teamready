@@ -19,6 +19,7 @@ class StaticPagesController < ApplicationController
 
   def contact
     @launch_interest = LaunchInterest.new
+    @new_account = params[:new_account] ? true : false
   end
 
   def privacy
