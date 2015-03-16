@@ -1,0 +1,29 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>All accounts</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal"><%= link_to 'New account', new_account_path %></p>
+
+<div class="listing">
+  <div class="listing-header">
+    <div class="listing-i-fm">Name:</div>
+    <div class="listing-i-f">Payment Active:</div>
+    <div class="listing-i-f">Active:</div>
+    <div class="listing-i-fs">Users:</div>
+    <div class="listing-i-fs">Groups:</div>
+    <div class="listing-i-fs">Events:</div>
+    <div class="listing-i-fs">Tasks:</div>
+    <div class="listing-i-fs">Messages:</div>
+    <br class="clear"/>
+  </div>
+</div>
+
+<div id="accouts">
+  <%= render @accounts %>
+</div>
