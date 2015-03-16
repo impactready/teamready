@@ -47,7 +47,7 @@ class Notification < ActionMailer::Base
   def notify_contact(email, message)
     @email = email
     @message = message
-    mail :to => "joseph@impactready.org, raouldevilliers@gmail.com", :subject => "Query from ImpactReady.com"
+    mail :to => ["joseph@impactready.org", "raouldevilliers@gmail.com"], :subject => "Query from ImpactReady.com"
   end
 
 end
