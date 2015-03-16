@@ -57,15 +57,15 @@
   <div class="admin-column">
 
     <%= render 'accounts/account_plan' %>
-    <p class="normal"><%= link_to "Edit your Account", edit_account_path(@account) %></p>
-    <p class="normal"><%= link_to "Close your Account", @account, :method => :delete, :data => {:confirm => "You sure you want to remove your profile?"} %></p>
+    <p class="normal"><%= link_to "Edit your account", edit_account_path(@account) %></p>
+    <p class="normal"><%= link_to "Close your account", @account, :method => :delete, :data => {:confirm => "You sure you want to remove your profile?"} %></p>
   </div>
 
   <div class="admin-column">
     <p class="normal"><strong>Event Classification</strong></p>
-    <p class="normal"><%= link_to "Manage Priority Options", priorities_path %></p>
-    <p class="normal"><%= link_to "Manage Types", types_path %></p>
-    <p class="normal"><%= link_to "Manage Statuses", statuses_path %></p>
+    <p class="normal"><%= link_to "Manage priority options", priorities_path %></p>
+    <p class="normal"><%= link_to "Manage types", types_path %></p>
+    <p class="normal"><%= link_to "Manage statuses", statuses_path %></p>
   </div>
 
   <div class="admin-column">

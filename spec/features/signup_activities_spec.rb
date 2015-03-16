@@ -66,7 +66,7 @@ describe 'SignUp Activities' do
             fill_in 'Password confirmation', :with => 'mememe'
           end
           click_button 'Submit'
-          page.should have_content('All Groups')
+          page.should have_content('All groups')
       end
     end
   end

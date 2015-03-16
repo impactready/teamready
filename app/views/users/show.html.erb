@@ -10,7 +10,7 @@
 
 <p class="normal"><strong>Email:</strong> <%= @user.email %></p>
 <% if current_user == @user %>
-  <p class="normal"><%= link_to "Edit", edit_user_path(current_user) %> | 
+  <p class="normal"><%= link_to "Edit", edit_user_path(current_user) %> |
   <%= link_to "Delete", current_user, :method => :delete, :data => {:confirm => "You sure you want to remove your profile?"},
                                 :title => "Remove your profile?" %><p>
 <% end %>

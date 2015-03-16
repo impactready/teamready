@@ -16,7 +16,7 @@ describe "User Activities" do
 
       it 'should render a mobile signin page if on a mobile device' do
         visit signin_path(:mobile => true)
-        page.should have_selector('div.mobile-heading-block', :text => 'Sign In')
+        page.should have_selector('div.mobile-heading-block', :text => 'Sign in')
       end
     end
 
@@ -31,12 +31,12 @@ describe "User Activities" do
 
       it 'should not sign a user in using mobile views' do
         visit signin_path(:mobile => true)
-        page.should have_selector('div.mobile-heading-block', :text => 'Sign In')
+        page.should have_selector('div.mobile-heading-block', :text => 'Sign in')
         fill_in 'Email', :with => ''
         fill_in 'Password', :with => ''
         click_button 'Sign in'
         page.should have_selector('div.flash_error')
-        page.should have_selector('div.mobile-heading-block', :text => 'Sign In')
+        page.should have_selector('div.mobile-heading-block', :text => 'Sign in')
       end
     end
 
@@ -60,7 +60,7 @@ describe "User Activities" do
         click_button 'Sign in'
         page.should have_selector('.mt-button-s', :text => 'Sign out')
         click_link 'Sign out'
-        page.should have_selector('div.mobile-heading-block', :text => 'Sign In')
+        page.should have_selector('div.mobile-heading-block', :text => 'Sign in')
       end
     end
   end
@@ -86,7 +86,7 @@ describe "User Activities" do
         end
         click_button 'Submit'
         page.should have_selector("div.flash_error")
-        page.should have_content("Edit Profile")
+        page.should have_content("Edit profile")
       end
     end
 
@@ -103,7 +103,7 @@ describe "User Activities" do
         end
         click_button 'Submit'
         page.should have_selector("div.flash_success")
-        page.should have_content("All Groups")
+        page.should have_content("All groups")
       end
     end
 

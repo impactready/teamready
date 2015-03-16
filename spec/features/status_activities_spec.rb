@@ -29,7 +29,7 @@ describe "Status Activities" do
         visit new_status_path
         click_button 'Submit'
         page.should have_selector('div.flash_error')
-        page.should have_content('New Status')
+        page.should have_content('New status')
       end
     end
 
@@ -39,7 +39,7 @@ describe "Status Activities" do
         fill_in 'Description', :with => "Closed"
         click_button 'Submit'
         page.should have_selector('div.flash_success')
-        page.should have_content('Status Options')
+        page.should have_content('Status options')
       end
     end
   end
@@ -56,7 +56,7 @@ describe "Status Activities" do
         fill_in 'Description', :with => ''
         click_button 'Submit'
         page.should have_selector('div.flash_error')
-        page.should have_content('Edit Status')
+        page.should have_content('Edit status')
       end
     end
 
@@ -65,7 +65,7 @@ describe "Status Activities" do
         fill_in 'Description', :with => 'Open Reviewed'
         click_button 'Submit'
         page.should have_selector('div.flash_success')
-        page.should have_content('Status Options')
+        page.should have_content('Status options')
       end
     end
 

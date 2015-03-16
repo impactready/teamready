@@ -29,7 +29,7 @@ describe "Type Activities" do
         visit new_type_path
         click_button 'Submit'
         page.should have_selector('div.flash_error')
-        page.should have_content('New Type')
+        page.should have_content('New type')
       end
     end
 
@@ -39,7 +39,7 @@ describe "Type Activities" do
         fill_in 'Description', :with => "Environmental"
         click_button 'Submit'
         page.should have_selector('div.flash_success')
-        page.should have_content('Type Options')
+        page.should have_content('Type options')
       end
     end
   end
@@ -56,7 +56,7 @@ describe "Type Activities" do
         fill_in 'Description', :with => ''
         click_button 'Submit'
         page.should have_selector('div.flash_error')
-        page.should have_content('Edit Type')
+        page.should have_content('Edit type')
       end
     end
 
@@ -65,7 +65,7 @@ describe "Type Activities" do
         fill_in 'Description', :with => 'Environmental Reviewd'
         click_button 'Submit'
         page.should have_selector('div.flash_success')
-        page.should have_content('Type Options')
+        page.should have_content('Type options')
       end
     end
 

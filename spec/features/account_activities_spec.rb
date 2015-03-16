@@ -90,11 +90,11 @@ describe 'Account Activities' do
 
       visit account_path(@account)
 
-      click_link 'Edit your Account'
+      click_link 'Edit your account'
       select 'Pro', :from => 'Account option'
       click_button 'Update Account'
 
-      page.should have_content('Account Activation')
+      page.should have_content('Account activation')
     end
 
   end

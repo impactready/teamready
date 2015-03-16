@@ -56,7 +56,7 @@ describe "Group Activities" do
         fill_in 'Name', :with => ''
         fill_in 'Description', :with => ''
         click_button 'Submit'
-        page.should have_content('Create a New Group')
+        page.should have_content('Create a new group')
         page.should have_selector('div.flash_error')
       end
     end
@@ -67,7 +67,7 @@ describe "Group Activities" do
         fill_in 'Name', :with => 'Sewer monitoring'
         fill_in 'Description', :with => 'People going into sewers to check quality.'
         click_button 'Submit'
-        page.should have_content('All Groups')
+        page.should have_content('All groups')
         page.should have_selector("tr.listing-item", :text => 'Sewer monitoring')
       end
     end
@@ -84,7 +84,7 @@ describe "Group Activities" do
       it 'should not update the group' do
         fill_in 'Name', :with => ''
         click_button 'Submit'
-        page.should have_content('Edit this Group')
+        page.should have_content('Edit this group')
         page.should have_selector('div.flash_error')
       end
     end
@@ -94,7 +94,7 @@ describe "Group Activities" do
         fill_in 'Name', :with => 'Sewer monitoring reviewed'
         fill_in 'Description', :with => 'People going into sewers to check quality - reviewed.'
         click_button 'Submit'
-        page.should have_content('All Groups')
+        page.should have_content('All groups')
         page.should have_selector('tr.listing-item', :text => 'Sewer monitoring reviewed')
       end
     end

@@ -1,14 +1,12 @@
 <div class="spacer">
 </div>
-<% if current_user.master_user? %>
-  <div class="heading-block">
-    <h2>All Users</h2>
-  </div>
-<% else %>
-  <div class="heading-block">
-    <h2>All Users in your Groups</h2>
-  </div>
-<% end %>
+<div class="heading-block">
+  <% if current_user.master_user? %>
+      <h2>All users</h2>
+  <% else %>
+      <h2>All users in your groups</h2>
+  <% end %>
+</div>
 <% if @users.count == 0%>
 
   <% if current_user.master_user? %>

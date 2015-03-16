@@ -4,13 +4,13 @@
 </div>
 
 <div class="heading-block">
-    <h2>All Groups</h2>
+    <h2>All groups</h2>
 </div>
 
 <div class="spacer">
 </div>
 <% if current_user.master_user? %>
-  <p class="normal"><%= link_to 'Create a New Group', new_group_path %></p>
+  <p class="normal"><%= link_to 'Create a new group', new_group_path %></p>
 <% end %>
 
 <% if @groups.count == 0%>

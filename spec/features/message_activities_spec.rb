@@ -20,7 +20,7 @@ describe 'Message Activities' do
 			VCR.use_cassette 'requests/message_activities/message_index' do
 			  message = FactoryGirl.create(:message, :user => @user, :group => @group)
 			  visit messages_path
-		  	page.should have_content('All Messages')
+		  	page.should have_content('All messages')
 		    page.should have_selector('tr.listing-item', :text => message.description)
 		    page.should have_link('Posted by')
 	    end
@@ -30,12 +30,12 @@ describe 'Message Activities' do
 	describe 'Message new page' do
 	  it 'should show a new page for a message' do
 	    visit new_message_path
-	    page.should have_selector('.heading-block', :text => 'New Message')
+	    page.should have_selector('.heading-block', :text => 'New message')
 	  end
 
 	  it 'should show a mobile view for a new page for a message' do
 	    visit new_message_path(:mobile => true)
-	    page.should have_selector('.mobile-heading-block', :text => 'New Message')
+	    page.should have_selector('.mobile-heading-block', :text => 'New message')
 	  end
 	end
 
@@ -47,7 +47,7 @@ describe 'Message Activities' do
 					  visit new_message_path
 					  click_button 'Submit'
 					  page.should have_selector('div.flash_error')
-					  page.should have_content('New Message')
+					  page.should have_content('New message')
 					end
 				end.should_not change(Message, :count)
 			end
@@ -58,7 +58,7 @@ describe 'Message Activities' do
 			      visit new_message_path(:mobile => true)
 			      click_button 'Submit'
 			      page.should have_selector('div.flash_error')
-			      page.should have_selector('.mobile-heading-block', :text => 'New Message')
+			      page.should have_selector('.mobile-heading-block', :text => 'New message')
 			    end
 			  end.should_not change(Incivent, :count)
 			end
@@ -73,7 +73,7 @@ describe 'Message Activities' do
 				    fill_in 'Location', :with => '20 Corlett Drive, Johannesburg'
 				    select @group.name, :from => 'Group'
 				    click_button 'Submit'
-				    page.should have_content('All Messages')
+				    page.should have_content('All messages')
 				  end
 			  end.should change(Message, :count).by(1)
 		  end
@@ -86,7 +86,7 @@ describe 'Message Activities' do
 		        fill_in 'Location', :with => '20 Corlett Drive, Johannesburg'
 		        select @group.name, :from => 'Group'
 		        click_button 'Submit'
-		        page.should have_selector('.mobile-heading-block', :text => 'All Tasks')
+		        page.should have_selector('.mobile-heading-block', :text => 'All tasks')
 		      end
 		    end.should change(Message, :count).by(1)
 		  end
@@ -107,7 +107,7 @@ describe 'Message Activities' do
 			    fill_in 'Description', :with => ""
 			    click_button 'Submit'
 			    page.should have_selector('div.flash_error')
-			    page.should have_content('Edit this Message')
+			    page.should have_content('Edit this message')
 			  end
 		  end
 		end
@@ -118,7 +118,7 @@ describe 'Message Activities' do
 			    fill_in 'Description', :with => 'Our customers were not happy..'
 			    fill_in 'Location', :with => '19 Corlett Drive, Johannesburg'
 			    click_button 'Submit'
-			    page.should have_content('All Messages')
+			    page.should have_content('All messages')
 			    page.should have_selector('tr.listing-item', :text => 'Our customers were not happy..')
 			  end
 		  end
@@ -141,7 +141,7 @@ describe 'Message Activities' do
 	  	VCR.use_cassette 'requests/message_activities/message_delete' do
 		  	message = FactoryGirl.create(:message, :user => @user, :group => @group)
 		    visit message_path(message)
-		    click_link 'Delete this Message'
+		    click_link 'Delete this message'
 		    page.should have_selector('div.flash_success', :text => 'Message removed.')
 		  end
 	  end

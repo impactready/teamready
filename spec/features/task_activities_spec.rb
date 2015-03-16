@@ -22,14 +22,14 @@ describe "Task Activities" do
     it 'should show a notice when there are no tasks on a mobile view' do
       visit tasks_path(:mobile => true)
       page.should have_content('You do not have any tasks assigned to you.')
-      page.should have_selector('div.mobile-heading-block', :text => 'All Tasks')
+      page.should have_selector('div.mobile-heading-block', :text => 'All tasks')
     end
 
     it 'should render the index page' do
       VCR.use_cassette 'requests/task_activities/task_index' do
         task = FactoryGirl.create(:task, :user => @user, :group => @group, :priority => @priority, :raised_user_id => @user.id, :status => @status)
         visit "/tasks/"
-        page.should have_content('All Tasks')
+        page.should have_content('All tasks')
         page.should have_selector("tr.listing-item", :text => task.description)
         page.should have_link("Priority")
       end
@@ -47,12 +47,12 @@ describe "Task Activities" do
   describe 'Task new page' do
     it 'should show a new page for an task' do
       visit new_task_path
-      page.should have_selector('.heading-block', :text => 'New Task')
+      page.should have_selector('.heading-block', :text => 'New task')
     end
 
     it 'should show a mobile view for a new page for an task' do
       visit new_task_path(:mobile => true)
-      page.should have_selector('.mobile-heading-block', :text => 'New Task')
+      page.should have_selector('.mobile-heading-block', :text => 'New task')
     end
   end
 
@@ -64,7 +64,7 @@ describe "Task Activities" do
             visit new_task_path
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_content('New Task')
+            page.should have_content('New task')
           end
         end.should_not change(Task, :count)
       end
@@ -75,7 +75,7 @@ describe "Task Activities" do
             visit new_task_path(:mobile => true)
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_selector('.mobile-heading-block', :text => 'New Task')
+            page.should have_selector('.mobile-heading-block', :text => 'New task')
           end
         end.should_not change(Task, :count)
       end
@@ -94,7 +94,7 @@ describe "Task Activities" do
             select @user.full_name, :from => 'User'
             fill_in 'Due date', :with => '2014-06-24'
             click_button 'Submit'
-            page.should have_content('All Tasks')
+            page.should have_content('All tasks')
             page.should have_selector('tr.listing-item', :text => "Do something now.")
           end
         end.should change(Task, :count).by(1)
@@ -112,7 +112,7 @@ describe "Task Activities" do
             select @user.full_name, :from => 'User'
             fill_in 'Due date', :with => '2014-06-24'
             click_button 'Submit'
-            page.should have_selector('.mobile-heading-block', :text => 'All Tasks')
+            page.should have_selector('.mobile-heading-block', :text => 'All tasks')
           end
         end.should change(Task, :count).by(1)
       end
@@ -134,7 +134,7 @@ describe "Task Activities" do
           fill_in 'Description', :with => ""
           click_button 'Submit'
           page.should have_selector('div.flash_error')
-          page.should have_content('Edit this Task')
+          page.should have_content('Edit this task')
         end
       end
     end
@@ -146,7 +146,7 @@ describe "Task Activities" do
           fill_in 'Description', :with => 'Do something now.. reviewed'
           fill_in 'Location', :with => '19 Corlett Drive, Johannesburg'
           click_button 'Submit'
-          page.should have_content('All Tasks')
+          page.should have_content('All tasks')
           page.should have_selector('tr.listing-item', :text => 'Do something now.. reviewed')
         end
       end
@@ -169,7 +169,7 @@ describe "Task Activities" do
       VCR.use_cassette 'requests/task_activities/task_delete' do
         task = FactoryGirl.create(:task, :user => @user, :group => @group, :priority => @priority, :raised_user_id => @user.id, :status => @status)
         visit task_path(task)
-        click_link('Delete this Task')
+        click_link('Delete this task')
         page.should have_selector('div.flash_success', :text => 'Task removed.')
       end
     end

@@ -23,7 +23,7 @@ describe "Incivent Activities" do
       VCR.use_cassette 'requests/incivent_activities/event_listing' do
         event = FactoryGirl.create(:incivent, :user => @user, :group => @group, :priority => @priority, :type => @type, :status => @status)
         visit incivents_path
-        page.should have_content('All Events')
+        page.should have_content('All events')
         page.should have_selector('tr.listing-item', :text => event.name)
         page.should have_link('Priority')
       end
@@ -33,12 +33,12 @@ describe "Incivent Activities" do
   describe 'Event new page' do
     it 'should show a new page for an event' do
       visit new_incivent_path
-      page.should have_selector('.heading-block', :text => 'New Event')
+      page.should have_selector('.heading-block', :text => 'New event')
     end
 
     it 'should show a mobile view for a new page for an event' do
       visit new_incivent_path(:mobile => true)
-      page.should have_selector('.mobile-heading-block', :text => 'New Event')
+      page.should have_selector('.mobile-heading-block', :text => 'New event')
     end
   end
 
@@ -50,7 +50,7 @@ describe "Incivent Activities" do
             visit new_incivent_path
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_text('New Event')
+            page.should have_text('New event')
           end
         end.should_not change(Incivent, :count)
       end
@@ -61,7 +61,7 @@ describe "Incivent Activities" do
             visit new_incivent_path(:mobile => true)
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_selector('.mobile-heading-block', :text => 'New Event')
+            page.should have_selector('.mobile-heading-block', :text => 'New event')
           end
         end.should_not change(Incivent, :count)
       end
@@ -81,7 +81,7 @@ describe "Incivent Activities" do
             select @type.description, :from => 'Type'
             select @group.name, :from => 'Group'
             click_button 'Submit'
-            page.should have_text('All Events')
+            page.should have_text('All events')
           end
         end.should change(Incivent, :count).by(1)
       end
@@ -98,7 +98,7 @@ describe "Incivent Activities" do
             select @type.description, :from => 'Type'
             select @group.name, :from => 'Group'
             click_button 'Submit'
-            page.should have_selector('.mobile-heading-block', :text => 'All Tasks')
+            page.should have_selector('.mobile-heading-block', :text => 'All tasks')
           end
         end.should change(Incivent, :count).by(1)
       end
@@ -116,7 +116,7 @@ describe "Incivent Activities" do
           fill_in 'Description', :with => ""
           click_button 'Submit'
           page.should have_selector('div.flash_error')
-          page.should have_content('Edit this Event')
+          page.should have_content('Edit this event')
         end
       end
     end
@@ -129,7 +129,7 @@ describe "Incivent Activities" do
           fill_in 'Name', :with => 'Serious oil spill reviewed'
           fill_in 'Description', :with => 'In Johannesburg.. reviewed'
           click_button 'Submit'
-          page.should have_content('All Events')
+          page.should have_content('All events')
           page.should have_selector('tr.listing-item', :text => 'Serious oil spill reviewed')
         end
       end
@@ -152,7 +152,7 @@ describe "Incivent Activities" do
       VCR.use_cassette 'requests/incivent_activities/event_delete' do
         event = FactoryGirl.create(:incivent, :user => @user, :group => @group, :priority => @priority, :type => @type, :status => @status)
         visit incivent_path(event)
-        click_link 'Delete this Event'
+        click_link 'Delete this event'
         page.should have_selector('div.flash_success', :text => 'Event removed.')
       end
     end

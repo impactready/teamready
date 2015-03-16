@@ -1,3 +1,4 @@
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJp-fDHOROELFhGj3s0HNVwq0anZlcFM"></script>
 <%= javascript 'googleearth' %>
 <%= javascript 'markerwithlabel' %>
 
@@ -5,13 +6,13 @@
 </div>
 
 <div class="heading-block">
-  <h2>All Events</h2>
+  <h2>All events</h2>
 </div>
 
 <div class="spacer">
 </div>
 
-<p class="normal"><%= link_to 'New Event', new_incivent_path %></p>
+<p class="normal"><%= link_to 'New event', new_incivent_path %></p>
 
 
 <% if @incivents.empty? %>
