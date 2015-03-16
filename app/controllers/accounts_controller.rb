@@ -21,7 +21,7 @@ class AccountsController < ApplicationController
   end
 
   def new
-    if signed_in?
+    if signed_in? && !current_user.god_user?
       flash[:error] = "You already have an account."
       redirect_to root_path
     else

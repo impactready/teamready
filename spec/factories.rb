@@ -1,10 +1,6 @@
 
 FactoryGirl.define do
 
-  sequence :email do |n|
-    "person#{n}@example.com"
-  end
-
   factory :account_option do
     id 1
     name "Test"
@@ -46,7 +42,7 @@ FactoryGirl.define do
     password "mememe"
     password_confirmation "mememe"
     account_id 1
-    email { generate(:email) }
+    email "person1@example.com"
   end
 
   factory :group do

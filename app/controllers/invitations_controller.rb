@@ -4,7 +4,7 @@ class InvitationsController < ApplicationController
   before_filter :check_user_number, :only => :new
 
   def new
-    if signed_in?
+    if signed_in? && !current_user.god_user
       if current_user.master_user?
         @invitation = Invitation.new(:account_id => current_user.account.id)
       else
@@ -45,7 +45,7 @@ class InvitationsController < ApplicationController
   end
 
   def check_user_number
-    if signed_in?
+    if signed_in? && !current_user.god_user?
       unless current_user.account.account_option.users > current_user.account.users.count
         flash[:error] = "You have reached the maximum number of users for your account option. Please upgrade."
         if current_user.master_user?

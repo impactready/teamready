@@ -24,34 +24,72 @@ describe 'Account Activities' do
 		end
 
     it 'should create and account and send details to an email address' do
-      true.should eq false
+      user = FactoryGirl.create(:user, god_user: true, master_user: true)
+      FactoryGirl.create(:account)
+
+      visit signin_path
+      fill_in 'Email', :with => user.email
+      fill_in 'Password', :with => user.password
+      click_button 'Sign in'
+
+      visit new_account_path
+      fill_in 'Name', with: 'Package Deliveries Inc.'
+      select 'Test', from: 'Account option'
+      select 'Yes', from: 'Active'
+      click_button 'Create Account'
+      page.should have_content('Registration: Step 1')
+
+      fill_in 'Email address', with: 'person999@example.com'
+      click_button 'Submit'
+
+      page.should have_content('Account Administration')
+
     end
 
     it 'should not allow an email if it already exits' do
-      true.should eq false
+      user = FactoryGirl.create(:user)
+      FactoryGirl.create(:account)
+
+      visit new_account_path
+      fill_in 'Name', with: 'Package Deliveries Inc.'
+      select 'Test', from: 'Account option'
+      click_button 'Create Account'
+      page.should have_content('Registration: Step 1')
+
+      fill_in 'Email address', with: user.email
+      click_button 'Submit'
+
+      page.should have_content('is already registered')
     end
   end
 
   describe 'Account Listing' do
-  	it 'should list all accounts' do
-  		account = FactoryGirl.create(:account)
-  		user = FactoryGirl.create(:user, :master_user => true, :god_user => true)
-  		priority = FactoryGirl.create(:priority)
-  		status = FactoryGirl.create(:status)
-  		type = FactoryGirl.create(:type)
-  		group = FactoryGirl.create(:group)
-  	  FactoryGirl.create(:membership)
-  	  visit signin_path
-  	  fill_in 'Email', :with => user.email
-  	  fill_in 'Password', :with => "mememe"
-  	  click_button 'Sign in'
+    before(:each) do
+      @account = FactoryGirl.create(:account)
+      user = FactoryGirl.create(:user, :master_user => true, :god_user => true)
+      priority = FactoryGirl.create(:priority)
+      status = FactoryGirl.create(:status)
+      type = FactoryGirl.create(:type)
+      group = FactoryGirl.create(:group)
+      FactoryGirl.create(:membership)
+      visit signin_path
+      fill_in 'Email', :with => user.email
+      fill_in 'Password', :with => "mememe"
+      click_button 'Sign in'
+    end
 
+  	it 'should list all accounts' do
   	  visit accounts_path
-  	  page.should have_content(account.name)
+
+  	  page.should have_content(@account.name)
   	end
 
     it 'should redirect to the new acccounts path for creating a new account' do
-      true.should eq false
+      visit accounts_path
+
+      click_link 'New account'
+
+      page.should have_content('Create a new account')
     end
   end
 
