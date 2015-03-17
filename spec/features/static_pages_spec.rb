@@ -51,6 +51,7 @@ describe 'Static Page Activities' do
 	    fill_in 'Message', :with => 'Hi! I am interested in your site...'
 	    click_button 'Submit'
 	    page.should have_selector('div.flash_success')
+	    ActionMailer::Base.deliveries.last.to.should include 'joseph@impactready.org'
 	  end
 
 	end

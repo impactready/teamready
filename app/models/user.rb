@@ -23,11 +23,10 @@ class User < ActiveRecord::Base
 
   validates :email, :presence => true,
                   :format => { :with => email_regex },
-                  :uniqueness => { :case_sensitive => false }
+                  :uniqueness => { :case_sensitive => false }, on: :create
   validates :password, :presence => true,
                   :confirmation => true,
-                  :length => { :within => 6..40 }
-  validates :password_confirmation, :presence =>true
+                  :length => { :within => 6..40 }, on: :create
 
   before_save :encrypt_password
   before_create { generate_token(:auth_token) }
@@ -35,8 +34,8 @@ class User < ActiveRecord::Base
 
   def send_password_reset
     generate_token(:password_reset_token)
-    self.password_reset_sent_at = Time.zone.now
-    save!
+    password_reset_sent_at = Time.zone.now
+    save
     Notification.password_reset(self).deliver rescue logger.error 'Unable to deliver the password reset email.'
   end
 

@@ -41,13 +41,13 @@ class Notification < ActionMailer::Base
 
   def password_reset(user)
     @user = user
-    mail :to => user.email, :subject => "[ImpactReady] - Password Reset"
+    mail(:to => user.email, :subject => "[ImpactReady] - Password Reset")
   end
 
   def notify_contact(email, message, subject)
     @email = email
     @message = message
-    mail :to => ["joseph@impactready.org", "raouldevilliers@gmail.com"], :subject => "Query from ImpactReady.com"
+    mail(:to => ["joseph@impactready.org", "raouldevilliers@gmail.com"], :subject => "Query from ImpactReady.com")
   end
 
 end
