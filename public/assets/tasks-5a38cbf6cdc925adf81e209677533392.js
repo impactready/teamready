@@ -1,1 +1,0 @@
-$(function(){$("#task_assigned_user_id").html("<option value=''>Select User</option>"),$("#task_group_id").change(function(){var a=$("#task_group_id").val();$.ajax({type:"GET",url:"/tasks/dynamic_users/",data:"user_id="+a})})});
