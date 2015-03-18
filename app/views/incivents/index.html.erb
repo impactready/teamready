@@ -1,4 +1,6 @@
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJp-fDHOROELFhGj3s0HNVwq0anZlcFM"></script>
+<%= content_for(:head) do %>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJp-fDHOROELFhGj3s0HNVwq0anZlcFM"></script>
+<% end %>
 <%= javascript 'googleearth' %>
 <%= javascript 'markerwithlabel' %>
 
