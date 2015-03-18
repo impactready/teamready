@@ -10,7 +10,11 @@ class LaunchInterestsController < ApplicationController
   def create
     @launch_interest = LaunchInterest.new(params[:launch_interest])
     if @launch_interest.save
-      Notification.notify_contact(@launch_interest.email_address, @launch_interest.message, @launch_interest.subject).deliver rescue logger.error 'Unable to deliver the contact email.'
+      begin
+        Notification.notify_contact(@launch_interest.email_address, @launch_interest.message, @launch_interest.subject).deliver
+      rescue Exception => e
+        logger.error "Unable to deliver the contact email: #{e.message}"
+      end
       flash[:success] = "Thanks, your message has been received. We will contact you shortly."
       redirect_to root_path
     else

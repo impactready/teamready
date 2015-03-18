@@ -27,7 +27,11 @@ class TasksController < ApplicationController
     group = @task.group
     @users = @account.users
     if @task.save
-      Notification.notify_task(@task.user, group, task_url(@task)).deliver rescue logger.error 'Unable to deliver the task email.'
+      begin
+        Notification.notify_task(@task.user, group, task_url(@task)).deliver
+      rescue Exception => e
+        logger.error "Unable to deliver the task email: #{e.message}"
+      end
       group.updates_add_create(group.name, 'task', @task.description)
       flash[:success] = 'Task created.'
       redirect_to tasks_path

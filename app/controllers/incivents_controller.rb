@@ -29,8 +29,12 @@ class InciventsController < ApplicationController
     group = @incivent.group
     if @incivent.save
       @incivent.group.users.each do |user|
-        Notification.notify_incivent(user, group, incivent_url(@incivent)).deliver rescue logger.error 'Unable to deliver the event email.'
         group.updates_add_create(group.name, 'incivent', @incivent.name)
+        begin
+          Notification.notify_incivent(user, group, incivent_url(@incivent)).deliver
+        rescue Exception => e
+          logger.error "Unable to deliver the event email: #{e.message}"
+        end
       end
       flash[:success] = 'Event created!'
       mobile_device? ? redirect_to(tasks_path) : redirect_to(incivents_path)

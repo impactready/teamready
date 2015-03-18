@@ -22,7 +22,11 @@ class MessagesController < ApplicationController
     @message = current_user.messages.build(params[:message])
     group = @message.group
     if @message.save
-      Notification.notify_message(user, group, message_url(@message)).deliver rescue logger.error 'Unable to deliver the message email.'
+      begin
+        Notification.notify_message(user, group, message_url(@message)).deliver
+      rescue Exception => e
+        logger.error "Unable to deliver the message email: #{e.message}"
+      end
       group.updates_add_create(group.name, 'message', @message.description)
       flash[:success] = 'Message added!'
       mobile_device? ? redirect_to(tasks_path) : redirect_to(messages_path)

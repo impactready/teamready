@@ -33,14 +33,22 @@ class Task < ActiveRecord::Base
     deadline_tasks = Task.where("due_date = ?", Date.today)
     unless deadline_tasks.empty?
       deadline_tasks.each do |task|
-        Notification.notify_deadline(task.user, task.description).deliver rescue logger.error 'Unable to deliver the task deadline email.'
+        begin
+          Notification.notify_deadline(task.user, task.description).deliver
+        rescue Exception => e
+          logger.error "Unable to deliver the task deadline email: #{e.message}"
+        end
       end
     end
 
     looming_tasks = Task.where("due_date = ?", Date.today + 4)
     unless looming_tasks.empty?
       looming_tasks.each do |task|
-        Notification.notify_looming(task.user, task.description).deliver rescue logger.error 'Unable to deliver the task looming email.'
+        begin
+          Notification.notify_looming(task.user, task.description).deliver
+        rescue Exception => e
+          logger.error "Unable to deliver the task looming email: #{e.message}"
+        end
       end
     end
   end
