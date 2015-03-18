@@ -34,10 +34,10 @@ class AccountsController < ApplicationController
   end
 
   def edit
-    if signed_in? && current_user.master_user?
-      @account = current_user.account
-    elsif current_user.god_user
+    if current_user.god_user
       @account = Account.find(params[:id])
+    elsif signed_in? && current_user.master_user?
+      @account = current_user.account
     else
       deny_access
     end
