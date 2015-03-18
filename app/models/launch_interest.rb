@@ -1,6 +1,6 @@
 class LaunchInterest < ActiveRecord::Base
 
-  attr_accessible :email_address, :message
+  attr_accessible :email_address, :message, :subject
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
