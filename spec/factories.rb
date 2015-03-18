@@ -82,7 +82,7 @@ FactoryGirl.define do
   factory :task do
     sequence(:description) {|n| "Do something - #{n}!" }
     location '20 Corlett Drive, Johannesburg'
-    user_id 1
+    assigned_user_id 1
     group_id 1
     raised_user_id 1
     priority_id 1
