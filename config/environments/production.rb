@@ -21,7 +21,7 @@ Incivent_App::Application.configure do
   config.assets.compile = true
 
   config.assets.precompile += %w( application.css application-ie.css static_pages.css mobile.css)
-  config.assets.precompile += %w( googleearth.js markerwithlabel.js tasks.js mobile.js)
+  config.assets.precompile += %w( googleearth.js markerwithlabel.js tasks.js mobile.js get_coords.js)
 
   # Generate digests for assets URLs
   config.assets.digest = true

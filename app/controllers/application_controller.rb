@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
     if session[:mobile_param]
       session[:mobile_param]
     else
-      (request.user_agent =~ /Mobile|webOS/) && (request.user_agent !~ /iPad/)
+      (request.user_agent =~ /Mobile|webOS/) && (request.user_agent !~ /iPad|Tablet/)
     end
   end
 
