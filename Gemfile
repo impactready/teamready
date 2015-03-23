@@ -8,7 +8,7 @@ gem 'rails', '4.0.13'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'paperclip', '~> 3.5.4'
-gem 'aws-sdk'
+gem 'aws-sdk', '< 2.0'
 gem 'pry'
 
 gem 'cocaine', '0.5.3'
