@@ -34,6 +34,7 @@ populateCoords = function() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
             function(position) {
+                alert('Using your current location for the longitude and latitude fields.');
                 $('.mobile-form input[id$="_latitude"]').val(position.coords.latitude);
                 $('.mobile-form input[id$="_longitude"]').val(position.coords.longitude);
             },function(error) {
