@@ -10,33 +10,38 @@
 
 
 $(function() {
-  $('div.mt-name').click(function() {
-    $(this).parent().children('.mt-info').first().show();
-  });
+    $('div.mt-name').click(function() {
+      $(this).parent().children('.mt-info').first().show();
+    });
 
-  $('.mt-button-i').click(function() {
-    window.location = '/incivents/new'
-  });
+    $('.mt-button-i').click(function() {
+      window.location = '/incivents/new'
+    });
 
-  $('.mt-button-t').click(function() {
-    window.location = '/tasks/new'
-  });
+    $('.mt-button-t').click(function() {
+      window.location = '/tasks/new'
+    });
 
-  $('.mt-button-m').click(function() {
-    window.location = '/messages/new'
-  });
+    $('.mt-button-m').click(function() {
+      window.location = '/messages/new'
+    });
 
-  populateCoords();
+    populateCoords();
 
 });
 
 populateCoords = function() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      $('.mobile-form input[id$="_latitude"]').val(position.coords.latitude);
-      $('.mobile-form input[id$="_longitude"]').val(position.coords.longitude);
-    },function(error) {
-      alert('Could not obtain the coordinates from your device.');
-    });
-  }
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                $('.mobile-form input[id$="_latitude"]').val(position.coords.latitude);
+                $('.mobile-form input[id$="_longitude"]').val(position.coords.longitude);
+            },function(error) {
+                alert('Could not obtain the coordinates from your device.');
+            }, {
+                enableHighAccuracy: true,
+                timeout : 7000
+            }
+        );
+    }
 }
