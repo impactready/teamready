@@ -40,7 +40,8 @@ populateCoords = function() {
                 alert('Could not obtain the coordinates from your device.');
             }, {
                 enableHighAccuracy: true,
-                timeout : 7000
+                timeout: 5000,
+                maximumAge: 60000
             }
         );
     }
