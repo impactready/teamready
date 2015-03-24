@@ -48,6 +48,11 @@ div.mobile-form {
     height: 2.5em;
     font-size: 1em;
   }
+
+  button:active {
+    background-color: #333;
+  }
+
 }
 
 div.mt-item {
@@ -93,30 +98,17 @@ div.mt-item {
       text-align: center;
       border-radius: 10px;
       border: 1px solid #ddd;
-      background-image: -moz-linear-gradient(
+      background-image: linear-gradient(
         hsla(0,0%,100%,.3),
         hsla(0,0%,100%,0) 20px
       );
-      background-image: -webkit-gradient(
-        linear, 0 0, 0 20,
-        from(hsla(0,0%,100%,.3)),
-        to(hsla(0,0%,100%,0))
-      );
     }
     div.mt-button-s {
-      background-color: #7AC5CD;
-      background-image: -moz-linear-gradient(
-          hsla(0,0%,100%,.7),
+      background-color: #148693;
+      background-image: linear-gradient(
+          hsla(0,0%,100%,.3),
           hsla(0,0%,100%,0) 20px
       );
-      background-image: -webkit-gradient(
-          linear, 0 0, 0 20,
-          from(hsla(0,0%,100%,.7)),
-          to(hsla(0,0%,100%,0))
-      );
-      a {
-        text-decoration: none;
-      }
 
     }
   }
@@ -168,3 +160,16 @@ form.formtastic fieldset > ol > li label {
   float: none;
 }
 
+
+/* Typography */
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+    div[class^="mt-button"] {
+        background-color: #333 !important;
+
+  }
+}

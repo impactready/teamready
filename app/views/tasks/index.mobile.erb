@@ -29,15 +29,23 @@
 
 <div class="mt-item">
   <div class="mt-buttons">
-    <div class="mt-button-i">New Event</div>
-    <div class="mt-button-t">New Task</div>
-    <div class="mt-button-m">New Message</div>
+    <a href="#">
+      <div class="mt-button-i">New Event</div>
+    </a>
+    <a href="#">
+      <div class="mt-button-t">New Task</div>
+    </a>
+    <a href="#">
+      <div class="mt-button-m">New Message</div>
+    </a>
   </div>
 </div>
 
 <div class="mt-item">
   <div class="mt-buttons">
-    <div class="mt-button-s"><%= link_to "Sign out", signout_path, :method => :delete %></div>
+    <%= link_to signout_path, :method => :delete do %>
+      <div class="mt-button-s">Sign out</div>
+    <% end %>
   </div>
 </div>
 
