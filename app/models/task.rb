@@ -9,7 +9,6 @@ class Task < ActiveRecord::Base
 
   validates_attachment_content_type :task_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
-
   attr_accessible :description, :raised_user_id, :assigned_user_id, :group_id, :latitude, :longitude, :location, :priority_id, :status_id, :due_date, :complete, :task_image
 
   geocoded_by :location

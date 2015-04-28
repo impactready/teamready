@@ -22,6 +22,7 @@ gem 'thin'
 gem 'exceptional'
 
 group :test, :development do
+  gem 'minitest'
   gem 'sqlite3'
   gem 'rspec-rails', '2.13.1'
   gem 'capybara', '2.1.0'
