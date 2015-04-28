@@ -1,5 +1,5 @@
 class RemovePhoneIndex < ActiveRecord::Migration
   def change
-    remove_index :users, :name => "index_users_on_phone"
+    remove_index :users, name: "index_users_on_phone"
   end
 end

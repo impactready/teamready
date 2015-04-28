@@ -9,7 +9,7 @@
 </div>
 
 <div class="general-form">
-	<%= semantic_form_for(:p_reset, :url => password_resets_path) do |f|%>
+	<%= semantic_form_for(:p_reset, url: password_resets_path) do |f|%>
 	  <%= f.inputs do %>
 	  	<%= f.input :email %>
 	  <% end %>

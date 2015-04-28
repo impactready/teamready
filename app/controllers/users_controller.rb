@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  skip_before_filter :check_access, :check_account_active, :check_payer, :only => [:new, :create]
+  skip_before_filter :check_access, :check_account_active, :check_payer, only: [:new, :create]
 
   def index
     if current_user.master_user?

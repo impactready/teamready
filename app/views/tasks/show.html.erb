@@ -8,7 +8,7 @@
 <p class="normal">
   <% if current_user.master_user? %>
     <%= link_to "Edit this task", edit_task_path(@task) %>  |
-    <%= link_to "Delete this task", @task, :method => :delete, :data => {:confirm => "Are you sure?"}, :title => "Delete task" %>  |
+    <%= link_to "Delete this task", @task, method: :delete, data: {confirm: "Are you sure?"}, title: "Delete task" %>  |
   <% end %>
   <%= link_to 'Back to tasks', tasks_path %>
 </p>

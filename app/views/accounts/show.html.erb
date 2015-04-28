@@ -58,7 +58,7 @@
 
     <%= render 'accounts/account_plan' %>
     <p class="normal"><%= link_to "Edit your account", edit_account_path(@account) %></p>
-    <p class="normal"><%= link_to "Close your account", @account, :method => :delete, :data => {:confirm => "You sure you want to remove your profile?"} %></p>
+    <p class="normal"><%= link_to "Close your account", @account, method: :delete, data: {confirm: "You sure you want to remove your profile?"} %></p>
   </div>
 
   <div class="admin-column">

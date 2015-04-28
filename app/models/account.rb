@@ -4,15 +4,15 @@ class Account < ActiveRecord::Base
 
 	belongs_to :account_option
 
-	has_many :users, :dependent => :destroy
-	has_many :groups, :dependent => :destroy
-	has_many :priorities, :dependent => :destroy
-	has_many :types, :dependent => :destroy
-	has_many :statuses, :dependent => :destroy
-	has_one :subscription, :dependent => :destroy
+	has_many :users, dependent: :destroy
+	has_many :groups, dependent: :destroy
+	has_many :priorities, dependent: :destroy
+	has_many :types, dependent: :destroy
+	has_many :statuses, dependent: :destroy
+	has_one :subscription, dependent: :destroy
 
-	validates :name, :presence => true
-	validates :account_option_id, :presence => true, :numericality =>  { :only_integer => true }
+	validates :name, presence: true
+	validates :account_option_id, presence: true, numericality:  { only_integer: true }
 
 	def account_incivents
 		account_group_ids = self.group_ids

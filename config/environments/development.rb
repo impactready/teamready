@@ -22,7 +22,7 @@ Incivent_App::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.default_url_options = { host: "localhost:3000" }
 
   #Fix for this bug --> Ruby interpreter (CUI) 1.9.2p180 [i386-mingw32] has stopped working
   # config.log_level = :warn

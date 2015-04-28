@@ -48,12 +48,12 @@
         <tr class="listing-header">
           <td class="listing-i-fd">Description:</td>
           <td class="listing-i-fb">Location:</td>
-          <td><%= link_to "Raised by", sort_index_tasks_path(:sort => "raised_user_id"), :remote => true %></td>
-          <td><%= link_to "Raised", sort_index_tasks_path(:sort => "created_at"), :remote => true %></td>
-          <td><%= link_to "Priority", sort_index_tasks_path(:sort => "priority_id"), :remote => true %></td>
-          <td><%= link_to "Status", sort_index_tasks_path(:sort => "status_id"), :remote => true %></td>
-          <td><%= link_to "Assigned to", sort_index_tasks_path(:sort => "user_id"), :remote => true %></td>
-          <td><%= link_to "Due Date", sort_index_tasks_path(:sort => "due_date"), :remote => true %></td>
+          <td><%= link_to "Raised by", sort_index_tasks_path(sort: "raised_user_id"), remote: true %></td>
+          <td><%= link_to "Raised", sort_index_tasks_path(sort: "created_at"), remote: true %></td>
+          <td><%= link_to "Priority", sort_index_tasks_path(sort: "priority_id"), remote: true %></td>
+          <td><%= link_to "Status", sort_index_tasks_path(sort: "status_id"), remote: true %></td>
+          <td><%= link_to "Assigned to", sort_index_tasks_path(sort: "user_id"), remote: true %></td>
+          <td><%= link_to "Due Date", sort_index_tasks_path(sort: "due_date"), remote: true %></td>
           <td class="listing-i-f">Image</td>
         </tr>
 

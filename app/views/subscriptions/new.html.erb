@@ -11,7 +11,7 @@
 <p class="normal">Please enter the activation code obtained from our implementation partner below. You can request an activtion code from Impactready <a href="http://www.impactready.org">here.</a></p>
 <div class="general-form">
 	<div class="subscribe-container">
-		 <%= semantic_form_for :activation, :url => activate_subscriptions_path, :method => 'post' do |f|%>
+		 <%= semantic_form_for :activation, url: activate_subscriptions_path, method: 'post' do |f|%>
         <%= f.inputs do %>
           <%= f.input :code %>
         <% end %>

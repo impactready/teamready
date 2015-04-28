@@ -1,39 +1,39 @@
 class Incivent < ActiveRecord::Base
 
-  belongs_to :user, :foreign_key => "raised_user_id"
+  belongs_to :user, foreign_key: "raised_user_id"
   belongs_to :priority
   belongs_to :type
   belongs_to :status
   belongs_to :group
 
-  has_attached_file :incivent_image, {:styles => { :medium => "390x390#", :thumb => "90x90#" }}.merge(ADD_PP_OPTIONS)
+  has_attached_file :incivent_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
   attr_accessible :name, :location, :description, :longitude, :latitude, :priority_id, :type_id, :status_id, :incivent_image, :group_id, :archive
   attr_protected :raised_user_id
 
   geocoded_by :location
-  reverse_geocoded_by :latitude, :longitude, :address => :location
+  reverse_geocoded_by :latitude, :longitude, address: :location
 
-  validates :name, :presence => true , :length => { :maximum => 80 }
-  validates :raised_user_id, :presence => true, :numericality =>  { :only_integer => true }
-  validates :priority_id, :presence => true
-  validates :status_id, :presence => true
-  validates :group_id, :presence => true
-  #validates :location, :presence => true
-  validates :type_id, :presence => true
-  validates :description, :presence => true
-  validates :longitude, :numericality => { :greater_than_or_equal_to => -180, :less_than_or_equal_to => 180 }
-  validates :latitude, :numericality => { :greater_than_or_equal_to => -90, :less_than_or_equal_to => 90 }
+  validates :name, presence: true , length: { maximum: 80 }
+  validates :raised_user_id, presence: true, numericality:  { only_integer: true }
+  validates :priority_id, presence: true
+  validates :status_id, presence: true
+  validates :group_id, presence: true
+  #validates :location, presence: true
+  validates :type_id, presence: true
+  validates :description, presence: true
+  validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
+  validates :latitude, numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }
 
-  before_validation :reverse_geocode, :if => :has_coordinates
-  before_validation :geocode, :if => :has_location, :unless => :has_coordinates
+  before_validation :reverse_geocode, if: :has_coordinates
+  before_validation :geocode, if: :has_location, unless: :has_coordinates
 
   before_save :cleanup
 
   scope :default_order, -> { order('created_at DESC') }
 
-  scope :unarchived, -> { where(:archive => false) }
-  scope :archived, -> { where(:archive => true) }
+  scope :unarchived, -> { where(archive: false) }
+  scope :archived, -> { where(archive: true) }
 
   # Called to limit incivents shown according to a search field
   def self.search(user, search)

@@ -67,7 +67,7 @@
       <% if @incivent.incivent_image %>
         <a href="#"><strong>View Image</strong>
           <div>
-            <%= image_tag @incivent.incivent_image.url(:medium), :class => "photo" %>
+            <%= image_tag @incivent.incivent_image.url(:medium), class: "photo" %>
           </div>
         </a>
       <% else %>

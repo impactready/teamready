@@ -1,8 +1,8 @@
 class GroupsController < ApplicationController
 
-  before_filter :check_account, :only => [:new, :create, :update, :edit, :destroy]
-  before_filter :check_master_user, :only => [:new, :create, :update, :edit, :destroy]
-  #before_filter :check_group_number, :only => :new
+  before_filter :check_account, only: [:new, :create, :update, :edit, :destroy]
+  before_filter :check_master_user, only: [:new, :create, :update, :edit, :destroy]
+  #before_filter :check_group_number, only: :new
 
   def index
     if current_user.master_user?
@@ -24,7 +24,7 @@ class GroupsController < ApplicationController
     @account = current_user.account
     @group = @account.groups.build(params[:group])
     if @group.save
-      @membership = current_user.memberships.build(:group_id => @group.id)
+      @membership = current_user.memberships.build(group_id: @group.id)
       if @membership.save
         flash[:success] = "Group created."
         redirect_to groups_path

@@ -1,12 +1,12 @@
 class InvitationsController < ApplicationController
 
   skip_before_filter :check_access, :check_account_active, :check_payer
-  before_filter :check_user_number, :only => :new
+  before_filter :check_user_number, only: :new
 
   def new
     if signed_in? && !current_user.god_user
       if current_user.master_user?
-        @invitation = Invitation.new(:account_id => current_user.account.id)
+        @invitation = Invitation.new(account_id: current_user.account.id)
       else
         flash[:notice] = "Invites can only be sent by the account master user."
         redirect_to root_path
@@ -17,7 +17,7 @@ class InvitationsController < ApplicationController
         @account = Account.find(params[:account_id])
         if @account && @account.users.count == 0
           @new_account = true
-          @invitation = Invitation.new(:account_id => @account.id)
+          @invitation = Invitation.new(account_id: @account.id)
         else
           deny_access
         end
@@ -40,7 +40,7 @@ class InvitationsController < ApplicationController
       end
       # cookies.delete(:current_account_id)
     else
-      render :action => 'new'
+      render action: 'new'
     end
   end
 

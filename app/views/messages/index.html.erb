@@ -49,9 +49,9 @@
           <tr class="listing-header">
             <td class="listing-i-fm">Message:</td>
             <td>Location:</td>
-            <td><%= link_to "Group", sort_index_messages_path(:sort => "group_id"), :remote => true %></td>
-            <td><%= link_to "Posted by", sort_index_messages_path(:sort => "user_id"), :remote => true %></td>
-            <td><%= link_to "Posted at", sort_index_messages_path(:sort => "created_at"), :remote => true %></td>
+            <td><%= link_to "Group", sort_index_messages_path(sort: "group_id"), remote: true %></td>
+            <td><%= link_to "Posted by", sort_index_messages_path(sort: "user_id"), remote: true %></td>
+            <td><%= link_to "Posted at", sort_index_messages_path(sort: "created_at"), remote: true %></td>
             <td class="listing-i-f">Actions</td>
           </tr>
           <%= render @messages %>

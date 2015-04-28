@@ -1,7 +1,7 @@
 <%= semantic_form_for(@type) do |f| %>
   <%= f.inputs do %>
     <%= f.input :description %>
-    <%= f.input :account_id, :as => :hidden %>
+    <%= f.input :account_id, as: :hidden %>
   <% end%>
   <%= f.actions do %>
     <%= f.action :submit, as: :button, label: 'Submit' %>

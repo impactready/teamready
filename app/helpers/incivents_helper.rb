@@ -21,7 +21,7 @@ module InciventsHelper
   namearray = []
   incivents.each do |incivent|
     namearray.push("<div class='label-incivent'><strong>Event</strong></div>
-                    <div class='label-content'>#{truncate(incivent.name, :length => 55)}</div>
+                    <div class='label-content'>#{truncate(incivent.name, length: 55)}</div>
                     <div class='label-footer'>Posted by: #{incivent.user.full_name}<br />Date: #{time_ago_in_words(incivent.created_at)} ago</div>")
   end
   return namearray.join("%|%")

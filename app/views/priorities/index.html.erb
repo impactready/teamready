@@ -31,7 +31,7 @@
         <tr class="listing-item">
           <td class="listing-i-fm"><%= priority.description %></td>
           <td><%= link_to 'Edit', edit_priority_path(priority) %></td>
-          <td><%= link_to 'Delete', priority, :data => {:confirm => 'Are you sure?'}, :method => :delete %></td>
+          <td><%= link_to 'Delete', priority, data: {confirm: 'Are you sure?'}, method: :delete %></td>
         </tr>
       <% end %>
     </table>

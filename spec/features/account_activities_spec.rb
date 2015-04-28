@@ -28,8 +28,8 @@ describe 'Account Activities' do
       FactoryGirl.create(:account)
 
       visit signin_path
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => user.password
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: user.password
       click_button 'Sign in'
 
       visit new_account_path
@@ -66,15 +66,15 @@ describe 'Account Activities' do
   describe 'Account Listing' do
     before(:each) do
       @account = FactoryGirl.create(:account)
-      user = FactoryGirl.create(:user, :master_user => true, :god_user => true)
+      user = FactoryGirl.create(:user, master_user: true, god_user: true)
       priority = FactoryGirl.create(:priority)
       status = FactoryGirl.create(:status)
       type = FactoryGirl.create(:type)
       group = FactoryGirl.create(:group)
       FactoryGirl.create(:membership)
       visit signin_path
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => "mememe"
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: "mememe"
       click_button 'Sign in'
     end
 
@@ -102,15 +102,15 @@ describe 'Account Activities' do
     end
 
     it 'should allow editing for god users' do
-      user = FactoryGirl.create(:user, :master_user => true, :god_user => true)
+      user = FactoryGirl.create(:user, master_user: true, god_user: true)
       visit signin_path
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => "mememe"
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: "mememe"
       click_button 'Sign in'
 
       visit accounts_path
       click_link 'Edit'
-      fill_in 'Name', :with => 'Environmental Militants!'
+      fill_in 'Name', with: 'Environmental Militants!'
       click_button 'Update Account'
 
       page.should have_content('Environmental Militants!')
@@ -118,18 +118,18 @@ describe 'Account Activities' do
 
     it 'should redirect to subscriptions if the account type is changed' do
       FactoryGirl.create(:account_option, name: "Pro", cost: 40, id: 2)
-      user = FactoryGirl.create(:user, :master_user => true)
+      user = FactoryGirl.create(:user, master_user: true)
       group = FactoryGirl.create(:group)
-      FactoryGirl.create(:membership, :user => user, :group => group)
+      FactoryGirl.create(:membership, user: user, group: group)
       visit signin_path
-      fill_in 'Email', :with => user.email
-      fill_in 'Password', :with => "mememe"
+      fill_in 'Email', with: user.email
+      fill_in 'Password', with: "mememe"
       click_button 'Sign in'
 
       visit account_path(@account)
 
       click_link 'Edit your account'
-      select 'Pro', :from => 'Account option'
+      select 'Pro', from: 'Account option'
       click_button 'Update Account'
 
       page.should have_content('Account activation')

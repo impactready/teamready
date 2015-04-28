@@ -11,15 +11,15 @@ module UseSessionsHelper
   
   def deny_access
     store_location
-    redirect_to signin_path, :notice => "Please sign in to access this page."
+    redirect_to signin_path, notice: "Please sign in to access this page."
   end
   
   def deny_access_master_user
-    redirect_to root_path, :error => "You must be an administrator to access this page."
+    redirect_to root_path, error: "You must be an administrator to access this page."
   end
   
   def deny_access_wrong_account
-    redirect_to root_path, :error => "You are trying to access information from other users or accounts that you are not authorised to view."
+    redirect_to root_path, error: "You are trying to access information from other users or accounts that you are not authorised to view."
   end
 
   def deny_access_inactive

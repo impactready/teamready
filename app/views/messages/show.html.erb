@@ -8,7 +8,7 @@
 <p class="normal">
   <% if current_user.master_user? %>
     <%= link_to "Edit this message", edit_message_path(@message) %>  |
-    <%= link_to "Delete this message", @message, :method => :delete, :data => {:confirm => "Are you sure?"}, :title => "Delete message" %>  |
+    <%= link_to "Delete this message", @message, method: :delete, data: {confirm: "Are you sure?"}, title: "Delete message" %>  |
   <% end %>
   <%= link_to 'Back to messages', messages_path %>
 </p>

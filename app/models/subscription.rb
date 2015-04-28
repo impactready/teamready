@@ -4,7 +4,7 @@ class Subscription < ActiveRecord::Base
 
   belongs_to :account
 
-  validates :paypal_payer_token, :recurring_profile_token, :account_id,	 :presence => true
+  validates :paypal_payer_token, :recurring_profile_token, :account_id,	 presence: true
 
 	def self.sub_pp_checkout(account, return_url, cancel_url)
 	  PayPal::Recurring.new(

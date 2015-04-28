@@ -1,9 +1,9 @@
 <% if @user.member?(group) %>
   <td>Assigned</td>
   <td>
-    <%= semantic_form_for @user.memberships.find_by_group_id(group), :html => { :method => :delete }, :remote => true do |f| %>
+    <%= semantic_form_for @user.memberships.find_by_group_id(group), html: { method: :delete }, remote: true do |f| %>
     <%= f.inputs do%>
-      <%= f.input :user_id, :as => :hidden %>
+      <%= f.input :user_id, as: :hidden %>
       <% end %>
       <%= f.actions do %>
         <%= f.action :submit, as: :button, label: 'Unassign' %>
@@ -13,10 +13,10 @@
 <% else %>
   <td>Not Assigned</td>
   <td>
-    <%= semantic_form_for @user.memberships.new(:group_id => group.id), :remote => true do |f| %>
+    <%= semantic_form_for @user.memberships.new(group_id: group.id), remote: true do |f| %>
       <%= f.inputs do %>
-        <%= f.input :user_id, :as => :hidden %>
-        <%= f.input :group_id, :as => :hidden %>
+        <%= f.input :user_id, as: :hidden %>
+        <%= f.input :group_id, as: :hidden %>
       <% end %>
       <%= f.actions do %>
         <%= f.action :submit, as: :button, label: 'Assign' %>

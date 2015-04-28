@@ -3,30 +3,30 @@ class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :phone, :password, :password_confirmation
 
   belongs_to :account
-  has_many :incivents,  :foreign_key => "raised_user_id", :dependent => :destroy
-  has_many :priorities, :through => :incivents
-  has_many :types, :through => :incivents
-  has_many :statuses, :through => :incivents
-  has_many :groups, :through => :memberships
-  has_many :memberships, :dependent => :destroy
-  has_many :tasks, :foreign_key => "assigned_user_id", :dependent => :destroy
-  has_many :messages, :dependent => :destroy
+  has_many :incivents,  foreign_key: "raised_user_id", dependent: :destroy
+  has_many :priorities, through: :incivents
+  has_many :types, through: :incivents
+  has_many :statuses, through: :incivents
+  has_many :groups, through: :memberships
+  has_many :memberships, dependent: :destroy
+  has_many :tasks, foreign_key: "assigned_user_id", dependent: :destroy
+  has_many :messages, dependent: :destroy
   has_many :invitations
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  validates :first_name, :presence => true,
-                  :length => { :maximum => 50 }
+  validates :first_name, presence: true,
+                  length: { maximum: 50 }
 
-  validates :last_name, :presence => true,
-                  :length => { :maximum => 50 }
+  validates :last_name, presence: true,
+                  length: { maximum: 50 }
 
-  validates :email, :presence => true,
-                  :format => { :with => email_regex },
-                  :uniqueness => { :case_sensitive => false }, on: :create
-  validates :password, :presence => true,
-                  :confirmation => true,
-                  :length => { :within => 6..40 }, on: :create
+  validates :email, presence: true,
+                  format: { with: email_regex },
+                  uniqueness: { case_sensitive: false }, on: :create
+  validates :password, presence: true,
+                  confirmation: true,
+                  length: { within: 6..40 }, on: :create
 
   before_save :encrypt_password
   before_create { generate_token(:auth_token) }
@@ -92,14 +92,14 @@ class User < ActiveRecord::Base
   # Call to return all users in the groups for which current_user is a member
   def relevant_members
     group_ids = self.group_ids
-    user_ids = Membership.select("user_id").where(:group_id => group_ids).map(&:user_id).uniq
+    user_ids = Membership.select("user_id").where(group_id: group_ids).map(&:user_id).uniq
     User.find(user_ids)
   end
 
   # Call to return all the groups for which a user is a member
   def member_groups
     group_ids = self.group_ids
-    Group.select("name").where(:id => group_ids).map(&:name).join(", ")
+    Group.select("name").where(id: group_ids).map(&:name).join(", ")
   end
 
   private

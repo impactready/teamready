@@ -46,16 +46,16 @@ Incivent_App::Application.routes.draw do
   resources :invitations, only: [:new, :create]
   resources :launch_interests, only: [:index, :create, :destroy]
 
-  get '/sms_ios/receive', :to => 'sms_ios#receive', :defaults =>  {:format  => :json}
-  get '/register', :to => 'accounts#new'
-  get '/signup/:invitation_token', :to => 'users#new'
-  get '/signup', :to => 'users#new'
-  get '/signin', :to => 'use_sessions#new'
-  delete '/signout', :to => 'use_sessions#destroy'
-  get '/privacy', :to => 'static_pages#privacy'
-  get '/terms', :to => 'static_pages#service_terms'
-  get '/pricing', :to => 'static_pages#pricing_signup'
-  get '/contact', :to => 'static_pages#contact'
+  get '/sms_ios/receive', to: 'sms_ios#receive', defaults:  {format: :json}
+  get '/register', to: 'accounts#new'
+  get '/signup/:invitation_token', to: 'users#new'
+  get '/signup', to: 'users#new'
+  get '/signin', to: 'use_sessions#new'
+  delete '/signout', to: 'use_sessions#destroy'
+  get '/privacy', to: 'static_pages#privacy'
+  get '/terms', to: 'static_pages#service_terms'
+  get '/pricing', to: 'static_pages#pricing_signup'
+  get '/contact', to: 'static_pages#contact'
 
   root to: 'static_pages#home'
 
@@ -67,8 +67,8 @@ Incivent_App::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
+  #   match 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  # This route can be invoked with purchase_url(id: product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
@@ -95,7 +95,7 @@ Incivent_App::Application.routes.draw do
   #   resources :products do
   #     resources :comments
   #     resources :sales do
-  #       get 'recent', :on => :collection
+  #       get 'recent', on: :collection
   #     end
   #   end
 
@@ -108,7 +108,7 @@ Incivent_App::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  # root to: 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

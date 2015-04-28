@@ -41,7 +41,7 @@ class SubscriptionsController < ApplicationController
 
   # def finalise
   # 	@account = current_user.account
-  #   @subscription = @account.build_subscription(:paypal_token => params[:token], :paypal_payer_token => params[:PayerID])
+  #   @subscription = @account.build_subscription(paypal_token: params[:token], paypal_payer_token: params[:PayerID])
   # 	response = @subscription.sub_pp_payment(@account).request_payment
  	# 	Subscription.check_paypal_response(response)
  	# 	response = @subscription.sub_pp_recurring(@account).create_recurring_profile

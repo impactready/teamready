@@ -1,7 +1,7 @@
 class LaunchInterestsController < ApplicationController
 
   skip_before_filter :check_access, :check_account_active, :check_payer
-  before_filter :only_god_user, :only => :index
+  before_filter :only_god_user, only: :index
 
   def index
     @launch_interests = LaunchInterest.all

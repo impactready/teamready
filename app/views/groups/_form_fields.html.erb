@@ -1,8 +1,8 @@
-<%= semantic_form_for @group, :html => {:multipart => true} do |f| %>
+<%= semantic_form_for @group, html: {multipart: true} do |f| %>
   <%= f.inputs do %>
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :geo_info, :as => :file, :label => "Geocoded overlay", :hint => "Google Earth KML files only" %>
+    <%= f.input :geo_info, as: :file, label: "Geocoded overlay", hint: "Google Earth KML files only" %>
   <% end %>
   <%= f.actions do %>
     <%= f.action :submit, as: :button, label: 'Submit' %>

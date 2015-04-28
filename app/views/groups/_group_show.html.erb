@@ -18,7 +18,7 @@
         <td><%= group.messages.count %></td>
         <% if current_user.master_user? %>
           <td class="listing-i-f"><%= link_to 'Edit', edit_group_path(group) %> |
-          <%= link_to 'Delete', group, :data => {:confirm => 'Are you sure?'}, :method => :delete %></td>
+          <%= link_to 'Delete', group, data: {confirm: 'Are you sure?'}, method: :delete %></td>
         <% end %>
       </tr>
     </table>

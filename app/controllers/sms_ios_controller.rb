@@ -13,7 +13,7 @@ class SmsIosController < ApplicationController
           SmsIo.send_sms(params[:od], "[Incivent] - Your message/event has been logged.")
 
           respond_to do |format|
-            format.json { render :json => {:result => "OK"} }                
+            format.json { render json: {result: "OK"} }                
           end
         else  
           send_and_render_error
@@ -30,7 +30,7 @@ class SmsIosController < ApplicationController
     SmsIo.send_sms(params[:od], "[Incivent] - Number not recognized for submission.")
 
     respond_to do |format|
-      format.json { render :json => {:result => "Error"} }            
+      format.json { render json: {result: "Error"} }            
     end
   end
 

@@ -2,18 +2,18 @@
     <h2>New event</h2>
 </div>
 <div class="mobile-form">
-  <%= semantic_form_for @incivent, :html => {:multipart => true} do |f| %>
+  <%= semantic_form_for @incivent, html: {multipart: true} do |f| %>
     <%= f.inputs do %>
       <%= f.input :name %>
-      <%= f.input :priority, :collection => @account.priorities, :member_label => :description, :include_blank => false %>
-      <%= f.input :status, :collection => @account.statuses, :member_label => :description, :include_blank => false %>
+      <%= f.input :priority, collection: @account.priorities, member_label: :description, include_blank: false %>
+      <%= f.input :status, collection: @account.statuses, member_label: :description, include_blank: false %>
       <%= f.input :location %>
-      <%= f.input :type, :collection => @account.types, :member_label => :description, :include_blank => false %>
+      <%= f.input :type, collection: @account.types, member_label: :description, include_blank: false %>
       <%= f.input :description %>
-      <%= f.input :group, :collection => current_user.groups, :member_label => :name, :include_blank => false %>
+      <%= f.input :group, collection: current_user.groups, member_label: :name, include_blank: false %>
       <%= f.input :latitude %>
       <%= f.input :longitude %>
-      <%= f.input :incivent_image, :as => :file, :label => "Event Image"%>
+      <%= f.input :incivent_image, as: :file, label: "Event Image"%>
     <% end %>
     <%= f.actions do %>
       <%= f.action :submit, as: :button, label: 'Submit' %>

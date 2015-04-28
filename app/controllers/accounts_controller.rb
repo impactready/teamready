@@ -1,7 +1,7 @@
 class AccountsController < ApplicationController
 
-  skip_before_filter :check_access, :check_account_active , :only => [:new, :create]
-  skip_before_filter :check_payer, :only => [:new, :create, :destroy]
+  skip_before_filter :check_access, :check_account_active , only: [:new, :create]
+  skip_before_filter :check_payer, only: [:new, :create, :destroy]
 
 
   def index
@@ -26,7 +26,7 @@ class AccountsController < ApplicationController
       redirect_to root_path
     else
       if params[:account_option]
-       @account = Account.new(:account_option_id => AccountOption.find_by_name(params[:account_option]).id)
+       @account = Account.new(account_option_id: AccountOption.find_by_name(params[:account_option]).id)
       else
         @account = Account.new
       end

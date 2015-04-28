@@ -6,7 +6,7 @@ class TasksController < ApplicationController
 
   def new
     @account = current_user.account
-    @task = Task.new(:raised_user_id => current_user.id)
+    @task = Task.new(raised_user_id: current_user.id)
     @users = @account.users
   end
 

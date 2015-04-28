@@ -21,7 +21,7 @@ module MessagesHelper
   namearray = []
   messages.each do |message|
     namearray.push("<div class='label-message'><strong>Message</strong></div>
-                    <div class='label-content'>#{truncate(message.description, :length => 55)}</div>
+                    <div class='label-content'>#{truncate(message.description, length: 55)}</div>
                     <div class='label-footer'>Posted by: #{message.user.full_name}<br />Date: #{time_ago_in_words(message.created_at)} ago</div>")
   end
   return namearray.join('%|%')

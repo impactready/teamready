@@ -11,7 +11,7 @@
           <ul>
               <% if signed_in? %>
                   <li><%= link_to "Support", contact_path %></li>
-                  <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+                  <li><%= link_to "Sign out", signout_path, method: :delete %></li>
               <% else %>
                   <li><%= link_to "Home", '/' %></li>
                   <li><%= link_to "Pricing/Signup", pricing_path %></li>
@@ -27,7 +27,7 @@
   <div class="header-main">
     <div class="container">
       <div class="main-page-image">
-          <%= image_tag("HeaderLogo.png", :alt => "Incivent") %>
+          <%= image_tag("HeaderLogo.png", alt: "Incivent") %>
       </div>
     </div>
   </div>

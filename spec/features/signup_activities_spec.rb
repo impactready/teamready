@@ -13,7 +13,7 @@ describe 'SignUp Activities' do
     it 'should have an email address' do
         visit @url
         page.should have_content('Registration: Step 2')
-        page.has_field?('Email', :with => @invitation.recipient_email)
+        page.has_field?('Email', with: @invitation.recipient_email)
     end
   end
 
@@ -22,14 +22,14 @@ describe 'SignUp Activities' do
     describe 'failure 1' do
       it 'should not allow signup' do
           visit @url
-          fill_in 'First name', :with => ''
-          fill_in 'Last name', :with => ''
-          fill_in 'Phone', :with => ''
+          fill_in 'First name', with: ''
+          fill_in 'Last name', with: ''
+          fill_in 'Phone', with: ''
           within '#user_password_input' do
-            fill_in 'Password', :with => 'mememe'
+            fill_in 'Password', with: 'mememe'
           end
           within '#user_password_confirmation_input' do
-            fill_in 'Password confirmation', :with => 'mememe'
+            fill_in 'Password confirmation', with: 'mememe'
           end
           click_button 'Submit'
           page.should have_selector("li.error")
@@ -39,14 +39,14 @@ describe 'SignUp Activities' do
     describe 'failure 2' do
       it 'should not allow signup' do
           visit @url
-          fill_in 'First name', :with => 'Test'
-          fill_in 'Last name', :with => 'User'
-          fill_in 'Phone', :with => ''
+          fill_in 'First name', with: 'Test'
+          fill_in 'Last name', with: 'User'
+          fill_in 'Phone', with: ''
           within '#user_password_input' do
-            fill_in 'Password', :with => ''
+            fill_in 'Password', with: ''
           end
           within '#user_password_confirmation_input' do
-            fill_in 'Password confirmation', :with => ''
+            fill_in 'Password confirmation', with: ''
           end
           click_button 'Submit'
           page.should have_selector("li.error")
@@ -56,14 +56,14 @@ describe 'SignUp Activities' do
     describe 'success' do
       it 'should allow signup ' do
           visit @url
-          fill_in 'First name', :with => 'Test'
-          fill_in 'Last name', :with => 'User'
-          fill_in 'Phone', :with => ''
+          fill_in 'First name', with: 'Test'
+          fill_in 'Last name', with: 'User'
+          fill_in 'Phone', with: ''
           within '#user_password_input' do
-            fill_in 'Password', :with => 'mememe'
+            fill_in 'Password', with: 'mememe'
           end
           within '#user_password_confirmation_input' do
-            fill_in 'Password confirmation', :with => 'mememe'
+            fill_in 'Password confirmation', with: 'mememe'
           end
           click_button 'Submit'
           page.should have_content('All groups')

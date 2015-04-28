@@ -2,20 +2,20 @@ class Group < ActiveRecord::Base
   attr_accessible :name, :description, :geo_info, :tasks_attributes
 
   belongs_to :account
-  has_many :incivents, :dependent => :destroy
-  has_many :users, :through => :memberships
-  has_many :priorities, :through => :incivents
-  has_many :types, :through => :incivents
-  has_many :memberships, :dependent => :destroy
-  has_many :tasks, :dependent => :destroy
-  has_many :messages, :dependent => :destroy
-  has_many :updates, :dependent => :destroy
+  has_many :incivents, dependent: :destroy
+  has_many :users, through: :memberships
+  has_many :priorities, through: :incivents
+  has_many :types, through: :incivents
+  has_many :memberships, dependent: :destroy
+  has_many :tasks, dependent: :destroy
+  has_many :messages, dependent: :destroy
+  has_many :updates, dependent: :destroy
 
   accepts_nested_attributes_for :tasks
 
   has_attached_file :geo_info
 
-  validates :name, :presence => true
+  validates :name, presence: true
 
   default_scope { order(created_at: :desc) }
 

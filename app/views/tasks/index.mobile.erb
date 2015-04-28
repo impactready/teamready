@@ -12,7 +12,7 @@
   <div class="mobile-task-table">
     <% @tasks.each do |task| %>
         <% unless task.complete? %>
-          <%= render 'tasks/task_show', :task => task %>
+          <%= render 'tasks/task_show', task: task %>
         <% end %>
     <% end %>
   </div>
@@ -41,7 +41,7 @@
 
 <div class="mt-item">
   <div class="mt-buttons">
-    <%= link_to signout_path, :method => :delete do %>
+    <%= link_to signout_path, method: :delete do %>
       <div class="mt-button-s">Sign out</div>
     <% end %>
   </div>

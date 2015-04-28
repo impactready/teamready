@@ -47,8 +47,8 @@ describe 'Static Page Activities' do
 	  end
 
 	  it "should accept a valid form" do
-	    fill_in 'Contact Email', :with => 'raoul@example.com'
-	    fill_in 'Message', :with => 'Hi! I am interested in your site...'
+	    fill_in 'Contact Email', with: 'raoul@example.com'
+	    fill_in 'Message', with: 'Hi! I am interested in your site...'
 	    click_button 'Submit'
 	    page.should have_selector('div.flash_success')
 	    ActionMailer::Base.deliveries.last.to.should include 'joseph@impactready.org'

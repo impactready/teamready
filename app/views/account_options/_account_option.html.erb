@@ -5,7 +5,7 @@
     <div class="listing-i-f"><%= account_option.users %></div>
     <div class="listing-i-f"><%= account_option.groups %></div>
     <div class="listing-i-f"><%= link_to 'Edit', edit_account_option_path(account_option) %></div>
-    <div class="listing-i-f"><%= link_to 'Delete', account_option, :data => {:confirm => 'Are you sure?'}, :method => :delete %></div>
+    <div class="listing-i-f"><%= link_to 'Delete', account_option, data: {confirm: 'Are you sure?'}, method: :delete %></div>
     <br class="clear" />
   </div>
 </div>
