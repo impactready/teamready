@@ -7,6 +7,9 @@ class Task < ActiveRecord::Base
 
   has_attached_file :task_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
+  validates_attachment_content_type :task_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
+
   attr_accessible :description, :raised_user_id, :assigned_user_id, :group_id, :latitude, :longitude, :location, :priority_id, :status_id, :due_date, :complete, :task_image
 
   geocoded_by :location

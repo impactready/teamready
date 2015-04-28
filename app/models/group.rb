@@ -15,6 +15,8 @@ class Group < ActiveRecord::Base
 
   has_attached_file :geo_info
 
+  validates_attachment_file_name :geo_info, matches: [/kml\Z/, /kmz\Z/]
+
   validates :name, presence: true
 
   default_scope { order(created_at: :desc) }
