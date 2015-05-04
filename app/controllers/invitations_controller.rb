@@ -4,7 +4,7 @@ class InvitationsController < ApplicationController
   before_filter :check_user_number, only: :new
 
   def new
-    if signed_in? && !current_user.god_user
+    if signed_in? #&& !current_user.god_user
       if current_user.master_user?
         @invitation = Invitation.new(account_id: current_user.account.id)
       else
