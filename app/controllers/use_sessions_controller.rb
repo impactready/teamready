@@ -6,7 +6,7 @@ class UseSessionsController < ApplicationController
   end
 
   def create
-    user = User.authenticate(params[:session][:email], params[:session][:password])
+    user = User.authenticate(params[:session][:email].strip, params[:session][:password].strip)
     if user
       sign_in user
       flash[:success] = "Login successful!"

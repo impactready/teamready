@@ -37,7 +37,8 @@ describe 'Account Activities' do
       select 'Test', from: 'Account option'
       select 'Yes', from: 'Active'
       click_button 'Create Account'
-      page.should have_content('Registration: Step 1')
+
+      page.should have_content('Invite a user to your account')
 
       fill_in 'Email address', with: 'person999@example.com'
       click_button 'Submit'
