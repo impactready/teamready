@@ -4,7 +4,7 @@ class InvitationsController < ApplicationController
   before_filter :check_user_number, only: :new
 
   def new
-    if signed_in? #&& !current_user.god_user
+    if signed_in?
       if current_user.master_user?
         @invitation = Invitation.new(account_id: current_user.account.id)
       else
@@ -29,7 +29,7 @@ class InvitationsController < ApplicationController
 
   def create
     @invitation = Invitation.new(params[:invitation])
-    if @invitation.save
+    if @invitation.downcase_email_and_save
       # Signup_path/signup_url is defined in the routes.rb file.
       AccountInvite.invitation(@invitation, signup_url + "/" + @invitation.token).deliver rescue logger.error 'Unable to deliver the invitation email.'
       flash[:notice] = "Further registation steps have been sent to the email address."

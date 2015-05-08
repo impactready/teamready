@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       @user = User.new
       if params[:invitation_token]
         @invitation = Invitation.find_by_token(params[:invitation_token])
-        @user.email = @invitation.recipient_email
+        @user.email = @invitation.recipient_email.downcase
         cookies[:current_account_id] = @invitation.account_id
       else
         flash[:error] = "You need to access this page from an invitation email sent to you."

@@ -6,11 +6,11 @@ class UseSessionsController < ApplicationController
   end
 
   def create
-    user = User.authenticate(params[:session][:email].strip, params[:session][:password].strip)
+    user = User.authenticate(params[:session][:email].strip.downcase, params[:session][:password].strip)
     if user
       sign_in user
       flash[:success] = "Login successful!"
-      mobile_device? ? redirect_to(tasks_path) : redirect_to(groups_path)
+      mobile_device? ? redirect_back_or(tasks_path) : redirect_back_or(groups_path)
     else
       flash[:error] = "Invalid username or password."
       render 'new'

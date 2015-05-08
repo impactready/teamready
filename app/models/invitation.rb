@@ -7,6 +7,11 @@ class Invitation < ActiveRecord::Base
 
 	before_create :generate_token
 
+	def downcase_email_and_save
+		self.recipient_email = self.recipient_email.downcase
+		save
+	end
+
 	private
 
 	def recipient_is_not_registered
@@ -16,5 +21,6 @@ class Invitation < ActiveRecord::Base
 	def generate_token
 	  self.token = Digest::SHA1.hexdigest([Time.now, rand].join)
 	end
+
 
 end
