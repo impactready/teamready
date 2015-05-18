@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150316135859) do
+ActiveRecord::Schema.define(version: 20150518133036) do
 
   create_table "account_options", force: true do |t|
     t.string   "name"
@@ -175,7 +175,7 @@ ActiveRecord::Schema.define(version: 20150316135859) do
     t.string   "auth_token"
     t.string   "password_reset_token"
     t.datetime "password_reset_sent_at"
-    t.boolean  "god_user",               default: false
+    t.boolean  "admin_user",             default: false
     t.string   "phone"
   end
 

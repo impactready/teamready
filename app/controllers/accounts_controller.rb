@@ -3,15 +3,6 @@ class AccountsController < ApplicationController
   skip_before_filter :check_access, :check_account_active , only: [:new, :create]
   skip_before_filter :check_payer, only: [:new, :create, :destroy]
 
-
-  def index
-    if signed_in? && current_user.god_user?
-      @accounts = Account.all
-    else
-      deny_access
-    end
-  end
-
   def show
     if signed_in? && current_user.master_user?
       @account = current_user.account
@@ -21,7 +12,7 @@ class AccountsController < ApplicationController
   end
 
   def new
-    if signed_in? && !current_user.god_user?
+    if signed_in?
       flash[:error] = "You already have an account."
       redirect_to root_path
     else
@@ -34,9 +25,7 @@ class AccountsController < ApplicationController
   end
 
   def edit
-    if current_user.god_user
-      @account = Account.find(params[:id])
-    elsif signed_in? && current_user.master_user?
+    if signed_in? && current_user.master_user?
       @account = current_user.account
     else
       deny_access
@@ -48,7 +37,6 @@ class AccountsController < ApplicationController
     @account.toggle(:active)
     if @account.save
       AccountInterface.set_account_defaults(@account)
-      # cookies[:current_account_id] = @account.id
       flash[:success] = "Your account has been created."
       redirect_to new_invitation_path(account_id: @account.id)
     else
@@ -70,11 +58,7 @@ class AccountsController < ApplicationController
       #   Subscription.check_paypal_response(response)
       # end
       flash[:success] = "Account updated."
-      if current_user.god_user
-        redirect_to accounts_path
-      else
-        redirect_to @account
-      end
+      redirect_to @account
     else
       render 'edit'
     end
@@ -90,11 +74,7 @@ class AccountsController < ApplicationController
     account.active = false
     account.save!
     flash[:success] = "Your profile has been removed and your account closed. Payment profiles have cancelled."
-    if current_user.god_user?
-      redirect_to accounts_path
-    else
-      sign_out
-    end
+    sign_out
   end
 
 end

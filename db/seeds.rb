@@ -64,7 +64,7 @@ puts "Creating users..."
 	in_user = in_account.users.build(user)
 	if in_user.full_name == "Raoul de Villiers" || "Joseph Barnes"
 		in_user.toggle(:master_user)
-		in_user.toggle(:god_user)
+		in_user.toggle(:admin_user)
 	end
 	in_user.save
  end

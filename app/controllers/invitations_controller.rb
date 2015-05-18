@@ -5,8 +5,8 @@ class InvitationsController < ApplicationController
 
   def new
     if signed_in?
-      if current_user.master_user?
-        @invitation = Invitation.new(account_id: current_user.account.id)
+      if current_user.master_user? || current_user.admin_user?
+        @invitation = Invitation.new(account_id: params[:account_id])
       else
         flash[:notice] = "Invites can only be sent by the account master user."
         redirect_to root_path
@@ -45,7 +45,7 @@ class InvitationsController < ApplicationController
   end
 
   def check_user_number
-    if signed_in? && !current_user.god_user?
+    if signed_in? && !current_user.admin_user?
       unless current_user.account.account_option.users > current_user.account.users.count
         flash[:error] = "You have reached the maximum number of users for your account option. Please upgrade."
         if current_user.master_user?

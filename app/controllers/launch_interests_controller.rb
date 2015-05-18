@@ -1,7 +1,7 @@
 class LaunchInterestsController < ApplicationController
 
   skip_before_filter :check_access, :check_account_active, :check_payer
-  before_filter :only_god_user, only: :index
+  before_filter :only_admin_user, only: :index
 
   def index
     @launch_interests = LaunchInterest.all
@@ -31,8 +31,8 @@ class LaunchInterestsController < ApplicationController
 
   private
 
-  def only_god_user
-    deny_access_wrong_account unless (signed_in? && current_user.god_user == true)
+  def only_admin_user
+    deny_access_wrong_account unless (signed_in? && current_user.admin_user == true)
   end
 
 end

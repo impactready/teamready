@@ -1,8 +1,8 @@
 class AccountOptionsController < ApplicationController
-  
+
   skip_before_filter :check_access, :check_account_active, :check_payer
-  before_filter :only_god_user
-  
+  before_filter :only_admin_user
+
   def index
     @account_options = AccountOption.all
   end
@@ -24,8 +24,8 @@ class AccountOptionsController < ApplicationController
       render 'new'
     end
   end
-  
- 
+
+
   def update
     @account_option = AccountOption.find(params[:id])
     if @account_option.update_attributes(params[:account_option])
@@ -44,8 +44,8 @@ class AccountOptionsController < ApplicationController
 
   private
 
-  def only_god_user
-    deny_access_wrong_account unless current_user.god_user == true
+  def only_admin_user
+    deny_access_wrong_account unless current_user.admin_user == true
   end
 
 end

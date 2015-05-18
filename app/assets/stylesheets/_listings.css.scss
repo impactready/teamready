@@ -29,6 +29,14 @@
     background-color: #F9F9FB;
 }
 
+.listing-item.alt {
+    background-color: #E4E4EA;
+}
+
+.listing-item.alt.heading {
+    font-weight: bold;
+}
+
 div[class^="listing-i-"] {
     float: left;
     padding: 2px 2px 2px 3px;

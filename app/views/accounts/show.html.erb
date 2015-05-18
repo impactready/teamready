@@ -70,7 +70,7 @@
 
   <div class="admin-column">
     <p class="normal"><strong>Additional Users</strong></p>
-    <p class="normal"><%= link_to "Invite a user to this account", new_invitation_path %></p>
+    <p class="normal"><%= link_to "Invite a user to this account", new_invitation_path(account_id: current_user.account.id) %></p>
   </div>
   <br class="clear"/>
 
