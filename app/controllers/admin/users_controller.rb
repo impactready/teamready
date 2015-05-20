@@ -1,5 +1,4 @@
-Admin::UsersController < Admin::BaseController
-
+class Admin::UsersController < Admin::BaseController
   def destroy
     user = Users.find(params[:id])
     if current_user == user
