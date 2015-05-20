@@ -4,7 +4,7 @@
   <% if current_user.master_user? %>
       <h2>All users</h2>
   <% else %>
-      <h2>All users in your groups</h2>
+      <h2>All users in your teams</h2>
   <% end %>
 </div>
 <% if @users.count == 0%>
@@ -12,7 +12,7 @@
   <% if current_user.master_user? %>
     <p>You have not added any users to this account.</p>
   <% else %>
-    <p>You have no fellow members. You need to be assigned to groups to see your fellow members.</p>
+    <p>You have no fellow members. You need to be assigned to teams to see your fellow members.</p>
   <% end %>
 
 <% else %>
@@ -24,7 +24,7 @@
     <table>
       <tr class="listing-header">
         <td>Name:</td>
-        <td class="listing-i-fxl">Memberships:</td>
+        <td class="listing-i-fxl">Team memberships:</td>
         <td></td>
       </tr>
       <%= render @users %>

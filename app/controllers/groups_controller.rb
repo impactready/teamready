@@ -26,7 +26,7 @@ class GroupsController < ApplicationController
     if @group.save
       @membership = current_user.memberships.build(group_id: @group.id)
       if @membership.save
-        flash[:success] = "Group created."
+        flash[:success] = "Team created."
         redirect_to groups_path
       else
         group_save_unsuccessful
@@ -40,10 +40,10 @@ class GroupsController < ApplicationController
     @account = current_user.account
     @group = @account.groups.find(params[:id])
     if @group.update_attributes(params[:group])
-      flash[:success] = "Group updated."
+      flash[:success] = "Team updated."
       redirect_to groups_path
     else
-      flash[:error] = "The group could not be updated."
+      flash[:error] = "The team could not be updated."
       render 'edit'
     end
   end
@@ -51,13 +51,13 @@ class GroupsController < ApplicationController
   def destroy
     group = Group.find(params[:id])
     group.destroy
-    flash[:success] = "Group removed."
+    flash[:success] = "Team removed."
     redirect_to groups_path
   end
 
   def check_group_number
     unless current_user.account.account_option.groups > current_user.account.groups.count
-      flash[:error] = "You have reached the maximum number of groups for your account option. Please upgrade."
+      flash[:error] = "You have reached the maximum number of teams for your account option. Please upgrade."
       if current_user.master_user?
         redirect_to account_path(current_user.account)
       else

@@ -103,7 +103,7 @@ describe "User Activities" do
         end
         click_button 'Submit'
         page.should have_selector("div.flash_success")
-        page.should have_content("All groups")
+        page.should have_content("All teams")
       end
     end
 

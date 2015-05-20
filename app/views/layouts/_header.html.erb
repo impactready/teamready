@@ -15,7 +15,7 @@
               <% else %>
                   <li><%= link_to "Home", '/' %></li>
                   <li><%= link_to "Pricing/Signup", pricing_path %></li>
-                  <li><%= link_to "Contact Us", contact_path %></li>
+                  <li><%= link_to "Contact us", contact_path %></li>
                   <li><%= link_to "Sign in", signin_path %></li>
               <% end %>
           </ul>
@@ -46,13 +46,13 @@
                   <li><%= link_to "Tasks", tasks_path %></li>
                   <li><%= link_to "Messages", messages_path %></li>
                   <% if current_user.master_user? %>
-                    <li><%= link_to "User Admin", users_path %></li>
+                    <li><%= link_to "Users", users_path %></li>
                   <% else %>
-                    <li><%= link_to "Fellow Members", users_path %></li>
+                    <li><%= link_to "Fellow members", users_path %></li>
                   <% end %>
-                  <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+                  <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
                   <% if current_user.master_user? %>
-                    <li><%= link_to "Account Management", current_user.account %></li>
+                    <li><%= link_to "Account management", current_user.account %></li>
                   <% end %>
                 <% end %>
             </ul>

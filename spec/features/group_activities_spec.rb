@@ -18,14 +18,14 @@ describe "Group Activities" do
   describe 'Group Listing' do
     it 'should show a notice when there are no groups' do
       visit groups_path
-      page.should have_content('You have not created any groups.')
+      page.should have_content('You have not created any teams.')
     end
 
     it 'should show a notice when there are no items in a group' do
       group = FactoryGirl.create(:group, account: @account)
       visit groups_path
       page.should have_selector('a', text: group.name)
-      page.should have_content('There are no events, tasks or messages in this group.')
+      page.should have_content('There are no events, tasks or messages in this team.')
     end
 
     it 'should show a map if an event/task/message has been created' do
@@ -33,7 +33,7 @@ describe "Group Activities" do
         group = FactoryGirl.create(:group, account: @account)
         message = FactoryGirl.create(:message, user: @user, group: group)
         visit groups_path
-        page.should have_content("Group Dashboard: #{group.name}")
+        page.should have_content("Team dashboard: #{group.name}")
         page.should have_selector('td', text: '1')
       end
     end
@@ -56,7 +56,7 @@ describe "Group Activities" do
         fill_in 'Name', with: ''
         fill_in 'Description', with: ''
         click_button 'Submit'
-        page.should have_content('Create a new group')
+        page.should have_content('Create a new team')
         page.should have_selector('div.flash_error')
       end
     end
@@ -67,7 +67,7 @@ describe "Group Activities" do
         fill_in 'Name', with: 'Sewer monitoring'
         fill_in 'Description', with: 'People going into sewers to check quality.'
         click_button 'Submit'
-        page.should have_content('All groups')
+        page.should have_content('All teams')
         page.should have_selector("tr.listing-item", text: 'Sewer monitoring')
       end
     end
@@ -84,7 +84,7 @@ describe "Group Activities" do
       it 'should not update the group' do
         fill_in 'Name', with: ''
         click_button 'Submit'
-        page.should have_content('Edit this group')
+        page.should have_content('Edit this team')
         page.should have_selector('div.flash_error')
       end
     end
@@ -94,7 +94,7 @@ describe "Group Activities" do
         fill_in 'Name', with: 'Sewer monitoring reviewed'
         fill_in 'Description', with: 'People going into sewers to check quality - reviewed.'
         click_button 'Submit'
-        page.should have_content('All groups')
+        page.should have_content('All teams')
         page.should have_selector('tr.listing-item', text: 'Sewer monitoring reviewed')
       end
     end

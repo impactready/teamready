@@ -66,7 +66,7 @@ describe 'SignUp Activities' do
             fill_in 'Password confirmation', with: 'mememe'
           end
           click_button 'Submit'
-          page.should have_content('All groups')
+          page.should have_content('All teams')
       end
     end
   end
