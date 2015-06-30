@@ -34,6 +34,21 @@ FactoryGirl.define do
     account_id 1
   end
 
+  factory :indicator do
+    id 1
+    description "Quality of Housing"
+  end
+
+  factory :indicator_measurement do
+    description 'Household no. 12: Housing quality very good.'
+    location '20 Corlett Drive, Johannesburg'
+    group_id 1
+    user_id 1
+    indicator_id 1
+    latitude 60.0
+    longitude 70.0
+  end
+
   factory :user do
     id 1
     first_name "Test"

@@ -9,6 +9,7 @@ class Account < ActiveRecord::Base
 	has_many :priorities, dependent: :destroy
 	has_many :types, dependent: :destroy
 	has_many :statuses, dependent: :destroy
+	has_many :indicators, dependent: :destroy
 	has_one :subscription, dependent: :destroy
 
 	validates :name, presence: true

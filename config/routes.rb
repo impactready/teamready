@@ -18,6 +18,7 @@ Incivent_App::Application.routes.draw do
   resources :priorities
   resources :types
   resources :statuses
+  resources :indicators
   resources :incivents  do
     collection do
       get 'sort_index'
