@@ -23,10 +23,13 @@ describe "Status Activities" do
 
 
   describe 'Status creation' do
+    before(:each) do
+      visit statuses_path
+      click_link 'New status'
+    end
 
     describe 'failure' do
       it "should not create a status option" do
-        visit new_status_path
         click_button 'Submit'
         page.should have_selector('div.flash_error')
         page.should have_content('New status')
@@ -35,7 +38,6 @@ describe "Status Activities" do
 
     describe 'success' do
       it "should not create a status option" do
-        visit new_status_path
         fill_in 'Description', with: "Closed"
         click_button 'Submit'
         page.should have_selector('div.flash_success')
@@ -48,7 +50,8 @@ describe "Status Activities" do
 
     before(:each) do
       @status = FactoryGirl.create(:status, account: @account)
-      visit edit_status_path(@status)
+      visit statuses_path
+      click_link 'Edit'
     end
 
     describe 'failure' do

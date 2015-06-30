@@ -26,7 +26,8 @@ describe "Type Activities" do
 
     describe 'failure' do
       it "should not create a type option" do
-        visit new_type_path
+        visit types_path
+        click_link 'New event type'
         click_button 'Submit'
         page.should have_selector('div.flash_error')
         page.should have_content('New type')
@@ -48,7 +49,8 @@ describe "Type Activities" do
 
     before(:each) do
       @type = FactoryGirl.create(:type, account: @account)
-      visit edit_type_path(@type)
+      visit types_path
+      click_link 'Edit'
     end
 
     describe 'failure' do
