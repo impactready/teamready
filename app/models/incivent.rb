@@ -16,7 +16,7 @@ class Incivent < ActiveRecord::Base
   geocoded_by :location
   reverse_geocoded_by :latitude, :longitude, address: :location
 
-  validates :name, presence: true , length: { maximum: 80 }
+  validates :name, presence: true, length: { maximum: 80 }
   validates :raised_user_id, presence: true, numericality:  { only_integer: true }
   validates :priority_id, presence: true
   validates :status_id, presence: true

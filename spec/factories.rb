@@ -57,16 +57,19 @@ FactoryGirl.define do
   end
 
   factory :update do
+    id 1
     group_id 1
     detail "New message called 'Sort this out' created in group '#{FactoryGirl.build(:group).name}'."
   end
 
   factory :membership do
+    id 1
     user_id 1
     group_id 1
   end
 
   factory :incivent do
+    id 1
     sequence(:name) {|n| "Oil Spill-#{n}" }
     location '20 Corlett Drive, Johannesburg'
     sequence(:description) {|n| "It was bad...#{n}" }
@@ -80,6 +83,7 @@ FactoryGirl.define do
   end
 
   factory :task do
+    id 1
     sequence(:description) {|n| "Do something - #{n}!" }
     location '20 Corlett Drive, Johannesburg'
     assigned_user_id 1
@@ -95,6 +99,7 @@ FactoryGirl.define do
 
 
   factory :message do
+    id 1
     sequence(:description) {|n| "Sort this out...#{n}" }
     location '100 Corlett Drive, Johannesburg'
     user_id 1
@@ -105,6 +110,7 @@ FactoryGirl.define do
   end
 
   factory :invitation do
+    id 1
     account_id 1
     recipient_email 'person@example.com'
   end
