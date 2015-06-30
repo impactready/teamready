@@ -14,6 +14,12 @@ describe "Type Activities" do
 
 
   describe 'Type listing' do
+    it "should direct from account view to statuses" do
+      visit account_path(@account)
+      click_link 'Manage types'
+      page.should have_content('Type options')
+    end
+
     it "should not create a new type option" do
       type = FactoryGirl.create(:type, account: @account)
       visit types_path

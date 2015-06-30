@@ -14,6 +14,12 @@ describe "Status Activities" do
 
 
   describe 'Status listing' do
+    it "should direct from account view to statuses" do
+      visit account_path(@account)
+      click_link 'Manage statuses'
+      page.should have_content('Status options')
+    end
+
     it "should not create a new status option" do
       status = FactoryGirl.create(:status, account: @account)
       visit statuses_path

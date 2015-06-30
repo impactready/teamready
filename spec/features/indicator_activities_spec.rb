@@ -14,6 +14,12 @@ describe "Indicator Activities" do
 
 
   describe 'Indicator listing' do
+    it "should direct from account view to indicators" do
+      visit account_path(@account)
+      click_link 'Manage indicators'
+      page.should have_content('Indicator options')
+    end
+
     it "should not create a new indicator option" do
       indicator = FactoryGirl.create(:indicator, account: @account)
       visit indicators_path

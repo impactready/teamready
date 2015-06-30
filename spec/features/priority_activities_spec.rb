@@ -14,6 +14,12 @@ describe "Priority Activities" do
 
 
   describe 'Priority listing' do
+    it "should direct from account view to priorities" do
+      visit account_path(@account)
+      click_link 'Manage priority options'
+      page.should have_content('Priority options')
+    end
+
     it "should not create a new priority option" do
       priority = FactoryGirl.create(:priority, account: @account)
       visit priorities_path
