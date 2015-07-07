@@ -1,4 +1,4 @@
-class IndicatorMeasurement < ActiveRecord::Base
+class Measurement < ActiveRecord::Base
 
   belongs_to :group
   belongs_to :user

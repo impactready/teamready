@@ -44,6 +44,7 @@ describe "Type Activities" do
       it "should not create a type option" do
         visit new_type_path
         fill_in 'Description', with: "Environmental"
+        select 'Event category', from: 'Usage'
         click_button 'Submit'
         page.should have_selector('div.flash_success')
         page.should have_content('Type options')

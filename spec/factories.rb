@@ -20,6 +20,14 @@ FactoryGirl.define do
     id 1
     description "Environmental"
     account_id 1
+    usage 'Event category'
+  end
+
+  factory :type_indicator, class: Type do
+    id 2
+    description "Housing delivery"
+    account_id 1
+    usage 'Measurement indicator'
   end
 
   factory :status do
@@ -34,17 +42,12 @@ FactoryGirl.define do
     account_id 1
   end
 
-  factory :indicator do
-    id 1
-    description "Quality of Housing"
-  end
-
-  factory :indicator_measurement do
+  factory :measurement do
     description 'Household no. 12: Housing quality very good.'
     location '20 Corlett Drive, Johannesburg'
     group_id 1
     user_id 1
-    indicator_id 1
+    type_id 2
     latitude 60.0
     longitude 70.0
   end

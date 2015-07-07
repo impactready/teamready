@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe Indicator do
+describe Measurement do
 end

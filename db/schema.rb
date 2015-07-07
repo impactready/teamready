@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150630095136) do
+ActiveRecord::Schema.define(version: 20150707065035) do
 
   create_table "account_options", force: true do |t|
     t.string   "name"
@@ -63,30 +63,6 @@ ActiveRecord::Schema.define(version: 20150630095136) do
     t.boolean  "archive",                     default: false
   end
 
-  create_table "indicator_measurements", force: true do |t|
-    t.string   "description"
-    t.integer  "user_id"
-    t.integer  "group_id"
-    t.integer  "indicator_id"
-    t.string   "location"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.boolean  "archive",                        default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "measurement_image_file_name"
-    t.string   "measurement_image_content_type"
-    t.integer  "measurement_image_file_size"
-    t.datetime "measurement_image_updated_at"
-  end
-
-  create_table "indicators", force: true do |t|
-    t.string   "description"
-    t.integer  "account_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "invitations", force: true do |t|
     t.integer  "account_id"
     t.string   "recipient_email"
@@ -101,6 +77,23 @@ ActiveRecord::Schema.define(version: 20150630095136) do
     t.datetime "updated_at"
     t.text     "message"
     t.string   "subject"
+  end
+
+  create_table "measurements", force: true do |t|
+    t.string   "description"
+    t.integer  "user_id"
+    t.integer  "group_id"
+    t.integer  "type_id"
+    t.string   "location"
+    t.float    "longitude"
+    t.float    "latitude"
+    t.boolean  "archive",                        default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "measurement_image_file_name"
+    t.string   "measurement_image_content_type"
+    t.integer  "measurement_image_file_size"
+    t.datetime "measurement_image_updated_at"
   end
 
   create_table "memberships", force: true do |t|
@@ -177,6 +170,7 @@ ActiveRecord::Schema.define(version: 20150630095136) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "account_id"
+    t.string   "usage",       default: "", null: false
   end
 
   create_table "updates", force: true do |t|

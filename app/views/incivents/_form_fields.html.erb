@@ -4,7 +4,7 @@
     <%= f.input :priority, collection: @account.priorities, member_label: :description, include_blank: false %>
     <%= f.input :status, collection: @account.statuses, member_label: :description, include_blank: false %>
     <%= f.input :location, hint: "You must enter either an address OR latitude and longitude as decimal degrees" %>
-    <%= f.input :type, collection: @account.types, member_label: :description, include_blank: false %>
+    <%= f.input :type, collection: @account.types.where(usage: 'Event category'), member_label: :description, include_blank: false %>
     <%= f.input :description %>
     <%= f.input :group, collection: current_user.groups, member_label: :name, include_blank: false %>
     <%= f.input :latitude %>
