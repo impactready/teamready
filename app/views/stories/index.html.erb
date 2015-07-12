@@ -14,7 +14,7 @@
 <div class="spacer">
 </div>
 
-<p class="normal"><%= link_to 'New stories', new_stories_path %></p>
+<p class="normal"><%= link_to 'New stories', new_story_path %></p>
 
 
 <% if @stories.empty? %>
@@ -54,7 +54,6 @@
             <td><%= link_to "Posted by", sort_index_stories_path(sort: "user_id"), remote: true %></td>
             <td><%= link_to "Posted at", sort_index_stories_path(sort: "created_at"), remote: true %></td>
             <td>Image</td>
-            <td class="listing-i-f">Actions</td>
           </tr>
           <%= render @stories %>
 

@@ -4,7 +4,9 @@ class Story < ActiveRecord::Base
   belongs_to :group
   belongs_to :type
 
-  attr_accessible :description, :location, :latitude, :longitude, :group_id, type_id:
+  has_attached_file :story_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
+
+  attr_accessible :description, :location, :latitude, :longitude, :group_id, :type_id
   attr_protected :user_id
 
   geocoded_by :location
@@ -29,7 +31,7 @@ class Story < ActiveRecord::Base
   def self.stories_from_groups_joined_by(user)
     group_ids = user.group_ids
     unless group_ids.empty?
-      where("group_id IN (#{group_ids.join(", ")})")
+      where(group_id: group_ids)
     else
       []
     end

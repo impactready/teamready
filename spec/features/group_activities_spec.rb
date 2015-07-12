@@ -8,6 +8,7 @@ describe "Group Activities" do
     @account = FactoryGirl.create(:account)
     @priority = FactoryGirl.create(:priority)
     @status = FactoryGirl.create(:status)
+    @domain = FactoryGirl.create(:type_domain)
     @type = FactoryGirl.create(:type)
     visit signin_path
     fill_in 'Email', with: @user.email
@@ -25,13 +26,13 @@ describe "Group Activities" do
       group = FactoryGirl.create(:group, account: @account)
       visit groups_path
       page.should have_selector('a', text: group.name)
-      page.should have_content('There are no events, tasks or messages in this team.')
+      page.should have_content('There are no events, tasks or stories in this team.')
     end
 
     it 'should show a map if an event/task/message has been created' do
       VCR.use_cassette 'requests/group_activities/group_index_with_message' do
         group = FactoryGirl.create(:group, account: @account)
-        message = FactoryGirl.create(:message, user: @user, group: group)
+        story = FactoryGirl.create(:story, user: @user, group: group, type: @domain)
         visit groups_path
         page.should have_content("Team dashboard: #{group.name}")
         page.should have_selector('td', text: '1')
@@ -41,7 +42,7 @@ describe "Group Activities" do
     it 'should show updates for a group if there are any' do
       VCR.use_cassette 'requests/group_activities/group_index_with_message' do
         group = FactoryGirl.create(:group, account: @account)
-        message = FactoryGirl.create(:message, user: @user, group: group)
+        story = FactoryGirl.create(:story, user: @user, group: group, type: @domain)
         group_update = FactoryGirl.create(:update, group: group)
         visit groups_path
         page.should have_selector('div.update-item', text: group_update.detail)

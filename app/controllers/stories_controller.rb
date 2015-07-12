@@ -5,6 +5,7 @@ class StoriesController < ApplicationController
   end
 
   def new
+    @account = current_user.account
     @story = current_user.stories.new
   end
 
@@ -19,13 +20,14 @@ class StoriesController < ApplicationController
   end
 
   def create
+    @account = current_user.account
     @story = current_user.stories.build(params[:story])
     group = @story.group
     if @story.save
       begin
         Notification.notify_story(user, group, story_url(@story)).deliver
       rescue Exception => e
-        logger.error "Unable to deliver the story email: #{e.story}"
+        logger.error "Unable to deliver the story email: #{e.message}"
       end
       group.updates_add_create(group.name, 'story', @story.description)
       flash[:success] = 'Story added!'

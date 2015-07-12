@@ -12,16 +12,12 @@ puts "Setting account options..."
 	{ name: "Pro", cost: 129, users: 20, groups: 10},
 	{ name: "Enterprise", cost: 199, users: 9999, groups: 9999}
 ].each do |account_option|
-	AccountOption.find_or_create_by_name(account_option)
+	AccountOption.create!(account_option)
  end
 
 puts "Setting account..."
 
-[	{ id: 1, name: "Impact Ready", account_option_id: 1, active: true }
-].each do |account|
-	Account.find_or_create_by_name(account)
-end
-
+Account.create({ id: 1, name: "ImpactReady", account_option_id: 1, active: true })
 
 puts "Setting priorities..."
 
@@ -30,7 +26,7 @@ puts "Setting priorities..."
 	{ description: "Low"}
 ].each do |priority|
 	in_priority = Account.find(1).priorities.build(priority)
-	in_priority.save
+	in_priority.save!
 end
 
 puts "Setting statuses..."
@@ -41,16 +37,16 @@ puts "Setting statuses..."
 	{ description: "Closed",  account_id: 1 }
 ].each do |status|
 	in_status = Account.find(1).statuses.build(status)
-	in_status.save
+	in_status.save!
 end
 
 puts "Setting types..."
 
-[	{ description: "Delivery delay", account_id: 1 },
-	{ description: "Stock spoilage", account_id: 1 }
+[	{ description: "Delivery delay", account_id: 1, usage: 'Event category' },
+	{ description: "Stock spoilage", account_id: 1, usage: 'Measurement indicator' }
 ].each do |type|
 	in_type = Account.find(1).types.build(type)
-	in_type.save
+	in_type.save!
 end
 
 puts "Creating users..."
@@ -66,7 +62,7 @@ puts "Creating users..."
 		in_user.toggle(:master_user)
 		in_user.toggle(:admin_user)
 	end
-	in_user.save
+	in_user.save!
  end
 
 puts "Populating groups..."
@@ -74,7 +70,7 @@ puts "Populating groups..."
 [	{ name: "Delivery Trucks", description: "A group for all our delivery trucks." }
 ].each do |group|
 	in_group = Account.find(1).groups.build(group)
-	in_group.save
+	in_group.save!
 end
 
 puts "Populating memberships..."
@@ -82,17 +78,18 @@ puts "Populating memberships..."
 [	{ group_id: 1 }
 ].each do |membership|
 	in_membership = User.find(1).memberships.build(membership)
-	in_membership.save
+	in_membership = User.find(2).memberships.build(membership)
+	in_membership.save!
 end
 
 
-puts "Populating incivents..."
+puts "Populating events..."
 
 [	{ name: "Tire Burst on my van!", raised_user_id: 1, location: "174 Longmarket St, Cape Town 8000, South Africa",
 	priority_id: 1, type_id: 1, description: "I burst a tire and I will not be on time!", group_id: 1, status_id: 1 }
 ].each do |incivent|
 	in_civent = User.find(1).incivents.build(incivent)
-	in_civent.save
+	in_civent.save!
 end
 
 puts "Populating tasks..."
@@ -102,14 +99,14 @@ puts "Populating tasks..."
 	{ description: "Deliver new Steinway piano to international meistro", location: "23 Lion St, Cape Town 8001, South Africa", group_id: 1,
 	assigned_user_id: 2, priority_id: 2, status_id: 1, raised_user_id: 1, due_date: '2012-06-15' }
 ].each do |task|
-	Task.find_or_create_by_description(task)
+	Task.create!(task)
 end
 
 puts "Populating messages..."
 
-[	{ description: "Customer raved about us! I am on my way to the next delivery.", group_id: 1, location: "Strand St, Cape Town 8001, South Africa" }
-].each do |message|
-	in_message = User.find(1).messages.build(message)
-	in_message.save
+[	{ description: "Customer raved about us! I am on my way to the next delivery.", group_id: 1, type_id: 2, location: "Strand St, Cape Town 8001, South Africa" }
+].each do |story|
+	in_message = User.find(1).stories.build(story)
+	in_message.save!
 end
 

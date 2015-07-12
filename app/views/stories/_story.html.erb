@@ -1,7 +1,7 @@
 
 <tr class="listing-item">
   <td class="listing-i-fm"><%= link_to story.description, story_path(story) %></td>
-  <td><%= story.type %></td>
+  <td><%= story.type.description %></td>
   <td><%= story.location %></td>
   <td><%= story.group.name %></td>
   <% if current_user?(user_locate_by_id(story.user_id)) %>
@@ -10,13 +10,10 @@
     <td><%= user_locate_by_id(story.user_id).full_name %></td>
   <% end %>
   <td><%= time_ago_in_words(story.created_at) %> ago</td>
-  <% if story.story_image.url == '/incivent_images/original/missing.png' %>
+  <% if story.story_image.url == '/story_images/original/missing.png' %>
     <td><%= image_tag 'missingThumb.png' %></td>
   <% else %>
     <td><%= image_tag story.story_image.url(:thumb) %></td>
-  <% end %>
-  <% if current_user?(story.user) || current_user.master_user? %>
-    <td class="listing-i-f"><%= link_to 'Edit', edit_story_path(story) %> | <%= link_to 'Delete', story, data: {confirm: 'Are you sure?'}, method: :delete %></td>
   <% end %>
 </tr>
 
