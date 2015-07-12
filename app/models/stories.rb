@@ -1,9 +1,10 @@
-class Message < ActiveRecord::Base
+class Story < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :group
+  belongs_to :type
 
-  attr_accessible :description, :location, :latitude, :longitude, :group_id
+  attr_accessible :description, :location, :latitude, :longitude, :group_id, type_id:
   attr_protected :user_id
 
   geocoded_by :location
@@ -25,7 +26,7 @@ class Message < ActiveRecord::Base
 
   before_save :cleanup
 
-  def self.messages_from_groups_joined_by(user)
+  def self.stories_from_groups_joined_by(user)
     group_ids = user.group_ids
     unless group_ids.empty?
       where("group_id IN (#{group_ids.join(", ")})")

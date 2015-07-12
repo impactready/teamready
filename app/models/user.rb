@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   has_many :groups, through: :memberships
   has_many :memberships, dependent: :destroy
   has_many :tasks, foreign_key: "assigned_user_id", dependent: :destroy
-  has_many :messages, dependent: :destroy
+  has_many :stories, dependent: :destroy
   has_many :invitations
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -79,9 +79,9 @@ class User < ActiveRecord::Base
     Incivent.unarchived.search(self, search)
   end
 
-  # Call to return all the messages in the groups for which current_user is a member
-  def relevant_messages
-    Message.unarchived.messages_from_groups_joined_by(self)
+  # Call to return all the stories in the groups for which current_user is a member
+  def relevant_stories
+    Story.unarchived.stories_from_groups_joined_by(self)
   end
 
   # Call to return all the tasks in the groups for which current_user is a member

@@ -19,7 +19,7 @@ module GroupsHelper
   group_latarray = []
   group_latarray.push(incivents_lats(group.incivents)) unless group.incivents.empty?
   group_latarray.push(tasks_lats(group.tasks)) unless group.tasks.empty?
-  group_latarray.push(messages_lats(group.messages)) unless group.messages.empty?
+  group_latarray.push(stories_lats(group.stories)) unless group.stories.empty?
   return group_latarray.join("%|%")
  end
 
@@ -27,7 +27,7 @@ module GroupsHelper
   group_longarray = []
   group_longarray.push(incivents_longs(group.incivents)) unless group.incivents.empty?
   group_longarray.push(tasks_longs(group.tasks)) unless group.tasks.empty?
-  group_longarray.push(messages_longs(group.messages)) unless group.messages.empty?
+  group_longarray.push(stories_longs(group.stories)) unless group.stories.empty?
   return group_longarray.join("%|%")
  end
 
@@ -35,7 +35,7 @@ module GroupsHelper
   group_namearray = []
   group_namearray.push(incivents_names(group.incivents)) unless group.incivents.empty?
   group_namearray.push(tasks_names(group.tasks)) unless group.tasks.empty?
-  group_namearray.push(messages_names(group.messages)) unless group.messages.empty?
+  group_namearray.push(stories_names(group.stories)) unless group.stories.empty?
   return group_namearray.join("%|%")
  end
 
@@ -43,7 +43,7 @@ module GroupsHelper
   group_urlarray = []
   group_urlarray.push(incivents_urls(group.incivents)) unless group.incivents.empty?
   group_urlarray.push(tasks_urls(group.tasks)) unless group.tasks.empty?
-  group_urlarray.push(messages_urls(group.messages))unless group.messages.empty?
+  group_urlarray.push(stories_urls(group.stories))unless group.stories.empty?
   return group_urlarray.join("%|%")
  end
 

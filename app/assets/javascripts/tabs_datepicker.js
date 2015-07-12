@@ -2,7 +2,7 @@ $(function() {
   $( '#group-tabs' ).tabs();
   $( '#incivent-tabs' ).tabs();
   $( '#task-tabs' ).tabs();
-  $( '#message-tabs' ).tabs();
+  $( '#stories-tabs' ).tabs();
   $( 'input[id$="_due_date"]' ).datepicker({ dateFormat: 'yy-mm-dd' });
   $('.flash_success').delay(8000).slideUp('slow');
   $('.flash_notice').delay(8000).slideUp('slow');

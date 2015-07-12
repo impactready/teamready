@@ -8,7 +8,7 @@ class Group < ActiveRecord::Base
   has_many :types, through: :incivents
   has_many :memberships, dependent: :destroy
   has_many :tasks, dependent: :destroy
-  has_many :messages, dependent: :destroy
+  has_many :stories, dependent: :destroy
   has_many :updates, dependent: :destroy
   has_many :indicator_measurements, dependent: :destroy
 

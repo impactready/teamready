@@ -20,11 +20,11 @@ class Notification < ActionMailer::Base
     mail(to: @user.email, subject: "[ImpactReady] - #{@user.first_name}, a new action has been assigned to you in the group '#{@group.name}' on ImpactReady")
   end
 
-  def notify_message(user, group, message_url)
-    @message_url  = message_url
+  def notify_story(user, group, story_url)
+    @story_url  = story_url
     @group = group
     @user = user
-    mail(to: @user.email, subject: "[ImpactReady] - #{@user.first_name}, a message has been created in the group '#{@group.name}' on ImpactReady")
+    mail(to: @user.email, subject: "[ImpactReady] - #{@user.first_name}, a story has been created in the group '#{@group.name}' on ImpactReady")
   end
 
   def notify_deadline(user, description )

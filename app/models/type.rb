@@ -1,6 +1,6 @@
 class Type < ActiveRecord::Base
 
-  attr_accessible :description
+  attr_accessible :description, :usage
   attr_protected :account_id
 
   has_many :incivents
@@ -9,7 +9,12 @@ class Type < ActiveRecord::Base
   has_many :statuses, through: :incivents
   has_many :groups, through: :incivents
   belongs_to :account
-  
+
   validates :description, presence: true
-  
+
+  USAGES = {
+    event_category: 'Event category',
+    measurement_indicator: 'Measurement indicator',
+    domain_of_change: 'Domain of change'
+  }
 end

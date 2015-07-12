@@ -25,9 +25,9 @@ class Account < ActiveRecord::Base
 		return Task.where(group_id: account_group_ids)
 	end
 
-	def account_messages
+	def account_stories
 		account_group_ids = self.group_ids
-		return Message.where(group_id: account_group_ids)
+		return Story.where(group_id: account_group_ids)
 	end
 
 

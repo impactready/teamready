@@ -30,6 +30,13 @@ FactoryGirl.define do
     usage 'Measurement indicator'
   end
 
+  factory :type_domain, class: Type do
+    id 3
+    description "Drug delivery frequency"
+    account_id 1
+    usage 'Domain of change'
+  end
+
   factory :status do
     id 1
     description "Open"
@@ -116,12 +123,13 @@ FactoryGirl.define do
   end
 
 
-  factory :message do
+  factory :story do
     id 1
     sequence(:description) {|n| "Sort this out...#{n}" }
     location '100 Corlett Drive, Johannesburg'
     user_id 1
     group_id 1
+    type_id 3
     latitude 60.555
     longitude 70.333
 

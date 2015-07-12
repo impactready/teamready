@@ -1,0 +1,16 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Story</h2>
+</div>
+
+<p class="normal">
+  <% if current_user.master_user? %>
+    <%= link_to "Edit this story", edit_story_path(@story) %>  |
+    <%= link_to "Delete this story", @story, method: :delete, data: {confirm: "Are you sure?"}, title: "Delete story" %>  |
+  <% end %>
+  <%= link_to 'Back to stories', stories_path %>
+</p>
+
+<%= render 'stories/story_show_detail' %>

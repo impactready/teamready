@@ -6,7 +6,7 @@
         <td class="listing-i-fl">Description:</td>
         <td>Number of Events</td>
         <td>Number of Tasks</td>
-        <td>Number of Messages</td>
+        <td>Number of Stories</td>
         <td class="listing-i-f">Actions</td>
       </tr>
 
@@ -15,7 +15,7 @@
         <td class="listing-i-fl"><%= group.description %></td>
         <td><%= group.incivents.count %></td>
         <td><%= group.tasks.count %></td>
-        <td><%= group.messages.count %></td>
+        <td><%= group.stories.count %></td>
         <% if current_user.master_user? %>
           <td class="listing-i-f"><%= link_to 'Edit', edit_group_path(group) %> |
           <%= link_to 'Delete', group, data: {confirm: 'Are you sure?'}, method: :delete %></td>
@@ -31,9 +31,9 @@
     <h2>Team dashboard: <%= group.name %></h2>
   </div>
 
-  <% if group.incivents.count == 0 && group.tasks.count == 0 && group.messages.count == 0 %>
+  <% if group.incivents.count == 0 && group.tasks.count == 0 && group.stories.count == 0 %>
     <div class="general-form">
-      <p class="normal">There are no events, tasks or messages in this team.</p>
+      <p class="normal">There are no events, tasks or stories in this team.</p>
     </div>
   <% else %>
     <div id="google_map_section-<%= group.id %>" data-kml="<%= attachment_url(group.geo_info) %>" data-url="<%= group_feature_urls(group) %>" data-name="<%= group_feature_names(group) %>" data-lat="<%= group_lats(group) %>" data-long="<%= group_longs(group) %>">

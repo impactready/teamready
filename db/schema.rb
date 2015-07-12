@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150707065035) do
+ActiveRecord::Schema.define(version: 20150712092407) do
 
   create_table "account_options", force: true do |t|
     t.string   "name"
@@ -105,18 +105,6 @@ ActiveRecord::Schema.define(version: 20150707065035) do
 
   add_index "memberships", ["user_id", "group_id"], name: "index_memberships_on_user_id_and_group_id", unique: true
 
-  create_table "messages", force: true do |t|
-    t.integer  "user_id"
-    t.text     "description"
-    t.integer  "group_id"
-    t.string   "location"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "archive",     default: false
-  end
-
   create_table "priorities", force: true do |t|
     t.string   "description"
     t.datetime "created_at"
@@ -134,6 +122,23 @@ ActiveRecord::Schema.define(version: 20150707065035) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "account_id"
+  end
+
+  create_table "stories", force: true do |t|
+    t.integer  "user_id"
+    t.text     "description"
+    t.integer  "group_id"
+    t.string   "location"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "archive",                  default: false
+    t.string   "story_image_file_name"
+    t.string   "story_image_content_type"
+    t.integer  "story_image_file_size"
+    t.datetime "story_image_updated_at"
+    t.integer  "type_id",                  default: 1
   end
 
   create_table "subscriptions", force: true do |t|

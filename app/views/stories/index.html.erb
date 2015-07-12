@@ -1,0 +1,66 @@
+<%= content_for(:head) do %>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtJp-fDHOROELFhGj3s0HNVwq0anZlcFM"></script>
+<% end %>
+<%= javascript 'googleearth' %>
+<%= javascript 'markerwithlabel' %>
+
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>All stories</h2>
+</div>
+
+<div class="spacer">
+</div>
+
+<p class="normal"><%= link_to 'New stories', new_stories_path %></p>
+
+
+<% if @stories.empty? %>
+
+  <div class="general-form">
+    <p class="normal"> You have no stories associated with you or your groups.</p>
+  </div>
+
+<% else %>
+
+  <div id="ids-for-earth" data-ids="1"></div>
+
+  <div id="stories-tabs">
+
+    <ul>
+      <li><a href="#stories-tabs-1">Location</a></li>
+      <li><a href="#stories-tabs-2">Details</a></li>
+    </ul>
+
+    <div id="stories-tabs-1">
+
+      <div id="google_map_section-1" data-url="<%= stories_urls(@stories) %>" data-name="<%= stories_names(@stories) %>" data-lat="<%= stories_lats(@stories) %>" data-long="<%= stories_longs(@stories) %>">
+      </div>
+
+    </div>
+
+
+    <div id="stories-tabs-2">
+
+      <div class="item-table">
+        <table>
+          <tr class="listing-header">
+            <td class="listing-i-fm">Story:</td>
+            <td>Domain of change:</td>
+            <td>Location:</td>
+            <td><%= link_to "Group", sort_index_stories_path(sort: "group_id"), remote: true %></td>
+            <td><%= link_to "Posted by", sort_index_stories_path(sort: "user_id"), remote: true %></td>
+            <td><%= link_to "Posted at", sort_index_stories_path(sort: "created_at"), remote: true %></td>
+            <td>Image</td>
+            <td class="listing-i-f">Actions</td>
+          </tr>
+          <%= render @stories %>
+
+        </table>
+      </div>
+    </div>
+
+  </div>
+<% end %>

@@ -23,7 +23,7 @@ $(function() {
     });
 
     $('.mt-button-m').click(function() {
-      window.location = '/messages/new'
+      window.location = '/stories/new'
     });
 
     get_coords();

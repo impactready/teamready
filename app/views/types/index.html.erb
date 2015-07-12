@@ -30,6 +30,7 @@
       <% @types.each do |type| %>
         <tr class="listing-item">
           <td class="listing-i-fm"><%= type.description %></td>
+          <td><%= type.usage %></td>
           <td><%= link_to 'Edit', edit_type_path(type) %></td>
           <td><%= link_to 'Delete', type, data: {confirm: 'Are you sure?'}, method: :delete %></td>
         </tr>

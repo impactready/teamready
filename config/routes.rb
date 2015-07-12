@@ -25,7 +25,7 @@ Incivent_App::Application.routes.draw do
     end
   end
 
-  resources :messages do
+  resources :stories do
     collection do
       get 'sort_index'
     end

@@ -1,11 +1,13 @@
-<%= semantic_form_for @message do |f| %>
+<%= semantic_form_for @story do |f| %>
   <%= f.inputs do %>
     <%= f.input :description, input_html: { cols: 40, rows: 5 } %>
+    <%= f.input :type, label: "Domain of change" , collection: @account.types.where(usage: Type::USAGES[:domain_of_change]), member_label: :description, include_blank: false%>
     <%= f.input :location, hint: "You must enter either an address OR latitude and longitude as decimal degrees" %>
     <%= f.input :group, collection: current_user.groups, member_label: :name, include_blank: false %>
     <%= f.input :latitude %>
     <%= f.input :longitude %>
-    <%= f.input :archive, label: "Archive this Message" %>
+    <%= f.input :story_image, as: :file, label: "Story image" %>
+    <%= f.input :archive, label: "Archive this story" %>
     <%= f.input :user_id, as: :hidden %>
   <% end %>
   <%= f.actions do %>

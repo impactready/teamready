@@ -30,14 +30,14 @@
       <td class="listing-i-fl"><strong>Team name</strong></td>
       <td><strong>Number of events</strong></td>
       <td><strong>Number of tasks</strong></td>
-      <td><strong>Number of messages</strong></td>
+      <td><strong>Number of stories</strong></td>
     </tr>
     <% @account.groups.each do |group| %>
       <tr class="listing-item">
         <td class="listing-i-fl"><%= group.name %>:</td>
         <td><%= group.incivents.count %></td>
         <td><%= group.tasks.count %></td>
-        <td><%= group.messages.count %></td>
+        <td><%= group.stories.count %></td>
       </tr>
     <% end %>
   </table>
