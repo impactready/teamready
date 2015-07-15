@@ -81,8 +81,8 @@ class User < ActiveRecord::Base
   end
 
   # Call to return all the main incivents in the groups for which current_user is a member
-  def relevant_measurements
-    Measurement.unarchived.measurements_from_groups_joined_by(self)
+  def relevant_measurements(search)
+    Measurement.unarchived.search(self, search)
   end
 
   # Call to return all the stories in the groups for which current_user is a member

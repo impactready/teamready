@@ -24,6 +24,15 @@ class Measurement < ActiveRecord::Base
   before_validation :reverse_geocode, if: :has_coordinates
   before_validation :geocode, if: :has_location, unless: :has_coordinates
 
+  # Called to limit incivents shown according to a search field
+  def self.search(user, search)
+    if search
+      measurements_from_groups_joined_by(user).where("description LIKE ?", "%#{search}%")
+    else
+      measurements_from_groups_joined_by(user)
+    end
+  end
+
   def self.measurements_from_groups_joined_by(user)
     group_ids = user.group_ids
     unless group_ids.empty?

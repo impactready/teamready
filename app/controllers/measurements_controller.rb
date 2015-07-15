@@ -1,7 +1,7 @@
 class MeasurementsController < ApplicationController
 
   def index
-    @measurements = current_user.relevant_measurements.default_order
+    @measurements = current_user.relevant_measurements(params[:search]).default_order
   end
 
   def new
