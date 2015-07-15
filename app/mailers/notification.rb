@@ -13,6 +13,13 @@ class Notification < ActionMailer::Base
     mail(to: @user.email, subject: "[ImpactReady] - A new event has been created in the group '#{@group.name}' on ImpactReady")
   end
 
+  def notify_measurement(user, group, measurement_url)
+    @measurement_url = measurement_url
+    @user = user
+    @group = group
+    mail(to: @user.email, subject: "[ImpactReady] - A new indicator measurement has been created in the group '#{@group.name}' on ImpactReady")
+  end
+
   def notify_task(user, group, task_url)
     @task_url = task_url
     @group = group

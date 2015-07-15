@@ -1,0 +1,16 @@
+<tr class="listing-item">
+  <td class="listing-i-fm"><%= link_to measurement.description, measurement_path(measurement) %></td>
+  <td><%= time_ago_in_words(measurement.created_at) %> ago</td>
+  <td><%= measurement.type.description %></td>
+  <% if measurement.location == "" %>
+    <td>Unnamed Coordinates</td>
+  <% else %>
+    <td><%= measurement.location %></td>
+  <% end %>
+  <td><%= measurement.group.name %></td>
+  <% if measurement.measurement_image.url == '/measurement_images/original/missing.png' %>
+    <td><%= image_tag 'missingThumb.png' %></td>
+  <% else %>
+    <td><%= image_tag measurement.measurement_image.url(:thumb) %></td>
+  <% end %>
+</tr>

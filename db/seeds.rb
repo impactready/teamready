@@ -102,11 +102,15 @@ puts "Populating tasks..."
 	Task.create!(task)
 end
 
-puts "Populating messages..."
+puts "Populating stories..."
 
 [	{ description: "Customer raved about us! I am on my way to the next delivery.", group_id: 1, type_id: 2, location: "Strand St, Cape Town 8001, South Africa" }
 ].each do |story|
 	in_message = User.find(1).stories.build(story)
 	in_message.save!
 end
+
+puts "Populating measurements.."
+
+User.find(1).measurements.create!(description: "Level of housing delivery: 100 units.", group_id: 1, type_id: 2, location: "1 Lion St, Cape Town 8001, South Africa", archive: false)
 

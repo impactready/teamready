@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :memberships, dependent: :destroy
   has_many :tasks, foreign_key: "assigned_user_id", dependent: :destroy
   has_many :stories, dependent: :destroy
+  has_many :measurements
   has_many :invitations
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -77,6 +78,11 @@ class User < ActiveRecord::Base
   # Call to return all the main incivents in the groups for which current_user is a member
   def relevant_incivents(search)
     Incivent.unarchived.search(self, search)
+  end
+
+  # Call to return all the main incivents in the groups for which current_user is a member
+  def relevant_measurements
+    Measurement.unarchived.measurements_from_groups_joined_by(self)
   end
 
   # Call to return all the stories in the groups for which current_user is a member

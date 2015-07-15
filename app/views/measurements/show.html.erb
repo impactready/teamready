@@ -1,0 +1,18 @@
+<div class="spacer">
+</div>
+
+<div class="heading-block">
+  <h2>Indicator measurement</h2>
+</div>
+
+<p class="normal">
+  <% if current_user?(@measurement.user) || current_user.master_user? %>
+    <%= link_to "Edit this measurement", edit_measurement_path(@measurement) %>  |
+    <%= link_to "Delete this measurement", @measurement, method: :delete, data: {confirm: "Are you sure?"}, title: "Delete indicator measurement" %>  |
+  <% end %>
+  <%= link_to 'Back to indicator measurements', measurements_path %>
+</p>
+
+<%= render 'measurements/measurement_show_detail' %>
+
+<p class="normal"><%= link_to 'Back to indicator measurements', measurements_path %></p>

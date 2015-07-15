@@ -10,7 +10,7 @@ class Group < ActiveRecord::Base
   has_many :tasks, dependent: :destroy
   has_many :stories, dependent: :destroy
   has_many :updates, dependent: :destroy
-  has_many :indicator_measurements, dependent: :destroy
+  has_many :measurements, dependent: :destroy
 
   accepts_nested_attributes_for :tasks
 

@@ -4,9 +4,10 @@
       <tr class="listing-header">
         <td class="listing-i-f">Name:</td>
         <td class="listing-i-fl">Description:</td>
-        <td>Number of Events</td>
-        <td>Number of Tasks</td>
-        <td>Number of Stories</td>
+        <td>Number of events</td>
+        <td>Number of tasks</td>
+        <td>Number of stories</td>
+        <td>Number of indicator measurements</td>
         <td class="listing-i-f">Actions</td>
       </tr>
 
@@ -16,6 +17,7 @@
         <td><%= group.incivents.count %></td>
         <td><%= group.tasks.count %></td>
         <td><%= group.stories.count %></td>
+        <td><%= group.measurements.count %></td>
         <% if current_user.master_user? %>
           <td class="listing-i-f"><%= link_to 'Edit', edit_group_path(group) %> |
           <%= link_to 'Delete', group, data: {confirm: 'Are you sure?'}, method: :delete %></td>
@@ -31,7 +33,7 @@
     <h2>Team dashboard: <%= group.name %></h2>
   </div>
 
-  <% if group.incivents.count == 0 && group.tasks.count == 0 && group.stories.count == 0 %>
+  <% if group.incivents.count == 0 && group.tasks.count == 0 && group.stories.count == 0 && group.measurements.count == 0 %>
     <div class="general-form">
       <p class="normal">There are no events, tasks or stories in this team.</p>
     </div>

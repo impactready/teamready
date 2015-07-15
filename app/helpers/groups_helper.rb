@@ -18,6 +18,7 @@ module GroupsHelper
  def group_lats(group)
   group_latarray = []
   group_latarray.push(incivents_lats(group.incivents)) unless group.incivents.empty?
+  group_latarray.push(measurements_lats(group.measurements)) unless group.measurements.empty?
   group_latarray.push(tasks_lats(group.tasks)) unless group.tasks.empty?
   group_latarray.push(stories_lats(group.stories)) unless group.stories.empty?
   return group_latarray.join("%|%")
@@ -26,6 +27,7 @@ module GroupsHelper
  def group_longs(group)
   group_longarray = []
   group_longarray.push(incivents_longs(group.incivents)) unless group.incivents.empty?
+  group_longarray.push(measurements_longs(group.measurements)) unless group.measurements.empty?
   group_longarray.push(tasks_longs(group.tasks)) unless group.tasks.empty?
   group_longarray.push(stories_longs(group.stories)) unless group.stories.empty?
   return group_longarray.join("%|%")
@@ -34,6 +36,7 @@ module GroupsHelper
  def group_feature_names(group)
   group_namearray = []
   group_namearray.push(incivents_names(group.incivents)) unless group.incivents.empty?
+  group_namearray.push(measurements_names(group.measurements)) unless group.measurements.empty?
   group_namearray.push(tasks_names(group.tasks)) unless group.tasks.empty?
   group_namearray.push(stories_names(group.stories)) unless group.stories.empty?
   return group_namearray.join("%|%")
@@ -42,6 +45,7 @@ module GroupsHelper
  def group_feature_urls(group)
   group_urlarray = []
   group_urlarray.push(incivents_urls(group.incivents)) unless group.incivents.empty?
+  group_urlarray.push(measurements_urls(group.measurements)) unless group.measurements.empty?
   group_urlarray.push(tasks_urls(group.tasks)) unless group.tasks.empty?
   group_urlarray.push(stories_urls(group.stories))unless group.stories.empty?
   return group_urlarray.join("%|%")

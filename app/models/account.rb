@@ -17,17 +17,22 @@ class Account < ActiveRecord::Base
 
 	def account_incivents
 		account_group_ids = self.group_ids
-		return Incivent.where(group_id: account_group_ids)
+		Incivent.where(group_id: account_group_ids)
 	end
 
 	def account_tasks
 		account_group_ids = self.group_ids
-		return Task.where(group_id: account_group_ids)
+		Task.where(group_id: account_group_ids)
 	end
 
 	def account_stories
 		account_group_ids = self.group_ids
-		return Story.where(group_id: account_group_ids)
+		Story.where(group_id: account_group_ids)
+	end
+
+	def account_measurements
+		account_group_ids = self.group_ids
+		Measurement.where(group_id: account_group_ids)
 	end
 
 

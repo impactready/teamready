@@ -31,6 +31,13 @@ Incivent_App::Application.routes.draw do
     end
   end
 
+  resources :measurements do
+    collection do
+      get 'sort_index'
+    end
+  end
+
+
   resources :tasks do
     collection do
       get 'sort_index'
