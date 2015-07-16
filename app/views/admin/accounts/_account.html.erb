@@ -6,18 +6,17 @@
         <div class="listing-i-fs"><%= account.users.count %></div>
         <div class="listing-i-fs"><%= account.groups.count %></div>
         <div class="listing-i-fs"><%= account.account_incivents.count %></div>
+        <div class="listing-i-f"><%= account.account_measurements.count %></div>
         <div class="listing-i-fs"><%= account.account_tasks.count %></div>
         <div class="listing-i-fs"><%= account.account_stories.count %></div>
-        <div class="listing-i-f"><%= link_to 'Edit', edit_admin_account_path(account) %> - <%= link_to 'Delete', account, method: :delete, url: admin_account_path(account) %></div>
+        <div class="listing-i-fs"><%= link_to 'Edit', edit_admin_account_path(account) %> - <%= link_to 'Delete', account, method: :delete, url: admin_account_path(account) %></div>
         <br class="clear" />
     </div>
     <div class="listing-item alt heading">
         <div class="listing-i-fm">User name</div>
-        <div class="listing-i-f">Email</div>
-        <div class="listing-i-f">Phone</div>
+        <div class="listing-i-f" style="width: 180px;">Email</div>
+        <div class="listing-i-f" style="width: 180px;">Phone</div>
         <div class="listing-i-fs">Master user?</div>
-        <div class="listing-i-fs"></div>
-        <div class="listing-i-fs"></div>
         <div class="listing-i-fs"></div>
         <div class="listing-i-fs"></div>
         <div class="listing-i-f"></div>
@@ -26,14 +25,12 @@
     <% account.users.each do |user| %>
         <div class="listing-item alt">
             <div class="listing-i-fm"><%= user.full_name %></div>
-            <div class="listing-i-f"><%= user.email %></div>
-            <div class="listing-i-f"><%= user.phone %></div>
+            <div class="listing-i-f" style="width: 180px;"><%= user.email %></div>
+            <div class="listing-i-f" style="width: 180px;"><%= user.phone %></div>
             <div class="listing-i-fs"><%= user.master_user %></div>
             <div class="listing-i-fs"></div>
             <div class="listing-i-fs"></div>
-            <div class="listing-i-fs"></div>
-            <div class="listing-i-fs"></div>
-            <div class="listing-i-f"><%= link_to 'Delete', user, method: :delete, url: admin_user_path(user) %></div>
+            <div class="listing-i-fs"><%= link_to 'Delete', user, method: :delete, url: admin_user_path(user) %></div>
             <br class="clear" />
         </div>
     <% end %>
