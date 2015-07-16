@@ -6,7 +6,7 @@
     <%= f.input :group, collection: current_user.groups, member_label: :name, include_blank: false %>
     <%= f.input :latitude %>
     <%= f.input :longitude %>
-    <%= f.input :measurement_image, as: :file, label: "Event image" %>
+    <%= f.input :measurement_image, as: :file, label: "Measurement image" %>
     <%= f.input :archive, label: "Archive this event" %>
   <% end %>
   <%= f.actions do %>

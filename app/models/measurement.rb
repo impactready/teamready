@@ -6,6 +6,8 @@ class Measurement < ActiveRecord::Base
 
   has_attached_file :measurement_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
+  validates_attachment_content_type :measurement_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+
   attr_accessible :location, :description, :longitude, :latitude, :type_id, :measurement_image, :group_id, :archive
   attr_protected :user_id
 
