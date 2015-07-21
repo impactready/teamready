@@ -79,7 +79,7 @@ describe "Incivent Activities" do
             select @priority.description, from: 'Priority'
             select @status.description, from: 'Status'
             select @type.description, from: 'Type'
-            select @group.name, from: 'Group'
+            select @group.name, from: 'Team'
             click_button 'Submit'
             page.should have_text('All events')
           end
@@ -96,7 +96,7 @@ describe "Incivent Activities" do
             select @priority.description, from: 'Priority'
             select @status.description, from: 'Status'
             select @type.description, from: 'Type'
-            select @group.name, from: 'Group'
+            select @group.name, from: 'Team'
             click_button 'Submit'
             page.should have_selector('.mobile-heading-block', text: 'All tasks')
           end

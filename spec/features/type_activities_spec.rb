@@ -16,7 +16,7 @@ describe "Type Activities" do
   describe 'Type listing' do
     it "should direct from account view to statuses" do
       visit account_path(@account)
-      click_link 'Manage types'
+      click_link 'Manage types / domains / indicators'
       page.should have_content('Type options')
     end
 

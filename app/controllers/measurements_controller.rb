@@ -33,13 +33,13 @@ class MeasurementsController < ApplicationController
         begin
           Notification.notify_measurement(user, group, measurement_url(@measurement)).deliver
         rescue Exception => e
-          logger.error "Unable to deliver the measurement email: #{e.message}"
+          logger.error "Unable to deliver the update email: #{e.message}"
         end
       end
-      flash[:success] = 'Indicator measurement created!'
+      flash[:success] = 'Indicator update created!'
       mobile_device? ? redirect_to(tasks_path) : redirect_to(measurements_path)
     else
-      flash[:error] = 'The indicator measurement was not successfully created.'
+      flash[:error] = 'The indicator update was not successfully created.'
       render 'new'
     end
   end
@@ -50,10 +50,10 @@ class MeasurementsController < ApplicationController
     group = @measurement.group
     if @measurement.update_attributes(params[:measurement])
       group.updates_add_archive(group.name, 'measurement', @measurement.name) if @measurement.archive == true
-      flash[:success] = 'Indicator measurement updated.'
+      flash[:success] = 'Indicator update updated.'
       redirect_to measurements_path
     else
-      flash[:error] = 'There were problems editing the indicator measurement.'
+      flash[:error] = 'There were problems editing the indicator update.'
       render 'edit'
     end
   end
@@ -64,7 +64,7 @@ class MeasurementsController < ApplicationController
     group = measurement.group
     if measurement.destroy
       group.updates_add_delete(group.name, 'measurement', measurement.description)
-      flash[:success] = 'Indicator measurement removed.'
+      flash[:success] = 'Indicator update removed.'
       redirect_to measurements_path
     end
   end

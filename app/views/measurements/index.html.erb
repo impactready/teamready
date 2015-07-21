@@ -8,19 +8,19 @@
 </div>
 
 <div class="heading-block">
-  <h2>All indicator measurements</h2>
+  <h2>All indicators</h2>
 </div>
 
 <div class="spacer">
 </div>
 
-<p class="normal"><%= link_to 'New measurement indicator', new_measurement_path %></p>
+<p class="normal"><%= link_to 'New indicator update', new_measurement_path %></p>
 
 
 <% if @measurements.empty? %>
 
   <div class="general-form">
-    <p class="normal"> You have no measurement indicators associated with you or your groups.</p>
+    <p class="normal"> You have no indicator updates associated with you or your teams.</p>
   </div>
 
 <% else %>
@@ -51,11 +51,11 @@
 
         <table>
           <tr class="listing-header">
-            <td class="listing-i-fm">description:</td>
+            <td class="listing-i-fm">Description</td>
+            <td><%= link_to "Indicator", sort_index_measurements_path(sort: "type_id"), remote: true %></td>
             <td><%= link_to "Raised", sort_index_measurements_path(sort: "created_at"), remote: true %></td>
-            <td><%= link_to "Type", sort_index_measurements_path(sort: "type_id"), remote: true %></td>
-            <td>Location:</td>
-            <td><%= link_to "Group", sort_index_measurements_path(sort: "group_id"), remote: true %></td>
+            <td>Location</td>
+            <td><%= link_to "Team", sort_index_measurements_path(sort: "group_id"), remote: true %></td>
             <td>Image</td>
           </tr>
 

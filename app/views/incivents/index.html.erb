@@ -20,7 +20,7 @@
 <% if @incivents.empty? %>
 
   <div class="general-form">
-    <p class="normal"> You have no events associated with you or your groups.</p>
+    <p class="normal"> You have no events associated with you or your teams.</p>
   </div>
 
 <% else %>
@@ -51,7 +51,7 @@
 
         <table>
           <tr class="listing-header">
-            <td class="listing-i-fm">Name:</td>
+            <td class="listing-i-fm">Name</td>
             <td><%= link_to "Raised", sort_index_incivents_path(sort: "created_at"), remote: true %></td>
             <td><%= link_to "Priority", sort_index_incivents_path(sort: "priority_id"), remote: true %></td>
             <td><%= link_to "Status", sort_index_incivents_path(sort: "status_id"), remote: true %></td>

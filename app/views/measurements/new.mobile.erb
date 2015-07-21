@@ -1,13 +1,13 @@
 <div class="mobile-heading-block">
-    <h2>New indicator measurement</h2>
+    <h2>New indicator update</h2>
 </div>
 <div class="mobile-form">
   <%= semantic_form_for @measurement, html: {multipart: true} do |f| %>
     <%= f.inputs do %>
+      <%= f.input :type, label: "Indicator", collection: @account.types.where(usage: Type::USAGES[:measurement_indicator]), member_label: :description, include_blank: false %>
       <%= f.input :description %>
       <%= f.input :location %>
-      <%= f.input :type, collection: @account.types.where(usage: Type::USAGES[:measurement_indicator]), member_label: :description, include_blank: false %>
-      <%= f.input :group, collection: current_user.groups, member_label: :name, include_blank: false %>
+      <%= f.input :group, label: 'Team', collection: current_user.groups, member_label: :name, include_blank: false %>
       <%= f.input :latitude %>
       <%= f.input :longitude %>
       <%= f.input :measurement_image, as: :file, label: "Measurement image"%>

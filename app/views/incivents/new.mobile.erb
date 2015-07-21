@@ -10,7 +10,7 @@
       <%= f.input :location %>
       <%= f.input :type, collection: @account.types, member_label: :description, include_blank: false %>
       <%= f.input :description %>
-      <%= f.input :group, collection: current_user.groups, member_label: :name, include_blank: false %>
+      <%= f.input :group, label: 'Team', collection: current_user.groups, member_label: :name, include_blank: false %>
       <%= f.input :latitude %>
       <%= f.input :longitude %>
       <%= f.input :incivent_image, as: :file, label: "Event image"%>

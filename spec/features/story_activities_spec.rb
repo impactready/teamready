@@ -73,7 +73,7 @@ describe 'Story Activities' do
 				    fill_in 'Description', with: 'Our customers were very happy!'
 				    fill_in 'Location', with: '20 Corlett Drive, Johannesburg'
 				    select @domain.description, from: 'Domain of change'
-				    select @group.name, from: 'Group'
+				    select @group.name, from: 'Team'
 				    click_button 'Submit'
 				    page.should have_content('All stories')
 				  end
@@ -87,7 +87,7 @@ describe 'Story Activities' do
 		        fill_in 'Description', with: 'Our customers were very happy!'
 		        fill_in 'Location', with: '20 Corlett Drive, Johannesburg'
 		        select @domain.description, from: 'Domain of change'
-		        select @group.name, from: 'Group'
+		        select @group.name, from: 'Team'
 		        click_button 'Submit'
 		        page.should have_selector('.mobile-heading-block', text: 'All tasks')
 		      end

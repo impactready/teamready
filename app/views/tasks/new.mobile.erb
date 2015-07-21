@@ -11,7 +11,7 @@
       <%= f.input :priority, collection: @account.priorities, member_label: :description, include_blank: false %>
       <%= f.input :status, collection: @account.statuses, member_label: :description, include_blank: false %>
       <%= f.input :location %>
-      <%= f.input :group, collection: current_user.groups, member_label: :name %>
+      <%= f.input :group, label: 'Team', collection: current_user.groups, member_label: :name %>
       <%= f.input :user, collection: @account.users, member_label: :full_name, include_blank: false %>
       <%= f.input :latitude %>
       <%= f.input :longitude %>

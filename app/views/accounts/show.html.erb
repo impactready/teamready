@@ -15,7 +15,7 @@
         <td><%= @account.users.count %></td>
       </tr>
       <tr class="listing-item">
-        <td class="listing-i-fl"><strong>Number of groups:</strong></td>
+        <td class="listing-i-fl"><strong>Number of teams:</strong></td>
         <td><%= @account.groups.count %></td>
       </tr>
   </table>
@@ -64,7 +64,7 @@
   <div class="admin-column">
     <p class="normal"><strong>Event Classification</strong></p>
     <p class="normal"><%= link_to "Manage priority options", priorities_path %></p>
-    <p class="normal"><%= link_to "Manage categories / domains / indicators", types_path %></p>
+    <p class="normal"><%= link_to "Manage types / domains / indicators", types_path %></p>
     <p class="normal"><%= link_to "Manage statuses", statuses_path %></p>
   </div>
 

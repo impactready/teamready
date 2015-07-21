@@ -20,7 +20,7 @@
 <% if @stories.empty? %>
 
   <div class="general-form">
-    <p class="normal"> You have no stories associated with you or your groups.</p>
+    <p class="normal"> You have no stories associated with you or your teams.</p>
   </div>
 
 <% else %>
@@ -47,9 +47,9 @@
       <div class="item-table">
         <table>
           <tr class="listing-header">
-            <td class="listing-i-fm">Story:</td>
-            <td>Domain of change:</td>
-            <td>Location:</td>
+            <td class="listing-i-fm">Story</td>
+            <td>Domain of change</td>
+            <td>Location</td>
             <td><%= link_to "Group", sort_index_stories_path(sort: "group_id"), remote: true %></td>
             <td><%= link_to "Posted by", sort_index_stories_path(sort: "user_id"), remote: true %></td>
             <td><%= link_to "Posted at", sort_index_stories_path(sort: "created_at"), remote: true %></td>
