@@ -20,14 +20,14 @@ FactoryGirl.define do
     id 1
     description "Environmental"
     account_id 1
-    usage 'Event category'
+    usage 'Event type'
   end
 
   factory :type_indicator, class: Type do
     id 2
     description "Housing delivery"
     account_id 1
-    usage 'Measurement indicator'
+    usage 'Indicator'
   end
 
   factory :type_domain, class: Type do

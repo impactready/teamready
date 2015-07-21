@@ -20,7 +20,7 @@ module MeasurementsHelper
  def measurements_names(measurements)
   namearray = []
   measurements.each do |measurement|
-    namearray.push("<div class='label-measurement'><strong>Measurement</strong></div>
+    namearray.push("<div class='label-measurement'><strong>Indicator</strong></div>
                     <div class='label-content'>#{truncate(measurement.description, length: 55)}</div>
                     <div class='label-footer'>Posted by: #{measurement.user.full_name}<br />Date: #{time_ago_in_words(measurement.created_at)} ago</div>")
   end

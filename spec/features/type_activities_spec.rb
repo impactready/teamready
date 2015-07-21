@@ -17,7 +17,7 @@ describe "Type Activities" do
     it "should direct from account view to statuses" do
       visit account_path(@account)
       click_link 'Manage types / domains / indicators'
-      page.should have_content('Type options')
+      page.should have_content('Types / domains / indicators')
     end
 
     it "should not create a new type option" do
@@ -33,10 +33,10 @@ describe "Type Activities" do
     describe 'failure' do
       it "should not create a type option" do
         visit types_path
-        click_link 'New event type'
+        click_link 'New item'
         click_button 'Submit'
         page.should have_selector('div.flash_error')
-        page.should have_content('New type')
+        page.should have_content('New item')
       end
     end
 
@@ -44,10 +44,10 @@ describe "Type Activities" do
       it "should not create a type option" do
         visit new_type_path
         fill_in 'Description', with: "Environmental"
-        select 'Event category', from: 'Usage'
+        select 'Event type', from: 'Usage'
         click_button 'Submit'
         page.should have_selector('div.flash_success')
-        page.should have_content('Type options')
+        page.should have_content('Types / domains / indicators')
       end
     end
   end
@@ -65,7 +65,7 @@ describe "Type Activities" do
         fill_in 'Description', with: ''
         click_button 'Submit'
         page.should have_selector('div.flash_error')
-        page.should have_content('Edit type')
+        page.should have_content('Edit item')
       end
     end
 
@@ -74,7 +74,7 @@ describe "Type Activities" do
         fill_in 'Description', with: 'Environmental Reviewd'
         click_button 'Submit'
         page.should have_selector('div.flash_success')
-        page.should have_content('Type options')
+        page.should have_content('Types / domains / indicators')
       end
     end
 

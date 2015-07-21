@@ -13,8 +13,8 @@ class Type < ActiveRecord::Base
   validates :description, presence: true
 
   USAGES = {
-    event_category: 'Event category',
-    measurement_indicator: 'Measurement indicator',
+    event_type: 'Event type',
+    indicator: 'Indicator',
     domain_of_change: 'Domain of change'
   }
 end
