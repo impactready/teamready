@@ -11,7 +11,7 @@ class LaunchInterestsController < ApplicationController
     @launch_interest = LaunchInterest.new(params[:launch_interest])
     if @launch_interest.save
       begin
-        Notification.notify_contact(@launch_interest.email_address, @launch_interest.message, @launch_interest.subject).deliver
+        Notification.notify_contact(@launch_interest.email_address, @launch_interest.message, @launch_interest.subject).deliver_now
       rescue Exception => e
         logger.error "Unable to deliver the contact email: #{e.message}"
       end

@@ -25,7 +25,7 @@ class StoriesController < ApplicationController
     group = @story.group
     if @story.save
       begin
-        Notification.notify_story(user, group, story_url(@story)).deliver
+        Notification.notify_story(user, group, story_url(@story)).deliver_now
       rescue Exception => e
         logger.error "Unable to deliver the story email: #{e.message}"
       end

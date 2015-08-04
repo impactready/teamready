@@ -31,7 +31,7 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(params[:invitation])
     if @invitation.downcase_email_and_save
       # Signup_path/signup_url is defined in the routes.rb file.
-      AccountInvite.invitation(@invitation, signup_url + "/" + @invitation.token).deliver rescue logger.error 'Unable to deliver the invitation email.'
+      AccountInvite.invitation(@invitation, signup_url + "/" + @invitation.token).deliver_now rescue logger.error 'Unable to deliver the invitation email.'
       flash[:notice] = "Further registation steps have been sent to the email address."
       if signed_in?
         redirect_to current_user.account

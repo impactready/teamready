@@ -31,7 +31,7 @@ class MeasurementsController < ApplicationController
       @measurement.group.users.each do |user|
         group.updates_add_create(group.name, 'measurement', @measurement.description)
         begin
-          Notification.notify_measurement(user, group, measurement_url(@measurement)).deliver
+          Notification.notify_measurement(user, group, measurement_url(@measurement)).deliver_now
         rescue Exception => e
           logger.error "Unable to deliver the update email: #{e.message}"
         end

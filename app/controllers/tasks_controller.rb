@@ -28,7 +28,7 @@ class TasksController < ApplicationController
     @users = @account.users
     if @task.save
       begin
-        Notification.notify_task(@task.user, group, task_url(@task)).deliver
+        Notification.notify_task(@task.user, group, task_url(@task)).deliver_now
       rescue Exception => e
         logger.error "Unable to deliver the task email: #{e.message}"
       end

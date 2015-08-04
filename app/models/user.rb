@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
     generate_token(:password_reset_token)
     password_reset_sent_at = Time.zone.now
     save
-    Notification.password_reset(self).deliver rescue logger.error 'Unable to deliver the password reset email.'
+    Notification.password_reset(self).deliver_now rescue logger.error 'Unable to deliver the password reset email.'
   end
 
   def generate_token(column)

@@ -36,7 +36,7 @@ class Task < ActiveRecord::Base
     unless deadline_tasks.empty?
       deadline_tasks.each do |task|
         begin
-          Notification.notify_deadline(task.user, task.description).deliver
+          Notification.notify_deadline(task.user, task.description).deliver_now
         rescue Exception => e
           logger.error "Unable to deliver the task deadline email: #{e.message}"
         end
@@ -47,7 +47,7 @@ class Task < ActiveRecord::Base
     unless looming_tasks.empty?
       looming_tasks.each do |task|
         begin
-          Notification.notify_looming(task.user, task.description).deliver
+          Notification.notify_looming(task.user, task.description).deliver_now
         rescue Exception => e
           logger.error "Unable to deliver the task looming email: #{e.message}"
         end

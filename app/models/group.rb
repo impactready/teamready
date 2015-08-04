@@ -35,7 +35,7 @@ class Group < ActiveRecord::Base
   end
 
   def updates_add_complete(group_name, title)
-    updates.create!(detail: "New task called '#{title}' in group '#{group_name}' marked as complete.")
+    updates.create!(detail: "Task called '#{title}' in group '#{group_name}' marked as complete.")
   end
 
 end

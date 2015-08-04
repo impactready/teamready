@@ -31,7 +31,7 @@ class InciventsController < ApplicationController
       @incivent.group.users.each do |user|
         group.updates_add_create(group.name, 'event', @incivent.name)
         begin
-          Notification.notify_incivent(user, group, incivent_url(@incivent)).deliver
+          Notification.notify_incivent(user, group, incivent_url(@incivent)).deliver_now
         rescue Exception => e
           logger.error "Unable to deliver the event email: #{e.message}"
         end

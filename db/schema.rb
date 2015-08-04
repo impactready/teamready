@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150712092407) do
+ActiveRecord::Schema.define(version: 20150804064107) do
 
   create_table "account_options", force: true do |t|
     t.string   "name"
@@ -181,8 +181,9 @@ ActiveRecord::Schema.define(version: 20150712092407) do
   create_table "updates", force: true do |t|
     t.integer  "group_id"
     t.string   "detail"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "update_type", default: "", null: false
   end
 
   create_table "users", force: true do |t|
