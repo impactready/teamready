@@ -54,7 +54,7 @@
     </div>
 
     <div class="general-form-in">
-      <%= render group.updates %>
+      <%= render group.updates.order(created_at: :desc) %>
     </div>
   <% end %>
 
