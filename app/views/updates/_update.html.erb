@@ -1,6 +1,6 @@
 <div class="update-item">
   <p>
     <strong><%= time_ago_in_words(update.created_at) %> ago:</strong><br />
-    <%= update.detail %>
+    [<%= update.update_type.capitalize %>] <%= update.detail %>
   </p>
 </div>
