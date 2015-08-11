@@ -51,13 +51,13 @@
 
         <table>
           <tr class="listing-header">
-            <td class="listing-i-fm">Name</td>
+            <td class="listing-i-fm">Description</td>
             <td><%= link_to "Raised", sort_index_incivents_path(sort: "created_at"), remote: true %></td>
             <td><%= link_to "Priority", sort_index_incivents_path(sort: "priority_id"), remote: true %></td>
             <td><%= link_to "Status", sort_index_incivents_path(sort: "status_id"), remote: true %></td>
             <td><%= link_to "Type", sort_index_incivents_path(sort: "type_id"), remote: true %></td>
-            <td>Location:</td>
-            <td><%= link_to "Group", sort_index_incivents_path(sort: "group_id"), remote: true %></td>
+            <td>Location</td>
+            <td><%= link_to "Team", sort_index_incivents_path(sort: "group_id"), remote: true %></td>
             <td>Image</td>
           </tr>
 

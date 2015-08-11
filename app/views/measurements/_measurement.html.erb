@@ -1,7 +1,7 @@
 <tr class="listing-item">
   <td class="listing-i-fm"><%= link_to measurement.description, measurement_path(measurement) %></td>
-  <td><%= time_ago_in_words(measurement.created_at) %> ago</td>
   <td><%= measurement.type.description %></td>
+  <td><%= time_ago_in_words(measurement.created_at) %> ago</td>
   <% if measurement.location == "" %>
     <td>Unnamed Coordinates</td>
   <% else %>
