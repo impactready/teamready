@@ -29,7 +29,7 @@ class MeasurementsController < ApplicationController
     group = @measurement.group
     if @measurement.save
       @measurement.group.users.each do |user|
-        group.updates_add_create(group.name, 'measurement', @measurement.description)
+        group.updates_add_create('measurement', @measurement)
         begin
           Notification.notify_measurement(user, group, measurement_url(@measurement)).deliver_now
         rescue Exception => e
@@ -49,7 +49,7 @@ class MeasurementsController < ApplicationController
     @measurement = @account.account_measurements.measurements_from_groups_joined_by(current_user).find(params[:id])
     group = @measurement.group
     if @measurement.update_attributes(params[:measurement])
-      group.updates_add_archive(group.name, 'measurement', @measurement.name) if @measurement.archive == true
+      group.updates_add_archive('measurement', @measurement) if @measurement.archive == true
       flash[:success] = 'Indicator update updated.'
       redirect_to measurements_path
     else
@@ -63,7 +63,7 @@ class MeasurementsController < ApplicationController
     measurement = account.account_measurements.find(params[:id])
     group = measurement.group
     if measurement.destroy
-      group.updates_add_delete(group.name, 'measurement', measurement.description)
+      group.updates_add_delete('measurement', measurement)
       flash[:success] = 'Indicator update removed.'
       redirect_to measurements_path
     end

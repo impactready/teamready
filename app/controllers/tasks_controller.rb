@@ -32,7 +32,7 @@ class TasksController < ApplicationController
       rescue Exception => e
         logger.error "Unable to deliver the task email: #{e.message}"
       end
-      group.updates_add_create(group.name, 'task', @task.description)
+      group.updates_add_create('task', @task)
       flash[:success] = 'Task created.'
       redirect_to tasks_path
     else
@@ -46,7 +46,7 @@ class TasksController < ApplicationController
     @task = @account.account_tasks.find(params[:id])
     group = @task.group
     if @task.update_attributes(params[:task])
-      group.updates_add_complete(group.name, @task.description) if @task.complete == true
+      group.updates_add_complete(@task) if @task.complete == true
       flash[:success] = 'Task updated.'
       redirect_to tasks_path
     else
@@ -60,7 +60,7 @@ class TasksController < ApplicationController
     task = account.account_tasks.find(params[:id])
     group = task.group
     if task.destroy
-      group.updates_add_delete(group.name, 'task', task.description)
+      group.updates_add_delete('task', task)
       flash[:success] = 'Task removed.'
       redirect_to tasks_path
     end

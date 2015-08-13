@@ -5,6 +5,8 @@ class Task < ActiveRecord::Base
   belongs_to :priority
   belongs_to :status
 
+  has_many :updates, as: :updatable
+
   has_attached_file :task_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
   validates_attachment_content_type :task_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]

@@ -4,6 +4,8 @@ class Measurement < ActiveRecord::Base
   belongs_to :user
   belongs_to :type
 
+  has_many :updates, as: :updatable
+
   has_attached_file :measurement_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
   validates_attachment_content_type :measurement_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]

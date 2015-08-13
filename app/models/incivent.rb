@@ -6,6 +6,8 @@ class Incivent < ActiveRecord::Base
   belongs_to :status
   belongs_to :group
 
+  has_many :updates, as: :updatable
+
   has_attached_file :incivent_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
   validates_attachment_content_type :incivent_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]

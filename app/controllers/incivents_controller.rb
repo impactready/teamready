@@ -29,7 +29,7 @@ class InciventsController < ApplicationController
     group = @incivent.group
     if @incivent.save
       @incivent.group.users.each do |user|
-        group.updates_add_create(group.name, 'event', @incivent.name)
+        group.updates_add_create('event', @incivent)
         begin
           Notification.notify_incivent(user, group, incivent_url(@incivent)).deliver_now
         rescue Exception => e
@@ -49,7 +49,7 @@ class InciventsController < ApplicationController
     @incivent = @account.account_incivents.incivents_from_groups_joined_by(current_user).find(params[:id])
     group = @incivent.group
     if @incivent.update_attributes(params[:incivent])
-      group.updates_add_archive(group.name, 'event', @incivent.name) if @incivent.archive == true
+      group.updates_add_archive('event', @incivent) if @incivent.archive == true
       flash[:success] = 'Event updated.'
       redirect_to incivents_path
     else
@@ -63,7 +63,7 @@ class InciventsController < ApplicationController
     incivent = account.account_incivents.find(params[:id])
     group = incivent.group
     if incivent.destroy
-      group.updates_add_delete(group.name, 'event', incivent.name)
+      group.updates_add_delete('event', incivent)
       flash[:success] = 'Event removed.'
       redirect_to incivents_path
     end

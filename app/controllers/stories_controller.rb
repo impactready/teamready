@@ -29,7 +29,7 @@ class StoriesController < ApplicationController
       rescue Exception => e
         logger.error "Unable to deliver the story email: #{e.message}"
       end
-      group.updates_add_create(group.name, 'story', @story.description)
+      group.updates_add_create('story', @story)
       flash[:success] = 'Story added!'
       mobile_device? ? redirect_to(tasks_path) : redirect_to(stories_path)
     else
@@ -43,7 +43,7 @@ class StoriesController < ApplicationController
     @story = @account.account_stories.find(params[:id])
     group = @story.group
     if @story.update_attributes(params[:story])
-      group.updates_add_archive(group.name, 'story', @story.description) if @story.archive == true
+      group.updates_add_archive('story', @story) if @story.archive == true
       flash[:success] = 'Story updated.'
       redirect_to stories_path
     else
@@ -57,7 +57,7 @@ class StoriesController < ApplicationController
     story = account.account_stories.find(params[:id])
     group = story.group
     if story.destroy
-      group.updates_add_delete(group.name, 'story', story.description)
+      group.updates_add_delete('story')
       flash[:success] = 'Story removed.'
       redirect_to stories_path
     end
