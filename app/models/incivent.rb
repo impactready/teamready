@@ -12,13 +12,12 @@ class Incivent < ActiveRecord::Base
 
   validates_attachment_content_type :incivent_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
-  attr_accessible :name, :location, :description, :longitude, :latitude, :priority_id, :type_id, :status_id, :incivent_image, :group_id, :archive
+  attr_accessible :location, :description, :longitude, :latitude, :priority_id, :type_id, :status_id, :incivent_image, :group_id, :archive
   attr_protected :raised_user_id
 
   geocoded_by :location
   reverse_geocoded_by :latitude, :longitude, address: :location
 
-  validates :name, presence: true, length: { maximum: 80 }
   validates :raised_user_id, presence: true, numericality:  { only_integer: true }
   validates :priority_id, presence: true
   validates :status_id, presence: true

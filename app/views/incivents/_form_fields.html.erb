@@ -1,11 +1,10 @@
 <%= semantic_form_for @incivent, html: {multipart: true} do |f| %>
   <%= f.inputs do %>
-    <%= f.input :name %>
+    <%= f.input :description %>
     <%= f.input :priority, collection: @account.priorities, member_label: :description, include_blank: false %>
     <%= f.input :status, collection: @account.statuses, member_label: :description, include_blank: false %>
     <%= f.input :location, hint: "You must enter either an address OR latitude and longitude as decimal degrees" %>
     <%= f.input :type, collection: @account.types.where(usage: Type::USAGES[:event_type]), member_label: :description, include_blank: false %>
-    <%= f.input :description %>
     <%= f.input :group, label: 'Team', collection: current_user.groups, member_label: :name, include_blank: false %>
     <%= f.input :latitude %>
     <%= f.input :longitude %>

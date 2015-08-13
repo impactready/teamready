@@ -73,8 +73,7 @@ describe "Incivent Activities" do
         lambda do
           VCR.use_cassette 'requests/incivent_activities/event_creation_success' do
             visit new_incivent_path
-            fill_in 'Name', with: 'Serious Oil Spill'
-            fill_in 'Description', with: 'In Johannesburg'
+            fill_in 'Description', with: 'Serious Oil Spill'
             fill_in 'Location', with: '20 Corlett Drive, Johannesburg'
             select @priority.description, from: 'Priority'
             select @status.description, from: 'Status'
@@ -90,7 +89,6 @@ describe "Incivent Activities" do
         lambda do
           VCR.use_cassette 'requests/incivent_activities/event_creation_success' do
             visit new_incivent_path(mobile: true)
-            fill_in 'Name', with: 'Serious Oil Spill'
             fill_in 'Description', with: 'In Johannesburg'
             fill_in 'Location', with: '20 Corlett Drive, Johannesburg'
             select @priority.description, from: 'Priority'
@@ -112,7 +110,6 @@ describe "Incivent Activities" do
         VCR.use_cassette 'requests/incivent_activities/event_editing_failure' do
           event = FactoryGirl.create(:incivent, user: @user, group: @group, priority: @priority, type: @type, status: @status)
           visit edit_incivent_path(event)
-          fill_in 'Name', with: ""
           fill_in 'Description', with: ""
           click_button 'Submit'
           page.should have_selector('div.flash_error')
@@ -126,7 +123,6 @@ describe "Incivent Activities" do
         VCR.use_cassette 'requests/incivent_activities/event_editing_success' do
           event = FactoryGirl.create(:incivent, user: @user, group: @group, priority: @priority, type: @type, status: @status)
           visit edit_incivent_path(event)
-          fill_in 'Name', with: 'Serious oil spill reviewed'
           fill_in 'Description', with: 'In Johannesburg.. reviewed'
           click_button 'Submit'
           page.should have_content('All events')
