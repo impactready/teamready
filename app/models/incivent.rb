@@ -61,17 +61,16 @@ class Incivent < ActiveRecord::Base
   private
 
   def cleanup
-    self.name = self.name.chomp
     self.location = self.location.chomp
     self.description = self.description.chomp
   end
 
   def has_coordinates
-    self.longitude && self.latitude
+    self.longitude && self.latitude && self.longitude_changed? && self.latitude_changed?
   end
 
   def has_location
-    self.location
+    self.location && self.location_changed?
   end
 
 end

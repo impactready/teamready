@@ -24,7 +24,7 @@ describe "Incivent Activities" do
         event = FactoryGirl.create(:incivent, user: @user, group: @group, priority: @priority, type: @type, status: @status)
         visit incivents_path
         page.should have_content('All events')
-        page.should have_selector('tr.listing-item', text: event.name)
+        page.should have_selector('tr.listing-item', text: event.description)
         page.should have_link('Priority')
       end
     end
@@ -126,7 +126,7 @@ describe "Incivent Activities" do
           fill_in 'Description', with: 'In Johannesburg.. reviewed'
           click_button 'Submit'
           page.should have_content('All events')
-          page.should have_selector('tr.listing-item', text: 'Serious oil spill reviewed')
+          page.should have_selector('tr.listing-item', text: 'In Johannesburg.. reviewed')
         end
       end
     end
@@ -138,13 +138,13 @@ describe "Incivent Activities" do
         event = FactoryGirl.create(:incivent, user: @user, group: @group, priority: @priority, type: @type, status: @status)
         visit incivent_path(event)
         page.should have_content('Event')
-        page.should have_selector('tr.listing-item', text: event.name)
+        page.should have_selector('tr.listing-item', text: event.description)
       end
     end
   end
 
   describe 'Event deleting' do
-    it "should delete an incivent on the show page" do
+    it "should delete an event on the show page" do
       VCR.use_cassette 'requests/incivent_activities/event_delete' do
         event = FactoryGirl.create(:incivent, user: @user, group: @group, priority: @priority, type: @type, status: @status)
         visit incivent_path(event)

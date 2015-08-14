@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://maps.googleapis.com/maps/api/geocode/json?language=en&latlng=60.0,70.0&sensor=false
+    uri: http://maps.googleapis.com/maps/api/geocode/json?address=19%20Corlett%20Drive,%20Johannesburg&language=en&sensor=false
     body:
       encoding: US-ASCII
       string: ''
@@ -21,9 +21,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Thu, 05 Mar 2015 12:54:37 GMT
+      - Fri, 14 Aug 2015 13:18:38 GMT
       Expires:
-      - Fri, 06 Mar 2015 12:54:37 GMT
+      - Sat, 15 Aug 2015 13:18:38 GMT
       Cache-Control:
       - public, max-age=86400
       Access-Control-Allow-Origin:
@@ -34,8 +34,6 @@ http_interactions:
       - 1; mode=block
       X-Frame-Options:
       - SAMEORIGIN
-      Alternate-Protocol:
-      - 80:quic,p=0.08
       Accept-Ranges:
       - none
       Vary:
@@ -43,171 +41,88 @@ http_interactions:
       Transfer-Encoding:
       - chunked
     body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        ewogICAicmVzdWx0cyIgOiBbCiAgICAgIHsKICAgICAgICAgImFkZHJlc3Nf
-        Y29tcG9uZW50cyIgOiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAg
-        ImxvbmdfbmFtZSIgOiAiS2hhbnR5LU1hbnNpeXNrIC0gR29ybm9wcmF2ZGlu
-        c2siLAogICAgICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAiS2hhbnR5LU1h
-        bnNpeXNrIC0gR29ybm9wcmF2ZGluc2siLAogICAgICAgICAgICAgICAidHlw
-        ZXMiIDogWyAicm91dGUiIF0KICAgICAgICAgICAgfSwKICAgICAgICAgICAg
-        ewogICAgICAgICAgICAgICAibG9uZ19uYW1lIiA6ICJLaGFudHktTWFuc2l5
-        c2tpeSByYXlvbiIsCiAgICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICJL
-        aGFudHktTWFuc2l5c2tpeSByLW4iLAogICAgICAgICAgICAgICAidHlwZXMi
-        IDogWyAiYWRtaW5pc3RyYXRpdmVfYXJlYV9sZXZlbF8yIiwgInBvbGl0aWNh
-        bCIgXQogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAg
-        ICAgICJsb25nX25hbWUiIDogIktoYW50eS1NYW5zaXlza2l5IGF2dG9ub21u
-        eXkgb2tydWciLAogICAgICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAi0KXQ
-        nNCQ0J4iLAogICAgICAgICAgICAgICAidHlwZXMiIDogWyAiYWRtaW5pc3Ry
-        YXRpdmVfYXJlYV9sZXZlbF8xIiwgInBvbGl0aWNhbCIgXQogICAgICAgICAg
-        ICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICJsb25nX25hbWUi
-        IDogIlJ1c3NpYSIsCiAgICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICJS
-        VSIsCiAgICAgICAgICAgICAgICJ0eXBlcyIgOiBbICJjb3VudHJ5IiwgInBv
-        bGl0aWNhbCIgXQogICAgICAgICAgICB9CiAgICAgICAgIF0sCiAgICAgICAg
-        ICJmb3JtYXR0ZWRfYWRkcmVzcyIgOiAiS2hhbnR5LU1hbnNpeXNrIC0gR29y
-        bm9wcmF2ZGluc2ssIEtoYW50eS1NYW5zaXlza2l5IGF2dG9ub21ueXkgb2ty
-        dWcsIFJ1c3NpYSIsCiAgICAgICAgICJnZW9tZXRyeSIgOiB7CiAgICAgICAg
-        ICAgICJib3VuZHMiIDogewogICAgICAgICAgICAgICAibm9ydGhlYXN0IiA6
-        IHsKICAgICAgICAgICAgICAgICAgImxhdCIgOiA2MC4wMjAzMTU4LAogICAg
-        ICAgICAgICAgICAgICAibG5nIiA6IDcwLjAyNjMzMTUKICAgICAgICAgICAg
-        ICAgfSwKICAgICAgICAgICAgICAgInNvdXRod2VzdCIgOiB7CiAgICAgICAg
-        ICAgICAgICAgICJsYXQiIDogNTkuOTk4ODE4OCwKICAgICAgICAgICAgICAg
-        ICAgImxuZyIgOiA3MC4wMDM1MzY5OTk5OTk5OQogICAgICAgICAgICAgICB9
-        CiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJsb2NhdGlvbiIgOiB7CiAg
-        ICAgICAgICAgICAgICJsYXQiIDogNjAuMDA5NTYyMSwKICAgICAgICAgICAg
-        ICAgImxuZyIgOiA3MC4wMTQ5MTYzCiAgICAgICAgICAgIH0sCiAgICAgICAg
-        ICAgICJsb2NhdGlvbl90eXBlIiA6ICJBUFBST1hJTUFURSIsCiAgICAgICAg
-        ICAgICJ2aWV3cG9ydCIgOiB7CiAgICAgICAgICAgICAgICJub3J0aGVhc3Qi
-        IDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDYwLjAyMDMxNTgsCiAg
-        ICAgICAgICAgICAgICAgICJsbmciIDogNzAuMDI2MzMxNQogICAgICAgICAg
-        ICAgICB9LAogICAgICAgICAgICAgICAic291dGh3ZXN0IiA6IHsKICAgICAg
-        ICAgICAgICAgICAgImxhdCIgOiA1OS45OTg4MTg4LAogICAgICAgICAgICAg
-        ICAgICAibG5nIiA6IDcwLjAwMzUzNjk5OTk5OTk5CiAgICAgICAgICAgICAg
-        IH0KICAgICAgICAgICAgfQogICAgICAgICB9LAogICAgICAgICAicGxhY2Vf
-        aWQiIDogIkNoSUpXMTNJaEFpUW4wTVIxQlNqd1doWmVBUSIsCiAgICAgICAg
-        ICJ0eXBlcyIgOiBbICJyb3V0ZSIgXQogICAgICB9LAogICAgICB7CiAgICAg
-        ICAgICJhZGRyZXNzX2NvbXBvbmVudHMiIDogWwogICAgICAgICAgICB7CiAg
-        ICAgICAgICAgICAgICJsb25nX25hbWUiIDogIjYyODUyMSIsCiAgICAgICAg
-        ICAgICAgICJzaG9ydF9uYW1lIiA6ICI2Mjg1MjEiLAogICAgICAgICAgICAg
-        ICAidHlwZXMiIDogWyAicG9zdGFsX2NvZGUiIF0KICAgICAgICAgICAgfSwK
-        ICAgICAgICAgICAgewogICAgICAgICAgICAgICAibG9uZ19uYW1lIiA6ICJS
-        dXNzaWEiLAogICAgICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAiUlUiLAog
-        ICAgICAgICAgICAgICAidHlwZXMiIDogWyAiY291bnRyeSIsICJwb2xpdGlj
-        YWwiIF0KICAgICAgICAgICAgfQogICAgICAgICBdLAogICAgICAgICAiZm9y
-        bWF0dGVkX2FkZHJlc3MiIDogIlJ1c3NpYSwgNjI4NTIxIiwKICAgICAgICAg
-        Imdlb21ldHJ5IiA6IHsKICAgICAgICAgICAgImJvdW5kcyIgOiB7CiAgICAg
-        ICAgICAgICAgICJub3J0aGVhc3QiIDogewogICAgICAgICAgICAgICAgICAi
-        bGF0IiA6IDYwLjAxMzEzODg5OTk5OTk5LAogICAgICAgICAgICAgICAgICAi
-        bG5nIiA6IDcwLjcwNDA4ODA5OTk5OTk5CiAgICAgICAgICAgICAgIH0sCiAg
-        ICAgICAgICAgICAgICJzb3V0aHdlc3QiIDogewogICAgICAgICAgICAgICAg
-        ICAibGF0IiA6IDU5LjgzOTI5NzkwMDAwMDAxLAogICAgICAgICAgICAgICAg
-        ICAibG5nIiA6IDY5LjY2MTY0NDEKICAgICAgICAgICAgICAgfQogICAgICAg
-        ICAgICB9LAogICAgICAgICAgICAibG9jYXRpb24iIDogewogICAgICAgICAg
-        ICAgICAibGF0IiA6IDU5LjkzMjY0NTksCiAgICAgICAgICAgICAgICJsbmci
-        IDogNzAuMzc0NjY5OTk5OTk5OTkKICAgICAgICAgICAgfSwKICAgICAgICAg
-        ICAgImxvY2F0aW9uX3R5cGUiIDogIkFQUFJPWElNQVRFIiwKICAgICAgICAg
-        ICAgInZpZXdwb3J0IiA6IHsKICAgICAgICAgICAgICAgIm5vcnRoZWFzdCIg
-        OiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNjAuMDEzMTM4ODk5OTk5
-        OTksCiAgICAgICAgICAgICAgICAgICJsbmciIDogNzAuNzA0MDg4MDk5OTk5
-        OTkKICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgInNvdXRod2Vz
-        dCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNTkuODM5Mjk3OTAw
-        MDAwMDEsCiAgICAgICAgICAgICAgICAgICJsbmciIDogNjkuNjYxNjQ0MQog
-        ICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgfSwKICAg
-        ICAgICAgInBsYWNlX2lkIiA6ICJDaElKMVdab055MkpuME1SMnJta0F6STZC
-        em8iLAogICAgICAgICAidHlwZXMiIDogWyAicG9zdGFsX2NvZGUiIF0KICAg
-        ICAgfSwKICAgICAgewogICAgICAgICAiYWRkcmVzc19jb21wb25lbnRzIiA6
-        IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgICAibG9uZ19uYW1lIiA6
-        ICJLaGFudHktTWFuc2l5c2t5IERpc3RyaWN0IiwKICAgICAgICAgICAgICAg
-        InNob3J0X25hbWUiIDogIktoYW50eS1NYW5zaXlza3kgRGlzdHJpY3QiLAog
-        ICAgICAgICAgICAgICAidHlwZXMiIDogWyAiYWRtaW5pc3RyYXRpdmVfYXJl
-        YV9sZXZlbF8yIiwgInBvbGl0aWNhbCIgXQogICAgICAgICAgICB9LAogICAg
-        ICAgICAgICB7CiAgICAgICAgICAgICAgICJsb25nX25hbWUiIDogIktoYW50
-        eS1NYW5zaSBBdXRvbm9tb3VzIE9rcnVnIiwKICAgICAgICAgICAgICAgInNo
-        b3J0X25hbWUiIDogItCl0JzQkNCeIiwKICAgICAgICAgICAgICAgInR5cGVz
-        IiA6IFsgImFkbWluaXN0cmF0aXZlX2FyZWFfbGV2ZWxfMSIsICJwb2xpdGlj
-        YWwiIF0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgewogICAgICAgICAg
-        ICAgICAibG9uZ19uYW1lIiA6ICJSdXNzaWEiLAogICAgICAgICAgICAgICAi
-        c2hvcnRfbmFtZSIgOiAiUlUiLAogICAgICAgICAgICAgICAidHlwZXMiIDog
-        WyAiY291bnRyeSIsICJwb2xpdGljYWwiIF0KICAgICAgICAgICAgfQogICAg
-        ICAgICBdLAogICAgICAgICAiZm9ybWF0dGVkX2FkZHJlc3MiIDogIktoYW50
-        eS1NYW5zaXlza3kgRGlzdHJpY3QsIEtoYW50eS1NYW5zaSBBdXRvbm9tb3Vz
-        IE9rcnVnLCBSdXNzaWEiLAogICAgICAgICAiZ2VvbWV0cnkiIDogewogICAg
-        ICAgICAgICAiYm91bmRzIiA6IHsKICAgICAgICAgICAgICAgIm5vcnRoZWFz
-        dCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNjMuMTg3MDM3LAog
-        ICAgICAgICAgICAgICAgICAibG5nIiA6IDcxLjE3MTk0MzIKICAgICAgICAg
-        ICAgICAgfSwKICAgICAgICAgICAgICAgInNvdXRod2VzdCIgOiB7CiAgICAg
-        ICAgICAgICAgICAgICJsYXQiIDogNTkuODM5MjgyOCwKICAgICAgICAgICAg
-        ICAgICAgImxuZyIgOiA2Ni4xMjg2NDk5CiAgICAgICAgICAgICAgIH0KICAg
-        ICAgICAgICAgfSwKICAgICAgICAgICAgImxvY2F0aW9uIiA6IHsKICAgICAg
-        ICAgICAgICAgImxhdCIgOiA2Mi40NzcwMjQ2MDAwMDAwMSwKICAgICAgICAg
-        ICAgICAgImxuZyIgOiA2OS42NzMwNTYKICAgICAgICAgICAgfSwKICAgICAg
-        ICAgICAgImxvY2F0aW9uX3R5cGUiIDogIkFQUFJPWElNQVRFIiwKICAgICAg
-        ICAgICAgInZpZXdwb3J0IiA6IHsKICAgICAgICAgICAgICAgIm5vcnRoZWFz
-        dCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNjMuMTg3MDM3LAog
-        ICAgICAgICAgICAgICAgICAibG5nIiA6IDcxLjE3MTk0MzIKICAgICAgICAg
-        ICAgICAgfSwKICAgICAgICAgICAgICAgInNvdXRod2VzdCIgOiB7CiAgICAg
-        ICAgICAgICAgICAgICJsYXQiIDogNTkuODM5MjgyOCwKICAgICAgICAgICAg
-        ICAgICAgImxuZyIgOiA2Ni4xMjg2NDk5CiAgICAgICAgICAgICAgIH0KICAg
-        ICAgICAgICAgfQogICAgICAgICB9LAogICAgICAgICAicGxhY2VfaWQiIDog
-        IkNoSUpuNm1qeVJISW5VTVJuSE1kdTc2ZUJaMCIsCiAgICAgICAgICJ0eXBl
-        cyIgOiBbICJhZG1pbmlzdHJhdGl2ZV9hcmVhX2xldmVsXzIiLCAicG9saXRp
-        Y2FsIiBdCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAgImFkZHJlc3NfY29t
-        cG9uZW50cyIgOiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgImxv
-        bmdfbmFtZSIgOiAiS2hhbnR5LU1hbnNpIEF1dG9ub21vdXMgT2tydWciLAog
-        ICAgICAgICAgICAgICAic2hvcnRfbmFtZSIgOiAi0KXQnNCQ0J4iLAogICAg
-        ICAgICAgICAgICAidHlwZXMiIDogWyAiYWRtaW5pc3RyYXRpdmVfYXJlYV9s
-        ZXZlbF8xIiwgInBvbGl0aWNhbCIgXQogICAgICAgICAgICB9LAogICAgICAg
-        ICAgICB7CiAgICAgICAgICAgICAgICJsb25nX25hbWUiIDogIlJ1c3NpYSIs
-        CiAgICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICJSVSIsCiAgICAgICAg
-        ICAgICAgICJ0eXBlcyIgOiBbICJjb3VudHJ5IiwgInBvbGl0aWNhbCIgXQog
-        ICAgICAgICAgICB9CiAgICAgICAgIF0sCiAgICAgICAgICJmb3JtYXR0ZWRf
-        YWRkcmVzcyIgOiAiS2hhbnR5LU1hbnNpIEF1dG9ub21vdXMgT2tydWcsIFJ1
-        c3NpYSIsCiAgICAgICAgICJnZW9tZXRyeSIgOiB7CiAgICAgICAgICAgICJi
-        b3VuZHMiIDogewogICAgICAgICAgICAgICAibm9ydGhlYXN0IiA6IHsKICAg
-        ICAgICAgICAgICAgICAgImxhdCIgOiA2NS43MTA3MDEwMDAwMDAwMSwKICAg
-        ICAgICAgICAgICAgICAgImxuZyIgOiA4NS45NzI4NDQ0OTk5OTk5OQogICAg
-        ICAgICAgICAgICB9LAogICAgICAgICAgICAgICAic291dGh3ZXN0IiA6IHsK
-        ICAgICAgICAgICAgICAgICAgImxhdCIgOiA1OC41NzY0MTg4LAogICAgICAg
-        ICAgICAgICAgICAibG5nIiA6IDU5LjE5NzQ3ODgwMDAwMDAxCiAgICAgICAg
-        ICAgICAgIH0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgImxvY2F0aW9u
-        IiA6IHsKICAgICAgICAgICAgICAgImxhdCIgOiA2Mi4yMjg3MDYyLAogICAg
-        ICAgICAgICAgICAibG5nIiA6IDcwLjY0MTAwNTgKICAgICAgICAgICAgfSwK
-        ICAgICAgICAgICAgImxvY2F0aW9uX3R5cGUiIDogIkFQUFJPWElNQVRFIiwK
-        ICAgICAgICAgICAgInZpZXdwb3J0IiA6IHsKICAgICAgICAgICAgICAgIm5v
-        cnRoZWFzdCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNjUuNzEw
-        NzAxMDAwMDAwMDEsCiAgICAgICAgICAgICAgICAgICJsbmciIDogODUuOTcy
-        ODQ0NDk5OTk5OTkKICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAg
-        InNvdXRod2VzdCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNTgu
-        NTc2NDE4OCwKICAgICAgICAgICAgICAgICAgImxuZyIgOiA1OS4xOTc0Nzg4
-        MDAwMDAwMQogICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAg
-        ICAgfSwKICAgICAgICAgInBsYWNlX2lkIiA6ICJDaElKSDM5VmhVazRjVU1S
-        amEzSVdZVXZhUU0iLAogICAgICAgICAidHlwZXMiIDogWyAiYWRtaW5pc3Ry
-        YXRpdmVfYXJlYV9sZXZlbF8xIiwgInBvbGl0aWNhbCIgXQogICAgICB9LAog
-        ICAgICB7CiAgICAgICAgICJhZGRyZXNzX2NvbXBvbmVudHMiIDogWwogICAg
-        ICAgICAgICB7CiAgICAgICAgICAgICAgICJsb25nX25hbWUiIDogIlJ1c3Np
-        YSIsCiAgICAgICAgICAgICAgICJzaG9ydF9uYW1lIiA6ICJSVSIsCiAgICAg
-        ICAgICAgICAgICJ0eXBlcyIgOiBbICJjb3VudHJ5IiwgInBvbGl0aWNhbCIg
-        XQogICAgICAgICAgICB9CiAgICAgICAgIF0sCiAgICAgICAgICJmb3JtYXR0
-        ZWRfYWRkcmVzcyIgOiAiUnVzc2lhIiwKICAgICAgICAgImdlb21ldHJ5IiA6
-        IHsKICAgICAgICAgICAgImJvdW5kcyIgOiB7CiAgICAgICAgICAgICAgICJu
-        b3J0aGVhc3QiIDogewogICAgICAgICAgICAgICAgICAibGF0IiA6IDgxLjg1
-        ODEyMjEsCiAgICAgICAgICAgICAgICAgICJsbmciIDogLTE2OS4wNDUyODYK
-        ICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgInNvdXRod2VzdCIg
-        OiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNDEuMTg1MzUzLAogICAg
-        ICAgICAgICAgICAgICAibG5nIiA6IDE5LjY0MDM1MzQKICAgICAgICAgICAg
-        ICAgfQogICAgICAgICAgICB9LAogICAgICAgICAgICAibG9jYXRpb24iIDog
-        ewogICAgICAgICAgICAgICAibGF0IiA6IDYxLjUyNDAxLAogICAgICAgICAg
-        ICAgICAibG5nIiA6IDEwNS4zMTg3NTYKICAgICAgICAgICAgfSwKICAgICAg
-        ICAgICAgImxvY2F0aW9uX3R5cGUiIDogIkFQUFJPWElNQVRFIiwKICAgICAg
-        ICAgICAgInZpZXdwb3J0IiA6IHsKICAgICAgICAgICAgICAgIm5vcnRoZWFz
-        dCIgOiB7CiAgICAgICAgICAgICAgICAgICJsYXQiIDogNzAsCiAgICAgICAg
-        ICAgICAgICAgICJsbmciIDogMTc5CiAgICAgICAgICAgICAgIH0sCiAgICAg
-        ICAgICAgICAgICJzb3V0aHdlc3QiIDogewogICAgICAgICAgICAgICAgICAi
-        bGF0IiA6IDQwLAogICAgICAgICAgICAgICAgICAibG5nIiA6IDI3CiAgICAg
-        ICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICB9LAogICAgICAg
-        ICAicGxhY2VfaWQiIDogIkNoSUoteVJuaVpwV1BFVVJFX1lSWnZqOUNSUSIs
-        CiAgICAgICAgICJ0eXBlcyIgOiBbICJjb3VudHJ5IiwgInBvbGl0aWNhbCIg
-        XQogICAgICB9CiAgIF0sCiAgICJzdGF0dXMiIDogIk9LIgp9Cg==
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "19",
+                       "short_name" : "19",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Corlett Drive",
+                       "short_name" : "Corlett Dr",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Illovo",
+                       "short_name" : "Illovo",
+                       "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                    },
+                    {
+                       "long_name" : "Sandton",
+                       "short_name" : "Sandton",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "2196",
+                       "short_name" : "2196",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "19 Corlett Drive, Sandton, 2196, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -26.1341337,
+                          "lng" : 28.051932
+                       },
+                       "southwest" : {
+                          "lat" : -26.1341492,
+                          "lng" : 28.0519256
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.1341337,
+                       "lng" : 28.0519256
+                    },
+                    "location_type" : "RANGE_INTERPOLATED",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -26.1327924697085,
+                          "lng" : 28.0532777802915
+                       },
+                       "southwest" : {
+                          "lat" : -26.1354904302915,
+                          "lng" : 28.0505798197085
+                       }
+                    }
+                 },
+                 "partial_match" : true,
+                 "place_id" : "Ei0xOSBDb3JsZXR0IERyaXZlLCBTYW5kdG9uLCAyMTk2LCBTb3V0aCBBZnJpY2E",
+                 "types" : [ "street_address" ]
+              }
+           ],
+           "status" : "OK"
+        }
     http_version: 
-  recorded_at: Thu, 05 Mar 2015 12:54:37 GMT
+  recorded_at: Fri, 14 Aug 2015 13:18:38 GMT
 recorded_with: VCR 2.9.2

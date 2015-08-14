@@ -4,7 +4,7 @@ class Measurement < ActiveRecord::Base
   belongs_to :user
   belongs_to :type
 
-  has_many :updates
+  has_many :updates, as: :updatable
 
   has_attached_file :measurement_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
@@ -54,11 +54,11 @@ class Measurement < ActiveRecord::Base
   end
 
   def has_coordinates
-    self.longitude && self.latitude
+    self.longitude && self.latitude && self.longitude_changed? && self.latitude_changed?
   end
 
   def has_location
-    self.location
+    self.location && self.location_changed?
   end
 
 end

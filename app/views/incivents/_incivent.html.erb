@@ -1,5 +1,5 @@
 <tr class="listing-item">
-  <td class="listing-i-fm"><%= link_to incivent.name, incivent_path(incivent) %></td>
+  <td class="listing-i-fm"><%= link_to truncate(incivent.description, length: 55), incivent_path(incivent) %></td>
   <td><%= time_ago_in_words(incivent.created_at) %> ago</td>
   <td><%= incivent.priority.description %></td>
   <td><%= incivent.status.description %></td>

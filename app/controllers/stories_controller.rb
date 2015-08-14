@@ -56,8 +56,8 @@ class StoriesController < ApplicationController
     account = current_user.account
     story = account.account_stories.find(params[:id])
     group = story.group
-    if story.destroy
-      group.updates_add_delete('story')
+    if story.update_attributes(archive: true)
+      group.updates_add_delete('story', story)
       flash[:success] = 'Story removed.'
       redirect_to stories_path
     end

@@ -59,7 +59,7 @@ class TasksController < ApplicationController
     account = current_user.account
     task = account.account_tasks.find(params[:id])
     group = task.group
-    if task.destroy
+    if task.update_attributes(archive: true)
       group.updates_add_delete('task', task)
       flash[:success] = 'Task removed.'
       redirect_to tasks_path

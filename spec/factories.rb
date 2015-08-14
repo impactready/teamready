@@ -95,7 +95,6 @@ FactoryGirl.define do
 
   factory :incivent do
     id 1
-    sequence(:name) {|n| "Oil Spill-#{n}" }
     location '20 Corlett Drive, Johannesburg'
     sequence(:description) {|n| "It was bad...#{n}" }
     latitude 60.555

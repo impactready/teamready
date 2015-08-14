@@ -73,11 +73,11 @@ class Task < ActiveRecord::Base
   end
 
   def has_coordinates
-    self.longitude && self.latitude
+    self.longitude && self.latitude && self.longitude_changed? && self.latitude_changed?
   end
 
   def has_location
-    self.location
+    self.location && self.location_changed?
   end
 
 end

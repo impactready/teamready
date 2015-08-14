@@ -8,7 +8,7 @@
 <p class="normal">
   <% if current_user?(@incivent.user) || current_user.master_user? %>
     <%= link_to "Edit this event", edit_incivent_path(@incivent) %>  |
-    <%= link_to "Delete this event", @incivent, method: :delete, data: {confirm: "Are you sure?"}, title: "Delete #{@incivent.name}" %>  |
+    <%= link_to "Delete this event", @incivent, method: :delete, data: {confirm: "Are you sure?"}, title: "Delete event" %>  |
   <% end %>
   <%= link_to 'Back to events', incivents_path %>
 </p>

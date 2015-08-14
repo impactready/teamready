@@ -62,7 +62,7 @@ class InciventsController < ApplicationController
     account = current_user.account
     incivent = account.account_incivents.find(params[:id])
     group = incivent.group
-    if incivent.destroy
+    if incivent.update_attributes(archive: true)
       group.updates_add_delete('event', incivent)
       flash[:success] = 'Event removed.'
       redirect_to incivents_path

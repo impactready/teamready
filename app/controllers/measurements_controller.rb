@@ -62,7 +62,7 @@ class MeasurementsController < ApplicationController
     account = current_user.account
     measurement = account.account_measurements.find(params[:id])
     group = measurement.group
-    if measurement.destroy
+    if measurement.update_attributes(archive: true)
       group.updates_add_delete('measurement', measurement)
       flash[:success] = 'Indicator update removed.'
       redirect_to measurements_path
