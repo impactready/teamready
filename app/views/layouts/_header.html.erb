@@ -43,7 +43,7 @@
                 <% if signed_in? %>
                   <li><%= link_to "Dashboard", groups_path %></li>
                   <li><%= link_to "Events", incivents_path %></li>
-                  <li><%= link_to "Indicators", measurements_path %></li>
+                  <li><%= link_to "Indicator meas.", measurements_path %></li>
                   <li><%= link_to "Tasks", tasks_path %></li>
                   <li><%= link_to "Stories", stories_path %></li>
                   <% if current_user.master_user? %>
