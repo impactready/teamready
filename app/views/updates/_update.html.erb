@@ -12,8 +12,14 @@
             <h3><%= update.updatable_type.capitalize %></h3>
             <br />
             <strong><%= update.detail %></strong>
-            <br>
-            Location: <%= update.updatable.location %>
+            <% if update.updatable.location %>
+                <br />
+                Location: <%= update.updatable.location %>
+            <% end %>
+            <% if update.updatable.longitude && update.updatable.latitude %>
+                <br />
+                Logitude: <%= update.updatable.longitude %> | Latitude: <%= update.updatable.latitude %>
+            <% end %>
             <% if update.updatable_type == 'Task' %>
                 <br />
                 Created by: <%= update.updatable.raised_user.full_name %>
@@ -23,6 +29,8 @@
                 <br />
                 Created by: <%= update.updatable.user.full_name %>
             <% end %>
+            <br />
+            <%= link_to 'More detail', update.updatable, class: 'blue' %>
         </p>
     </div>
 </div>
