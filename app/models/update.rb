@@ -1,8 +1,8 @@
 class Update < ActiveRecord::Base
-  attr_accessible :detail, :update_type
+  attr_accessible :detail, :group_id
 
   belongs_to :group
-  belongs_to :updateable, polymorphic: true
+  belongs_to :updatable, polymorphic: true
 
   validates :detail, presence: true
 

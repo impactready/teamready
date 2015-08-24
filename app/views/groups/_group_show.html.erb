@@ -1,4 +1,4 @@
-<div id="group-tabs-<%= group.id %>">
+<div id="group-tabs-<%= group.id %>" class="group_tab">
   <div class="item-table">
     <table>
       <tr class="listing-header">
@@ -29,31 +29,37 @@
   <div class="spacer">
   </div>
 
-  <div class="heading-block-in">
-    <h2>Team dashboard: <%= group.name %></h2>
+  <div class="heading-block-in group-section-link" data-group-section-id="dashboard">
+    <h2>Dashboard</h2>
   </div>
 
-  <% if group.incivents.count == 0 && group.tasks.count == 0 && group.stories.count == 0 && group.measurements.count == 0 %>
-    <div class="general-form">
-      <p class="normal">There are no events, tasks or stories in this team.</p>
-    </div>
-  <% else %>
-    <div id="google_map_section-<%= group.id %>" data-kml="<%= attachment_url(group.geo_info) %>" data-url="<%= group_feature_urls(group) %>" data-name="<%= group_feature_names(group) %>" data-lat="<%= group_lats(group) %>" data-long="<%= group_longs(group) %>">
-    </div>
-  <% end %>
+  <div class="group-section" id="group-section-dashboard">
+    <% if group.incivents.count == 0 && group.tasks.count == 0 && group.stories.count == 0 && group.measurements.count == 0 %>
+      <div class="general-form">
+        <p class="normal">There are no events, tasks or stories in this team.</p>
+      </div>
+    <% else %>
+      <div id="google_map_section-<%= group.id %>" data-kml="<%= attachment_url(group.geo_info) %>" data-url="<%= group_feature_urls(group) %>" data-name="<%= group_feature_names(group) %>" data-lat="<%= group_lats(group) %>" data-long="<%= group_longs(group) %>">
+      </div>
+    <% end %>
+  </div>
+
   <% unless group.updates.empty? %>
 
     <div class="spacer">
     </div>
 
-    <div class="heading-block-in">
-      <h2>Team updates: <%= group.name %></h2>
+
+    <div class="heading-block-in group-section-link" data-group-section-id="update-feed">
+      <h2>Update feed</h2>
     </div>
 
-    <div class="spacer">
-    </div>
-
-    <div class="general-form-in">
+    <div class="group-section" id="group-section-update-feed">
+      <%= semantic_form_for :category do |f| %>
+        <%= f.inputs do %>
+          <%= f.input :group_object, label: "Select type:", collection: ['Event', 'Task', 'Measurement', 'Story'], include_blank: true, required: false %>
+        <% end %>
+      <% end %>
       <%= render group.updates.order(created_at: :desc) %>
     </div>
   <% end %>

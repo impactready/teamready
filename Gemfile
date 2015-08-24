@@ -4,8 +4,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.2.3'
 
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+gem 'pg'
 
 gem 'paperclip', '~> 4.2.0'
 gem 'aws-sdk', '1.47.0'
@@ -23,7 +22,6 @@ gem 'exceptional'
 
 group :test, :development do
   gem 'minitest'
-  gem 'sqlite3'
   gem 'rspec-rails', '2.13.1'
   gem 'capybara', '2.1.0'
 end
@@ -39,7 +37,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 

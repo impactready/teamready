@@ -34,7 +34,8 @@ describe "Group Activities" do
         group = FactoryGirl.create(:group, account: @account)
         story = FactoryGirl.create(:story, user: @user, group: group, type: @domain)
         visit groups_path
-        page.should have_content("Team dashboard: #{group.name}")
+        page.should have_content(group.name)
+        page.should have_content("Dashboard")
         page.should have_selector('td', text: '1')
       end
     end
@@ -43,7 +44,7 @@ describe "Group Activities" do
       VCR.use_cassette 'requests/group_activities/group_index_with_message' do
         group = FactoryGirl.create(:group, account: @account)
         story = FactoryGirl.create(:story, user: @user, group: group, type: @domain)
-        group_update = FactoryGirl.create(:update, group: group)
+        group_update = FactoryGirl.create(:update, group: group, updatable_id: story.id, updatable_type: 'Story')
         visit groups_path
         page.should have_selector('div.update-item', text: group_update.detail)
       end

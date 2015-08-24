@@ -46,6 +46,10 @@ class Measurement < ActiveRecord::Base
     end
   end
 
+  def image
+    measurement_image unless measurement_image.url == '/measurement_images/original/missing.png'
+  end
+
   private
 
   def cleanup

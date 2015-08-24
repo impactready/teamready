@@ -1,6 +1,15 @@
-<div class="update-item">
-  <p>
-    <strong><%= time_ago_in_words(update.created_at) %> ago:</strong><br />
-    [<%= update.update_type.capitalize %>] <%= update.detail %>
-  </p>
+<div class="update-item" data-updatable-type="<%= update.updatable_type %>">
+    <% if update.updatable.image %>
+        <div class="update-image">
+            <%= image_tag update.updatable.image.url(:medium), class: "feed" %>
+        </div>
+    <% end %>
+    <div class="update-time">
+        <%= time_tag update.created_at %>
+    </div>
+    <p>
+        <h3><%= update.updatable_type.capitalize %></h3>
+        <br />
+        <%= update.detail %>
+    </p>
 </div>

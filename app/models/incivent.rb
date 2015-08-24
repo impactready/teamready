@@ -58,6 +58,10 @@ class Incivent < ActiveRecord::Base
     end
   end
 
+  def image
+    incivent_image unless incivent_image.url == '/incivent_images/original/missing.png'
+  end
+
   private
 
   def cleanup

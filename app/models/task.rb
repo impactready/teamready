@@ -66,6 +66,10 @@ class Task < ActiveRecord::Base
     end
   end
 
+  def image
+    task_image unless task_image.url == '/task_images/original/missing.png'
+  end
+
   private
 
   def cleanup

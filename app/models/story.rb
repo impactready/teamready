@@ -39,6 +39,10 @@ class Story < ActiveRecord::Base
     end
   end
 
+  def image
+    story_image unless story_image.url == '/story_images/original/missing.png'
+  end
+
   private
 
   def cleanup

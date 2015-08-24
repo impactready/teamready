@@ -85,7 +85,7 @@ end
 
 puts "Populating events..."
 
-[	{ name: "Tire Burst on my van!", raised_user_id: 1, location: "174 Longmarket St, Cape Town 8000, South Africa",
+[	{raised_user_id: 1, location: "174 Longmarket St, Cape Town 8000, South Africa",
 	priority_id: 1, type_id: 1, description: "I burst a tire and I will not be on time!", group_id: 1, status_id: 1 }
 ].each do |incivent|
 	in_civent = User.find(1).incivents.build(incivent)

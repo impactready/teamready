@@ -28,3 +28,10 @@ input[type="submit"] {
     border: 1px solid #ddd;
 
 }
+
+.group-section-link {
+    &:hover {
+        background-color: #eee;
+        cursor: pointer
+    }
+}

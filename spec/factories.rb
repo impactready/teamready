@@ -84,7 +84,9 @@ FactoryGirl.define do
   factory :update do
     id 1
     group_id 1
-    detail "New message called 'Sort this out' created in group '#{FactoryGirl.build(:group).name}'."
+    detail "New story called 'Sort this out' created in group '#{FactoryGirl.build(:group).name}'."
+    updatable_id 1
+    updatable_type 'Story'
   end
 
   factory :membership do

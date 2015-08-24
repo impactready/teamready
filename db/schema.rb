@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150813144316) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "account_options", force: :cascade do |t|
     t.string   "name",       limit: 255
     t.integer  "cost"
@@ -102,7 +105,7 @@ ActiveRecord::Schema.define(version: 20150813144316) do
     t.datetime "updated_at"
   end
 
-  add_index "memberships", ["user_id", "group_id"], name: "index_memberships_on_user_id_and_group_id", unique: true
+  add_index "memberships", ["user_id", "group_id"], name: "index_memberships_on_user_id_and_group_id", unique: true, using: :btree
 
   create_table "priorities", force: :cascade do |t|
     t.string   "description", limit: 255
@@ -180,14 +183,13 @@ ActiveRecord::Schema.define(version: 20150813144316) do
   create_table "updates", force: :cascade do |t|
     t.integer  "group_id"
     t.string   "detail",         limit: 255
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
-    t.string   "update_type",    limit: 255, default: "", null: false
-    t.integer  "updatable_id"
-    t.string   "updatable_type"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "updatable_id",               null: false
+    t.string   "updatable_type",             null: false
   end
 
-  add_index "updates", ["updatable_type", "updatable_id"], name: "index_updates_on_updatable_type_and_updatable_id"
+  add_index "updates", ["updatable_id"], name: "updates_updatable_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",             limit: 255
@@ -206,6 +208,6 @@ ActiveRecord::Schema.define(version: 20150813144316) do
     t.string   "phone",                  limit: 255
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
