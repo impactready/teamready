@@ -61,10 +61,7 @@ div.header-main {
 
 .page {
     padding: 5px 0 5px 0;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-
+    min-height: 400px;
 }
 
 .heading-block, .heading-block-in {
@@ -183,6 +180,7 @@ br.clear {
 
 #group-section-update-feed {
     padding-top: 10px;
+    display: none;
 
     .update-item {
         margin: 0 5px 0 5px;

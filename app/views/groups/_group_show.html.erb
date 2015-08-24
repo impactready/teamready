@@ -57,7 +57,7 @@
     <div class="group-section" id="group-section-update-feed">
       <%= semantic_form_for :category do |f| %>
         <%= f.inputs do %>
-          <%= f.input :group_object, label: "Select type:", collection: ['Event', 'Task', 'Measurement', 'Story'], include_blank: true, required: false %>
+          <%= f.input :group_object, label: "Select type ->", collection: ['Event', 'Task', 'Measurement', 'Story'], include_blank: true, required: false %>
         <% end %>
       <% end %>
       <%= render group.updates.order(created_at: :desc) %>

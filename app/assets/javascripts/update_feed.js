@@ -7,6 +7,9 @@ $(function() {
         update_items.filter(function () {
             return $(this).data('updatable-type') === object_class
         }).show();
+        $('html, body').animate({
+               scrollTop: $('div[data-group-section-id="update-feed"]').offset().top
+        }, 50);
     });
 
     $('div.group-section-link').click(function () {

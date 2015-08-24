@@ -85,6 +85,10 @@ form.formtastic fieldset > ol > li.boolean label {
     padding: 0px;
 }
 
+form.formtastic.category{
+  border-bottom: 1px solid #ddd;
+}
+
 form.formtastic select#category_group_object {
   float: right;
 }
