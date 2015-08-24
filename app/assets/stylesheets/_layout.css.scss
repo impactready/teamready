@@ -66,7 +66,6 @@ div.header-main {
 
 .heading-block, .heading-block-in {
    padding: 2px 5px 2px 5px;
-   background-color: #F7F7F7;
    background-image: -moz-linear-gradient(
        hsla(0,0%,100%,0),
        hsla(0,0%,100%,.2) 50px
@@ -84,7 +83,12 @@ div.header-main {
    }
 }
 
+.heading-block-in {
+    background-color: #EAEAEA;
+}
+
 .heading-block {
+    background-color: #F7F7F7;
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
