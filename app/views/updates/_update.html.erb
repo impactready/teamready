@@ -7,20 +7,22 @@
     <div class="update-time">
         <%= time_tag update.created_at %>
     </div>
-    <p>
-        <h3><%= update.updatable_type.capitalize %></h3>
-        <br />
-        <strong><%= update.detail %></strong>
-        <br>
-        Location: <%= update.updatable.location %>
-        <% if update.updatable_type == 'Task' %>
+    <div class="update-body">
+        <p>
+            <h3><%= update.updatable_type.capitalize %></h3>
             <br />
-            Created by: <%= update.updatable.raised_user.full_name %>
-            <br />
-            Assigned to: <%= update.updatable.user.full_name %>
-        <% else %>
-            <br />
-            Created by: <%= update.updatable.user.full_name %>
-        <% end %>
-    </p>
+            <strong><%= update.detail %></strong>
+            <br>
+            Location: <%= update.updatable.location %>
+            <% if update.updatable_type == 'Task' %>
+                <br />
+                Created by: <%= update.updatable.raised_user.full_name %>
+                <br />
+                Assigned to: <%= update.updatable.user.full_name %>
+            <% else %>
+                <br />
+                Created by: <%= update.updatable.user.full_name %>
+            <% end %>
+        </p>
+    </div>
 </div>
