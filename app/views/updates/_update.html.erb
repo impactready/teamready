@@ -13,11 +13,14 @@
         <strong><%= update.detail %></strong>
         <br>
         Location: <%= update.updatable.location %>
-        <br />
-        Created by: <%= update.updatable.user.full_name %>
         <% if update.updatable_type == 'Task' %>
             <br />
-            Assigned to: <%= update.updatable.assigned_user.full_name %>
+            Created by: <%= update.updatable.raised_user.full_name %>
+            <br />
+            Assigned to: <%= update.updatable.user.full_name %>
+        <% else %>
+            <br />
+            Created by: <%= update.updatable.user.full_name %>
         <% end %>
     </p>
 </div>

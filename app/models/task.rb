@@ -2,6 +2,8 @@ class Task < ActiveRecord::Base
 
   belongs_to :group
   belongs_to :user, foreign_key: "assigned_user_id"
+  belongs_to :raised_user, class_name: 'User'
+
   belongs_to :priority
   belongs_to :status
 
