@@ -35,6 +35,26 @@ class Task < ActiveRecord::Base
   scope :complete, -> { where(complete: true) }
   scope :unarchived, -> { where(archive: false) }
 
+  def self.csv_column_headers
+    ['Description', 'User', 'Raised user', 'Group', 'Priority', 'Status', 'Due date', 'Complete', 'Location', 'Longitude', 'Latitude']
+  end
+
+  def csv_columns
+    [
+      description,
+      user.full_name,
+      raised_user.full_name,
+      group.name,
+      priority.description,
+      status.description,
+      due_date,
+      complete,
+      location,
+      longitude,
+      latitude
+    ]
+  end
+
   def self.check_deadlines
     deadline_tasks = Task.where("due_date = ?", Date.today)
     unless deadline_tasks.empty?

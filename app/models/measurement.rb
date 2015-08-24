@@ -28,6 +28,22 @@ class Measurement < ActiveRecord::Base
   before_validation :reverse_geocode, if: :has_coordinates
   before_validation :geocode, if: :has_location, unless: :has_coordinates
 
+  def self.csv_column_headers
+    ['Description', 'User', 'Group', Type::USAGES[:indicator], 'Location', 'Longitude', 'Latitude']
+  end
+
+  def csv_columns
+    [
+      description,
+      user.full_name,
+      group.name,
+      type.description,
+      location,
+      longitude,
+      latitude
+    ]
+  end
+
   # Called to limit incivents shown according to a search field
   def self.search(user, search)
     if search
