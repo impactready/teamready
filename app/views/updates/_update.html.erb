@@ -10,6 +10,14 @@
     <p>
         <h3><%= update.updatable_type.capitalize %></h3>
         <br />
-        <%= update.detail %>
+        <strong><%= update.detail %></strong>
+        <br>
+        Location: <%= update.updatable.location %>
+        <br />
+        Created by: <%= update.updatable.user.full_name %>
+        <% if update.updatable_type == 'Task' %>
+            <br />
+            Assigned to: <%= update.updatable.assigned_user.full_name %>
+        <% end %>
     </p>
 </div>
