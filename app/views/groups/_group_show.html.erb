@@ -55,9 +55,13 @@
     </div>
 
     <div class="group-section" id="group-section-update-feed">
-      <%= semantic_form_for :category do |f| %>
+      <%= semantic_form_for :category, method: :post, url: exports_path do |f| %>
         <%= f.inputs do %>
           <%= f.input :group_object, label: "Select type ->", collection: ['Event', 'Task', 'Measurement', 'Story'], include_blank: true, required: false %>
+          <%= f.input :group_id, as: :hidden, value: group.id %>
+        <% end %>
+        <%= f.actions do %>
+          <%= f.action :submit, as: :button, label: 'Export' %>
         <% end %>
       <% end %>
       <%= render group.updates.order(created_at: :desc) %>

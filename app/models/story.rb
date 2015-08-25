@@ -32,22 +32,6 @@ class Story < ActiveRecord::Base
 
   before_save :cleanup
 
-  def self.csv_column_headers
-    ['Description', 'User', 'Group', Type::USAGES[:domain_of_change], 'Location', 'Longitude', 'Latitude']
-  end
-
-  def csv_columns
-    [
-      description,
-      user.full_name,
-      group.name,
-      type.description,
-      location,
-      longitude,
-      latitude
-    ]
-  end
-
   def self.stories_from_groups_joined_by(user)
     group_ids = user.group_ids
     unless group_ids.empty?

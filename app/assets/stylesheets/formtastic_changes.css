@@ -92,3 +92,8 @@ form.formtastic.category{
 form.formtastic select#category_group_object {
   float: right;
 }
+
+form.formtastic li#category_submit_action button {
+  float: right;
+  display: none;
+}

@@ -5,6 +5,8 @@ Incivent_App::Application.routes.draw do
     resources :users, only: :destroy
   end
 
+  resources :exports, only: :create
+
   resources :subscriptions do
     collection do
       # get 'paypal_checkout'
