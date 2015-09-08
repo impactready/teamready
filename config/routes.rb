@@ -1,5 +1,12 @@
 Incivent_App::Application.routes.draw do
 
+  namespace :api do
+    namespace :v1 do
+      get 'android/setup'
+      post 'android/create'
+    end
+  end
+
   namespace :admin do
     resources :accounts
     resources :users, only: :destroy

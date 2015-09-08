@@ -2,29 +2,23 @@ class AccountInterface
 
   def self.set_account_defaults(account)
 
-    [ { description: "High"},
-      { description: "Medium"},
-      { description: "Low"}
+    [ { description: "None"}
     ].each do |priority|
       in_priority = account.priorities.build(priority)
       in_priority.save
     end
 
 
-    [ { description: "Open"},
-      { description: "Under Investigation"},
-      { description: "Resolved",},
-      { description: "Closed",}
+    [ { description: "None"}
     ].each do |status|
       in_status = account.statuses.build(status)
       in_status.save
     end
 
 
-    [ { description: "Incident"},
-      { description: "Meeting"},
-      { description: "Visit"},
-      { description: "Report Delivery"},
+    [ { description: "None", usage: Type::USAGES[:event_type]},
+      { description: "None", usage: Type::USAGES[:indicator]},
+      { description: "None", usage: Type::USAGES[:domain_of_change]},
     ].each do |type|
       in_type = account.types.build(type)
       in_type.save

@@ -4,13 +4,11 @@ class Type < ActiveRecord::Base
   attr_protected :account_id
 
   has_many :incivents
-  has_many :users, through: :incivents
-  has_many :priorities, through: :incivents
-  has_many :statuses, through: :incivents
-  has_many :groups, through: :incivents
+  has_many :stories
+  has_many :measurements
   belongs_to :account
 
-  validates :description, presence: true
+  validates :description, :usage, presence: true
 
   USAGES = {
     event_type: 'Event type',

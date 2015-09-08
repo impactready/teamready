@@ -68,6 +68,7 @@ FactoryGirl.define do
     password_confirmation "mememe"
     account_id 1
     email "person1@example.com"
+    api_key "XX11WW"
   end
 
   factory :group do

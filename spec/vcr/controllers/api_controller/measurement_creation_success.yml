@@ -1,0 +1,550 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.googleapis.com/maps/api/geocode/json?language=en&latlng=-26.1249014,28.0878431&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Tue, 08 Sep 2015 08:39:46 GMT
+      Expires:
+      - Wed, 09 Sep 2015 08:39:46 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - '*'
+      Server:
+      - mafe
+      Content-Length:
+      - '1305'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "20",
+                       "short_name" : "20",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Corlett Drive",
+                       "short_name" : "Corlett Dr",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Bramley",
+                       "short_name" : "Bramley",
+                       "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                    },
+                    {
+                       "long_name" : "Johannesburg",
+                       "short_name" : "Johannesburg",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "2018",
+                       "short_name" : "2018",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "20 Corlett Drive, Johannesburg, 2018, South Africa",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -26.1249014,
+                       "lng" : 28.0878431
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -26.1235524197085,
+                          "lng" : 28.0891920802915
+                       },
+                       "southwest" : {
+                          "lat" : -26.1262503802915,
+                          "lng" : 28.0864941197085
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ8w1rWxUNlR4RKkv--7CNFgU",
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Bramley",
+                       "short_name" : "Bramley",
+                       "types" : [ "sublocality_level_1", "sublocality", "political" ]
+                    },
+                    {
+                       "long_name" : "Johannesburg",
+                       "short_name" : "Johannesburg",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "2018",
+                       "short_name" : "2018",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Bramley, Johannesburg, 2090, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -26.1211931,
+                          "lng" : 28.0950339
+                       },
+                       "southwest" : {
+                          "lat" : -26.1298408,
+                          "lng" : 28.071203
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.1242991,
+                       "lng" : 28.0815415
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -26.1211931,
+                          "lng" : 28.0950339
+                       },
+                       "southwest" : {
+                          "lat" : -26.1298408,
+                          "lng" : 28.071203
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJFxCiwD4NlR4RYg5nS7CDyMg",
+                 "types" : [ "sublocality_level_1", "sublocality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Johannesburg",
+                       "short_name" : "Johannesburg",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Johannesburg, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -26.1041199,
+                          "lng" : 28.1376001
+                       },
+                       "southwest" : {
+                          "lat" : -26.2389231,
+                          "lng" : 27.942449
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.2041028,
+                       "lng" : 28.0473051
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -26.1041199,
+                          "lng" : 28.1376001
+                       },
+                       "southwest" : {
+                          "lat" : -26.2389231,
+                          "lng" : 27.942449
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJUWpA8GgMlR4RQUDTsdnJiiM",
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "2018",
+                       "short_name" : "2018",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Johannesburg",
+                       "short_name" : "Johannesburg",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Johannesburg, 2018, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -26.121193,
+                          "lng" : 28.0950339
+                       },
+                       "southwest" : {
+                          "lat" : -26.129841,
+                          "lng" : 28.071203
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.1242991,
+                       "lng" : 28.0815415
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -26.121193,
+                          "lng" : 28.0950339
+                       },
+                       "southwest" : {
+                          "lat" : -26.129841,
+                          "lng" : 28.071203
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJVbjjwD4NlR4RFOkVWETPv4w",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "2090",
+                       "short_name" : "2090",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "2090, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -26.004902,
+                          "lng" : 28.148004
+                       },
+                       "southwest" : {
+                          "lat" : -26.1421989,
+                          "lng" : 28.069071
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.0891435,
+                       "lng" : 28.1005632
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -26.004902,
+                          "lng" : 28.148004
+                       },
+                       "southwest" : {
+                          "lat" : -26.1421989,
+                          "lng" : 28.069071
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ_xwN555ylR4RNyr17Jut8xE",
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "City of Johannesburg Metropolitan Municipality, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -25.9028298,
+                          "lng" : 28.2144601
+                       },
+                       "southwest" : {
+                          "lat" : -26.5262899,
+                          "lng" : 27.71427
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.1704415,
+                       "lng" : 27.9717606
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -25.9028298,
+                          "lng" : 28.2144601
+                       },
+                       "southwest" : {
+                          "lat" : -26.5262899,
+                          "lng" : 27.71427
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ--D0r2YJlR4RsJHlAPhHxy0",
+                 "types" : [ "administrative_area_level_3", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "City of Johannesburg Metropolitan Municipality",
+                       "short_name" : "City of Johannesburg Metropolitan Municipality",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "City of Johannesburg Metropolitan Municipality, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -25.9028298,
+                          "lng" : 28.2144601
+                       },
+                       "southwest" : {
+                          "lat" : -26.5262899,
+                          "lng" : 27.71427
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.1704415,
+                       "lng" : 27.9717606
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -25.9028298,
+                          "lng" : 28.2144601
+                       },
+                       "southwest" : {
+                          "lat" : -26.5262899,
+                          "lng" : 27.71427
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ--D0r2YJlR4R3YGCHNfY9S4",
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Gauteng",
+                       "short_name" : "GP",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Gauteng, South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -25.1096099,
+                          "lng" : 29.0984187
+                       },
+                       "southwest" : {
+                          "lat" : -26.9118973,
+                          "lng" : 27.1563401
+                       }
+                    },
+                    "location" : {
+                       "lat" : -26.2707593,
+                       "lng" : 28.1122679
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -25.1096099,
+                          "lng" : 29.0984187
+                       },
+                       "southwest" : {
+                          "lat" : -26.9118973,
+                          "lng" : 27.1563401
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJn3cRVJUSlR4R4jhUy8fnnm0",
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "South Africa",
+                       "short_name" : "ZA",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "South Africa",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : -22.1254241,
+                          "lng" : 38.0007352
+                       },
+                       "southwest" : {
+                          "lat" : -46.9767945,
+                          "lng" : 16.4535918
+                       }
+                    },
+                    "location" : {
+                       "lat" : -30.559482,
+                       "lng" : 22.937506
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -22.1254241,
+                          "lng" : 32.8909911
+                       },
+                       "southwest" : {
+                          "lat" : -34.8331569,
+                          "lng" : 16.4535918
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJURLu2YmmNBwRoOikHwxjXeg",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Tue, 08 Sep 2015 08:39:46 GMT
+recorded_with: VCR 2.9.2

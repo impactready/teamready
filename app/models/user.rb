@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   before_create { generate_token(:auth_token) }
+  before_create { generate_token(:api_key, 3) }
   before_create :sanitize_phone
 
   def send_password_reset
@@ -40,9 +41,9 @@ class User < ActiveRecord::Base
     Notification.password_reset(self).deliver_now rescue logger.error 'Unable to deliver the password reset email.'
   end
 
-  def generate_token(column)
+  def generate_token(column, length = nil)
     begin
-      self[column] = SecureRandom.urlsafe_base64
+      length ? self[column] = SecureRandom.hex(length) : self[column] = SecureRandom.hex
     end while User.exists?(column => self[column])
   end
 
