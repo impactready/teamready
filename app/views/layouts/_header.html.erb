@@ -51,7 +51,7 @@
                   <% else %>
                     <li><%= link_to "Team members", users_path %></li>
                   <% end %>
-                  <li><%= link_to "Edit profile", edit_user_path(current_user) %></li>
+                  <li><%= link_to "Profile", edit_user_path(current_user) %></li>
                   <% if current_user.master_user? %>
                     <li><%= link_to "Account", current_user.account %></li>
                   <% end %>
