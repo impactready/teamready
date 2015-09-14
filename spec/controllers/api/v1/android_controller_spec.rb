@@ -7,13 +7,24 @@ describe Api::V1::AndroidController do
   end
 
   describe "GET 'statuses'" do
-    it "creates an event" do
+    it "returns status objects for a user" do
       FactoryGirl.create(:account)
-      FactoryGirl.create(:type)
+      type = FactoryGirl.create(:type)
       FactoryGirl.create(:group)
 
       get 'setup'
-      response.should be_success
+      body = JSON.parse(response.body)
+
+      expect(response).to be_success
+      expect(body["types"][0]["description"]).to eq "Environmental"
+    end
+
+    it "returns nothing if the user is not authenticated" do
+      request.env['HTTP_AUTHORIZATION'] = nil
+
+      get 'setup'
+
+      expect(response).not_to be_success
     end
   end
 
@@ -32,7 +43,7 @@ describe Api::V1::AndroidController do
         post 'create', type: 'event', event: { description: 'Serious Oil Spill', type_id: @type.id, group_id: @group.id, longitude: 28.0878431, latitude: -26.1249014}
 
         body = JSON.parse(response.body)
-        response.should be_success
+        expect(response).to be_success
         expect(body['event']['description']).to eq('Serious Oil Spill')
       end
     end
@@ -42,7 +53,7 @@ describe Api::V1::AndroidController do
         post 'create', type: 'story', story: { description: 'Our customers were very happy!', type_id: @type.id, group_id: @group.id, longitude: 28.0878431, latitude: -26.1249014}
 
         body = JSON.parse(response.body)
-        response.should be_success
+        expect(response).to be_success
         expect(body['story']['description']).to eq('Our customers were very happy!')
       end
     end
@@ -52,7 +63,7 @@ describe Api::V1::AndroidController do
         post 'create', type: 'measurement', measurement: { description: 'Delivery is up by 100%.', type_id: @type.id, group_id: @group.id, longitude: 28.0878431, latitude: -26.1249014}
 
         body = JSON.parse(response.body)
-        response.should be_success
+        expect(response).to be_success
         expect(body['measurement']['description']).to eq('Delivery is up by 100%.')
       end
     end
