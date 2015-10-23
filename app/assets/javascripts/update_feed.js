@@ -24,11 +24,19 @@ $(function() {
 
     $('div.group-section-link').click(function () {
         section = $(this).data('group-section-id');
+        $('div.group-section-link').find(".expand").html("expand &darr;")
+        $(this).find(".expand").html("")
         current_group_tab = $('div.group_tab').filter(':visible');
         current_group_tab.find('div.group-section').hide();
         current_group_tab.find('div#group-section-' + section).show()
-        $('html, body').animate({
-               scrollTop: $(this).offset().top
-        }, 50);
+        // $('html, body').animate({
+        //        scrollTop: $(this).offset().top - 50
+        // }, 50);
     });
+
+    $('div.group-section-link').hover(function() {
+        $(this).find(".expand").show();
+    }, function() {
+        $(this).find(".expand").hide();
+    })
 });

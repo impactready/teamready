@@ -30,8 +30,24 @@ input[type="submit"] {
 }
 
 .group-section-link {
+    padding-top: 10px;
+    float: none;
+
     &:hover {
         background-color: #ddd;
         cursor: pointer
+    }
+
+    h2 {
+        padding-top: 0;
+        display: inline;
+    }
+
+    .expand {
+        padding-top: 3px;
+        display: none;
+        float: right;
+        font-size: 0.9em;
+        color: #888;
     }
 }
