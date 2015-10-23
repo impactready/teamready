@@ -6,14 +6,13 @@ body {
     margin: 0 0 0 0;
     padding: 0px;
     color: #030303;
-    background-image: linear-gradient(180deg, #D7D7D7, #D7D7D7 150px, #fff 400px);
     font-size: 13px;
     line-height: 1.5;
 }
 
 div.above-header {
     height: 30px;
-    background: #888;
+    background: #8598a0;
     -webkit-box-shadow: 2px 1px 2px hsla(0,0%,0%,.2);
     box-shadow: 2px 1px 2px hsla(0,0%,0%,.2);
     padding: 0 5px 0 5px;
@@ -28,20 +27,20 @@ div.top-name {
 
 div.header-main {
     font-family: 'Arimo', sans-serif;
-    background-color: #D5D5D5;
-    background-image: -moz-linear-gradient(
+    background-color: #EFEFEF;
+    background-image: linear-gradient(
         hsla(0,0%,100%,0),
         hsla(0,0%,100%,.4) 105px
     );
-    background-image: -webkit-gradient(
-        linear, 0 0, 0 105,
-        from(hsla(0,0%,100%,0)),
-        to(hsla(0,0%,100%,.4))
-    );
+    // background-image: -webkit-gradient(
+    //     linear, 0 0, 0 105,
+    //     from(hsla(0,0%,100%,0)),
+    //     to(hsla(0,0%,100%,.4))
+    // );
     padding: 5px 5px 0 5px;
     border-top: 2px solid #ECF1EF;
     border-bottom: 2px solid #C1C1C1;
-    height: 95px;
+    height: 83px;
 }
 
 .header-info {
@@ -51,6 +50,21 @@ div.header-main {
     font-family: 'Arimo', sans-serif;
     -webkit-box-shadow: 2px 1px 2px hsla(0,0%,0%,.2);
     box-shadow: 2px 1px 2px hsla(0,0%,0%,.2);
+}
+
+.fold {
+    background-image: image-url("FoldBackground.jpg");
+    overflow: auto;
+}
+
+.photo-credit {
+    a {
+        font-weight: bold;
+        color: black;
+    }
+    position: absolute;
+    left: 5px;
+    bottom: 30px;
 }
 
 .container {
@@ -88,7 +102,7 @@ div.header-main {
 }
 
 .heading-block {
-    background-color: #F7F7F7;
+    background-color: #ECEBEB;
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;

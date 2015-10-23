@@ -4,8 +4,8 @@ describe 'Static Page Activities' do
 	describe 'get the Home Page' do
 	  it "should show details from the home page" do
 	    visit '/'
-	    page.should have_content('SEE YOUR ORGANISATION PERFORMING')
-	    page.should have_selector('div.photo-main')
+	    page.should have_content('A SIMPLER REPORTING TOOL')
+	    page.should have_selector('span.photo-credit')
 	  end
 	end
 
