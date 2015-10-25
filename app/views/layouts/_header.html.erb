@@ -4,7 +4,7 @@
     <div class="container">
       <% if signed_in? %>
         <div class="top-name">
-          Hello <strong><%= current_user.first_name %>!</strong>
+          protea.io | Hello <strong><%= current_user.first_name %>!</strong>
         </div>
       <% end %>
       <nav class="top-menu">
@@ -21,14 +21,6 @@
           </ul>
       </nav>
       <br class="clear" />
-    </div>
-  </div>
-
-  <div class="header-main">
-    <div class="container">
-      <div class="main-page-image">
-          <%= image_tag("HeaderLogo.png", alt: "Incivent") %>
-      </div>
     </div>
   </div>
   <% if signed_in? %>
@@ -59,6 +51,14 @@
             </ul>
         </nav>
         <br class="clear"/>
+      </div>
+    </div>
+  <% else %>
+    <div class="header-main">
+      <div class="container">
+        <div class="main-page-image">
+            <%= image_tag("HeaderLogo.png", alt: "Incivent") %>
+        </div>
       </div>
     </div>
   <% end %>

@@ -46,6 +46,14 @@ form.formtastic input[type="submit"], form.formtastic button {
       to(hsla(0,0%,100%,.3))
   );
   border: 1px solid #BBB;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+form.formtastic.account button {
+  font-size: 1.3em
 }
 
 form.formtastic fieldset.buttons { margin-left: 0; padding:0.5em 0; margin-top:-0.5em; margin-bottom:1em; }

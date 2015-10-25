@@ -23,19 +23,19 @@ class Group < ActiveRecord::Base
   default_scope { order(created_at: :desc) }
 
   def updates_add_create(type, updatable)
-    updatable.updates.create!(group_id: self.id, detail: "New #{type} called '#{updatable.description}' created in group '#{self.name}'.")
+    updatable.updates.create!(group_id: self.id, detail: "New #{type} created in group '#{self.name}'.")
   end
 
   def updates_add_delete(type, updatable)
-    updatable.updates.create!(group_id: self.id, detail: "The #{type} called '#{updatable.description}' in group '#{self.name}' deleted.")
+    updatable.updates.create!(group_id: self.id, detail: "#{type} in group '#{self.name}' deleted.")
   end
 
   def updates_add_archive(type, updatable)
-    updatable.updates.create!(group_id: self.id, detail: "The #{type} called '#{updatable.description}' in group '#{self.name}' archived.")
+    updatable.updates.create!(group_id: self.id, detail: "#{type} in group '#{self.name}' archived.")
   end
 
   def updates_add_complete(updatable)
-    updatable.updates.create!(group_id: self.id, detail: "Task called '#{updatable.description}' in group '#{self.name}' marked as complete.")
+    updatable.updates.create!(group_id: self.id, detail: "Task in group '#{self.name}' marked as complete.")
   end
 
 end

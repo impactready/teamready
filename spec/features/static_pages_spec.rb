@@ -5,7 +5,6 @@ describe 'Static Page Activities' do
 	  it "should show details from the home page" do
 	    visit '/'
 	    page.should have_content('A SIMPLER REPORTING TOOL')
-	    page.should have_selector('span.photo-credit')
 	  end
 	end
 
@@ -21,7 +20,7 @@ describe 'Static Page Activities' do
 	    page.should have_content('Signup')
 	    page.should have_selector('div.pricing')
 
-	    click_link 'New account'
+	    click_button 'New account'
 
 	    page.should have_content 'Contact us'
 	    page.should have_content 'Thank you for your interest in joining us.'
