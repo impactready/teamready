@@ -3,14 +3,19 @@
     <div class="bottom-navigation">
     <nav class="footer-menu">
         <ul>
-            <li><%#= link_to "Privacy Policy", privacy_path %></li>
-            <li><%#= link_to "Service Terms", terms_path %></li>
+            <li><%= link_to "Privacy Policy", privacy_path %></li>
+            <li><%= link_to "Service Terms", terms_path %></li>
         </ul>
     </nav>
     </div>
 
     <div class="footer-copyright">
-        <p>Copyright 2011-<%= Date.today.year %> ImpactReady. All rights reserved.</p>
+        <p>
+            Site &copy; 2011-<%= Date.today.year %> ImpactReady/Raoul de Villiers. <br />
+            All rights reserved.<br />
+            Image &copy; <a href="https://www.flickr.com/photos/128539140@N03/">Jake Stimpson</a>
+        </p>
+
     </div>
 
 </footer>

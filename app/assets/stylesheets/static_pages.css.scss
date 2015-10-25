@@ -1,5 +1,10 @@
 /* main page */
 
+.fold {
+    background-image: image-url("FoldBackground.jpg");
+    overflow: auto;
+}
+
 .home-page-form {
   height: auto;
   margin: 100px 0 200px 0;
@@ -34,6 +39,7 @@ h3.home-page-top {
   //padding: 8px 0 8px 5px;
 
 }
+
 
 .features {
   border-top: 1px solid #ddd;
