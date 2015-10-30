@@ -2,7 +2,7 @@ class Priority < ActiveRecord::Base
 
   attr_accessible :description
   attr_protected :account_id
-  
+
   has_many :incivents
   has_many :tasks
   has_many :users, through: :incivents
@@ -12,5 +12,6 @@ class Priority < ActiveRecord::Base
   belongs_to :account
 
   validates :description, presence: true
+  validates :description, length: { maximum: 40 }
 
 end

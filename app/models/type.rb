@@ -9,6 +9,7 @@ class Type < ActiveRecord::Base
   belongs_to :account
 
   validates :description, :usage, presence: true
+  validates :description, length: { maximum: 40 }
 
   USAGES = {
     event_type: 'Event type',

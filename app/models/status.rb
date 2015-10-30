@@ -12,5 +12,6 @@ class Status < ActiveRecord::Base
   belongs_to :account
 
   validates :description, presence: true
+  validates :description, length: { maximum: 40 }
 
 end

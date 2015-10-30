@@ -11,19 +11,45 @@ class Api::V1::AndroidController < ApplicationController
   end
 
   def create
-    case params[:type]
+    type = @api_user.account.types.find_by(description: params[:type])
+    type ||= @api_user.account.types.find_by(description: 'None')
+    group = @api_user.account.groups.find_by(description: params[:group])
+    group ||= @api_user.account.groups.first.id
+
+    case params[:object_type]
     when 'event'
-      params[:event][:priority_id] = @api_user.account.priorities.find_by(description: 'None').id
-      params[:event][:status_id] = @api_user.account.statuses.find_by(description: 'None').id
-      event = @api_user.incivents.create(params[:event])
+      priority = @api_user.account.priorities.find_by(description: 'None')
+      status = @api_user.account.statuses.find_by(description: 'None')
+
+      event = @api_user.incivents.create(
+        description: params[:description],
+        type_id: type.id,
+        group_id: group.id,
+        priority_id: priority.id,
+        status_id: status.id,
+        longitude: params[:longitude],
+        latitude: params[:latitude]
+      )
 
       render json: {result_ok: true, event: event}
     when 'story'
-      story = @api_user.stories.create(params[:story])
+      story = @api_user.stories.create(
+        description: params[:description],
+        type_id: type.id,
+        group_id: group.id,
+        longitude: params[:longitude],
+        latitude: params[:latitude]
+      )
 
       render json: {result_ok: true, story: story}
     when 'measurement'
-      measurement = @api_user.measurements.create(params[:measurement])
+      measurement = @api_user.measurements.create(
+        description: params[:description],
+        type_id: type.id,
+        group_id: group.id,
+        longitude: params[:longitude],
+        latitude: params[:latitude]
+      )
 
       render json: {result_ok: true, measurement: measurement}
     end
