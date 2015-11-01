@@ -14,7 +14,7 @@ class Api::V1::AndroidController < ApplicationController
     type = @api_user.account.types.find_by(description: params[:type])
     type ||= @api_user.account.types.find_by(description: 'None')
     group = @api_user.account.groups.find_by(description: params[:group])
-    group ||= @api_user.account.groups.first.id
+    group ||= @api_user.account.groups.first
 
     case params[:object_type]
     when 'event'
