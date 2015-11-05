@@ -44,7 +44,7 @@ class Api::V1::AndroidController < ApplicationController
         group.updates_add_create('event', event)
       end
 
-      puts event
+      puts event.attributes
       render json: {result_ok: true, event: event}
     when 'story'
       story = @api_user.stories.new(
