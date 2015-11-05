@@ -23,7 +23,7 @@ class Api::V1::AndroidController < ApplicationController
       priority = @api_user.account.priorities.find_by(description: 'None')
       status = @api_user.account.statuses.find_by(description: 'None')
 
-      event = @api_user.incivents.create(
+      event = @api_user.incivents.new(
         description: params[:object][:description],
         type_id: type.id,
         group_id: group.id,
@@ -33,9 +33,21 @@ class Api::V1::AndroidController < ApplicationController
         latitude: params[:object][:latitude],
         incivent_image: params[:object][:image]
       )
+      if event.save
+        event.group.users.each do |user|
+          begin
+            Notification.notify_incivent(user, group, incivent_url(incivent)).deliver_now
+          rescue Exception => e
+            logger.error "Unable to deliver the event email: #{e.message}"
+          end
+        end
+        group.updates_add_create('event', event)
+      end
+
+      puts event
       render json: {result_ok: true, event: event}
     when 'story'
-      story = @api_user.stories.create(
+      story = @api_user.stories.new(
         description: params[:object][:description],
         type_id: type.id,
         group_id: group.id,
@@ -43,6 +55,17 @@ class Api::V1::AndroidController < ApplicationController
         latitude: params[:object][:latitude],
         story_image: params[:object][:image]
       )
+
+      if story.save
+        story.group.users.each do |user|
+          begin
+            Notification.notify_story(user, group, story_url(story)).deliver_now
+          rescue Exception => e
+            logger.error "Unable to deliver the story email: #{e.message}"
+          end
+        end
+        group.updates_add_create('story', story)
+      end
 
       render json: {result_ok: true, story: story}
     when 'measurement'
@@ -54,6 +77,17 @@ class Api::V1::AndroidController < ApplicationController
         latitude: params[:object][:latitude],
         measurement_image: params[:object][:image]
       )
+
+      if measurement.save
+        measurement.group.users.each do |user|
+          begin
+            Notification.notify_measurement(user, group, measurement_url(measurement)).deliver_now
+          rescue Exception => e
+            logger.error "Unable to deliver the update email: #{e.message}"
+          end
+        end
+        group.updates_add_create('measurement', measurement)
+      end
 
       render json: {result_ok: true, measurement: measurement}
     end

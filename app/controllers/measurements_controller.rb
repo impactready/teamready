@@ -29,14 +29,14 @@ class MeasurementsController < ApplicationController
     group = @measurement.group
     if @measurement.save
       @measurement.group.users.each do |user|
-        group.updates_add_create('measurement', @measurement)
         begin
           Notification.notify_measurement(user, group, measurement_url(@measurement)).deliver_now
         rescue Exception => e
           logger.error "Unable to deliver the update email: #{e.message}"
         end
       end
-      flash[:success] = 'Indicator update created!'
+      group.updates_add_create('measurement', @measurement)
+      flash[:success] = 'Indicator measurement created!'
       mobile_device? ? redirect_to(tasks_path) : redirect_to(measurements_path)
     else
       flash[:error] = 'The indicator update was not successfully created.'
