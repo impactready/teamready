@@ -11,44 +11,44 @@ class Api::V1::AndroidController < ApplicationController
   end
 
   def create
-    type = @api_user.account.types.find_by(description: params[:type])
+    type = @api_user.account.types.find_by(description: params[:object][:type])
     type ||= @api_user.account.types.find_by(description: 'None')
-    group = @api_user.account.groups.find_by(description: params[:group])
+    group = @api_user.account.groups.find_by(description: params[:object][:group])
     group ||= @api_user.account.groups.first
 
-    case params[:object_type]
+    case params[:object_category]
     when 'event'
       priority = @api_user.account.priorities.find_by(description: 'None')
       status = @api_user.account.statuses.find_by(description: 'None')
 
       event = @api_user.incivents.create(
-        description: params[:description],
+        description: params[:object][:description],
         type_id: type.id,
         group_id: group.id,
         priority_id: priority.id,
         status_id: status.id,
-        longitude: params[:longitude],
-        latitude: params[:latitude]
+        longitude: params[:object][:longitude],
+        latitude: params[:object][:latitude]
       )
 
       render json: {result_ok: true, event: event}
     when 'story'
       story = @api_user.stories.create(
-        description: params[:description],
+        description: params[:object][:description],
         type_id: type.id,
         group_id: group.id,
-        longitude: params[:longitude],
-        latitude: params[:latitude]
+        longitude: params[:object][:longitude],
+        latitude: params[:object][:latitude]
       )
 
       render json: {result_ok: true, story: story}
     when 'measurement'
       measurement = @api_user.measurements.create(
-        description: params[:description],
+        description: params[:object][:description],
         type_id: type.id,
         group_id: group.id,
-        longitude: params[:longitude],
-        latitude: params[:latitude]
+        longitude: params[:object][:longitude],
+        latitude: params[:object][:latitude]
       )
 
       render json: {result_ok: true, measurement: measurement}

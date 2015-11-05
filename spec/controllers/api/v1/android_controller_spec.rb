@@ -40,7 +40,7 @@ describe Api::V1::AndroidController do
 
     it "creates an event via the API" do
       VCR.use_cassette 'controllers/api_controller/event_creation_success' do
-        post 'create', object_type: 'event', description: "Serious Oil Spill", type: @type.description, group: @group.description, longitude: "28.0878431", latitude: "-26.1249014"
+        post 'create', object_category: 'event', object: { description: "Serious Oil Spill", type: @type.description, group: @group.description, longitude: "28.0878431", latitude: "-26.1249014" }
 
         body = JSON.parse(response.body)
         expect(response).to be_success
@@ -50,7 +50,7 @@ describe Api::V1::AndroidController do
 
     it "creates a story via the API" do
       VCR.use_cassette 'controllers/api_controller/story_creation_success' do
-        post 'create', object_type: 'story', description: "Our customers were very happy!", type: @type.description, group: @group.description, longitude: "28.0878431", latitude: "-26.1249014"
+        post 'create', object_category: 'story', object: { description: "Our customers were very happy!", type: @type.description, group: @group.description, longitude: "28.0878431", latitude: "-26.1249014" }
 
         body = JSON.parse(response.body)
         expect(response).to be_success
@@ -60,7 +60,7 @@ describe Api::V1::AndroidController do
 
     it "creates a measurement via the API" do
       VCR.use_cassette 'controllers/api_controller/measurement_creation_success' do
-        post 'create', object_type: 'measurement', description: "Delivery is up by 100%.", type: @type.description, group: @group.description, longitude: "28.0878431", latitude: "-26.1249014"
+        post 'create', object_category: 'measurement', object: { description: "Delivery is up by 100%.", type: @type.description, group: @group.description, longitude: "28.0878431", latitude: "-26.1249014" }
 
         body = JSON.parse(response.body)
         expect(response).to be_success
