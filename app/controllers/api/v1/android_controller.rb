@@ -11,6 +11,8 @@ class Api::V1::AndroidController < ApplicationController
   end
 
   def create
+    puts params
+
     type = @api_user.account.types.find_by(description: params[:object][:type])
     type ||= @api_user.account.types.find_by(description: 'None')
     group = @api_user.account.groups.find_by(description: params[:object][:group])
