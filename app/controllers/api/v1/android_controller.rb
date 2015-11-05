@@ -31,9 +31,8 @@ class Api::V1::AndroidController < ApplicationController
         status_id: status.id,
         longitude: params[:object][:longitude],
         latitude: params[:object][:latitude],
-        incivent_image: params[:object][:file]
+        incivent_image: params[:object][:image]
       )
-
       render json: {result_ok: true, event: event}
     when 'story'
       story = @api_user.stories.create(
@@ -42,7 +41,7 @@ class Api::V1::AndroidController < ApplicationController
         group_id: group.id,
         longitude: params[:object][:longitude],
         latitude: params[:object][:latitude],
-        story_image: params[:object][:file]
+        story_image: params[:object][:image]
       )
 
       render json: {result_ok: true, story: story}
@@ -53,7 +52,7 @@ class Api::V1::AndroidController < ApplicationController
         group_id: group.id,
         longitude: params[:object][:longitude],
         latitude: params[:object][:latitude],
-        measurement_image: params[:object][:file]
+        measurement_image: params[:object][:image]
       )
 
       render json: {result_ok: true, measurement: measurement}
