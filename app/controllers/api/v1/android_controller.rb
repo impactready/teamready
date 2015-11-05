@@ -28,7 +28,8 @@ class Api::V1::AndroidController < ApplicationController
         priority_id: priority.id,
         status_id: status.id,
         longitude: params[:object][:longitude],
-        latitude: params[:object][:latitude]
+        latitude: params[:object][:latitude],
+        incivent_image: params[:object][:file]
       )
 
       render json: {result_ok: true, event: event}
@@ -38,7 +39,8 @@ class Api::V1::AndroidController < ApplicationController
         type_id: type.id,
         group_id: group.id,
         longitude: params[:object][:longitude],
-        latitude: params[:object][:latitude]
+        latitude: params[:object][:latitude],
+        story_image: params[:object][:file]
       )
 
       render json: {result_ok: true, story: story}
@@ -48,7 +50,8 @@ class Api::V1::AndroidController < ApplicationController
         type_id: type.id,
         group_id: group.id,
         longitude: params[:object][:longitude],
-        latitude: params[:object][:latitude]
+        latitude: params[:object][:latitude],
+        measurement_image: params[:object][:file]
       )
 
       render json: {result_ok: true, measurement: measurement}
