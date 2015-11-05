@@ -10,7 +10,7 @@ class Incivent < ActiveRecord::Base
 
   has_attached_file :incivent_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
-  validates_attachment_content_type :incivent_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :incivent_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif", "application/octet-stream"]
 
   attr_accessible :location, :description, :longitude, :latitude, :priority_id, :type_id, :status_id, :incivent_image, :group_id, :archive
   attr_protected :raised_user_id

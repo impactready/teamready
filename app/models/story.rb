@@ -8,7 +8,7 @@ class Story < ActiveRecord::Base
 
   has_attached_file :story_image, {styles: { medium: "390x390#", thumb: "90x90#" }}.merge(ADD_PP_OPTIONS)
 
-  validates_attachment_content_type :story_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"]
+  validates_attachment_content_type :story_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif", "application/octet-stream"]
 
   attr_accessible :description, :location, :latitude, :longitude, :group_id, :type_id
   attr_protected :user_id
