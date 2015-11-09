@@ -1100,13 +1100,12 @@ The following style may be *conditionally* included for improved support on olde
 form.formtastic fieldset ol li fieldset legend { margin-left: -6px;}
 
 --------------------------------------------------------------------------------------------------*/
-
-
-
+/* line 18, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form {
   font-family: Helvetica, sans-serif;
 }
 
+/* line 22, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic input, form.formtastic textarea, form.formtastic select {
   font: inherit;
   padding: 2px;
@@ -1114,74 +1113,93 @@ form.formtastic input, form.formtastic textarea, form.formtastic select {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-
 }
 
-form.formtastic fieldset > ol > li.text textarea {height: 100px; }
+/* line 32, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
+form.formtastic fieldset > ol > li.text textarea {
+  height: 100px;
+}
 
+/* line 34, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic input[type="submit"], form.formtastic button {
   background-color: #7AC5CD;
   padding: 3px 10px 4px 10px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
-  background-image: -moz-linear-gradient(
-      hsla(0,0%,100%,.7),
-      hsla(0,0%,100%,0) 20px
-  );
-  background-image: -webkit-gradient(
-      linear, 0 0, 0 20,
-      from(hsla(0,0%,100%,.7)),
-      to(hsla(0,0%,100%,.3))
-  );
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 20px);
+  background-image: -webkit-gradient(linear, 0 0, 0 20, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.3)));
   border: 1px solid #BBB;
 }
+/* line 51, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
+form.formtastic input[type="submit"]:hover, form.formtastic button:hover {
+  cursor: pointer;
+}
 
-form.formtastic fieldset.buttons { margin-left: 0; padding:0.5em 0; margin-top:-0.5em; margin-bottom:1em; }
+/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
+form.formtastic.account button {
+  font-size: 1.3em;
+}
 
+/* line 60, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
+form.formtastic fieldset.buttons {
+  margin-left: 0;
+  padding: 0.5em 0;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+/* line 62, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic fieldset > ol > li p.inline-errors {
-  color:#cc0000;
-  margin:0.5em 460px 0 130px;
+  color: #cc0000;
+  margin: 0.5em 460px 0 130px;
   font-size: 0.8em;
 }
 
+/* line 68, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic fieldset > ol > li p.inline-hints {
-  color:#666;
-  margin:0.5em 460px 0 130px;
+  color: #666;
+  margin: 0.5em 460px 0 130px;
   font-size: 0.8em;
 }
 
+/* line 74, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic fieldset > ol > li {
   padding: 3px 2px 2px 2px;
   margin-top: 0;
 }
 
+/* line 79, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic fieldset > ol > li.boolean label {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 /*form.formtastic fieldset > ol > li.boolean label input {
   margin:0 0.5em 0 0;
 }*/
-
+/* line 87, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 .listing-i-ff form.formtastic fieldset.buttons {
   margin-left: 0px;
   padding-top: 0px;
 }
 
+/* line 92, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 .item-table form.formtastic fieldset.buttons {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
-form.formtastic.category{
+/* line 97, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
+form.formtastic.category {
   border-bottom: 1px solid #ddd;
 }
 
+/* line 101, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic select#category_group_object {
   float: right;
 }
 
+/* line 105, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/formtastic_changes.css.scss */
 form.formtastic li#category_submit_action button {
   float: right;
   display: none;
@@ -1237,37 +1255,19 @@ div.header-main {
 }
 
 /* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
-.fold {
-  background-image: url(/assets/FoldBackground.jpg);
-  overflow: auto;
-}
-
-/* line 61, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
-.photo-credit {
-  position: absolute;
-  left: 5px;
-  bottom: 30px;
-}
-/* line 62, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
-.photo-credit a {
-  font-weight: bold;
-  color: black;
-}
-
-/* line 71, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .container {
   width: 930px;
   margin: 0 auto;
   float: none;
 }
 
-/* line 77, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 62, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .page {
   padding: 5px 0 5px 0;
   min-height: 400px;
 }
 
-/* line 82, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 67, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .heading-block, .heading-block-in {
   padding: 2px 5px 2px 5px;
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50px);
@@ -1276,19 +1276,19 @@ div.header-main {
   -webkit-box-shadow: 1px 1px 2px hsla(0,0%,0%,.3);
   box-shadow: 1px 1px 2px hsla(0,0%,0%,.3);*/
 }
-/* line 96, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 81, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .heading-block h2, .heading-block-in h2 {
   padding-top: 10px;
 }
 
-/* line 101, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 86, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .heading-block-in {
   background-color: #EAEAEA;
   padding-right: 10px;
   height: 32px;
 }
 
-/* line 107, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 92, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .heading-block {
   background-color: #ECEBEB;
   border-radius: 4px;
@@ -1297,40 +1297,40 @@ div.header-main {
   height: 45px;
 }
 
-/* line 115, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 100, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .footer-wrapper {
   text-align: center;
   margin-top: 10px;
 }
 
-/* line 121, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 106, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .main-page-user_info {
   float: right;
   height: 25px;
   padding: 2px 5px 0 5px;
 }
 
-/* line 127, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 112, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .spacer {
   height: 12px;
 }
 
-/* line 131, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 116, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .right {
   float: right;
 }
 
-/* line 135, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 120, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 br.clear {
   clear: both;
 }
 
-/* line 139, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 124, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .index-item-image {
   position: relative;
 }
 
-/* line 143, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 128, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .index-item-image a div {
   display: none;
   position: absolute;
@@ -1338,12 +1338,12 @@ br.clear {
   top: -380px;
 }
 
-/* line 151, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 136, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .index-item-image a:hover div {
   display: block;
 }
 
-/* line 156, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 141, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .admin-column {
   width: 306px;
   height: 130px;
@@ -1354,7 +1354,7 @@ br.clear {
   padding: 2px 1px 2px 1px;
 }
 
-/* line 166, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 151, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .general-form, .general-form-in {
   height: auto;
   float: none;
@@ -1363,20 +1363,20 @@ br.clear {
   background-color: #FFFFFD;
 }
 
-/* line 174, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 159, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .general-form {
   -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* line 180, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 165, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .general-form-in {
   border-top: 1px solid #ddd;
   border-radius: 0 0 8px 8px;
 }
 
-/* line 185, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 170, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .tabs-page {
   height: auto;
   margin: 10px 0 10px 0;
@@ -1389,42 +1389,42 @@ br.clear {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 197, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 182, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 #group-section-dashboard {
   display: block;
 }
 
-/* line 201, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 186, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed {
   padding-top: 10px;
   display: none;
 }
-/* line 205, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 190, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item {
   margin: 0 5px 0 5px;
   border-bottom: 1px solid #ddd;
   font-size: 13px;
 }
-/* line 209, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 194, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-time {
   margin-top: 10px;
 }
-/* line 211, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 196, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-time time {
   padding: 5px 10px;
   background-color: #eee;
 }
-/* line 216, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 201, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-image {
   float: right;
   width: 100px;
 }
-/* line 221, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 206, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-body {
   width: 780px;
 }
 
-/* line 229, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 214, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .centered-text {
   width: 550px;
   margin: 20px 0 20px 160px;
@@ -1432,7 +1432,7 @@ br.clear {
   padding: 15px;
 }
 
-/* line 236, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 221, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
 .ui-widget-header {
   background-color: #79B6A8;
 }
