@@ -4,7 +4,7 @@ describe 'Static Page Activities' do
 	describe 'get the Home Page' do
 	  it "should show details from the home page" do
 	    visit '/'
-	    page.should have_content('A SIMPLER REPORTING TOOL')
+	    page.should have_content('AN IMMERSIVE REPORTING TOOL')
 	  end
 	end
 
