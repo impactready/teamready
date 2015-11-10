@@ -119,7 +119,7 @@ describe "Measurement Activities" do
           visit edit_measurement_path(measurement)
           fill_in 'Description', with: 'In Johannesburg.. reviewed'
           click_button 'Submit'
-          page.should have_content('All indicators')
+          page.should have_content('All indicator measurements')
           page.should have_selector('tr.listing-item', text: 'In Johannesburg.. reviewed')
         end
       end
