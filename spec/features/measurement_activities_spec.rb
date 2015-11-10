@@ -21,7 +21,7 @@ describe "Measurement Activities" do
       VCR.use_cassette 'requests/measurement_activities/measurement_listing' do
         measurement = FactoryGirl.create(:measurement, user: @user, group: @group, type: @type)
         visit measurements_path
-        page.should have_content('All indicators')
+        page.should have_content('All indicator measurements')
         page.should have_selector('tr.listing-item', text: measurement.description)
         page.should have_link('Indicator')
       end
@@ -31,12 +31,12 @@ describe "Measurement Activities" do
   describe 'Measurement new page' do
     it 'should show a new page for an measurement' do
       visit new_measurement_path
-      page.should have_selector('.heading-block', text: 'New indicator update')
+      page.should have_selector('.heading-block', text: 'New indicator measurement')
     end
 
     it 'should show a mobile view for a new page for an measurement' do
       visit new_measurement_path(mobile: true)
-      page.should have_selector('.mobile-heading-block', text: 'New indicator update')
+      page.should have_selector('.mobile-heading-block', text: 'New indicator measurement')
     end
   end
 
@@ -48,7 +48,7 @@ describe "Measurement Activities" do
             visit new_measurement_path
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_text('New indicator update')
+            page.should have_text('New indicator measurement')
           end
         end.should_not change(Measurement, :count)
       end
@@ -59,7 +59,7 @@ describe "Measurement Activities" do
             visit new_measurement_path(mobile: true)
             click_button 'Submit'
             page.should have_selector('div.flash_error')
-            page.should have_selector('.mobile-heading-block', text: 'New indicator update')
+            page.should have_selector('.mobile-heading-block', text: 'New indicator measurement')
           end
         end.should_not change(Measurement, :count)
       end
@@ -76,7 +76,7 @@ describe "Measurement Activities" do
             select @type.description, from: 'Indicator'
             select @group.name, from: 'Team'
             click_button 'Submit'
-            page.should have_text('All indicators')
+            page.should have_text('All indicator measurements')
           end
         end.should change(Measurement, :count).by(1)
       end
@@ -107,7 +107,7 @@ describe "Measurement Activities" do
           fill_in 'Description', with: ""
           click_button 'Submit'
           page.should have_selector('div.flash_error')
-          page.should have_content('Edit this indicator update')
+          page.should have_content('Edit this indicator measurement')
         end
       end
     end
@@ -131,7 +131,7 @@ describe "Measurement Activities" do
       VCR.use_cassette 'requests/measurement_activities/measurement_show' do
         measurement = FactoryGirl.create(:measurement, user: @user, group: @group, type: @type)
         visit measurement_path(measurement)
-        page.should have_content('Indicator update')
+        page.should have_content('Indicator measurement')
         page.should have_selector('tr.listing-item', text: measurement.description)
       end
     end
@@ -143,7 +143,7 @@ describe "Measurement Activities" do
         measurement = FactoryGirl.create(:measurement, user: @user, group: @group, type: @type)
         visit measurement_path(measurement)
         click_link 'Delete this measurement'
-        page.should have_selector('div.flash_success', text: 'Indicator update removed.')
+        page.should have_selector('div.flash_success', text: 'Indicator measurement removed.')
       end
     end
   end
