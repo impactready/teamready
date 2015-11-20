@@ -37,7 +37,7 @@ class AccountOptionsController < ApplicationController
   end
 
   def destroy
-    AccountOptions.find(params[:id]).destroy
+    AccountOption.find(params[:id]).destroy
     flash[:success] = "Account option removed."
     redirect_to account_options_path
   end
