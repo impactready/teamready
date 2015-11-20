@@ -1,6 +1,6 @@
 class AccountOption < ActiveRecord::Base
 
-  attr_accessible :name, :cost
+  attr_accessible :name, :cost, :users, :groups
 
 	has_many :accounts
 
