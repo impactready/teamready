@@ -16,9 +16,7 @@ class Story < ActiveRecord::Base
   geocoded_by :location
   reverse_geocoded_by :latitude, :longitude, address: :location
 
-  validates :description, presence: true
-  validates :group_id, presence: true, numericality:  { only_integer: true }
-  validates :user_id, presence: true, numericality:  { only_integer: true }
+  validates :description, :group_id, :user_id, :type_id,  presence: true
   # validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
   # validates :latitude, numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }
 

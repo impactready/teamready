@@ -10,7 +10,7 @@ class Measurement < ActiveRecord::Base
 
   validates_attachment_content_type :measurement_image, content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif", "application/octet-stream"]
 
-  attr_accessible :location, :description, :longitude, :latitude, :type_id, :measurement_image, :group_id, :archive
+  attr_accessible :location, :description, :type_id, :measurement_image, :group_id, :archive
   attr_protected :user_id
 
   validates :description, :user_id, :type_id, :group_id, :location, presence: true

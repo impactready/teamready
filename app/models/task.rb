@@ -18,9 +18,7 @@ class Task < ActiveRecord::Base
   geocoded_by :location
   reverse_geocoded_by :latitude, :longitude, address: :location
 
-  validates :description, :priority_id, :status_id, :due_date, presence: true
-  validates :group_id, presence: true, numericality:  { only_integer: true }
-  validates :raised_user_id, :assigned_user_id, presence: true, numericality:  { only_integer: true }
+  validates :description, :priority_id, :status_id, :due_date, :group_id, :raised_user_id, :assigned_user_id, presence: true
   # validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
   # validates :latitude, numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }
 

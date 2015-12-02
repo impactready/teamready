@@ -52,7 +52,7 @@ describe Api::V1::AndroidController do
       post 'create', object_category: 'event', object: { description: nil, type: @type.description, group: @group.description, longitude: nil, latitude: nil}
 
       body = JSON.parse(response.body)
-      expect(response).not_to be_success
+      expect(response).to be_success
       expect(body['event']).to eq(nil)
     end
 
