@@ -13,7 +13,7 @@ class Measurement < ActiveRecord::Base
   attr_accessible :location, :description, :type_id, :measurement_image, :group_id, :archive
   attr_protected :user_id
 
-  validates :description, :user_id, :type_id, :group_id, :location, presence: true
+  validates :description, :user_id, :type_id, :group_id, presence: true
 
   geocoded_by :location
   reverse_geocoded_by :latitude, :longitude, address: :location
