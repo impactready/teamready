@@ -45,7 +45,7 @@ class Api::V1::AndroidController < ApplicationController
         group.updates_add_create('event', event)
         render json: {result_ok: true, event: event}
       else
-        render json: {result_ok: false, event: nil}, status: 400
+        render json: {result_ok: false, event: nil}
       end
 
 
@@ -70,7 +70,7 @@ class Api::V1::AndroidController < ApplicationController
         group.updates_add_create('story', story)
         render json: {result_ok: true, story: story}
       else
-        render json: {result_ok: false, story: nil}, status: 400
+        render json: {result_ok: false, story: nil}
       end
 
     when 'measurement'
