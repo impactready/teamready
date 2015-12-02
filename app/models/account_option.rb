@@ -10,7 +10,7 @@ class AccountOption < ActiveRecord::Base
 	before_save :cleanup
 
 	def cleanup
-	  self[:name] = self[:name].chomp
+	  self[:name] = self[:name].strip
 	end
 
 end

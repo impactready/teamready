@@ -52,7 +52,7 @@ class Story < ActiveRecord::Base
   private
 
   def cleanup
-    self.description = self.description.chomp
+    self.description = self.description.strip
   end
 
   def has_coordinates
