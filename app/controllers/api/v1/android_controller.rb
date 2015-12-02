@@ -94,7 +94,7 @@ class Api::V1::AndroidController < ApplicationController
         group.updates_add_create('measurement', measurement)
         render json: {result_ok: true, measurement: measurement}
       else
-        render json: {result_ok: false, measurement: nil}, status: 400
+        render json: {result_ok: false, measurement: nil}
       end
     end
 
