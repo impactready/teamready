@@ -1206,7 +1206,7 @@ form.formtastic li#category_submit_action button {
 }
 /* @import "https://fonts.googleapis.com/css?family=ABeeZee|Arimo:400,700"; */
 /* layout */
-/* line 4, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 4, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 body {
   font-family: 'Arimo', sans-serif;
   display: block;
@@ -1217,7 +1217,7 @@ body {
   line-height: 1.5;
 }
 
-/* line 14, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 14, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 div.above-header {
   height: 30px;
   background: #8598a0;
@@ -1226,14 +1226,14 @@ div.above-header {
   padding: 0 5px 0 5px;
 }
 
-/* line 23, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 23, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 div.top-name {
   padding: 7px 0 0 5px;
   float: left;
   color: white;
 }
 
-/* line 29, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 29, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 div.header-main {
   font-family: 'Arimo', sans-serif;
   background-color: #EFEFEF;
@@ -1244,7 +1244,7 @@ div.header-main {
   height: 75px;
 }
 
-/* line 47, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 47, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .header-info {
   padding-top: 5px;
   background-color: #FFF;
@@ -1254,20 +1254,20 @@ div.header-main {
   box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .container {
   width: 930px;
   margin: 0 auto;
   float: none;
 }
 
-/* line 62, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 62, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .page {
   padding: 5px 0 5px 0;
   min-height: 400px;
 }
 
-/* line 67, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 67, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .heading-block, .heading-block-in {
   padding: 2px 5px 2px 5px;
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2) 50px);
@@ -1276,19 +1276,19 @@ div.header-main {
   -webkit-box-shadow: 1px 1px 2px hsla(0,0%,0%,.3);
   box-shadow: 1px 1px 2px hsla(0,0%,0%,.3);*/
 }
-/* line 81, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 81, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .heading-block h2, .heading-block-in h2 {
   padding-top: 10px;
 }
 
-/* line 86, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 86, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .heading-block-in {
   background-color: #EAEAEA;
   padding-right: 10px;
   height: 32px;
 }
 
-/* line 92, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 92, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .heading-block {
   background-color: #ECEBEB;
   border-radius: 4px;
@@ -1297,40 +1297,40 @@ div.header-main {
   height: 45px;
 }
 
-/* line 100, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 100, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .footer-wrapper {
   text-align: center;
   margin-top: 10px;
 }
 
-/* line 106, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 106, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .main-page-user_info {
   float: right;
   height: 25px;
   padding: 2px 5px 0 5px;
 }
 
-/* line 112, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 112, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .spacer {
   height: 12px;
 }
 
-/* line 116, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 116, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .right {
   float: right;
 }
 
-/* line 120, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 120, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 br.clear {
   clear: both;
 }
 
-/* line 124, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 124, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .index-item-image {
   position: relative;
 }
 
-/* line 128, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 128, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .index-item-image a div {
   display: none;
   position: absolute;
@@ -1338,12 +1338,12 @@ br.clear {
   top: -380px;
 }
 
-/* line 136, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 136, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .index-item-image a:hover div {
   display: block;
 }
 
-/* line 141, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 141, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .admin-column {
   width: 306px;
   height: 130px;
@@ -1354,7 +1354,7 @@ br.clear {
   padding: 2px 1px 2px 1px;
 }
 
-/* line 151, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 151, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .general-form, .general-form-in {
   height: auto;
   float: none;
@@ -1363,20 +1363,20 @@ br.clear {
   background-color: #FFFFFD;
 }
 
-/* line 159, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 159, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .general-form {
   -moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
-/* line 165, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 165, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .general-form-in {
   border-top: 1px solid #ddd;
   border-radius: 0 0 8px 8px;
 }
 
-/* line 170, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 170, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .tabs-page {
   height: auto;
   margin: 10px 0 10px 0;
@@ -1389,42 +1389,41 @@ br.clear {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* line 182, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 182, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 #group-section-dashboard {
   display: block;
 }
 
-/* line 186, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 186, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed {
   padding-top: 10px;
-  display: none;
 }
-/* line 190, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 189, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item {
   margin: 0 5px 0 5px;
   border-bottom: 1px solid #ddd;
   font-size: 13px;
 }
-/* line 194, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 193, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-time {
   margin-top: 10px;
 }
-/* line 196, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 195, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-time time {
   padding: 5px 10px;
   background-color: #eee;
 }
-/* line 201, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 200, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-image {
   float: right;
   width: 100px;
 }
-/* line 206, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 205, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 #group-section-update-feed .update-item div.update-body {
   width: 720px;
 }
 
-/* line 214, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 213, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .centered-text {
   width: 550px;
   margin: 20px 0 20px 160px;
@@ -1432,24 +1431,24 @@ br.clear {
   padding: 15px;
 }
 
-/* line 221, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_layout.css.scss */
+/* line 220, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_layout.css.scss */
 .ui-widget-header {
   background-color: #79B6A8;
 }
 
 /* various types of lists for incivents and associated details*/
-/* line 4, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 4, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .item-table {
   margin: 4px 0 4px 0;
 }
 
-/* line 8, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 8, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing {
   float: none;
   border-radius: 4px;
 }
 
-/* line 13, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 13, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-header {
   font-weight: bold;
   color: #eee;
@@ -1458,32 +1457,32 @@ br.clear {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
 }
-/* line 20, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 20, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-header a {
   color: #eee;
 }
 
-/* line 25, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 25, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-header td, .listing-item td {
   min-height: 35px;
 }
 
-/* line 29, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 29, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-item {
   background-color: #F9F9FB;
 }
 
-/* line 33, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 33, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-item.alt {
   background-color: #E4E4EA;
 }
 
-/* line 37, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 37, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-item.alt.heading {
   font-weight: bold;
 }
 
-/* line 41, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 41, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 div[class^="listing-i-"] {
   float: left;
   padding: 2px 2px 2px 3px;
@@ -1491,95 +1490,95 @@ div[class^="listing-i-"] {
   font-size: 13px;
 }
 
-/* line 48, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 48, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fs {
   width: 60px;
 }
 
-/* line 52, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 52, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-f {
   width: 90px;
 }
 
-/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fb {
   width: 110px;
 }
 
-/* line 60, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 60, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-ff {
   width: 130px;
 }
 
-/* line 64, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 64, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fn {
   width: 150px;
 }
 
-/* line 68, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 68, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fd {
   width: 190px;
 }
 
-/* line 72, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 72, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fm {
   width: 230px;
 }
 
-/* line 76, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 76, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fl {
   width: 380px;
 }
 
-/* line 80, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 80, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fll {
   width: 530px;
 }
 
-/* line 84, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 84, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-fxl {
   width: 600px;
 }
 
-/* line 88, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 88, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-i {
   width: 230px;
 }
 
-/* line 92, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 92, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-im {
   width: 280px;
 }
 
-/* line 96, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 96, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-i-il {
   width: 500px;
 }
 
-/* line 100, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_listings.css.scss */
+/* line 100, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_listings.css.scss */
 .listing-view-image {
   color: #999;
   font-weight: bold;
 }
 
-/* line 2, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_typography.css.scss */
+/* line 2, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_typography.css.scss */
 p, h1, h2, h3 {
   font-family: 'Arimo', sans-serif;
 }
 
-/* line 6, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_typography.css.scss */
+/* line 6, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_typography.css.scss */
 p.normal {
   margin: 0.7em 0 0.2em;
   text-align: justify;
 }
 
-/* line 11, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_typography.css.scss */
+/* line 11, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_typography.css.scss */
 h3.center {
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* line 16, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_typography.css.scss */
+/* line 16, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_typography.css.scss */
 h1, h2, h3 {
   line-height: 100%;
   color: #595959;
@@ -1588,80 +1587,80 @@ h1, h2, h3 {
 }
 
 /* Links */
-/* line 3, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 3, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 a {
   color: #696969;
   text-decoration: none;
   font-family: 'Arimo', sans-serif;
 }
 
-/* line 8, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 8, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 a:hover {
   color: #757575;
   text-decoration: underline;
 }
 
-/* line 13, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 13, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav.top-menu a {
   color: #EEE;
 }
 
-/* line 17, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 17, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 a.blue {
   font-weight: bold;
   color: #8A8AAD;
 }
 
 /* Navigation */
-/* line 25, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 25, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav.top-menu {
   padding-top: 5px;
   float: right;
 }
 
-/* line 30, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 30, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav.main-menu {
   float: left;
   height: 25px;
 }
 
-/* line 36, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 36, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav.footer-menu {
   float: none;
 }
 
-/* line 41, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 41, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 45, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 45, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav ul li {
   list-style-type: none;
   display: inline-block;
   padding: 2px 0;
 }
 
-/* line 50, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 50, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav ul li a {
   padding: 0 5px;
   font-weight: bold;
   color: #575757;
 }
 
-/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* line 60, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_nav.css.scss */
+/* line 60, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_nav.css.scss */
 .listing-header a {
   font-weight: bold;
 }
 
 /* Error and success messages */
-/* line 5, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 5, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 .flash_error, .flash_notice, .flash_success {
   padding-top: 6px;
   height: 28px;
@@ -1669,36 +1668,36 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* line 12, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 12, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 .flash_error {
   color: #FF0000;
   border: solid 2px #FF0000;
 }
 
-/* line 17, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 17, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 .flash_notice {
   color: #20B2AA;
   border: solid 2px #20B2AA;
 }
 
-/* line 22, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 22, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 .flash_success {
   color: #008B00;
   border: solid 2px #008B00;
 }
 
-/* line 27, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 27, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 #form-errors {
   color: #8a1f11;
 }
 
-/* line 31, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 31, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 div#form-errors h2 {
   font-size: 1.2em;
   font-weight: bold;
 }
 
-/* line 36, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 36, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 .field_with_errors {
   margin-top: 5px;
   background-color: red;
@@ -1706,12 +1705,12 @@ div#form-errors h2 {
   display: table;
 }
 
-/* line 43, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 43, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 .field_with_errors label {
   color: #fff;
 }
 
-/* line 47, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 47, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 #error_explanation {
   width: 400px;
   border: 2px solid red;
@@ -1721,7 +1720,7 @@ div#form-errors h2 {
   background-color: #f0f0f0;
 }
 
-/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 56, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -1732,27 +1731,27 @@ div#form-errors h2 {
   color: #fff;
 }
 
-/* line 66, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 66, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 #error_explanation p {
   color: #333;
   margin-bottom: 0;
   padding: 5px;
 }
 
-/* line 72, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_errors.css.scss */
+/* line 72, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_errors.css.scss */
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
 }
 
 /* Google Earth */
-/* line 4, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 4, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div[id^="google_map_section"] {
   height: 530px;
   width: 930px;
 }
 
-/* line 9, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 9, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 .map-label {
   font-size: 1.1em;
   background-color: #ffffff;
@@ -1767,7 +1766,7 @@ div[id^="google_map_section"] {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
-/* line 23, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 23, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div[class^="label-"] {
   color: #000000;
   padding: 1px 0px;
@@ -1775,33 +1774,33 @@ div[class^="label-"] {
   font-size: 13px;
 }
 
-/* line 30, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 30, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div.label-story {
   background-color: #00BFFF;
 }
 
-/* line 34, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 34, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div.label-incivent {
   background-color: #FF4500;
 }
 
-/* line 39, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 39, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div.label-task {
   background-color: #ffe956;
 }
 
-/* line 43, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 43, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div.label-measurement {
   background-color: #228B22;
 }
 
-/* line 48, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 48, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div.label-content {
   padding: 1px 2px;
   text-align: left;
 }
 
-/* line 53, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 53, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 div.label-footer {
   padding: 1px 2px;
   text-align: left;
@@ -1812,7 +1811,7 @@ div.label-footer {
 }
 
 /* Photo */
-/* line 64, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 64, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 .photo {
   margin: 0 0 0 2px;
   padding: 3px 3px 10px 3px;
@@ -1822,7 +1821,7 @@ div.label-footer {
   box-shadow: 2px 2px 4px #aaa;
 }
 
-/* line 74, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_google_photos.css.scss */
+/* line 74, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_google_photos.css.scss */
 .feed {
   float: right;
   height: 165px;
@@ -1830,7 +1829,7 @@ div.label-footer {
 }
 
 /* Buttons */
-/* line 5, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_buttons.css.scss */
+/* line 5, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_buttons.css.scss */
 input[type="submit"] {
   background-color: #7AC5CD;
   border: 1px solid #BABABA;
@@ -1842,34 +1841,34 @@ input[type="submit"] {
   background-image: -webkit-gradient(linear, 0 0, 0 20, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0)));
 }
 
-/* line 23, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_buttons.css.scss */
+/* line 23, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_buttons.css.scss */
 .subscribe-container {
   padding-top: 10px;
 }
 
-/* line 26, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_buttons.css.scss */
+/* line 26, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_buttons.css.scss */
 .subscribe-form {
   padding: 35px 30px 25px;
   background: #eee;
   border: 1px solid #ddd;
 }
 
-/* line 33, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_buttons.css.scss */
+/* line 33, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_buttons.css.scss */
 .group-section-link {
   padding-top: 10px;
   float: none;
 }
-/* line 37, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_buttons.css.scss */
+/* line 37, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_buttons.css.scss */
 .group-section-link:hover {
   background-color: #ddd;
   cursor: pointer;
 }
-/* line 42, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_buttons.css.scss */
+/* line 42, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_buttons.css.scss */
 .group-section-link h2 {
   padding-top: 0;
   display: inline;
 }
-/* line 47, /Users/raouldevilliers/Documents/Development/Sites/Business/incivent_impactready/app/assets/stylesheets/_buttons.css.scss */
+/* line 47, /Users/raouldevilliers/Documents/Development/Sites/Business/teamready/app/assets/stylesheets/_buttons.css.scss */
 .group-section-link .expand {
   padding-top: 3px;
   display: none;
