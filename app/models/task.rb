@@ -21,8 +21,8 @@ class Task < ActiveRecord::Base
   validates :description, :priority_id, :status_id, :due_date, presence: true
   validates :group_id, presence: true, numericality:  { only_integer: true }
   validates :raised_user_id, :assigned_user_id, presence: true, numericality:  { only_integer: true }
-  validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
-  validates :latitude, numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }
+  # validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
+  # validates :latitude, numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }
 
   scope :default_order, -> { order('created_at DESC') }
 
@@ -70,6 +70,10 @@ class Task < ActiveRecord::Base
 
   def image
     task_image unless task_image.url == '/task_images/original/missing.png'
+  end
+
+  def cannot_geolocate
+    self.longitude.nil? || self.latitude.nil?
   end
 
   private

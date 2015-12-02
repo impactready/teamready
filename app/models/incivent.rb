@@ -18,15 +18,11 @@ class Incivent < ActiveRecord::Base
   geocoded_by :location
   reverse_geocoded_by :latitude, :longitude, address: :location
 
-  validates :raised_user_id, presence: true, numericality:  { only_integer: true }
-  validates :priority_id, presence: true
-  validates :status_id, presence: true
-  validates :group_id, presence: true
-  #validates :location, presence: true
-  validates :type_id, presence: true
+  validates :raised_user_id, :priority_id, :status_id, :group_id, :type_id, presence: true, numericality:  { only_integer: true }
   validates :description, presence: true
-  validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
-  validates :latitude, numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }
+  # validates :location, presence: true
+  # validates :longitude, numericality: { greater_than_or_equal_to: -180, less_than_or_equal_to: 180 }
+  # validates :latitude, numericality: { greater_than_or_equal_to: -90, less_than_or_equal_to: 90 }
 
   before_validation :reverse_geocode, if: :has_coordinates
   before_validation :geocode, if: :has_location, unless: :has_coordinates
@@ -60,6 +56,10 @@ class Incivent < ActiveRecord::Base
 
   def image
     incivent_image unless incivent_image.url == '/incivent_images/original/missing.png'
+  end
+
+  def cannot_geolocate
+    self.longitude.nil? || self.latitude.nil?
   end
 
   private

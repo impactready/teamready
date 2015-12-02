@@ -4,7 +4,7 @@ module TasksHelper
  def tasks_lats(tasks)
   latarray = []
   tasks.each do |task|
-    latarray.push(task.latitude)
+    latarray.push(task.latitude) unless task.cannot_geolocate
   end
   return latarray.join('%|%')
  end
@@ -12,7 +12,7 @@ module TasksHelper
  def tasks_longs(tasks)
   longarray = []
   tasks.each do |task|
-    longarray.push(task.longitude)
+    longarray.push(task.longitude) unless task.cannot_geolocate
   end
   return longarray.join('%|%')
  end
@@ -21,9 +21,11 @@ module TasksHelper
   namearray = []
   tasks.each do |task|
     task_status = task.complete? ? 'Completed' : "Due: #{task.due_date}"
-    namearray.push("<div class='label-task'><strong>Task</strong></div>
-                    <div class='label-content'>#{truncate(task.description, length: 55)}</div>
-                    <div class='label-footer'>Assigned to: #{task.user.full_name}<br />#{task_status}</div>")
+    namearray.push(
+      "<div class='label-task'><strong>Task</strong></div>
+      <div class='label-content'>#{truncate(task.description, length: 55)}</div>
+      <div class='label-footer'>Assigned to: #{task.user.full_name}<br />#{task_status}</div>"
+    ) unless task.cannot_geolocate
   end
   return namearray.join('%|%')
  end
@@ -31,7 +33,7 @@ module TasksHelper
  def tasks_urls(tasks)
   urlarray = []
   tasks.each do |task|
-    urlarray.push(task_url(task))
+    urlarray.push(task_url(task)) unless task.cannot_geolocate
   end
   return urlarray.join('%|%')
  end

@@ -33,6 +33,7 @@ class Api::V1::AndroidController < ApplicationController
         latitude: params[:object][:latitude],
         incivent_image: params[:object][:image]
       )
+
       if event.save
         event.group.users.each do |user|
           begin
@@ -42,10 +43,12 @@ class Api::V1::AndroidController < ApplicationController
           end
         end
         group.updates_add_create('event', event)
+        render json: {result_ok: true, event: event}
+      else
+        render json: {result_ok: false, event: nil}, status: 400
       end
 
-      puts event.attributes
-      render json: {result_ok: true, event: event}
+
     when 'story'
       story = @api_user.stories.new(
         description: params[:object][:description],
@@ -65,9 +68,11 @@ class Api::V1::AndroidController < ApplicationController
           end
         end
         group.updates_add_create('story', story)
+        render json: {result_ok: true, story: story}
+      else
+        render json: {result_ok: false, story: nil}, status: 400
       end
 
-      render json: {result_ok: true, story: story}
     when 'measurement'
       measurement = @api_user.measurements.create(
         description: params[:object][:description],
@@ -87,9 +92,10 @@ class Api::V1::AndroidController < ApplicationController
           end
         end
         group.updates_add_create('measurement', measurement)
+        render json: {result_ok: true, measurement: measurement}
+      else
+        render json: {result_ok: false, measurement: nil}, status: 400
       end
-
-      render json: {result_ok: true, measurement: measurement}
     end
 
   end

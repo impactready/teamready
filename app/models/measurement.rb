@@ -13,7 +13,7 @@ class Measurement < ActiveRecord::Base
   attr_accessible :location, :description, :longitude, :latitude, :type_id, :measurement_image, :group_id, :archive
   attr_protected :user_id
 
-  validates :description, :user_id, :type_id, :group_id, :location, :longitude, :latitude, presence: true
+  validates :description, :user_id, :type_id, :group_id, :location, presence: true
 
   geocoded_by :location
   reverse_geocoded_by :latitude, :longitude, address: :location
@@ -64,6 +64,10 @@ class Measurement < ActiveRecord::Base
 
   def image
     measurement_image unless measurement_image.url == '/measurement_images/original/missing.png'
+  end
+
+  def cannot_geolocate
+    self.longitude.nil? || self.latitude.nil?
   end
 
   private

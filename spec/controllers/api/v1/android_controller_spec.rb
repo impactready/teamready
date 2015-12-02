@@ -48,6 +48,14 @@ describe Api::V1::AndroidController do
       end
     end
 
+    it "does not create an event if there is something missing" do
+      post 'create', object_category: 'event', object: { description: nil, type: @type.description, group: @group.description, longitude: nil, latitude: nil}
+
+      body = JSON.parse(response.body)
+      expect(response).not_to be_success
+      expect(body['event']).to eq(nil)
+    end
+
     it "creates a story via the API" do
       VCR.use_cassette 'controllers/api_controller/story_creation_success' do
         post 'create', object_category: 'story', object: { description: "Our customers were very happy!", type: @type.description, group: @group.description, longitude: "28.0878431", latitude: "-26.1249014" }
