@@ -31,7 +31,7 @@ class Notification < ActionMailer::Base
     @story_url  = story_url
     @group = group
     @user = user
-    mail(to: @user.email, subject: "[ImpactReady] - #{@user.first_name}, a story has been created in the group '#{@group.name}' on ImpactReady")
+    mail(to: @user.email, subject: "[ImpactReady] - A new story has been created in the group '#{@group.name}' on ImpactReady")
   end
 
   def notify_deadline(user, description )

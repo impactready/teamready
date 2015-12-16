@@ -37,7 +37,7 @@ class Api::V1::AndroidController < ApplicationController
       if event.save
         event.group.users.each do |user|
           begin
-            Notification.notify_incivent(user, group, incivent_url(incivent)).deliver_now
+            Notification.notify_incivent(user, group, incivent_url(event)).deliver_now
           rescue Exception => e
             logger.error "Unable to deliver the event email: #{e.message}"
           end

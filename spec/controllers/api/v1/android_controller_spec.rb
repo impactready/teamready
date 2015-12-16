@@ -45,6 +45,7 @@ describe Api::V1::AndroidController do
         body = JSON.parse(response.body)
         expect(response).to be_success
         expect(body['event']['description']).to eq('Serious Oil Spill')
+        expect(ActionMailer::Base.deliveries.last.subject).to include "A new event"
       end
     end
 
@@ -63,6 +64,7 @@ describe Api::V1::AndroidController do
         body = JSON.parse(response.body)
         expect(response).to be_success
         expect(body['story']['description']).to eq('Our customers were very happy!')
+        expect(ActionMailer::Base.deliveries.last.subject).to include "A new story"
       end
     end
 
@@ -73,6 +75,7 @@ describe Api::V1::AndroidController do
         body = JSON.parse(response.body)
         expect(response).to be_success
         expect(body['measurement']['description']).to eq('Delivery is up by 100%.')
+        expect(ActionMailer::Base.deliveries.last.subject).to include "A new indicator measurement"
       end
     end
   end
