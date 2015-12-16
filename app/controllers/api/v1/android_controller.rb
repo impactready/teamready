@@ -23,8 +23,8 @@ class Api::V1::AndroidController < ApplicationController
 
       event = @api_user.incivents.new(
         description: params[:object][:description],
-        type_id: type.id if type,
-        group_id: group.id if group,
+        type_id: type.id,
+        group_id: group.id,
         priority_id: priority.id,
         status_id: status.id,
         longitude: params[:object][:longitude],
