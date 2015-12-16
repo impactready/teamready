@@ -14,9 +14,7 @@ class Api::V1::AndroidController < ApplicationController
     puts params
 
     type = @api_user.account.types.find_by(description: params[:object][:type])
-    type ||= @api_user.account.types.find_by(description: 'None')
-    group = @api_user.account.groups.find_by(description: params[:object][:group])
-    group ||= @api_user.account.groups.first
+    group = @api_user.account.groups.find_by(name: params[:object][:group])
 
     case params[:object_category]
     when 'event'
@@ -25,8 +23,8 @@ class Api::V1::AndroidController < ApplicationController
 
       event = @api_user.incivents.new(
         description: params[:object][:description],
-        type_id: type.id,
-        group_id: group.id,
+        type_id: type.id if type,
+        group_id: group.id if group,
         priority_id: priority.id,
         status_id: status.id,
         longitude: params[:object][:longitude],
