@@ -10,6 +10,8 @@ class GroupsController < ApplicationController
     else
       @groups = current_user.groups
     end
+    @ids_for_earth = []
+    @groups.each { |group| @ids_for_earth << group.id unless group.incivents.count == 0 && group.tasks.count == 0 && group.stories.count == 0 && group.measurements.count == 0 }
   end
 
   def new
