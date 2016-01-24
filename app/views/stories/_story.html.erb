@@ -1,7 +1,7 @@
 
 <tr class="listing-item">
   <td class="listing-i-fm"><%= link_to story.description, story_path(story) %></td>
-  <td><%= story.type.description %></td>
+  <td><%= story.type.description if story.type %></td>
   <td><%= story.location %></td>
   <td><%= story.group.name %></td>
   <% if current_user?(user_locate_by_id(story.user_id)) %>

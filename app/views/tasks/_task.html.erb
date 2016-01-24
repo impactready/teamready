@@ -8,8 +8,8 @@
     <td><%= user_locate_by_id(task.raised_user_id).full_name %></td>
   <% end %>
   <td><%= time_ago_in_words(task.created_at) %> ago</td>
-   <td><%= task.priority.description %></td>
-  <td><%= task.status.description %></td>
+   <td><%= task.priority.description if task.priority %></td>
+  <td><%= task.status.description if task.status %></td>
   <% if current_user?(task.user) %>
     <td>You</td>
   <% else %>

@@ -1,9 +1,9 @@
 <tr class="listing-item">
   <td class="listing-i-fm"><%= link_to truncate(incivent.description, length: 55), incivent_path(incivent) %></td>
   <td><%= time_ago_in_words(incivent.created_at) %> ago</td>
-  <td><%= incivent.priority.description %></td>
-  <td><%= incivent.status.description %></td>
-  <td><%= incivent.type.description %></td>
+  <td><%= incivent.priority.description if incivent.priority %></td>
+  <td><%= incivent.status.description if incivent.status  %></td>
+  <td><%= incivent.type.description if incivent.type   %></td>
   <% if incivent.location == "" %>
     <td>Unnamed Coordinates</td>
   <% else %>
