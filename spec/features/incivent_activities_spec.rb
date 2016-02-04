@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'vcr'
 
-describe "Incivent Activities" do
+describe "Incivent Activities", type: :feature do
 
   before(:each) do
     FactoryGirl.create(:account_option)

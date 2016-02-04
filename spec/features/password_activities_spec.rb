@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Password Activities' do
+describe 'Password Activities', type: :feature do
   before(:each) do
     FactoryGirl.create(:account)
     @user = FactoryGirl.create(:user)

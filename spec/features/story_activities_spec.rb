@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'vcr'
 
-describe 'Story Activities' do
+describe 'Story Activities', type: :feature do
 	before(:each) do
 		FactoryGirl.create(:account_option)
 		@domain = FactoryGirl.create(:type_domain)

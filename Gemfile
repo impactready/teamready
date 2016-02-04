@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.2.3'
 
-gem 'rails', '4.2.3'
+gem 'rails', '4.2.5.1'
 
 gem 'pg'
 
@@ -18,12 +18,14 @@ gem 'faker', '1.0.1'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 # gem 'paypal-recurring'
 gem 'thin'
-gem 'exceptional'
+
+# Exceptions
+gem 'exception_notification'
 
 group :test, :development do
-  gem 'minitest'
-  gem 'rspec-rails', '2.13.1'
-  gem 'capybara', '2.1.0'
+  # gem 'minitest'
+  gem 'rspec-rails', '3.3.2'
+  gem 'capybara', '2.6.0'
 end
 
 group :development do

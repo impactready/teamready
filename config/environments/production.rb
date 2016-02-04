@@ -77,7 +77,12 @@ Incivent_App::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   #config.action_mailer.raise_delivery_errors = true
 
-
+  config.middleware.use ExceptionNotification::Rack,
+    email: {
+      email_prefix: "[TeamReady] ",
+      sender_address: %{"notifier" <notifier@impactready.herokuapp.com>},
+      exception_recipients: %w{raouldevilliers@gmail.com}
+    }
 
   # Enable threaded mode
   # config.threadsafe!

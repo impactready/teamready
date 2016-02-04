@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Static Page Activities' do
+describe 'Static Page Activities', type: :feature do
 	describe 'get the Home Page' do
 	  it "should show details from the home page" do
 	    visit '/'

@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'vcr'
 
-describe "Task Activities" do
+describe "Task Activities", type: :feature do
 
   before(:each) do
     FactoryGirl.create(:account_option)

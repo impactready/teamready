@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Api::V1::AndroidController do
+describe Api::V1::AndroidController, type: :controller do
   before(:each) do
     user = FactoryGirl.create(:user)
     request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials('api',user.api_key)

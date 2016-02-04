@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Status Activities" do
+describe "Status Activities", type: :feature do
 
   before(:each) do
     FactoryGirl.create(:account_option)

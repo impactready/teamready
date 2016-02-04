@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Subscription Activities' do
+describe 'Subscription Activities', type: :feature do
 
   before(:each) do
     account_option = FactoryGirl.create(:account_option, cost: 40)

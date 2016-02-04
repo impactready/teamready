@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Type Activities" do
+describe "Type Activities", type: :feature do
 
   before(:each) do
     FactoryGirl.create(:account_option)

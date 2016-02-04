@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "Priority Activities" do
+describe "Priority Activities", type: :feature do
 
   before(:each) do
     FactoryGirl.create(:account_option)
