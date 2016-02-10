@@ -9,14 +9,22 @@ class StoriesController < ApplicationController
     @story = current_user.stories.new
   end
 
-  def edit
-    @account = current_user.account
-    @story = @account.account_stories.find(params[:id])
-  end
-
   def show
     @account = current_user.account
-    @story = @account.account_stories.find(params[:id])
+    if (current_user.master_user? && current_user.account == Story.find(params[:id]).group.account) || @account.account_stories.stories_from_groups_joined_by(current_user).find_by(id: params[:id])
+      @story = @account.account_stories.find(params[:id])
+    else
+      deny_access_wrong_account
+    end
+  end
+
+  def edit
+    if (current_user.master_user? && current_user.account == Story.find(params[:id]).group.account ) || current_user.stories.find(params[:id])
+      @account = current_user.account
+      @story = @account.account_stories.find(params[:id])
+    else
+      deny_access_wrong_account
+    end
   end
 
   def create

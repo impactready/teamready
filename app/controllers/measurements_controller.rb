@@ -11,7 +11,11 @@ class MeasurementsController < ApplicationController
 
   def show
     @account = current_user.account
-    deny_access_wrong_account unless @measurement = @account.account_measurements.measurements_from_groups_joined_by(current_user).find(params[:id])
+    if (current_user.master_user? && current_user.account == Measurement.find(params[:id]).group.account) || @account.account_measurements.measurements_from_groups_joined_by(current_user).find_by(id: params[:id])
+      @measurement = @account.account_measurements.find(params[:id])
+    else
+      deny_access_wrong_account
+    end
   end
 
   def edit

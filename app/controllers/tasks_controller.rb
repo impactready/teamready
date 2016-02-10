@@ -10,15 +10,23 @@ class TasksController < ApplicationController
     @users = @account.users
   end
 
-  def edit
-    @account = current_user.account
-    @task = @account.account_tasks.find(params[:id])
-    @group = @task.group
-  end
-
   def show
     @account = current_user.account
-    @task = @account.account_tasks.find(params[:id])
+    if (current_user.master_user? && current_user.account == Task.find(params[:id]).group.account) || @account.account_tasks.tasks_from_groups_joined_by(current_user).find_by(id: params[:id])
+      @task = @account.account_tasks.find(params[:id])
+    else
+      deny_access_wrong_account
+    end
+  end
+
+  def edit
+    if (current_user.master_user? && current_user.account == Task.find(params[:id]).group.account) || Tasks.find_by(raised_user_id: current_user.id)
+      @account = current_user.account
+      @task = @account.account_tasks.find(params[:id])
+      @group = @task.group
+    else
+      deny_access_wrong_account
+    end
   end
 
   def create
