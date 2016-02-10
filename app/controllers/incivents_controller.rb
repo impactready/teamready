@@ -16,9 +16,6 @@ class InciventsController < ApplicationController
     else
       deny_access_wrong_account
     end
-
-    @account = current_user.account
-    deny_access_wrong_account unless @incivent = @account.account_incivents.incivents_from_groups_joined_by(current_user).find_by(id: params[:id])
   end
 
   def edit
