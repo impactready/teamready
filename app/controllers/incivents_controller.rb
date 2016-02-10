@@ -11,11 +11,18 @@ class InciventsController < ApplicationController
 
   def show
     @account = current_user.account
-    deny_access_wrong_account unless @incivent = @account.account_incivents.incivents_from_groups_joined_by(current_user).find(params[:id])
+    if (current_user.master_user? && current_user.account == Incivent.find(params[:id]).group.account ) || @account.account_incivents.incivents_from_groups_joined_by(current_user).find_by(id: params[:id])
+      @incivent = @account.account_incivents.find(params[:id])
+    else
+      deny_access_wrong_account
+    end
+
+    @account = current_user.account
+    deny_access_wrong_account unless @incivent = @account.account_incivents.incivents_from_groups_joined_by(current_user).find_by(id: params[:id])
   end
 
   def edit
-    if (current_user.master_user? && current_user.account == Incivent.find(params[:id]).group.account ) || current_user.incivents.find(params[:id])
+    if (current_user.master_user? && current_user.account == Incivent.find(params[:id]).group.account ) || current_user.incivents.find_by(id: params[:id])
       @account = current_user.account
       @incivent = @account.account_incivents.find(params[:id])
     else
