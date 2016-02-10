@@ -8,30 +8,33 @@ module UseSessionsHelper
   def authenticate
     deny_access unless signed_in?
   end
-  
+
   def deny_access
     store_location
-    redirect_to signin_path, notice: "Please sign in to access this page."
+    flash[:notice] = "Please sign in to access this page."
+    redirect_to signin_path
   end
-  
+
   def deny_access_master_user
-    redirect_to root_path, error: "You must be an administrator to access this page."
+    flash[:error] = "You must be an administrator to access this page."
+    redirect_to root_path
   end
-  
+
   def deny_access_wrong_account
-    redirect_to root_path, error: "You are trying to access information from other users or accounts that you are not authorised to view."
+    flash[:error] = "You are trying to access information from other users or accounts that you are not authorised to view."
+    redirect_to root_path
   end
 
   def deny_access_inactive
     flash[:error] = "This account has been deactivated. Please contact support for more information."
     sign_out
   end
-  
+
   def redirect_back_or(default)
     redirect_to(session[:return_to] || default)
     clear_return_to
   end
-  
+
   def current_user?(user)
     user == current_user
   end
@@ -54,14 +57,14 @@ module UseSessionsHelper
     #reset_session
     redirect_to root_path
   end
- 
+
 #  def sign_out
 #    cookies.delete(:remember_token)
 #    self.current_user = nil
 #  end
 
   private
-  
+
   def store_location
     session[:return_to] = request.fullpath
   end
@@ -70,4 +73,4 @@ module UseSessionsHelper
     session[:return_to] = nil
   end
 
-end 
+end
