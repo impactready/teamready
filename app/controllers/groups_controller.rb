@@ -11,7 +11,7 @@ class GroupsController < ApplicationController
       @groups = current_user.groups
     end
     @ids_for_earth = []
-    @groups.each { |group| @ids_for_earth << group.id unless group.incivents.unarchived.count == 0 && group.tasks.count == 0 && group.stories.count == 0 && group.measurements.count == 0 }
+    @groups.each { |group| @ids_for_earth << group.id unless group.incivents.unarchived.count == 0 && group.tasks.unarchived.count == 0 && group.stories.unarchived.count == 0 && group.measurements.unarchived.count == 0 }
   end
 
   def new

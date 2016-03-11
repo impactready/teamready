@@ -14,10 +14,10 @@
       <tr class="listing-item">
         <td class="listing-i-f"><%= group.name %></td>
         <td class="listing-i-fl"><%= group.description %></td>
-        <td><%= group.incivents.count %></td>
-        <td><%= group.tasks.count %></td>
-        <td><%= group.stories.count %></td>
-        <td><%= group.measurements.count %></td>
+        <td><%= group.incivents.unarchived.count %></td>
+        <td><%= group.tasks.unarchived.count %></td>
+        <td><%= group.stories.unarchived.count %></td>
+        <td><%= group.measurements.unarchived.count %></td>
         <% if current_user.master_user? %>
           <td class="listing-i-f"><%= link_to 'Edit', edit_group_path(group) %> |
           <%= link_to 'Delete', group, data: {confirm: 'Are you sure?'}, method: :delete %></td>
@@ -60,7 +60,7 @@
   </div>
 
   <div class="group-section" id="group-section-dashboard">
-    <% if group.incivents.count == 0 && group.tasks.count == 0 && group.stories.count == 0 && group.measurements.count == 0 %>
+    <% if group.incivents.unarchived.count == 0 && group.tasks.unarchived.count == 0 && group.stories.unarchived.count == 0 && group.measurements.unarchived.count == 0 %>
       <div class="general-form">
         <p class="normal">There are no events, tasks or stories in this team.</p>
       </div>
